@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
 import 'package:my_demo/screens/home/components/bottom_nav_bar.dart';
 import 'package:my_demo/screens/home/components/the_app_bar.dart';
 import 'package:my_demo/screens/home/components/the_body.dart';
@@ -22,7 +23,7 @@ class _MyHomePageState extends State<MyHomePage> {
       drawer: TheDrawer(),
       appBar: TheAppBar(),
       // drawer: (),
-      body: TheBody(),
+      body: DetialsScreen(),
       floatingActionButton: TheFap(),
       bottomNavigationBar: TheBottomeNavBar(),
     );

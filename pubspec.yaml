@@ -44,6 +44,9 @@ dependencies:
   flutter_staggered_grid_view: ^0.6.2
   flutter_svg: ^1.1.1+1
   smooth_star_rating: ^1.1.1
+  persistent_bottom_nav_bar: ^4.0.2
+  flutter_inner_drawer: ^1.0.0+1
+  simple_animations: ^4.2.0
 
 dev_dependencies:
   flutter_test:

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_demo/constants.dart';
+import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
+import 'package:my_demo/screens/home/my_home_page.dart';
+import 'package:my_demo/screens/setting%20screen/setting_screen.dart';
 
 class TheBottomeNavBar extends StatelessWidget {
   const TheBottomeNavBar({Key? key}) : super(key: key);
@@ -32,19 +35,55 @@ class TheBottomeNavBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return MyHomePage();
+                  },
+                ),
+              );
+            },
             icon: SvgPicture.asset('assets/icons/home.svg'),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return DetialsScreen();
+                  },
+                ),
+              );
+            },
             icon: SvgPicture.asset('assets/icons/Glyph.svg'),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SettingScreen();
+                  },
+                ),
+              );
+            },
             icon: SvgPicture.asset('assets/icons/Following.svg'),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SettingScreen();
+                  },
+                ),
+              );
+            },
             icon: SvgPicture.asset('assets/icons/person.svg'),
           ),
         ],

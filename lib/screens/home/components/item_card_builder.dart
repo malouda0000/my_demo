@@ -34,25 +34,61 @@ class ItemCardBuilder extends StatelessWidget {
             title: 'burgerking',
             discription: 'best burger',
             svgSrc: 'assets/icons/chinese_noodles.svg',
-            pressit: () {},
+            pressit: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return DetialsScreen();
+                  },
+                ),
+              );
+            },
           ),
           TheItemCard(
             title: 'burgerking',
             discription: 'best burger',
             svgSrc: 'assets/icons/chinese_noodles.svg',
-            pressit: () {},
+            pressit: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return DetialsScreen();
+                  },
+                ),
+              );
+            },
           ),
           TheItemCard(
             title: 'burgerking',
             discription: 'best burger',
             svgSrc: 'assets/icons/burger_beer.svg',
-            pressit: () {},
+            pressit: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return DetialsScreen();
+                  },
+                ),
+              );
+            },
           ),
           TheItemCard(
             title: 'burgerking',
             discription: 'best burger',
             svgSrc: 'assets/icons/chinese_noodles.svg',
-            pressit: () {},
+            pressit: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return DetialsScreen();
+                  },
+                ),
+              );
+            },
           ),
         ],
       ),
@@ -81,11 +117,11 @@ class TheItemCard extends StatelessWidget {
       // margin:  EdgeInsets.all(20),
       decoration: BoxDecoration(
         // color: Colors.red,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
             offset: Offset(0, 4),
-            blurRadius: 20,
+            blurRadius: 10,
             color: ksecondaryColor.withOpacity(0.32),
             // color: Colors.red,
           ),

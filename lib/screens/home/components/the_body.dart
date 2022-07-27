@@ -5,7 +5,7 @@ import 'package:my_demo/screens/home/components/the_category_item.dart';
 import 'package:my_demo/screens/home/components/the_search_bar.dart';
 
 class TheBody extends StatefulWidget {
-  TheBody({Key? key}) : super(key: key);
+  const TheBody({Key? key}) : super(key: key);
 
   @override
   State<TheBody> createState() => _TheBodyState();
@@ -18,7 +18,7 @@ class _TheBodyState extends State<TheBody> {
       scrollDirection: Axis.vertical,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           TheSearchBar(),
           TheCategoryItem(),
           ItemCardBuilder(),

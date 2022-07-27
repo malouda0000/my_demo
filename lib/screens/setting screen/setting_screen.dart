@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:my_demo/constants.dart';
 import 'package:my_demo/widgets/bottom_nav_bar.dart';
 import 'package:my_demo/screens/home/components/the_app_bar.dart';
-import 'package:my_demo/screens/home/components/the_body.dart';
 import 'package:my_demo/widgets/the_drawer.dart';
 import 'package:my_demo/widgets/the_fap.dart';
 
@@ -11,19 +10,19 @@ class SettingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizedBox emptySpace = SizedBox(
+    SizedBox emptySpace = const SizedBox(
       height: 10,
       width: 10,
     );
 
     return Scaffold(
-      drawer: TheDrawer(),
+      drawer: const TheDrawer(),
       appBar: TheAppBar(),
       // drawer: (),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             // mainAxisAlignment: MainAxisAlignment.center,
@@ -31,7 +30,7 @@ class SettingScreen extends StatelessWidget {
               emptySpace,
               Container(
                 height: MediaQuery.of(context).size.width * 0.3,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
                     image: AssetImage('assets/images/me.jpg'),
@@ -48,27 +47,27 @@ class SettingScreen extends StatelessWidget {
               Text(
                 'hummam mohamed '.toUpperCase(),
               ),
-              Divider(
+              const Divider(
                 color: ksecondaryColor,
                 thickness: 2,
               ),
-              SettingItem(),
-              SettingItem(),
-              SettingItem(),
-              SettingItem(),
-              SettingItem(),
+              const SettingItem(),
+              const SettingItem(),
+              const SettingItem(),
+              const SettingItem(),
+              const SettingItem(),
             ],
           ),
         ),
       ),
-      floatingActionButton: TheFap(),
-      bottomNavigationBar: TheBottomeNavBar(),
+      floatingActionButton: const TheFap(),
+      bottomNavigationBar: const TheBottomeNavBar(),
     );
   }
 }
 
 class SettingItem extends StatelessWidget {
-  SettingItem({Key? key}) : super(key: key);
+  const SettingItem({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     String title = "the new method";

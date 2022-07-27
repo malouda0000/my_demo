@@ -11,7 +11,7 @@ class OffersAndDiscounts extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
+        const Padding(
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 8),
           child: Text(
             'Offers And discounts',
@@ -26,7 +26,7 @@ class OffersAndDiscounts extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-            image: DecorationImage(
+            image: const DecorationImage(
               fit: BoxFit.fill,
               image: AssetImage('assets/images/burger.png'),
             ),
@@ -47,7 +47,7 @@ class OffersAndDiscounts extends StatelessWidget {
               ),
             ),
             child: Padding(
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [

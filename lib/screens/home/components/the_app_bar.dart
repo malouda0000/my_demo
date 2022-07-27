@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_demo/constants.dart';
@@ -8,7 +6,7 @@ AppBar TheAppBar() {
   return AppBar(
     centerTitle: true,
     backgroundColor: theMainLightColor,
-    title: TheMainTitleBuilder(),
+    title: const TheMainTitleBuilder(),
     elevation: 0,
     leading: Builder(builder: (context) {
       return IconButton(

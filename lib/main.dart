@@ -6,11 +6,11 @@ import 'package:my_demo/screens/home/my_home_page.dart';
 //  var size = MediaQuery.of(context).size;
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -57,13 +57,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           bodyText1: TextStyle(color: ksecondaryColor),
           bodyText2: TextStyle(color: ksecondaryColor),
         ),
       ),
 
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }

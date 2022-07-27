@@ -11,7 +11,7 @@ class TheBottomeNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 35),
+      padding: const EdgeInsets.symmetric(horizontal: 35),
       height: 75,
       width: double.infinity,
 
@@ -19,13 +19,13 @@ class TheBottomeNavBar extends StatelessWidget {
       decoration: BoxDecoration(
           // color: Colors.red,
           color: Colors.white,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(15),
             topRight: Radius.circular(15),
           ),
           boxShadow: [
             BoxShadow(
-                offset: Offset(0, 7),
+                offset: const Offset(0, 7),
                 blurRadius: 33,
                 // color: Color(0xFF6daed9),
                 color: ksecondaryColor.withOpacity(.1))
@@ -40,7 +40,7 @@ class TheBottomeNavBar extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return MyHomePage();
+                    return const MyHomePage();
                   },
                 ),
               );
@@ -53,7 +53,7 @@ class TheBottomeNavBar extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return DetialsScreen();
+                    return const DetialsScreen();
                   },
                 ),
               );
@@ -66,7 +66,7 @@ class TheBottomeNavBar extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return SettingScreen();
+                    return const SettingScreen();
                   },
                 ),
               );
@@ -79,7 +79,7 @@ class TheBottomeNavBar extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return SettingScreen();
+                    return const SettingScreen();
                   },
                 ),
               );

@@ -7,7 +7,7 @@ class TheCategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 8.0),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 8.0),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
@@ -74,7 +74,7 @@ class ItemBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: GestureDetector(
         onTap: () {},
         child: Column(
@@ -82,10 +82,11 @@ class ItemBuilder extends StatelessWidget {
             Text(
               title,
               style: isActive
-                  ? TextStyle(color: kTextColor, fontWeight: FontWeight.bold
+                  ? const TextStyle(
+                      color: kTextColor, fontWeight: FontWeight.bold
                       // fontSize: 12,
                       )
-                  : TextStyle(
+                  : const TextStyle(
                       color: ksecondaryColor,
                       // fontSize: 12,
                     ),
@@ -98,7 +99,7 @@ class ItemBuilder extends StatelessWidget {
                     10,
                   ),
                 ),
-                margin: EdgeInsets.symmetric(
+                margin: const EdgeInsets.symmetric(
                   vertical: 8,
                   horizontal: 8,
                 ),

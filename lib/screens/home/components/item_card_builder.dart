@@ -4,13 +4,13 @@ import 'package:my_demo/constants.dart';
 import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
 
 class ItemCardBuilder extends StatelessWidget {
-  ItemCardBuilder({
+  const ItemCardBuilder({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    // Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
@@ -24,7 +24,7 @@ class ItemCardBuilder extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return DetialsScreen();
+                    return const DetialsScreen();
                   },
                 ),
               );
@@ -39,7 +39,7 @@ class ItemCardBuilder extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return DetialsScreen();
+                    return const DetialsScreen();
                   },
                 ),
               );
@@ -54,7 +54,7 @@ class ItemCardBuilder extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return DetialsScreen();
+                    return const DetialsScreen();
                   },
                 ),
               );
@@ -69,7 +69,7 @@ class ItemCardBuilder extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return DetialsScreen();
+                    return const DetialsScreen();
                   },
                 ),
               );
@@ -84,7 +84,7 @@ class ItemCardBuilder extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return DetialsScreen();
+                    return const DetialsScreen();
                   },
                 ),
               );
@@ -99,7 +99,7 @@ class ItemCardBuilder extends StatelessWidget {
 class TheItemCard extends StatelessWidget {
   final String title, discription, svgSrc;
   final Function pressit;
-  TheItemCard(
+  const TheItemCard(
       {Key? key,
       required this.title,
       required this.discription,
@@ -110,7 +110,7 @@ class TheItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       width: MediaQuery.of(context).size.width * .35,
       // height: MediaQuery.of(context).size.width * .40,
       // padding:  EdgeInsets.all(20),
@@ -120,7 +120,7 @@ class TheItemCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
-            offset: Offset(0, 4),
+            offset: const Offset(0, 4),
             blurRadius: 10,
             color: ksecondaryColor.withOpacity(0.32),
             // color: Colors.red,
@@ -135,12 +135,12 @@ class TheItemCard extends StatelessWidget {
             pressit();
           },
           child: Padding(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             child: Column(
               children: [
                 Container(
-                  margin: EdgeInsets.only(bottom: 15),
-                  padding: EdgeInsets.all(25),
+                  margin: const EdgeInsets.only(bottom: 15),
+                  padding: const EdgeInsets.all(25),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: kPrimaryColor.withOpacity(0.32),
@@ -149,11 +149,11 @@ class TheItemCard extends StatelessWidget {
                 ),
                 Text(
                   title,
-                  style: TextStyle(color: kPrimaryColor),
+                  style: const TextStyle(color: kPrimaryColor),
                 ),
                 Text(
                   discription,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 12,
                   ),
                 ),

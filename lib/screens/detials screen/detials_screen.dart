@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:my_demo/constants.dart';
 import 'package:my_demo/screens/detials%20screen/components/detials_screen_app_bar.dart';
 import 'package:my_demo/widgets/bottom_nav_bar.dart';
@@ -16,7 +15,7 @@ class DetialsScreen extends StatelessWidget {
       body: const DetialsScreenBody(
         imageSrc: 'assets/images/burger.png',
       ),
-      bottomNavigationBar: TheBottomeNavBar(),
+      bottomNavigationBar: const TheBottomeNavBar(),
     );
   }
 }
@@ -57,15 +56,15 @@ class _DetialsScreenBodyState extends State<DetialsScreenBody> {
             child: Column(
               children: [
                 Row(
-                  children: [
-                    const Icon(
+                  children: const [
+                    Icon(
                       Icons.location_on,
                       color: ksecondaryColor,
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
-                    const Text(
+                    Text(
                       'khartoum city',
                       style: TextStyle(
                         color: kTextColor,
@@ -93,20 +92,20 @@ class _DetialsScreenBodyState extends State<DetialsScreenBody> {
                           height: 10,
                         ),
                         Row(
-                          children: [
-                            const CustomRating(
+                          children: const [
+                            CustomRating(
                               ratingColor: kPrimaryColor,
                             ),
-                            const CustomRating(
+                            CustomRating(
                               ratingColor: kPrimaryColor,
                             ),
-                            const CustomRating(
+                            CustomRating(
                               ratingColor: kPrimaryColor,
                             ),
-                            const CustomRating(
+                            CustomRating(
                               ratingColor: kPrimaryColor,
                             ),
-                            const CustomRating(
+                            CustomRating(
                               ratingColor: kPrimaryColor,
                             ),
                             // SmoothStarRating(
@@ -142,7 +141,7 @@ class _DetialsScreenBodyState extends State<DetialsScreenBody> {
                             //
                             //
 
-                            const Text(
+                            Text(
                               ' 24 reviews',
                               style: TextStyle(
                                 color: kTextColor,

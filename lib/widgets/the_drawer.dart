@@ -18,11 +18,11 @@ class TheDrawer extends StatelessWidget {
       child: Column(
         // crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          DrawerHeaderpluse(),
-          DrawerItem(),
-          DrawerItem(),
-          DrawerItem(),
-          DrawerItem(),
+          const DrawerHeaderpluse(),
+          const DrawerItem(),
+          const DrawerItem(),
+          const DrawerItem(),
+          const DrawerItem(),
           const Divider(thickness: 5),
           //
           //
@@ -104,16 +104,16 @@ class TheDrawer extends StatelessWidget {
 
           const Spacer(),
           const Padding(
-            padding: const EdgeInsets.all(8),
+            padding: EdgeInsets.all(8),
             child: Text(
               textAlign: TextAlign.start,
               'theme',
-              style: const TextStyle(
+              style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
             ),
           ),
-          ColorPicker(),
+          const ColorPicker(),
         ],
       ),
     );
@@ -121,24 +121,24 @@ class TheDrawer extends StatelessWidget {
 }
 
 class DrawerHeaderpluse extends StatelessWidget {
-  DrawerHeaderpluse({
+  const DrawerHeaderpluse({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return const UserAccountsDrawerHeader(
-      currentAccountPicture: const CircleAvatar(
+      currentAccountPicture: CircleAvatar(
         child: Icon(Icons.abc_sharp),
       ),
       accountName: Text('data'),
-      accountEmail: const Text('data'),
+      accountEmail: Text('data'),
       otherAccountsPictures: [
-        const Icon(
+        Icon(
           Icons.person_outline,
           color: Colors.white,
         ),
-        const Icon(
+        Icon(
           Icons.save_outlined,
           color: Colors.white,
         )
@@ -148,7 +148,7 @@ class DrawerHeaderpluse extends StatelessWidget {
 }
 
 class ColorPicker extends StatelessWidget {
-  ColorPicker({
+  const ColorPicker({
     Key? key,
   }) : super(key: key);
 
@@ -227,7 +227,7 @@ class ColorPicker extends StatelessWidget {
 }
 
 class DrawerItem extends StatelessWidget {
-  DrawerItem({Key? key}) : super(key: key);
+  const DrawerItem({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     String title = "the new method";

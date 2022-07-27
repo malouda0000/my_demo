@@ -9,7 +9,7 @@ AppBar DetialsScreenAppBar() {
     backgroundColor: kPrimaryColor,
     leading: IconButton(
       onPressed: () {},
-      icon: Icon(
+      icon: const Icon(
         Icons.arrow_back,
       ),
     ),

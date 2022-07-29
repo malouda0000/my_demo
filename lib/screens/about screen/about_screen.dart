@@ -5,8 +5,8 @@ import 'package:my_demo/screens/home/components/the_app_bar.dart';
 import 'package:my_demo/widgets/the_drawer.dart';
 import 'package:my_demo/widgets/the_fap.dart';
 
-class SettingScreen extends StatelessWidget {
-  const SettingScreen({Key? key}) : super(key: key);
+class AboutScreen extends StatelessWidget {
+  const AboutScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_demo/constants.dart';
+import 'package:my_demo/screens/about%20screen/about_screen.dart';
 import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
 import 'package:my_demo/screens/home/my_home_page.dart';
-import 'package:my_demo/screens/setting%20screen/setting_screen.dart';
+import 'package:my_demo/screens/setting/setting_screen.dart';
 
 class TheBottomeNavBar extends StatelessWidget {
   const TheBottomeNavBar({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class TheBottomeNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 35),
-      height: 75,
+      height: 70,
       width: double.infinity,
 
       // color: Colors.red,
@@ -66,12 +67,15 @@ class TheBottomeNavBar extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return const SettingScreen();
+                    return const AboutScreen();
                   },
                 ),
               );
             },
-            icon: SvgPicture.asset('assets/icons/Following.svg'),
+            icon: const Icon(
+              Icons.settings_outlined,
+              color: ksecondaryColor,
+            ),
           ),
           IconButton(
             onPressed: () {

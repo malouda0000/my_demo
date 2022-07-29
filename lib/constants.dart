@@ -6,6 +6,7 @@ const kTextColor = Color(0xFF50505D);
 const kTextLightColor = Color(0xFF6A727D);
 const kTextBlacColor = Color.fromRGBO(0, 0, 0, 1);
 const theMainLightColor = Color.fromARGB(255, 255, 255, 255);
+const kGrayColor = Color.fromRGBO(235, 235, 235, 1);
 
 class TempText extends StatelessWidget {
   const TempText({Key? key}) : super(key: key);

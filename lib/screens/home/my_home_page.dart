@@ -19,15 +19,15 @@ class _MyHomePageState extends State<MyHomePage> {
   // GlobalKey<ScaffoldState> ScaffoldGenralKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
-    // return Scaffold(
-    //   drawer: const TheDrawer(),
-    //   appBar: TheAppBar(),
-    //   // drawer: (),
-    //   body: const TheBody(),
-    //   floatingActionButton: const TheFap(),
-    //   bottomNavigationBar: const TheBottomeNavBar(),
-    // );
+    return Scaffold(
+      drawer: const TheDrawer(),
+      appBar: TheAppBar(),
+      // drawer: (),
+      body: const TheBody(),
+      floatingActionButton: const TheFap(),
+      bottomNavigationBar: const TheBottomeNavBar(),
+    );
 
-    return SettingScreen();
+    // return SettingScreen();
   }
 }

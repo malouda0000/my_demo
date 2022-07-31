@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:http/http.dart';
 import 'package:my_demo/constants.dart';
 import 'package:my_demo/screens/about%20screen/about_screen.dart';
 import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
 import 'package:my_demo/screens/home/my_home_page.dart';
+import 'package:get/get.dart';
 import 'package:my_demo/screens/setting/setting_screen.dart';
 
 class TheBottomeNavBar extends StatelessWidget {
@@ -35,19 +37,7 @@ class TheBottomeNavBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const MyHomePage();
-                  },
-                ),
-              );
-            },
-            icon: SvgPicture.asset('assets/icons/home.svg'),
-          ),
+          bottomeNavBarIcon(),
           IconButton(
             onPressed: () {
               Navigator.push(
@@ -78,20 +68,29 @@ class TheBottomeNavBar extends StatelessWidget {
             ),
           ),
           IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const SettingScreen();
-                  },
-                ),
-              );
-            },
+            onPressed: () {},
             icon: SvgPicture.asset('assets/icons/person.svg'),
           ),
         ],
       ),
+    );
+  }
+}
+
+class bottomeNavBarIcon extends StatelessWidget {
+  const bottomeNavBarIcon({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      onPressed: () {
+        Get.offAll(() {
+          SettingScreen();
+        });
+      },
+      icon: SvgPicture.asset('assets/icons/home.svg'),
     );
   }
 }

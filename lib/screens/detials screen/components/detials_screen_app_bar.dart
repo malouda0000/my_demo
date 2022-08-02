@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 import '../../../constants.dart';
 
@@ -8,7 +9,9 @@ AppBar DetialsScreenAppBar() {
     elevation: 0,
     backgroundColor: kPrimaryColor,
     leading: IconButton(
-      onPressed: () {},
+      onPressed: () {
+        Get.back();
+      },
       icon: const Icon(
         Icons.arrow_back,
       ),

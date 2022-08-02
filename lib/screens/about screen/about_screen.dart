@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:my_demo/constants.dart';
+import 'package:my_demo/screens/setting/settign_list_tile.dart';
 import 'package:my_demo/widgets/bottom_nav_bar.dart';
 import 'package:my_demo/screens/home/components/the_app_bar.dart';
 import 'package:my_demo/widgets/the_drawer.dart';
 import 'package:my_demo/widgets/the_fap.dart';
+// import 'package:flutter_remix/flutter_remix.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({Key? key}) : super(key: key);
@@ -51,33 +54,115 @@ class AboutScreen extends StatelessWidget {
                 color: ksecondaryColor,
                 thickness: 2,
               ),
-              const SettingItem(),
-              const SettingItem(),
-              const SettingItem(),
-              const SettingItem(),
-              const SettingItem(),
+              SettingListTile(
+                theTitle: 'Account',
+                theIcon: Icons.person_outline,
+                theFunction: () {},
+              ),
+              SettingListTile(
+                theTitle: 'Notification',
+                theIcon: Icons.notifications_outlined,
+                theFunction: () {},
+              ),
+              SettingListTile(
+                theTitle: 'Privacy & Security',
+                theIcon: Icons.lock_outline,
+                theFunction: () {},
+              ),
+              SettingListTile(
+                theTitle: 'Appearance',
+                theIcon: Icons.remove_red_eye_outlined,
+                theFunction: () {},
+              ),
+              const Divider(
+                thickness: 2,
+              ),
+              Column(
+                children: [
+                  const Text(
+                    'Feel free to contac me',
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CommuincationIcon(
+                        theIcon: Icons.facebook_rounded,
+                        theUrlLanching: () {},
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      CommuincationIcon(
+                        theIcon: Icons.email_rounded,
+                        theUrlLanching: () {},
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      CommuincationIcon(
+                        theIcon: Icons.person_rounded,
+                        theUrlLanching: () {},
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+//                   IconButton(onPressed: (){}, icon: Icon(Icon(FlutterRemix.search),
+
+// ))
+                    ],
+                  ),
+                ],
+              ),
             ],
           ),
         ),
       ),
-      floatingActionButton: const TheFap(),
+      // floatingActionButton: const TheFap(),
       bottomNavigationBar: const TheBottomeNavBar(),
     );
   }
 }
 
-class SettingItem extends StatelessWidget {
-  const SettingItem({Key? key}) : super(key: key);
+class CommuincationIcon extends StatelessWidget {
+  final Function theUrlLanching;
+  final IconData theIcon;
+  const CommuincationIcon({
+    Key? key,
+    required this.theUrlLanching,
+    required this.theIcon,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    String title = "the new method";
-    String discription = 'theee discription';
-    return ListTile(
-      leading: const Icon(Icons.home),
-      trailing: const Icon(Icons.send),
-      title: Text(title),
-      subtitle: Text(discription),
-      onTap: () {},
+    return Container(
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: ksecondaryColor,
+      ),
+      // padding: EdgeInsets.all(15),
+      child: Container(
+        margin: EdgeInsets.all(7),
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: kPrimaryColor,
+        ),
+        child: IconButton(
+          onPressed: () {
+            theUrlLanching;
+          },
+          icon: Icon(
+            theIcon,
+            color: kTextBlacColor,
+          ),
+        ),
+      ),
     );
   }
 }

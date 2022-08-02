@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:my_demo/constants.dart';
 import 'package:my_demo/screens/setting/search_box.dart';
 import 'package:my_demo/screens/setting/settign_list_tile.dart';
@@ -15,7 +16,10 @@ class SettingScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            // Get.back();
+            Get.back();
+          },
           icon: const Icon(
             Icons.arrow_back,
             color: kPrimaryColor,
@@ -36,6 +40,7 @@ class SettingScreen extends StatelessWidget {
           ),
         ),
       ),
+      drawer: const TheDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(14.0),
         child: Column(
@@ -77,14 +82,13 @@ class SettingScreen extends StatelessWidget {
               theIcon: Icons.info_outline,
               theFunction: () {},
             ),
-            Spacer(),
-            Center(
+            // const Spacer(),
+            const Center(
               child: Text('all rights reserved to hummam mohamed hamza'),
             )
           ],
         ),
       ),
-      drawer: const TheDrawer(),
     );
   }
 }

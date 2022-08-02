@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get/get.dart';
 import 'package:my_demo/constants.dart';
+import 'package:my_demo/screens/about%20screen/about_screen.dart';
+import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
 import 'package:my_demo/screens/home/my_home_page.dart';
+import 'package:my_demo/screens/setting/setting_screen.dart';
 // import 'dart:ffi';
 
 //  var size = MediaQuery.of(context).size;
@@ -19,6 +22,13 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+
+      getPages: [
+        GetPage(name: '/', page: () => const MyHomePage()),
+        GetPage(name: '/detialsScreen', page: () => const DetialsScreen()),
+        GetPage(name: '/settingScreen', page: () => const SettingScreen()),
+        GetPage(name: '/aboutScreen', page: () => const AboutScreen()),
+      ],
 
       // themeMode: ThemeMode.dark,
 

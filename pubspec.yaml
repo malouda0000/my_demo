@@ -51,7 +51,7 @@ dependencies:
   simple_animations: ^4.2.0
   get: ^4.6.5
   iconsax: ^0.0.8
-  flutter_remix: ^0.0.3
+  # flutter_remix: ^0.0.1
 
 dev_dependencies:
   flutter_test:

@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:http/http.dart';
 import 'package:my_demo/constants.dart';
-import 'package:my_demo/screens/about%20screen/about_screen.dart';
-import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
-import 'package:my_demo/screens/home/my_home_page.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/screens/setting/setting_screen.dart';
 
 class TheBottomeNavBar extends StatelessWidget {
   const TheBottomeNavBar({Key? key}) : super(key: key);
@@ -23,9 +17,9 @@ class TheBottomeNavBar extends StatelessWidget {
           // color: Colors.red,
           color: Colors.white,
           borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(15),
-            topRight: Radius.circular(15),
-          ),
+              // topLeft: Radius.circular(15),
+              // topRight: Radius.circular(15),
+              ),
           boxShadow: [
             BoxShadow(
                 offset: const Offset(0, 7),
@@ -36,40 +30,22 @@ class TheBottomeNavBar extends StatelessWidget {
 
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          bottomeNavBarIcon(),
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const DetialsScreen();
-                  },
-                ),
-              );
-            },
-            icon: SvgPicture.asset('assets/icons/Glyph.svg'),
+        children: const [
+          BottomeNavBarIcon(
+            theNamedRout: '/',
+            theNavBarIcon: Icons.home_rounded,
           ),
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const AboutScreen();
-                  },
-                ),
-              );
-            },
-            icon: const Icon(
-              Icons.settings_outlined,
-              color: ksecondaryColor,
-            ),
+          BottomeNavBarIcon(
+            theNamedRout: '/detialsScreen',
+            theNavBarIcon: Icons.medical_information_rounded,
           ),
-          IconButton(
-            onPressed: () {},
-            icon: SvgPicture.asset('assets/icons/person.svg'),
+          BottomeNavBarIcon(
+            theNamedRout: '/settingScreen',
+            theNavBarIcon: Icons.settings_rounded,
+          ),
+          BottomeNavBarIcon(
+            theNamedRout: '/aboutScreen',
+            theNavBarIcon: Icons.person_rounded,
           ),
         ],
       ),
@@ -77,20 +53,24 @@ class TheBottomeNavBar extends StatelessWidget {
   }
 }
 
-class bottomeNavBarIcon extends StatelessWidget {
-  const bottomeNavBarIcon({
+class BottomeNavBarIcon extends StatelessWidget {
+  final String theNamedRout;
+  final IconData theNavBarIcon;
+  const BottomeNavBarIcon({
     Key? key,
+    required this.theNamedRout,
+    required this.theNavBarIcon,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () {
-        Get.offAll(() {
-          SettingScreen();
-        });
+        Get.toNamed(theNamedRout);
       },
-      icon: SvgPicture.asset('assets/icons/home.svg'),
+      icon: Icon(theNavBarIcon),
+      iconSize: 25,
+      color: kPrimaryColor,
     );
   }
 }

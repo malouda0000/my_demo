@@ -52,6 +52,7 @@ dependencies:
   get: ^4.6.5
   iconsax: ^0.0.8
   # flutter_remix: ^0.0.1
+  intro_slider: ^3.0.9
 
 dev_dependencies:
   flutter_test:

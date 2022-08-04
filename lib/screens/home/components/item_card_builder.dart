@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:my_demo/constants.dart';
 import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
 
@@ -20,14 +21,7 @@ class ItemCardBuilder extends StatelessWidget {
             discription: 'best burger',
             svgSrc: 'assets/icons/burger_beer.svg',
             pressit: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const DetialsScreen();
-                  },
-                ),
-              );
+              Get.toNamed('detialsScreen');
             },
           ),
           TheItemCard(
@@ -110,19 +104,26 @@ class TheItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // alignment: Alignment.center,
       margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       width: MediaQuery.of(context).size.width * .35,
-      // height: MediaQuery.of(context).size.width * .40,
+      height: MediaQuery.of(context).size.width * .50,
       // padding:  EdgeInsets.all(20),
       // margin:  EdgeInsets.all(20),
       decoration: BoxDecoration(
         // color: Colors.red,
         borderRadius: BorderRadius.circular(10),
+        // color: Colors.red
+
+//
+//
+//
+//
         boxShadow: [
           BoxShadow(
             offset: const Offset(0, 4),
             blurRadius: 10,
-            color: ksecondaryColor.withOpacity(0.32),
+            color: ksecondaryColor.withOpacity(0.70),
             // color: Colors.red,
           ),
         ],
@@ -130,6 +131,7 @@ class TheItemCard extends StatelessWidget {
       // child: SvgPicture.asset('assets/images/beyond-meat-mcdonalds.png'),
 
       child: Material(
+        borderRadius: BorderRadius.circular(10),
         child: InkWell(
           onTap: () {
             pressit();

@@ -9,21 +9,21 @@ class TheBottomeNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 35),
-      height: 70,
+      // height: 70,
       width: double.infinity,
 
       // color: Colors.red,
       decoration: BoxDecoration(
           // color: Colors.red,
           color: Colors.white,
-          borderRadius: const BorderRadius.only(
-              // topLeft: Radius.circular(15),
-              // topRight: Radius.circular(15),
-              ),
+          // borderRadius: const BorderRadius.only(
+          //     // topLeft: Radius.circular(15),
+          //     // topRight: Radius.circular(15),
+          //     ),
           boxShadow: [
             BoxShadow(
                 offset: const Offset(0, 7),
-                blurRadius: 33,
+                // blurRadius: 33,
                 // color: Color(0xFF6daed9),
                 color: ksecondaryColor.withOpacity(.1))
           ]),
@@ -66,7 +66,7 @@ class BottomeNavBarIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () {
-        Get.toNamed(theNamedRout);
+        Get.offAllNamed(theNamedRout);
       },
       icon: Icon(theNavBarIcon),
       iconSize: 25,

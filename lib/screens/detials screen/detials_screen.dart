@@ -105,9 +105,9 @@ class _DetialsScreenBodyState extends State<DetialsScreenBody> {
                             CustomRating(
                               ratingColor: kPrimaryColor,
                             ),
-                            CustomRating(
-                              ratingColor: kPrimaryColor,
-                            ),
+                            // CustomRating(
+                            //   ratingColor: kPrimaryColor,
+                            // ),
                             // SmoothStarRating(
                             //   allowHalfRating: true,
                             //   borderColor: kPrimaryColor,

@@ -4,12 +4,14 @@ import 'package:my_demo/constants.dart';
 class SettingListTile extends StatelessWidget {
   final String theTitle;
   final IconData theIcon;
+  final bool diviedIt;
   Function theFunction;
   SettingListTile({
     Key? key,
     required this.theTitle,
     required this.theIcon,
     required this.theFunction,
+    required this.diviedIt,
   }) : super(key: key);
 
   @override
@@ -22,10 +24,10 @@ class SettingListTile extends StatelessWidget {
             color: kTextBlacColor,
           ),
           title: Text(theTitle,
-              style: TextStyle(
+              style: const TextStyle(
                 color: kTextBlacColor,
               )),
-          trailing: Icon(
+          trailing: const Icon(
             Icons.arrow_forward,
             color: kTextBlacColor,
           ),
@@ -33,7 +35,7 @@ class SettingListTile extends StatelessWidget {
             theFunction;
           },
         ),
-        Divider(),
+        if (diviedIt) const Divider(),
       ],
     );
   }

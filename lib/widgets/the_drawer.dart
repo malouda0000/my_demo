@@ -1,6 +1,11 @@
 // import 'dart:js';
 
 import 'package:flutter/material.dart';
+import 'package:my_demo/constants.dart';
+import 'package:my_demo/screens/setting/settign_list_tile.dart';
+
+String accountName = 'Hmmam mohamed hamza';
+String accountEmail = 'Hamam.hamza85@gmail.com';
 
 SizedBox emptySpace = const SizedBox(
   height: 10,
@@ -19,10 +24,30 @@ class TheDrawer extends StatelessWidget {
         // crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const DrawerHeaderpluse(),
-          const DrawerItem(),
-          const DrawerItem(),
-          const DrawerItem(),
-          const DrawerItem(),
+          SettingListTile(
+            diviedIt: true,
+            theTitle: 'Account',
+            theIcon: Icons.person_outline,
+            theFunction: () {},
+          ),
+          SettingListTile(
+            diviedIt: true,
+            theTitle: 'Notification',
+            theIcon: Icons.notifications_outlined,
+            theFunction: () {},
+          ),
+          SettingListTile(
+            diviedIt: true,
+            theTitle: 'Privacy & Security',
+            theIcon: Icons.lock_outline,
+            theFunction: () {},
+          ),
+          SettingListTile(
+            diviedIt: false,
+            theTitle: 'Appearance',
+            theIcon: Icons.remove_red_eye_outlined,
+            theFunction: () {},
+          ),
           const Divider(thickness: 5),
           //
           //
@@ -107,8 +132,9 @@ class TheDrawer extends StatelessWidget {
             padding: EdgeInsets.all(8),
             child: Text(
               textAlign: TextAlign.start,
-              'theme',
+              'Theme',
               style: TextStyle(
+                color: kTextBlacColor,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -127,20 +153,36 @@ class DrawerHeaderpluse extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const UserAccountsDrawerHeader(
+    return UserAccountsDrawerHeader(
       currentAccountPicture: CircleAvatar(
-        child: Icon(Icons.abc_sharp),
+        child: Container(
+          // height: MediaQuery.of(context).size.width * 0.3,
+          decoration: const BoxDecoration(
+            shape: BoxShape.circle,
+            image: DecorationImage(
+              image: AssetImage('assets/images/me.jpg'),
+              fit: BoxFit.fitHeight,
+            ),
+          ),
+          // child: Image.asset(
+          //   'assets/images/me.jpg',
+          //   // height: 250,
+          //   // width: 250,
+          // ),
+        ),
       ),
-      accountName: Text('data'),
-      accountEmail: Text('data'),
-      otherAccountsPictures: [
+      accountName: Text(accountName),
+      accountEmail: Text(accountEmail),
+      otherAccountsPictures: const [
         Icon(
           Icons.person_outline,
-          color: Colors.white,
+          // color: Colors.white,
+          color: kTextBlacColor,
         ),
         Icon(
           Icons.save_outlined,
-          color: Colors.white,
+          // color: Colors.white,
+          color: kTextBlacColor,
         )
       ],
     );
@@ -160,18 +202,7 @@ class ColorPicker extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Column(
-            children: [
-              InkWell(
-                onTap: () {},
-                child: const CircleAvatar(
-                  backgroundColor: Colors.yellow,
-                ),
-              ),
-              emptySpace,
-              const Text("yellow"),
-            ],
-          ),
+          TheThemeColorSelector(),
           Column(
             children: [
               InkWell(
@@ -226,18 +257,26 @@ class ColorPicker extends StatelessWidget {
   }
 }
 
-class DrawerItem extends StatelessWidget {
-  const DrawerItem({Key? key}) : super(key: key);
+class TheThemeColorSelector extends StatelessWidget {
+  const TheThemeColorSelector({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    String title = "the new method";
-    String discription = 'theee discription';
-    return ListTile(
-      leading: const Icon(Icons.home),
-      trailing: const Icon(Icons.send),
-      title: Text(title),
-      subtitle: Text(discription),
-      onTap: () {},
+    return Column(
+      children: [
+        GestureDetector(
+          onTap: () {},
+          child: const CircleAvatar(
+            backgroundColor: Colors.yellow,
+          ),
+        ),
+        emptySpace,
+        const Text(
+          "yellow",
+        ),
+      ],
     );
   }
 }

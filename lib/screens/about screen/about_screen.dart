@@ -5,7 +5,6 @@ import 'package:my_demo/screens/setting/settign_list_tile.dart';
 import 'package:my_demo/widgets/bottom_nav_bar.dart';
 import 'package:my_demo/screens/home/components/the_app_bar.dart';
 import 'package:my_demo/widgets/the_drawer.dart';
-import 'package:my_demo/widgets/the_fap.dart';
 // import 'package:flutter_remix/flutter_remix.dart';
 
 class AboutScreen extends StatelessWidget {
@@ -55,21 +54,25 @@ class AboutScreen extends StatelessWidget {
                 thickness: 2,
               ),
               SettingListTile(
+                diviedIt: true,
                 theTitle: 'Account',
                 theIcon: Icons.person_outline,
                 theFunction: () {},
               ),
               SettingListTile(
+                diviedIt: true,
                 theTitle: 'Notification',
                 theIcon: Icons.notifications_outlined,
                 theFunction: () {},
               ),
               SettingListTile(
+                diviedIt: true,
                 theTitle: 'Privacy & Security',
                 theIcon: Icons.lock_outline,
                 theFunction: () {},
               ),
               SettingListTile(
+                diviedIt: false,
                 theTitle: 'Appearance',
                 theIcon: Icons.remove_red_eye_outlined,
                 theFunction: () {},
@@ -81,7 +84,7 @@ class AboutScreen extends StatelessWidget {
                 children: [
                   const Text(
                     'Feel free to contac me',
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
@@ -143,15 +146,22 @@ class CommuincationIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: ksecondaryColor,
+        // shape: BoxShape.circle,
+        // color: ksecondaryColor,
+        borderRadius: BorderRadius.circular(10),
+        // color: kTextBlacColor,
+
+        color: kPrimaryColor,
       ),
       // padding: EdgeInsets.all(15),
       child: Container(
-        margin: EdgeInsets.all(7),
+        margin: const EdgeInsets.all(2),
         decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: kPrimaryColor,
+          // shape: BoxShape.circle,
+          borderRadius: BorderRadius.circular(10),
+          color: kTextBlacColor,
+          // color: ksecondaryColor,
+          // color: kTextBlacColor,
         ),
         child: IconButton(
           onPressed: () {
@@ -159,7 +169,9 @@ class CommuincationIcon extends StatelessWidget {
           },
           icon: Icon(
             theIcon,
-            color: kTextBlacColor,
+            // color: kTextBlacColor.withOpacity(.5),
+            // color: kTextBlacColor,
+            color: kPrimaryColor,
           ),
         ),
       ),

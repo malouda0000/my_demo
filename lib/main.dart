@@ -5,6 +5,9 @@ import 'package:my_demo/screens/about%20screen/about_screen.dart';
 import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
 import 'package:my_demo/screens/home/my_home_page.dart';
 import 'package:my_demo/screens/setting/setting_screen.dart';
+
+import 'screens/intro slider/intro_slider.dart';
+
 // import 'dart:ffi';
 
 //  var size = MediaQuery.of(context).size;
@@ -74,7 +77,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
 
-      home: const MyHomePage(),
+      home: IntroSliderPage(),
     );
   }
 }

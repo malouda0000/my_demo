@@ -7,6 +7,7 @@ import 'package:intro_slider/intro_slider.dart';
 // import 'package:intro_slider/intro_slider.dart';
 import 'package:my_demo/constants.dart';
 import 'package:my_demo/screens/home/my_home_page.dart';
+import 'package:my_demo/screens/sing%20and%20log%20in%20screen/sing_and_log_in_screen.dart';
 // import 'package:intro_slider/slide_object.dart';
 
 class IntroSliderPage extends StatefulWidget {
@@ -119,36 +120,41 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
   @override
   Widget build(BuildContext context) {
     return IntroSlider(
-        backgroundColorAllSlides: kPrimaryColor,
-        renderSkipBtn: const Text(
-          "Skip",
-          style: TextStyle(
-            color: theMainLightColor,
-          ),
+      backgroundColorAllSlides: kPrimaryColor,
+      renderSkipBtn: const Text(
+        "Skip",
+        style: TextStyle(
+          color: theMainLightColor,
         ),
-        renderNextBtn: const Text(
-          "Next",
-          style: TextStyle(
-            color: theMainLightColor,
-          ),
+      ),
+      renderNextBtn: const Text(
+        "Next",
+        style: TextStyle(
+          color: theMainLightColor,
         ),
-        renderDoneBtn: const Text(
-          "Done",
-          style: TextStyle(
-            color: theMainLightColor,
-          ),
+      ),
+      renderDoneBtn: const Text(
+        "Done",
+        style: TextStyle(
+          color: theMainLightColor,
         ),
-        // colorDoneBtn: Colors.white,
-        // doneButtonStyle: ButtonStyle(backgroundColor: Color(theMainLightColor)),
+      ),
+      // colorDoneBtn: Colors.white,
+      // doneButtonStyle: ButtonStyle(backgroundColor: Color(theMainLightColor)),
 
-        autoScroll: true,
-        // doneButtonStyle: ButtonStyle(backgroundColor: Color(Colors.white,)) ,
-        colorActiveDot: theMainLightColor,
-        sizeDot: 8.0,
-        // typeDotAnimation: dotSliderAnimation.SIZE_TRANSITION,
-        listCustomTabs: this.renderListCustomTabs(),
-        scrollPhysics: const BouncingScrollPhysics(),
-        // shouldHideStatusBar: false,
-        onDonePress: () => Get.offAll(const MyHomePage()));
+      // autoScroll: true,
+      // autoScrollInterval: Duration(seconds: 1),
+      // doneButtonStyle: ButtonStyle(backgroundColor: Color(Colors.white,)) ,
+      colorActiveDot: theMainLightColor,
+      sizeDot: 8.0,
+      // typeDotAnimation: dotSliderAnimation.SIZE_TRANSITION,
+      listCustomTabs: this.renderListCustomTabs(),
+      scrollPhysics: const BouncingScrollPhysics(),
+      // shouldHideStatusBar: false,
+      onDonePress: () {
+        Get.offAll(SingInScreen());
+        print('done tabeded secsufuly');
+      },
+    );
   }
 }

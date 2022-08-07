@@ -7,6 +7,7 @@ import 'package:my_demo/screens/home/my_home_page.dart';
 import 'package:my_demo/screens/setting/setting_screen.dart';
 
 import 'screens/intro slider/intro_slider.dart';
+import 'screens/sing and log in screen/sing_and_log_in_screen.dart';
 
 // import 'dart:ffi';
 
@@ -23,14 +24,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false, initialRoute: 'InroSliderScreen',
       title: 'Flutter Demo',
-
+// initialRoute: ,
       getPages: [
-        GetPage(name: '/', page: () => const MyHomePage()),
+        GetPage(name: '/homePage', page: () => MyHomePage()),
+        GetPage(name: '/InroSliderScreen', page: () => IntroSliderPage()),
+        GetPage(name: '/SinInScreen', page: () => SingInScreen()),
         GetPage(name: '/detialsScreen', page: () => const DetialsScreen()),
         GetPage(name: '/settingScreen', page: () => const SettingScreen()),
         GetPage(name: '/aboutScreen', page: () => const AboutScreen()),
+        GetPage(name: '/SingInAndLogIn', page: () => SingInScreen()),
       ],
 
       // themeMode: ThemeMode.dark,

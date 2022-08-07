@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/constants.dart';
-import 'package:my_demo/screens/setting/search_box.dart';
+import 'package:my_demo/widgets/the_input_feaild.dart';
 import 'package:my_demo/screens/setting/settign_list_tile.dart';
 import 'package:my_demo/widgets/bottom_nav_bar.dart';
 import 'package:my_demo/widgets/the_drawer.dart';
@@ -69,7 +69,13 @@ class SettingScreenBody extends StatelessWidget {
         // mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SearchBox(size: size),
+          TheIputFeaild(
+            isPassword: false,
+            textInputType: TextInputType.name,
+            size: size,
+            theHint: 'search',
+            theLeadingIcon: Icons.search_rounded,
+          ),
           const SizedBox(
             // height: size.height * .0,
             height: 10,

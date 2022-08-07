@@ -1,11 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:my_demo/constants.dart';
+import 'package:my_demo/screens/home/my_home_page.dart';
 import 'package:my_demo/screens/setting/settign_list_tile.dart';
+import 'package:my_demo/screens/sing%20and%20log%20in%20screen/sing_and_log_in_screen.dart';
 import 'package:my_demo/widgets/bottom_nav_bar.dart';
 import 'package:my_demo/screens/home/components/the_app_bar.dart';
 import 'package:my_demo/widgets/the_drawer.dart';
+import 'package:url_launcher/url_launcher.dart';
 // import 'package:flutter_remix/flutter_remix.dart';
+
+// final Uri _url = Uri.parse('tel:+1-555-010-999');
+
+// Future<void> _launchUrl() async {
+//   if (!await launchUrl(_url)) {
+//     throw GetSnackBar(
+//       title: 'Could not launch $_url',
+//     );
+//   }
+// }
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({Key? key}) : super(key: key);
@@ -57,7 +71,11 @@ class AboutScreen extends StatelessWidget {
                 diviedIt: true,
                 theTitle: 'Account',
                 theIcon: Icons.person_outline,
-                theFunction: () {},
+                theFunction: () {
+                  // Get.offAllNamed('/SinInScreen');
+                  Get.to(() => SingInScreen());
+                  print('the Account ListTile has been tapded sucsesfully');
+                },
               ),
               SettingListTile(
                 diviedIt: true,
@@ -97,14 +115,29 @@ class AboutScreen extends StatelessWidget {
                     children: [
                       CommuincationIcon(
                         theIcon: Icons.facebook_rounded,
-                        theUrlLanching: () {},
+                        theUrlLanching: () async {
+                          const url = 'https://facebook.com';
+
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          } else {
+                            return const GetSnackBar(
+                              message: 'cant launch the url',
+                            );
+                          }
+                          ;
+                        },
+
+                        // theUrlLanching: (){},
                       ),
                       const SizedBox(
                         width: 20,
                       ),
                       CommuincationIcon(
                         theIcon: Icons.email_rounded,
-                        theUrlLanching: () {},
+                        theUrlLanching: () {
+                          Get.to(const MyHomePage());
+                        },
                       ),
                       const SizedBox(
                         width: 20,

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:my_demo/constants.dart';
-
 import '../screens/sing and log in screen/sing_and_log_in_screen.dart';
 
 class BigggButton extends StatelessWidget {
   final IconData theLeadingIcon;
   final String theButtonTitle;
-  Function onTaped;
+  final void Function()? onTaped;
 
   BigggButton({
     Key? key,
@@ -17,11 +16,10 @@ class BigggButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return MaterialButton(
         // style: ButtonStyle(backgroundColor: theBackgrounColor),
-        onPressed: () {
-          onTaped;
-        },
+        onPressed: onTaped,
+        color: kTextBlacColor,
         child: Padding(
           padding: const EdgeInsets.all(11.0),
           child: Row(
@@ -29,11 +27,15 @@ class BigggButton extends StatelessWidget {
             children: [
               Icon(
                 theLeadingIcon,
+                color: kPrimaryColor,
               ),
               emptySpace,
               Text(
                 theButtonTitle,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    color: kPrimaryColor),
               ),
             ],
           ),

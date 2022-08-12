@@ -4,7 +4,6 @@ import 'package:my_demo/constants.dart';
 import 'package:my_demo/screens/home/my_home_page.dart';
 import 'package:my_demo/widgets/big_button.dart';
 import 'package:my_demo/widgets/the_input_feaild.dart';
-
 import '../about screen/about_screen.dart';
 
 final SizedBox emptySpace = SizedBox(
@@ -111,12 +110,12 @@ class SingInScreen extends StatelessWidget {
                       );
                       print('the new button tabded sucssfully');
                     },
-                    child: Text(
+                    child: const Text(
                       'LogIn',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 30,
-                      ),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30,
+                          color: kPrimaryColor),
                     ),
                   ),
                 ),

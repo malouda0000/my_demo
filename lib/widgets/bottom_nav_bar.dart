@@ -32,7 +32,7 @@ class TheBottomeNavBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: const [
           BottomeNavBarIcon(
-            theNamedRout: '/',
+            theNamedRout: '/homePage',
             theNavBarIcon: Icons.home_rounded,
           ),
           BottomeNavBarIcon(

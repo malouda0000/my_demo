@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intro_slider/intro_slider.dart';
-
-// import 'package:flutter_intro_slider_example/home.dart';
-// import 'package:intro_slider/dot_animation_enum.dart';
-// import 'package:intro_slider/intro_slider.dart';
 import 'package:my_demo/constants.dart';
-import 'package:my_demo/screens/home/my_home_page.dart';
 import 'package:my_demo/screens/sing%20and%20log%20in%20screen/sing_and_log_in_screen.dart';
-// import 'package:intro_slider/slide_object.dart';
 
 class IntroSliderPage extends StatefulWidget {
   @override
@@ -20,7 +14,6 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     slides.add(
       new Slide(
@@ -54,6 +47,7 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
   }
 
   List<Widget> renderListCustomTabs() {
+    Size size = MediaQuery.of(context).size;
     List<Widget> tabs = [];
     for (int i = 0; i < slides.length; i++) {
       Slide currentSlide = slides[i];
@@ -68,16 +62,20 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
+                  width: size.width * .8,
                   padding: const EdgeInsets.all(20),
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Colors.white,
+                    // color: Colors.white,
+                    color: kPrimaryColor,
                   ),
                   child: Image.asset(
                     currentSlide.pathImage.toString(),
                     // "assets/images/movie.png",
                     matchTextDirection: true,
-                    height: 60,
+                    // height: 60,
+                    width: size.width * .5,
+                    // fit: BoxFit.contain,
                   ),
                 ),
                 Container(

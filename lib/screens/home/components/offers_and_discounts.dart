@@ -37,15 +37,20 @@ class OffersAndDiscounts extends StatelessWidget {
 
           child: DecoratedBox(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              gradient: LinearGradient(
-                colors: [
-                  kPrimaryColor.withOpacity(.5),
-                  // ksecondaryColor.withOpacity(.5),
-                  Colors.white.withOpacity(.4)
-                ],
-              ),
-            ),
+                borderRadius: BorderRadius.circular(15),
+                gradient: LinearGradient(colors: [
+                  kTextBlacColor.withOpacity(.1),
+                  kTextBlacColor.withOpacity(.1),
+                ])
+
+                //  LinearGradient(
+                //   colors: [
+                //     kPrimaryColor.withOpacity(.5),
+                //     // ksecondaryColor.withOpacity(.5),
+                //     Colors.white.withOpacity(.4)
+                //   ],
+                // ),
+                ),
             child: Padding(
               padding: const EdgeInsets.all(15),
               child: Row(

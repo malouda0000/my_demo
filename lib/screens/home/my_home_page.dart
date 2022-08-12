@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/screens/setting/setting_screen.dart';
 import 'package:my_demo/widgets/bottom_nav_bar.dart';
 import 'package:my_demo/screens/home/components/the_app_bar.dart';
 import 'package:my_demo/screens/home/components/the_body.dart';

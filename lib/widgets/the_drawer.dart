@@ -1,8 +1,9 @@
-// import 'dart:js';
-
 import 'package:flutter/material.dart';
-import 'package:my_demo/constants.dart';
-import 'package:my_demo/screens/setting/settign_list_tile.dart';
+import 'package:get/get.dart';
+import 'package:my_demo/screens/setting/widgets/reserved_rights_row.dart';
+import 'package:my_demo/screens/setting/widgets/settign_list_tile.dart';
+import 'package:my_demo/widgets/big_button.dart';
+import 'package:my_demo/widgets/the%20drawer/widgets/drawer_header_plus.dart';
 
 String accountName = 'Hmmam mohamed hamza';
 String accountEmail = 'Hamam.hamza85@gmail.com';
@@ -23,7 +24,7 @@ class TheDrawer extends StatelessWidget {
       child: Column(
         // crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const DrawerHeaderpluse(),
+          const DrawerHeaderplus(),
           SettingListTile(
             diviedIt: true,
             theTitle: 'Account',
@@ -43,38 +44,33 @@ class TheDrawer extends StatelessWidget {
             theFunction: () {},
           ),
           SettingListTile(
-            diviedIt: false,
+            diviedIt: true,
             theTitle: 'Appearance',
             theIcon: Icons.remove_red_eye_outlined,
-            theFunction: () {},
+            theFunction: () {
+              Get.toNamed('/themeScreen');
+            },
           ),
-          const Divider(thickness: 5),
+          const Divider(),
           //
           //
           //
           //
           //
 
+          const Spacer(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ButtonBar(
                 // alignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  ElevatedButton.icon(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.settings_outlined,
-                    ),
-                    label: const Text('setting'),
-                  ),
-                  ElevatedButton.icon(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.settings_outlined,
-                    ),
-                    label: const Text('advance setting'),
-                  ),
+                  BigggButton(
+                      theLeadingIcon: Icons.settings_outlined,
+                      theButtonTitle: 'Settings',
+                      onTaped: () {
+                        Get.toNamed('/settingScreen');
+                      }),
                 ],
               )
             ],
@@ -127,156 +123,16 @@ class TheDrawer extends StatelessWidget {
           //
           //
 
-          const Spacer(),
-          const Padding(
-            padding: EdgeInsets.all(8),
-            child: Text(
-              textAlign: TextAlign.start,
-              'Theme',
-              style: TextStyle(
-                color: kTextBlacColor,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+          SizedBox(
+            height: 15,
           ),
-          const ColorPicker(),
-        ],
-      ),
-    );
-  }
-}
 
-class DrawerHeaderpluse extends StatelessWidget {
-  const DrawerHeaderpluse({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return UserAccountsDrawerHeader(
-      currentAccountPicture: CircleAvatar(
-        child: Container(
-          // height: MediaQuery.of(context).size.width * 0.3,
-          decoration: const BoxDecoration(
-            shape: BoxShape.circle,
-            image: DecorationImage(
-              image: AssetImage('assets/images/me.jpg'),
-              fit: BoxFit.fitHeight,
-            ),
-          ),
-          // child: Image.asset(
-          //   'assets/images/me.jpg',
-          //   // height: 250,
-          //   // width: 250,
-          // ),
-        ),
-      ),
-      accountName: Text(accountName),
-      accountEmail: Text(accountEmail),
-      otherAccountsPictures: const [
-        Icon(
-          Icons.person_outline,
-          // color: Colors.white,
-          color: kTextBlacColor,
-        ),
-        Icon(
-          Icons.save_outlined,
-          // color: Colors.white,
-          color: kTextBlacColor,
-        )
-      ],
-    );
-  }
-}
-
-class ColorPicker extends StatelessWidget {
-  const ColorPicker({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          TheThemeColorSelector(),
-          Column(
-            children: [
-              InkWell(
-                onTap: () {},
-                child: const CircleAvatar(
-                  backgroundColor: Colors.amber,
-                ),
-              ),
-              emptySpace,
-              const Text("amber"),
-            ],
-          ),
-          Column(
-            children: [
-              InkWell(
-                onTap: () {},
-                child: const CircleAvatar(
-                  backgroundColor: Colors.lightBlue,
-                ),
-              ),
-              emptySpace,
-              const Text("lightBlue"),
-            ],
-          ),
-          Column(
-            children: [
-              InkWell(
-                onTap: () {},
-                child: const CircleAvatar(
-                  backgroundColor: Colors.blue,
-                ),
-              ),
-              emptySpace,
-              const Text("blue"),
-            ],
-          ),
-          Column(
-            children: [
-              CircleAvatar(
-                backgroundColor: Colors.blueGrey,
-                child: InkWell(
-                  onTap: () {},
-                ),
-              ),
-              emptySpace,
-              const Text("bluegrey"),
-            ],
+          ReservedRightsRow(),
+          SizedBox(
+            height: 15,
           ),
         ],
       ),
-    );
-  }
-}
-
-class TheThemeColorSelector extends StatelessWidget {
-  const TheThemeColorSelector({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        GestureDetector(
-          onTap: () {},
-          child: const CircleAvatar(
-            backgroundColor: Colors.yellow,
-          ),
-        ),
-        emptySpace,
-        const Text(
-          "yellow",
-        ),
-      ],
     );
   }
 }

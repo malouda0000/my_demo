@@ -5,7 +5,7 @@ class SettingListTile extends StatelessWidget {
   final String theTitle;
   final IconData theIcon;
   final bool diviedIt;
-  Function theFunction;
+  final void Function()? theFunction;
   SettingListTile({
     Key? key,
     required this.theTitle,
@@ -31,9 +31,7 @@ class SettingListTile extends StatelessWidget {
             Icons.arrow_forward,
             color: kTextBlacColor,
           ),
-          onTap: () {
-            theFunction;
-          },
+          onTap: theFunction,
         ),
         if (diviedIt) const Divider(),
       ],

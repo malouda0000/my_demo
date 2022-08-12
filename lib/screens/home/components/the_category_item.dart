@@ -60,9 +60,9 @@ class TheCategoryItem extends StatelessWidget {
 }
 
 class ItemBuilder extends StatelessWidget {
-  String title;
-  bool isActive;
-  Function pressed;
+  final String title;
+  final bool isActive;
+  final Function pressed;
 
   ItemBuilder({
     Key? key,

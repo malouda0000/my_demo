@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:my_demo/constants.dart';
 
 class TheIputFeaild extends StatelessWidget {
+  final Size size;
+  final String theHint;
+  final IconData theLeadingIcon;
+  final TextInputType textInputType;
+  final bool isPassword;
+  // final TextEditingController controller;
+
   const TheIputFeaild({
     Key? key,
     required this.size,
@@ -10,13 +17,6 @@ class TheIputFeaild extends StatelessWidget {
     required this.textInputType,
     required this.isPassword,
   }) : super(key: key);
-
-  final Size size;
-  final String theHint;
-  final IconData theLeadingIcon;
-  final TextInputType textInputType;
-  final bool isPassword;
-  // final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +28,7 @@ class TheIputFeaild extends StatelessWidget {
       ),
       width: size.width,
       child: TextField(
+        enableSuggestions: true,
         keyboardType: textInputType,
         obscureText: isPassword,
         // controller: controller,

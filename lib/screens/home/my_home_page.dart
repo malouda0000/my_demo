@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/widgets/bottom_nav_bar.dart';
-import 'package:my_demo/screens/home/components/the_app_bar.dart';
-import 'package:my_demo/screens/home/components/the_body.dart';
+import 'package:my_demo/widgets/bottom%20navigation%20bar/bottom_nav_bar.dart';
+import 'package:my_demo/widgets/the%20appbar/the_app_bar.dart';
+import 'package:my_demo/screens/home/widgets/the_body.dart';
 import 'package:my_demo/widgets/the_drawer.dart';
 import 'package:my_demo/widgets/the_fap.dart';
 
@@ -24,7 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // drawer: (),
       body: const TheBody(),
       floatingActionButton: const TheFap(),
-      bottomNavigationBar: const TheBottomeNavBar(),
+      bottomNavigationBar: const TheBottomNavBar(),
     );
 
     // return SettingScreen();

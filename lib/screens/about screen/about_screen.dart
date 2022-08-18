@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/constants.dart';
 import 'package:my_demo/screens/Error/error_message_screen.dart';
+import 'package:my_demo/screens/about%20screen/widgets/communication_icon.dart';
+import 'package:my_demo/screens/about%20screen/widgets/user_image.dart';
+import 'package:my_demo/screens/about%20screen/widgets/user_name.dart';
 import 'package:my_demo/screens/home/my_home_page.dart';
 import 'package:my_demo/screens/setting/widgets/settign_list_tile.dart';
-import 'package:my_demo/screens/sing%20and%20log%20in%20screen/sing_and_log_in_screen.dart';
-import 'package:my_demo/widgets/bottom_nav_bar.dart';
-import 'package:my_demo/screens/home/components/the_app_bar.dart';
+import 'package:my_demo/screens/sing%20and%20log%20in%20screen/sing_in.dart';
+import 'package:my_demo/widgets/bottom%20navigation%20bar/bottom_nav_bar.dart';
+import 'package:my_demo/widgets/the%20appbar/the_app_bar.dart';
+import 'package:my_demo/widgets/communication_row.dart';
 import 'package:my_demo/widgets/the_drawer.dart';
+import 'package:my_demo/widgets/title_builder.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:my_demo/constants.dart';
+
+import 'widgets/temp_debuging_row.dart';
 // import 'package:flutter_remix/flutter_remix.dart';
 
 // final Uri _url = Uri.parse('tel:+1-555-010-999');
@@ -26,240 +33,74 @@ class AboutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizedBox emptySpace = const SizedBox(
-      height: 10,
-      width: 10,
-    );
-
     return Scaffold(
       drawer: const TheDrawer(),
       appBar: TheAppBar(),
       // drawer: (),
       body: ListView(
         scrollDirection: Axis.vertical,
+        padding: const EdgeInsets.all(10),
         children: [
-          Container(
-            padding: const EdgeInsets.all(10),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              // mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                emptySpace,
-                Container(
-                  height: MediaQuery.of(context).size.width * 0.3,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/me.jpg'),
-                      fit: BoxFit.fitHeight,
-                    ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              emptySpace,
+              UserImage(),
+              emptySpace,
+              UserName(),
+              const Divider(
+                color: ksecondaryColor,
+                thickness: 1,
+              ),
+              SettingListTile(
+                diviedIt: true,
+                theTitle: 'Account',
+                theIcon: Icons.person_outline,
+                theFunction: () {
+                  Get.toNamed('/aboutScreen');
+                },
+              ),
+              SettingListTile(
+                diviedIt: true,
+                theTitle: 'Notification',
+                theIcon: Icons.notifications_outlined,
+                theFunction: () {},
+              ),
+              SettingListTile(
+                diviedIt: true,
+                theTitle: 'Privacy & Security',
+                theIcon: Icons.lock_outline,
+                theFunction: () {},
+              ),
+              SettingListTile(
+                diviedIt: false,
+                theTitle: 'Appearance',
+                theIcon: Icons.remove_red_eye_outlined,
+                theFunction: () {
+                  Get.toNamed('/themeScreen');
+                },
+              ),
+              const Divider(
+                thickness: 1,
+              ),
+              Column(
+                children: [
+                  const TitleBuilder(theTitle: 'Feel free to contac me'),
+                  const SizedBox(
+                    height: 15,
                   ),
-                  // child: Image.asset(
-                  //   'assets/images/me.jpg',
-                  //   // height: 250,
-                  //   // width: 250,
-                  // ),
-                ),
-                emptySpace,
-                Text(
-                  'hummam mohamed '.toUpperCase(),
-                ),
-                const Divider(
-                  color: ksecondaryColor,
-                  thickness: 2,
-                ),
-                SettingListTile(
-                  diviedIt: true,
-                  theTitle: 'Account',
-                  theIcon: Icons.person_outline,
-                  theFunction: () {
-                    // Get.offAllNamed('/SinInScreen');
-                    Get.to(() => SingInScreen());
-                    print('the Account ListTile has been tapded sucsesfully');
-                  },
-                ),
-                SettingListTile(
-                  diviedIt: true,
-                  theTitle: 'Notification',
-                  theIcon: Icons.notifications_outlined,
-                  theFunction: () {},
-                ),
-                SettingListTile(
-                  diviedIt: true,
-                  theTitle: 'Privacy & Security',
-                  theIcon: Icons.lock_outline,
-                  theFunction: () {},
-                ),
-                SettingListTile(
-                  diviedIt: false,
-                  theTitle: 'Appearance',
-                  theIcon: Icons.remove_red_eye_outlined,
-                  theFunction: () {},
-                ),
-                const Divider(
-                  thickness: 2,
-                ),
-                Column(
-                  children: [
-                    const Text(
-                      'Feel free to contac me',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CommuincationIcon(
-                          theIcon: Icons.facebook_rounded,
-                          theUrlLanching: () async {
-                            const url = 'https://facebook.com';
-
-                            if (await canLaunch(url)) {
-                              await launch(url);
-                            } else {
-                              return Get.to(() => ErrorMessageScreen());
-                            }
-                            ;
-                          },
-
-                          // theUrlLanching: (){},
-                        ),
-                        const SizedBox(
-                          width: 20,
-                        ),
-                        CommuincationIcon(
-                          theIcon: Icons.email_rounded,
-                          theUrlLanching: () {
-                            Get.to(const MyHomePage());
-                          },
-                        ),
-                        const SizedBox(
-                          width: 20,
-                        ),
-                        CommuincationIcon(
-                          theIcon: Icons.person_rounded,
-                          theUrlLanching: () {},
-                        ),
-                        const SizedBox(
-                          width: 20,
-                        ),
-//                   IconButton(onPressed: (){}, icon: Icon(Icon(FlutterRemix.search),
-
-// ))
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          clipBehavior: Clip.hardEdge,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: MaterialButton(
-                            color: kPrimaryColor,
-                            onPressed: () {
-                              Get.offAllNamed(
-                                '/SinInScreen',
-                              );
-                              print('the new button tabded sucssfully');
-                            },
-                            child: Text(
-                              'debug SingIn Screen',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                // fontSize: 30,
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Container(
-                          clipBehavior: Clip.hardEdge,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: MaterialButton(
-                            color: kPrimaryColor,
-                            onPressed: () {
-                              Get.offAllNamed(
-                                '/InroSliderScreen',
-                              );
-                              print('the new button tabded sucssfully');
-                            },
-                            child: Text(
-                              'debug the Slider Screen',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                // fontSize: 30,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
-            ),
+                  CommunicationRow(),
+                  emptySpace,
+                  TempDebugingRow(),
+                ],
+              ),
+            ],
           ),
         ],
       ),
       // floatingActionButton: const TheFap(),
-      bottomNavigationBar: const TheBottomeNavBar(),
-    );
-  }
-}
-
-class CommuincationIcon extends StatelessWidget {
-  final void Function()? theUrlLanching;
-  final IconData theIcon;
-  const CommuincationIcon({
-    Key? key,
-    this.theUrlLanching,
-    required this.theIcon,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        // shape: BoxShape.circle,
-        // color: ksecondaryColor,
-        borderRadius: BorderRadius.circular(10),
-        // color: kTextBlacColor,
-
-        color: kPrimaryColor,
-      ),
-      // padding: EdgeInsets.all(15),
-      child: Container(
-        margin: const EdgeInsets.all(2),
-        decoration: BoxDecoration(
-          // shape: BoxShape.circle,
-          borderRadius: BorderRadius.circular(10),
-          color: kTextBlacColor,
-          // color: ksecondaryColor,
-          // color: kTextBlacColor,
-        ),
-        child: IconButton(
-          onPressed: () {
-            theUrlLanching;
-          },
-          icon: Icon(
-            theIcon,
-            // color: kTextBlacColor.withOpacity(.5),
-            // color: kTextBlacColor,
-            color: kPrimaryColor,
-          ),
-        ),
-      ),
+      bottomNavigationBar: const TheBottomNavBar(),
     );
   }
 }

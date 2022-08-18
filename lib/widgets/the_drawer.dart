@@ -8,11 +8,6 @@ import 'package:my_demo/widgets/the%20drawer/widgets/drawer_header_plus.dart';
 String accountName = 'Hmmam mohamed hamza';
 String accountEmail = 'Hamam.hamza85@gmail.com';
 
-SizedBox emptySpace = const SizedBox(
-  height: 10,
-  width: 15,
-);
-
 class TheDrawer extends StatelessWidget {
   const TheDrawer({
     Key? key,

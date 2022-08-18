@@ -24,10 +24,11 @@ class TheIputFeaild extends StatelessWidget {
       alignment: Alignment.center,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: kGrayColor,
+        color: theMainLightColor,
       ),
       width: size.width,
       child: TextField(
+        cursorColor: kPrimaryColor,
         enableSuggestions: true,
         keyboardType: textInputType,
         obscureText: isPassword,

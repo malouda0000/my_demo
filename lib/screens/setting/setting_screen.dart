@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/screens/home/components/the_app_bar.dart';
+import 'package:my_demo/widgets/the%20appbar/the_app_bar.dart';
 import 'package:my_demo/screens/setting/widgets/setting_screen_body.dart';
-import 'package:my_demo/widgets/bottom_nav_bar.dart';
+import 'package:my_demo/widgets/bottom%20navigation%20bar/bottom_nav_bar.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({Key? key}) : super(key: key);
@@ -46,7 +46,7 @@ class _SettingScreenState extends State<SettingScreen> {
 
       appBar: TheAppBar(),
       body: SettingScreenBody(),
-      bottomNavigationBar: const TheBottomeNavBar(),
+      bottomNavigationBar: const TheBottomNavBar(),
     );
   }
 }

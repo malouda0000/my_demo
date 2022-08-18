@@ -7,11 +7,9 @@ import 'package:my_demo/screens/home/my_home_page.dart';
 import 'package:my_demo/screens/setting/setting_screen.dart';
 import 'package:my_demo/screens/setting/theme_screen.dart';
 import 'screens/intro slider/intro_slider.dart';
-import 'screens/sing and log in screen/sing_and_log_in_screen.dart';
-
-// import 'dart:ffi';
-
-//  var size = MediaQuery.of(context).size;
+import 'screens/sing and log in screen/sing_in.dart';
+import 'screens/sing and log in screen/sing_up_screen.dart';
+import 'screens/splash screen/custom_splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,17 +22,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowCheckedModeBanner: false, initialRoute: 'themeScreen',
+      debugShowCheckedModeBanner: false,
+      initialRoute: 'homePage',
       title: 'Flutter Demo',
 // initialRoute: ,
       getPages: [
         GetPage(name: '/homePage', page: () => MyHomePage()),
         GetPage(name: '/InroSliderScreen', page: () => IntroSliderPage()),
+        GetPage(name: '/singUpScreen', page: () => SingUpScreen()),
         GetPage(name: '/SinInScreen', page: () => SingInScreen()),
-        GetPage(name: '/detialsScreen', page: () => const DetialsScreen()),
+        GetPage(name: '/detailsScreen', page: () => const DetialsScreen()),
         GetPage(name: '/settingScreen', page: () => const SettingScreen()),
         GetPage(name: '/aboutScreen', page: () => const AboutScreen()),
-        GetPage(name: '/themeScreen', page: () => ThemeScreen())
+        GetPage(name: '/themeScreen', page: () => ThemeScreen()),
+        GetPage(name: '/splashScreen', page: () => CustomSplashScreen()),
       ],
 
       // themeMode: ThemeMode.dark,

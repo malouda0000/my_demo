@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/screens/home/components/item_card_builder.dart';
-import 'package:my_demo/screens/home/components/offers_and_discounts.dart';
-import 'package:my_demo/screens/home/components/the_category_item.dart';
-import 'package:my_demo/screens/home/components/the_search_bar.dart';
+import 'package:my_demo/screens/home/widgets/item_card_builder.dart';
+import 'package:my_demo/screens/home/widgets/offers_and_discounts.dart';
+import 'package:my_demo/screens/home/widgets/the_category_item.dart';
+import 'package:my_demo/screens/home/widgets/the_search_bar.dart';
 
 class TheBody extends StatefulWidget {
   const TheBody({Key? key}) : super(key: key);

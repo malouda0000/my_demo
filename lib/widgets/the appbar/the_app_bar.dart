@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_demo/constants.dart';
+import 'package:my_demo/widgets/the%20appbar/widgets/the_main_title_builder.dart';
 
 AppBar TheAppBar() {
   return AppBar(
     centerTitle: true,
     backgroundColor: theMainLightColor,
-    title: const TheMainTitleBuilder(),
+    title: const TheMainTitleBuilder(firstTitle: 'punk', secondTitle: 'food'),
     elevation: 0,
     leading: Builder(builder: (context) {
       return IconButton(
-        icon: SvgPicture.asset('assets/icons/menu.svg'),
+        icon: SvgPicture.asset(menuImage),
         onPressed: () {
           // TheDrawer();
           Scaffold.of(context).openDrawer();
@@ -52,33 +53,4 @@ AppBar TheAppBar() {
       ),
     ],
   );
-}
-
-class TheMainTitleBuilder extends StatelessWidget {
-  const TheMainTitleBuilder({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return RichText(
-        // strutStyle: Theme.of(context).textTheme.titleMedium.copyWith(fontWeight: FontWeight.bold)
-        text: const TextSpan(
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 25,
-              color: ksecondaryColor,
-            ),
-            children: [
-          TextSpan(
-            text: 'punk',
-          ),
-          TextSpan(
-              style: TextStyle(
-                // fontWeight: FontWeight.bold,
-                color: kPrimaryColor,
-              ),
-              text: 'food')
-        ]));
-  }
 }

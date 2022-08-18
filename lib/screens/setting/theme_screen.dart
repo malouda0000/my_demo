@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:my_demo/constants.dart';
-import 'package:my_demo/screens/home/components/the_app_bar.dart';
+import 'package:my_demo/widgets/the%20appbar/the_app_bar.dart';
 import 'package:my_demo/screens/setting/widgets/darkness_row.dart';
 import 'package:my_demo/screens/setting/widgets/the_color_picker.dart';
-import 'package:my_demo/widgets/bottom_nav_bar.dart';
+import 'package:my_demo/widgets/bottom%20navigation%20bar/bottom_nav_bar.dart';
 
 class ThemeScreen extends StatelessWidget {
   const ThemeScreen({Key? key}) : super(key: key);
@@ -61,7 +61,7 @@ class ThemeScreen extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: TheBottomeNavBar(),
+      bottomNavigationBar: TheBottomNavBar(),
     );
   }
 }

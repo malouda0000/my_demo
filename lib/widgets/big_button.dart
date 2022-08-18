@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_demo/constants.dart';
-import '../screens/sing and log in screen/sing_and_log_in_screen.dart';
 
 class BigggButton extends StatelessWidget {
   final IconData theLeadingIcon;
@@ -16,29 +15,35 @@ class BigggButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialButton(
-        // style: ButtonStyle(backgroundColor: theBackgrounColor),
-        onPressed: onTaped,
-        color: kTextBlacColor,
-        child: Padding(
-          padding: const EdgeInsets.all(11.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                theLeadingIcon,
-                color: kPrimaryColor,
-              ),
-              emptySpace,
-              Text(
-                theButtonTitle,
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                    color: kPrimaryColor),
-              ),
-            ],
-          ),
-        ));
+    return Container(
+      clipBehavior: Clip.hardEdge,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: MaterialButton(
+          // style: ButtonStyle(backgroundColor: theBackgrounColor),
+          onPressed: onTaped,
+          color: kTextBlacColor,
+          child: Padding(
+            padding: const EdgeInsets.all(11.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  theLeadingIcon,
+                  color: theMainLightColor,
+                ),
+                emptySpace,
+                Text(
+                  theButtonTitle,
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      color: theMainLightColor),
+                ),
+              ],
+            ),
+          )),
+    );
   }
 }

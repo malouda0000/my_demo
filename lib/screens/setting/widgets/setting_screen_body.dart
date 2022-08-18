@@ -10,7 +10,6 @@ class SettingScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TextEditingController searchInSettingController;
-    Size size = MediaQuery.of(context).size;
     return ListView(
       padding: EdgeInsets.all(15),
       children: [
@@ -18,7 +17,7 @@ class SettingScreenBody extends StatelessWidget {
           // controller: searchInSettingController,
           isPassword: false,
           textInputType: TextInputType.name,
-          size: size,
+          size: Get.size,
           theHint: 'search',
           theLeadingIcon: Icons.search_rounded,
         ),
@@ -30,7 +29,7 @@ class SettingScreenBody extends StatelessWidget {
           diviedIt: true,
           theTitle: 'Account',
           theIcon: Icons.person_outline,
-          theFunction: () {},
+          theFunction: () => Get.toNamed('/aboutScreen'),
         ),
         SettingListTile(
           diviedIt: true,
@@ -62,9 +61,7 @@ class SettingScreenBody extends StatelessWidget {
           diviedIt: true,
           theTitle: 'about',
           theIcon: Icons.info_outline,
-          theFunction: () {
-            Get.toNamed('/aboutScreen');
-          },
+          theFunction: () => Get.toNamed('/aboutScreen'),
         ),
         // const Spacer(),
         ReservedRightsRow(),

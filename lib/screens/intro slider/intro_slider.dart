@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intro_slider/intro_slider.dart';
 import 'package:my_demo/constants.dart';
-import 'package:my_demo/screens/sing%20and%20log%20in%20screen/sing_and_log_in_screen.dart';
+import 'package:my_demo/screens/sing%20and%20log%20in%20screen/sing_in.dart';
 
 class IntroSliderPage extends StatefulWidget {
   @override

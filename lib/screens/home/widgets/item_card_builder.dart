@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
 import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
 
 class ItemCardBuilder extends StatelessWidget {
@@ -123,7 +123,7 @@ class TheItemCard extends StatelessWidget {
           BoxShadow(
             offset: const Offset(0, 4),
             blurRadius: 10,
-            color: ksecondaryColor.withOpacity(0.70),
+            color: AppColor.ksecondaryColor.withOpacity(0.70),
             // color: Colors.red,
           ),
         ],
@@ -145,19 +145,23 @@ class TheItemCard extends StatelessWidget {
                   padding: const EdgeInsets.all(25),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: kPrimaryColor.withOpacity(0.32),
+                    color: AppColor.kPrimaryColor.withOpacity(0.32),
                   ),
-                  child: SvgPicture.asset(svgSrc),
+                  child: SvgPicture.asset(
+                    svgSrc,
+                    height: Get.height * .04,
+                  ),
                 ),
                 Text(
                   title,
-                  style: const TextStyle(color: kPrimaryColor),
+                  style: const TextStyle(color: AppColor.kPrimaryColor),
                 ),
                 Text(
                   discription,
-                  style: const TextStyle(
-                    fontSize: 12,
-                  ),
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyText1
+                      ?.copyWith(fontSize: 12),
                 ),
               ],
             ),

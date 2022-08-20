@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
 
 class TitleBuilder extends StatelessWidget {
   final String theTitle;
@@ -10,7 +10,9 @@ class TitleBuilder extends StatelessWidget {
     return Text(
       theTitle,
       style: TextStyle(
-          color: ksecondaryColor, fontSize: 20, fontWeight: FontWeight.bold),
+          color: AppColor.kTextColor,
+          fontSize: 20,
+          fontWeight: FontWeight.bold),
     );
   }
 }

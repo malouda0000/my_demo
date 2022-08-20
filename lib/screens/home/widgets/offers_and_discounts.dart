@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
 
 class OffersAndDiscounts extends StatelessWidget {
   const OffersAndDiscounts({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class OffersAndDiscounts extends StatelessWidget {
             'Offers And discounts',
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: kTextColor,
+              color: AppColor.kTextColor,
             ),
           ),
         ),
@@ -39,8 +39,8 @@ class OffersAndDiscounts extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 gradient: LinearGradient(colors: [
-                  kTextBlacColor.withOpacity(.1),
-                  kTextBlacColor.withOpacity(.1),
+                  AppColor.kTextBlacColor.withOpacity(.1),
+                  AppColor.kTextBlacColor.withOpacity(.1),
                 ])
 
                 //  LinearGradient(

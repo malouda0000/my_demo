@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
+import 'package:my_demo/constans/routes.dart';
 import 'package:my_demo/widgets/the_drawer.dart';
 
 class DrawerHeaderplus extends StatelessWidget {
@@ -10,10 +11,11 @@ class DrawerHeaderplus extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var bodyTextTow = Theme.of(context).textTheme.bodyText2;
     return UserAccountsDrawerHeader(
       currentAccountPicture: CircleAvatar(
         child: GestureDetector(
-          onTap: () => Get.offAllNamed('/aboutScreen'),
+          onTap: () => Get.offAllNamed(AppRoute.aboutScreen),
           child: Container(
             // height: MediaQuery.of(context).size.width * 0.3,
             decoration: const BoxDecoration(
@@ -31,18 +33,34 @@ class DrawerHeaderplus extends StatelessWidget {
           ),
         ),
       ),
-      accountName: Text(accountName),
-      accountEmail: Text(accountEmail),
-      otherAccountsPictures: const [
-        Icon(
-          Icons.person_outline,
-          // color: Colors.white,
-          color: kTextBlacColor,
+      accountName: Text(
+        accountName,
+        style: bodyTextTow,
+      ),
+      accountEmail: Text(
+        accountEmail,
+        style: bodyTextTow,
+      ),
+      otherAccountsPictures: [
+        GestureDetector(
+          onTap: () {
+            Get.offAllNamed(AppRoute.aboutScreen);
+          },
+          child: Icon(
+            Icons.person_outline,
+            // color: Colors.white,
+            color: AppColor.kTextBlacColor,
+          ),
         ),
-        Icon(
-          Icons.save_outlined,
-          // color: Colors.white,
-          color: kTextBlacColor,
+        GestureDetector(
+          onTap: () {
+            Get.snackbar('save', 'comming soon');
+          },
+          child: Icon(
+            Icons.save_outlined,
+            // color: Colors.white,
+            color: AppColor.kTextBlacColor,
+          ),
         )
       ],
     );

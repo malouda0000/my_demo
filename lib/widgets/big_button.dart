@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
 
 class BigggButton extends StatelessWidget {
   final IconData theLeadingIcon;
@@ -23,7 +23,7 @@ class BigggButton extends StatelessWidget {
       child: MaterialButton(
           // style: ButtonStyle(backgroundColor: theBackgrounColor),
           onPressed: onTaped,
-          color: kTextBlacColor,
+          color: AppColor.kTextColor,
           child: Padding(
             padding: const EdgeInsets.all(11.0),
             child: Row(
@@ -31,7 +31,7 @@ class BigggButton extends StatelessWidget {
               children: [
                 Icon(
                   theLeadingIcon,
-                  color: theMainLightColor,
+                  color: AppColor.kPrimaryColor,
                 ),
                 emptySpace,
                 Text(
@@ -39,7 +39,7 @@ class BigggButton extends StatelessWidget {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: theMainLightColor),
+                      color: AppColor.kPrimaryColor),
                 ),
               ],
             ),

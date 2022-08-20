@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
 
 import '../../screens/about screen/about_screen.dart';
 import '../../screens/detials screen/detials_screen.dart';
@@ -22,8 +22,8 @@ class TheBottomNavBar extends StatelessWidget {
     int theCurrentIndex = 0;
     return BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: kPrimaryColor,
-        unselectedItemColor: kPrimaryColor,
+        selectedItemColor: AppColor.kPrimaryColor,
+        unselectedItemColor: AppColor.kPrimaryColor,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         currentIndex: theCurrentIndex,
@@ -113,7 +113,7 @@ class TheBottomNavBar extends StatelessWidget {
 
       // bottomNavigationBar: BottomNavigationBar(
       //   enableFeedback: true,
-      //   selectedLabelStyle: TextStyle(color: kPrimaryColor),
+      //   selectedLabelStyle: TextStyle(color: AppColor.kPrimaryColor),
       //   items: [
       //     BottomNavigationBarItem(
       //       label: 'home',

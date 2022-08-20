@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
+import 'package:my_demo/constans/routes.dart';
+import 'package:my_demo/screens/auth/social_auth.dart';
 import 'package:my_demo/screens/home/my_home_page.dart';
-import 'package:my_demo/screens/sing%20and%20log%20in%20screen/widgets/dont_have_account.dart';
-import 'package:my_demo/screens/sing%20and%20log%20in%20screen/widgets/or_row.dart';
-import 'package:my_demo/screens/sing%20and%20log%20in%20screen/widgets/social_auth.dart';
 import 'package:my_demo/widgets/backgroundContainer.dart';
 import 'package:my_demo/widgets/big_button.dart';
 import 'package:my_demo/widgets/the_input_feaild.dart';
+
+import '../../widgets/app_id.dart';
+import 'dont_have_account.dart';
+import 'or_row.dart';
 
 class SingInScreen extends StatelessWidget {
   const SingInScreen({Key? key}) : super(key: key);
@@ -15,7 +18,7 @@ class SingInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // backgroundColor: kPrimaryColor,
+        // backgroundColor: AppColor.kPrimaryColor,
         body: Stack(
       children: [
         BackgrounContainer(),
@@ -27,28 +30,30 @@ class SingInScreen extends StatelessWidget {
               child: Container(
                 padding: EdgeInsets.all(15),
                 decoration: BoxDecoration(
-                    color: kPrimaryColor,
+                    color: AppColor.kPrimaryColor,
                     borderRadius: BorderRadius.circular(10)),
                 child: Column(
                   // mainAxisAlignment: MainAxisAlignment.center,
                   // crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    AppId(titleColor: theMainLightColor),
+                    AppId(titleColor: AppColor.theMainLightColor),
                     emptySpace,
                     TheIputFeaild(
                       isPassword: false,
                       textInputType: TextInputType.name,
-                      size: MediaQuery.of(context).size,
+                      theSize: Get.width,
                       theHint: 'email',
                       theLeadingIcon: Icons.email_outlined,
+                      backgroundColor: AppColor.theMainLightColor,
                     ),
                     emptySpace,
                     TheIputFeaild(
                       isPassword: true,
                       textInputType: TextInputType.text,
-                      size: MediaQuery.of(context).size,
+                      theSize: Get.width,
                       theHint: 'password',
                       theLeadingIcon: Icons.password_rounded,
+                      backgroundColor: AppColor.theMainLightColor,
                     ),
                     emptySpace,
                     Container(
@@ -98,7 +103,7 @@ class SingInScreen extends StatelessWidget {
                     DontHaveAccount(
                       doYouHaveAccoun: 'Dot\'t have account yet !!',
                       singOrLogin: 'SingUp Now',
-                      theFunc: () => Get.toNamed('/singUpScreen'),
+                      theFunc: () => Get.toNamed(AppRoute.singUpScreen),
                     ),
                   ],
                 ),
@@ -108,39 +113,5 @@ class SingInScreen extends StatelessWidget {
         ),
       ],
     ));
-  }
-}
-
-class AppId extends StatelessWidget {
-  final Color titleColor;
-  const AppId({Key? key, required this.titleColor}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Container(
-          padding: EdgeInsets.all(15),
-          decoration: BoxDecoration(
-              color: theMainLightColor,
-              borderRadius: BorderRadius.circular(10)),
-          child: Image.asset(
-            humburger,
-            width: Get.width * 0.3,
-          ),
-        ),
-        emptySpace,
-        Text(
-          'PnukFood',
-          style: TextStyle(
-            color: titleColor,
-            fontSize: 35,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ],
-    );
   }
 }

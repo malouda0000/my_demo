@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
 
 class DontHaveAccount extends StatelessWidget {
   final String doYouHaveAccoun;
@@ -19,13 +19,13 @@ class DontHaveAccount extends StatelessWidget {
       children: [
         Text(
           doYouHaveAccoun,
-          style: TextStyle(color: theMainLightColor),
+          style: TextStyle(color: AppColor.theMainLightColor),
         ),
         GestureDetector(
           child: Text(
             singOrLogin.toUpperCase(),
-            style:
-                TextStyle(color: kTextBlacColor, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: AppColor.kTextBlacColor, fontWeight: FontWeight.bold),
           ),
           onTap: theFunc,
         )

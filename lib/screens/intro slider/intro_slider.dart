@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intro_slider/intro_slider.dart';
-import 'package:my_demo/constants.dart';
-import 'package:my_demo/screens/sing%20and%20log%20in%20screen/sing_in.dart';
+import 'package:my_demo/constans/constants.dart';
+
+import '../auth/sing_in.dart';
 
 class IntroSliderPage extends StatefulWidget {
   @override
@@ -67,7 +68,7 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     // color: Colors.white,
-                    color: kPrimaryColor,
+                    color: AppColor.kPrimaryColor,
                   ),
                   child: Image.asset(
                     currentSlide.pathImage.toString(),
@@ -118,32 +119,32 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
   @override
   Widget build(BuildContext context) {
     return IntroSlider(
-      backgroundColorAllSlides: kPrimaryColor,
+      backgroundColorAllSlides: AppColor.kPrimaryColor,
       renderSkipBtn: const Text(
         "Skip",
         style: TextStyle(
-          color: theMainLightColor,
+          color: AppColor.theMainLightColor,
         ),
       ),
       renderNextBtn: const Text(
         "Next",
         style: TextStyle(
-          color: theMainLightColor,
+          color: AppColor.theMainLightColor,
         ),
       ),
       renderDoneBtn: const Text(
         "Done",
         style: TextStyle(
-          color: theMainLightColor,
+          color: AppColor.theMainLightColor,
         ),
       ),
       // colorDoneBtn: Colors.white,
-      // doneButtonStyle: ButtonStyle(backgroundColor: Color(theMainLightColor)),
+      // doneButtonStyle: ButtonStyle(backgroundColor: Color(AppColor.theMainLightColor)),
 
       // autoScroll: true,
       // autoScrollInterval: Duration(seconds: 1),
       // doneButtonStyle: ButtonStyle(backgroundColor: Color(Colors.white,)) ,
-      colorActiveDot: theMainLightColor,
+      colorActiveDot: AppColor.theMainLightColor,
       sizeDot: 8.0,
       // typeDotAnimation: dotSliderAnimation.SIZE_TRANSITION,
       listCustomTabs: this.renderListCustomTabs(),
@@ -151,7 +152,6 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
       // shouldHideStatusBar: false,
       onDonePress: () {
         Get.offAll(SingInScreen());
-        print('done tabeded secsufuly');
       },
     );
   }

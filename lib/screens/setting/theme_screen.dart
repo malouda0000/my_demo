@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
 import 'package:my_demo/widgets/the%20appbar/the_app_bar.dart';
 import 'package:my_demo/screens/setting/widgets/darkness_row.dart';
 import 'package:my_demo/screens/setting/widgets/the_color_picker.dart';
@@ -31,7 +31,7 @@ class ThemeScreen extends StatelessWidget {
               textAlign: TextAlign.start,
               'Themes',
               style: TextStyle(
-                color: ksecondaryColor,
+                color: AppColor.ksecondaryColor,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -51,7 +51,7 @@ class ThemeScreen extends StatelessWidget {
                 child: Text(
                   'Darkness',
                   style: TextStyle(
-                    color: ksecondaryColor,
+                    color: AppColor.ksecondaryColor,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

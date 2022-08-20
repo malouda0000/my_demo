@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
+import '../../../constans/constants.dart';
 
 class CommuincationIcon extends StatelessWidget {
   final String CommuincationIconTitle;

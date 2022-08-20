@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
 
 class TheIputFeaild extends StatelessWidget {
-  final Size size;
+  final double theSize;
   final String theHint;
   final IconData theLeadingIcon;
   final TextInputType textInputType;
   final bool isPassword;
+  final Color backgroundColor;
   // final TextEditingController controller;
 
   const TheIputFeaild({
     Key? key,
-    required this.size,
+    required this.theSize,
     required this.theHint,
     required this.theLeadingIcon,
     required this.textInputType,
     required this.isPassword,
+    required this.backgroundColor,
   }) : super(key: key);
 
   @override
@@ -24,11 +26,11 @@ class TheIputFeaild extends StatelessWidget {
       alignment: Alignment.center,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: theMainLightColor,
+        color: backgroundColor,
       ),
-      width: size.width,
+      width: theSize,
       child: TextField(
-        cursorColor: kPrimaryColor,
+        cursorColor: AppColor.kPrimaryColor,
         enableSuggestions: true,
         keyboardType: textInputType,
         obscureText: isPassword,
@@ -36,12 +38,10 @@ class TheIputFeaild extends StatelessWidget {
         decoration: InputDecoration(
           border: InputBorder.none,
           hintText: theHint,
-          hintStyle: TextStyle(
-            color: kTextBlacColor,
-          ),
+          hintStyle: Theme.of(context).textTheme.bodyText1,
           prefixIcon: Icon(
             theLeadingIcon,
-            color: kTextBlacColor,
+            color: AppColor.kTextColor,
           ),
         ),
       ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
 
 class TheMainTitleBuilder extends StatelessWidget {
   final String firstTitle;
@@ -18,7 +18,7 @@ class TheMainTitleBuilder extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 25,
-              color: ksecondaryColor,
+              color: AppColor.ksecondaryColor,
             ),
             children: [
           TextSpan(
@@ -27,7 +27,7 @@ class TheMainTitleBuilder extends StatelessWidget {
           TextSpan(
               style: TextStyle(
                 // fontWeight: FontWeight.bold,
-                color: kPrimaryColor,
+                color: AppColor.kPrimaryColor,
               ),
               text: secondTitle)
         ]));

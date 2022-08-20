@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
 
 class DarknessRow extends StatelessWidget {
   const DarknessRow({Key? key}) : super(key: key);
@@ -8,8 +8,8 @@ class DarknessRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List darknessList = [
-      kTextBlacColor,
-      kTextBlacColor,
+      AppColor.kTextBlacColor,
+      AppColor.kTextBlacColor,
     ];
     return GridView.builder(
         shrinkWrap: true,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
 
 class TheSearchBar extends StatelessWidget {
   const TheSearchBar({
@@ -18,7 +18,7 @@ class TheSearchBar extends StatelessWidget {
         // margin: const EdgeInsets.all(20),
         decoration: BoxDecoration(
           border: Border.all(
-            color: kPrimaryColor,
+            color: AppColor.kPrimaryColor,
           ),
           borderRadius: BorderRadius.circular(50),
         ),
@@ -27,7 +27,7 @@ class TheSearchBar extends StatelessWidget {
             border: InputBorder.none,
             icon: SvgPicture.asset('assets/icons/search.svg'),
             hintText: 'search',
-            hintStyle: const TextStyle(color: ksecondaryColor),
+            hintStyle: const TextStyle(color: AppColor.ksecondaryColor),
           ),
         ),
       ),

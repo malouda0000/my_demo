@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
 import 'package:my_demo/screens/about%20screen/widgets/communication_icon.dart';
 
 class SocialAuthRow extends StatelessWidget {
@@ -14,7 +14,7 @@ class SocialAuthRow extends StatelessWidget {
         CommuincationIcon(
           CommuincationIconTitle: 'faceBook',
           theIcon: Icons.facebook_rounded,
-          iconColor: theMainLightColor,
+          iconColor: AppColor.theMainLightColor,
           theUrlLanching: () {
             GetSnackBar(
               message: 'logIn with sochialmedia',
@@ -26,7 +26,7 @@ class SocialAuthRow extends StatelessWidget {
         CommuincationIcon(
           CommuincationIconTitle: 'email',
           theIcon: Icons.email_outlined,
-          iconColor: theMainLightColor,
+          iconColor: AppColor.theMainLightColor,
           theUrlLanching: () {
             GetSnackBar(
               message: 'logIn with sochialmedia',
@@ -38,7 +38,7 @@ class SocialAuthRow extends StatelessWidget {
         CommuincationIcon(
           CommuincationIconTitle: 'phone',
           theIcon: Icons.phone_outlined,
-          iconColor: theMainLightColor,
+          iconColor: AppColor.theMainLightColor,
           theUrlLanching: () {
             GetSnackBar(
               message: 'logIn with sochialmedia',

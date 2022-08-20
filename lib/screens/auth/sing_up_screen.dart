@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/app_images.dart';
+import 'package:my_demo/constans/constants.dart';
+import 'package:my_demo/constans/routes.dart';
+import 'package:my_demo/screens/auth/social_auth.dart';
 import 'package:my_demo/screens/home/my_home_page.dart';
-import 'package:my_demo/screens/sing%20and%20log%20in%20screen/widgets/dont_have_account.dart';
-import 'package:my_demo/screens/sing%20and%20log%20in%20screen/widgets/or_row.dart';
-import 'package:my_demo/screens/sing%20and%20log%20in%20screen/widgets/social_auth.dart';
 import 'package:my_demo/widgets/backgroundContainer.dart';
 import 'package:my_demo/widgets/big_button.dart';
 import 'package:my_demo/widgets/the_input_feaild.dart';
+
+import 'dont_have_account.dart';
+import 'or_row.dart';
 
 class SingUpScreen extends StatelessWidget {
   const SingUpScreen({Key? key}) : super(key: key);
@@ -15,7 +18,7 @@ class SingUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // backgroundColor: kPrimaryColor,
+        // backgroundColor: AppColor.kPrimaryColor,
         body: Stack(
       children: [
         BackgrounContainer(),
@@ -27,7 +30,7 @@ class SingUpScreen extends StatelessWidget {
               child: Container(
                 padding: EdgeInsets.all(15),
                 decoration: BoxDecoration(
-                    color: kPrimaryColor,
+                    color: AppColor.kPrimaryColor,
                     borderRadius: BorderRadius.circular(10)),
                 child: Column(
                   // mainAxisAlignment: MainAxisAlignment.center,
@@ -36,10 +39,10 @@ class SingUpScreen extends StatelessWidget {
                     Container(
                       padding: EdgeInsets.all(15),
                       decoration: BoxDecoration(
-                          color: theMainLightColor,
+                          color: AppColor.theMainLightColor,
                           borderRadius: BorderRadius.circular(10)),
                       child: Image.asset(
-                        humburger,
+                        AppImages.mainIcon,
                         width: Get.width * 0.3,
                       ),
                     ),
@@ -47,7 +50,7 @@ class SingUpScreen extends StatelessWidget {
                     Text(
                       'PnukFood',
                       style: TextStyle(
-                        color: theMainLightColor,
+                        color: AppColor.theMainLightColor,
                         fontSize: 35,
                         fontWeight: FontWeight.bold,
                       ),
@@ -55,27 +58,31 @@ class SingUpScreen extends StatelessWidget {
 
                     emptySpace,
                     TheIputFeaild(
-                        isPassword: false,
-                        textInputType: TextInputType.text,
-                        size: MediaQuery.of(context).size,
-                        theHint: 'email',
-                        theLeadingIcon: Icons.email_outlined),
+                      isPassword: false,
+                      textInputType: TextInputType.text,
+                      theSize: Get.width,
+                      theHint: 'email',
+                      theLeadingIcon: Icons.email_outlined,
+                      backgroundColor: AppColor.theMainLightColor,
+                    ),
                     emptySpace,
 
                     TheIputFeaild(
                       isPassword: true,
                       textInputType: TextInputType.text,
-                      size: MediaQuery.of(context).size,
+                      theSize: Get.width,
                       theHint: 'password',
                       theLeadingIcon: Icons.password_rounded,
+                      backgroundColor: AppColor.theMainLightColor,
                     ),
                     emptySpace,
                     TheIputFeaild(
                       isPassword: true,
                       textInputType: TextInputType.text,
-                      size: MediaQuery.of(context).size,
+                      theSize: Get.width,
                       theHint: 'reInter password',
                       theLeadingIcon: Icons.password_rounded,
+                      backgroundColor: AppColor.theMainLightColor,
                     ),
                     emptySpace,
                     BigggButton(
@@ -119,7 +126,7 @@ class SingUpScreen extends StatelessWidget {
                     DontHaveAccount(
                       doYouHaveAccoun: 'Allredy have account  !!',
                       singOrLogin: 'SingIn Now',
-                      theFunc: () => Get.toNamed('/SinInScreen'),
+                      theFunc: () => Get.toNamed(AppRoute.singInScreen),
                     ),
                   ],
                 ),

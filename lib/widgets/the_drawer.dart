@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/constans/routes.dart';
 import 'package:my_demo/screens/setting/widgets/reserved_rights_row.dart';
 import 'package:my_demo/screens/setting/widgets/settign_list_tile.dart';
 import 'package:my_demo/widgets/big_button.dart';
@@ -24,29 +25,32 @@ class TheDrawer extends StatelessWidget {
             diviedIt: true,
             theTitle: 'Account',
             theIcon: Icons.person_outline,
-            theFunction: () {},
+            theFunction: () => Get.offAllNamed(AppRoute.detailsScreen),
           ),
           SettingListTile(
             diviedIt: true,
             theTitle: 'Notification',
             theIcon: Icons.notifications_outlined,
-            theFunction: () {},
+            theFunction: () {
+              Get.snackbar('Notifications', 'comming soon');
+            },
           ),
           SettingListTile(
             diviedIt: true,
             theTitle: 'Privacy & Security',
             theIcon: Icons.lock_outline,
-            theFunction: () {},
+            theFunction: () {
+              Get.snackbar('Security center', 'comming soon');
+            },
           ),
           SettingListTile(
             diviedIt: true,
             theTitle: 'Appearance',
             theIcon: Icons.remove_red_eye_outlined,
             theFunction: () {
-              Get.toNamed('/themeScreen');
+              Get.toNamed(AppRoute.themeScreen);
             },
           ),
-          const Divider(),
           //
           //
           //
@@ -64,7 +68,7 @@ class TheDrawer extends StatelessWidget {
                       theLeadingIcon: Icons.settings_outlined,
                       theButtonTitle: 'Settings',
                       onTaped: () {
-                        Get.toNamed('/settingScreen');
+                        Get.toNamed(AppRoute.settignScreen);
                       }),
                 ],
               )

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-import '../../../constants.dart';
+import '../../../constans/constants.dart';
 
 AppBar DetialsScreenAppBar() {
   return AppBar(
     elevation: 0,
-    backgroundColor: kPrimaryColor,
+    backgroundColor: AppColor.kPrimaryColor,
     leading: IconButton(
       onPressed: () {
         Get.back();
@@ -18,11 +18,21 @@ AppBar DetialsScreenAppBar() {
     ),
     actions: [
       IconButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.snackbar(
+            'share',
+            'comming soon',
+          );
+        },
         icon: SvgPicture.asset('assets/icons/share.svg'),
       ),
       IconButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.snackbar(
+            'more informations ',
+            'comming soon',
+          );
+        },
         icon: SvgPicture.asset('assets/icons/more.svg'),
       ),
     ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
+import 'package:my_demo/constans/routes.dart';
 
 class TempDebugingRow extends StatelessWidget {
   const TempDebugingRow({Key? key}) : super(key: key);
@@ -18,10 +19,10 @@ class TempDebugingRow extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: MaterialButton(
-                color: kPrimaryColor,
+                color: AppColor.kPrimaryColor,
                 onPressed: () {
                   Get.offAllNamed(
-                    '/SinInScreen',
+                    AppRoute.singInScreen,
                   );
                   print('the new button tabded sucssfully');
                 },
@@ -43,10 +44,10 @@ class TempDebugingRow extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: MaterialButton(
-                color: kPrimaryColor,
+                color: AppColor.kPrimaryColor,
                 onPressed: () {
                   Get.offAllNamed(
-                    '/InroSliderScreen',
+                    AppRoute.introSliderScreen,
                   );
                   print('the new button tabded sucssfully');
                 },
@@ -73,10 +74,10 @@ class TempDebugingRow extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: MaterialButton(
-                color: kPrimaryColor,
+                color: AppColor.kPrimaryColor,
                 onPressed: () {
                   Get.toNamed(
-                    '/splashScreen',
+                    AppRoute.customSplashScreen,
                   );
                 },
                 child: Text(

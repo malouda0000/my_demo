@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/constants.dart';
-import 'package:my_demo/screens/about%20screen/about_screen.dart';
-import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
+import 'package:my_demo/constans/constants.dart';
+import 'package:my_demo/constans/routes.dart';
+import 'package:my_demo/routesPluse.dart';
 import 'package:my_demo/screens/home/my_home_page.dart';
-import 'package:my_demo/screens/setting/setting_screen.dart';
-import 'package:my_demo/screens/setting/theme_screen.dart';
-import 'screens/intro slider/intro_slider.dart';
-import 'screens/sing and log in screen/sing_in.dart';
-import 'screens/sing and log in screen/sing_up_screen.dart';
-import 'screens/splash screen/custom_splash_screen.dart';
+// import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,20 +18,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'homePage',
+      initialRoute: AppRoute.customSplashScreen,
       title: 'Flutter Demo',
 // initialRoute: ,
-      getPages: [
-        GetPage(name: '/homePage', page: () => MyHomePage()),
-        GetPage(name: '/InroSliderScreen', page: () => IntroSliderPage()),
-        GetPage(name: '/singUpScreen', page: () => SingUpScreen()),
-        GetPage(name: '/SinInScreen', page: () => SingInScreen()),
-        GetPage(name: '/detailsScreen', page: () => const DetialsScreen()),
-        GetPage(name: '/settingScreen', page: () => const SettingScreen()),
-        GetPage(name: '/aboutScreen', page: () => const AboutScreen()),
-        GetPage(name: '/themeScreen', page: () => ThemeScreen()),
-        GetPage(name: '/splashScreen', page: () => CustomSplashScreen()),
-      ],
+
+// no need for get pages when iam using routes:
+      // getPages: [
+      //   GetPage(name: '/homePage', page: () => const MyHomePage()),
+      //   GetPage(name: '/InroSliderScreen', page: () => IntroSliderPage()),
+      //   GetPage(name: '/singUpScreen', page: () => const SingUpScreen()),
+      //   GetPage(name: '/SinInScreen', page: () => const SingInScreen()),
+      //   GetPage(name: '/detailsScreen', page: () => const DetialsScreen()),
+      //   GetPage(name: '/settingScreen', page: () => const SettingScreen()),
+      //   GetPage(name: '/aboutScreen', page: () => const AboutScreen()),
+      //   GetPage(name: '/themeScreen', page: () => const ThemeScreen()),
+      //   GetPage(name: '/splashScreen', page: () => const CustomSplashScreen()),
+      // ],
+
+      routes: routesPluse,
 
       // themeMode: ThemeMode.dark,
 
@@ -61,11 +60,11 @@ class MyApp extends StatelessWidget {
 // //
 // //
 
-//         primaryColor: kPrimaryColor,
+//         primaryColor: AppColor.kPrimaryColor,
 //         scaffoldBackgroundColor: Colors.white,
 //         textTheme: TextTheme(
-//           body1: TextStyle(color: ksecondaryColor),
-//           body2: TextStyle(color: ksecondaryColor),
+//           body1: TextStyle(color: AppColor.ksecondaryColor),
+//           body2: TextStyle(color: AppColor.ksecondaryColor),
 //         ),
 //       ),
 
@@ -74,15 +73,18 @@ class MyApp extends StatelessWidget {
 //
 
       theme: ThemeData(
-        primaryColor: kPrimaryColor,
+        // fontFamily: GoogleFonts.cairo().fontFamily,
+        fontFamily: 'Cairo',
+        primaryColor: AppColor.kPrimaryColor,
+
         scaffoldBackgroundColor: Colors.white,
         textTheme: const TextTheme(
-          bodyText1: TextStyle(color: ksecondaryColor),
-          bodyText2: TextStyle(color: ksecondaryColor),
+          bodyText1: TextStyle(color: AppColor.kTextColor),
+          bodyText2: TextStyle(color: AppColor.kTextBlacColor),
         ),
       ),
 
-      home: IntroSliderPage(),
+      home: MyHomePage(),
     );
   }
 }

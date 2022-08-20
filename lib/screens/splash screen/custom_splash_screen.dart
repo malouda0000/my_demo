@@ -1,11 +1,26 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
+import 'package:my_demo/constans/routes.dart';
+import '../../widgets/app_id.dart';
 
-import '../sing and log in screen/sing_in.dart';
-
-class CustomSplashScreen extends StatelessWidget {
+class CustomSplashScreen extends StatefulWidget {
   const CustomSplashScreen({Key? key}) : super(key: key);
+
+  @override
+  State<CustomSplashScreen> createState() => _CustomSplashScreenState();
+}
+
+class _CustomSplashScreenState extends State<CustomSplashScreen> {
+  @override
+  void initState() {
+    super.initState;
+    Timer(Duration(seconds: 1), () {
+      Get.offAllNamed(AppRoute.homePage);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +34,7 @@ class CustomSplashScreen extends StatelessWidget {
             width: 300,
             height: 300,
             decoration: BoxDecoration(
-              color: kPrimaryColor.withOpacity(.8),
+              color: AppColor.kPrimaryColor.withOpacity(.8),
               shape: BoxShape.circle,
             ),
           ),
@@ -31,7 +46,7 @@ class CustomSplashScreen extends StatelessWidget {
             width: 700,
             height: 700,
             decoration: BoxDecoration(
-              color: kPrimaryColor.withOpacity(.4),
+              color: AppColor.kPrimaryColor.withOpacity(.4),
               shape: BoxShape.circle,
             ),
           ),
@@ -43,7 +58,7 @@ class CustomSplashScreen extends StatelessWidget {
             width: 700,
             height: 700,
             decoration: BoxDecoration(
-              color: kPrimaryColor,
+              color: AppColor.kPrimaryColor,
               shape: BoxShape.circle,
             ),
           ),
@@ -55,7 +70,7 @@ class CustomSplashScreen extends StatelessWidget {
             width: 700,
             height: 700,
             decoration: BoxDecoration(
-              color: kPrimaryColor.withOpacity(.7),
+              color: AppColor.kPrimaryColor.withOpacity(.7),
               shape: BoxShape.circle,
             ),
           ),
@@ -67,7 +82,7 @@ class CustomSplashScreen extends StatelessWidget {
             width: 400,
             height: 400,
             decoration: BoxDecoration(
-              color: kPrimaryColor.withOpacity(.4),
+              color: AppColor.kPrimaryColor.withOpacity(.4),
               shape: BoxShape.circle,
             ),
           ),
@@ -77,7 +92,7 @@ class CustomSplashScreen extends StatelessWidget {
             width: Get.width,
             height: Get.height,
             child: AppId(
-              titleColor: kPrimaryColor,
+              titleColor: AppColor.kPrimaryColor,
             ))
       ],
     ));

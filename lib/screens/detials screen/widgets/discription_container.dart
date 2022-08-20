@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/constants.dart';
+import 'package:get/get.dart';
+import 'package:my_demo/constans/constants.dart';
 import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
+import 'package:my_demo/widgets/big_button.dart';
 
 class DiscriptionContainer extends StatelessWidget {
   const DiscriptionContainer({Key? key}) : super(key: key);
@@ -11,7 +13,7 @@ class DiscriptionContainer extends StatelessWidget {
       alignment: AlignmentDirectional.topStart,
       padding: const EdgeInsets.all(15),
       decoration: const BoxDecoration(
-        color: theMainLightColor,
+        color: AppColor.theMainLightColor,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(15),
           topRight: Radius.circular(15),
@@ -23,7 +25,7 @@ class DiscriptionContainer extends StatelessWidget {
             children: const [
               Icon(
                 Icons.location_on,
-                color: ksecondaryColor,
+                color: AppColor.kTextColor,
               ),
               SizedBox(
                 width: 10,
@@ -31,7 +33,7 @@ class DiscriptionContainer extends StatelessWidget {
               Text(
                 'khartoum city',
                 style: TextStyle(
-                  color: kTextColor,
+                  color: AppColor.kTextColor,
                 ),
               ),
             ],
@@ -47,7 +49,7 @@ class DiscriptionContainer extends StatelessWidget {
                   const Text(
                     'Big Burger',
                     style: TextStyle(
-                      color: kTextColor,
+                      color: AppColor.kTextColor,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
@@ -58,23 +60,23 @@ class DiscriptionContainer extends StatelessWidget {
                   Row(
                     children: const [
                       CustomRating(
-                        ratingColor: kPrimaryColor,
+                        ratingColor: AppColor.kPrimaryColor,
                       ),
                       CustomRating(
-                        ratingColor: kPrimaryColor,
+                        ratingColor: AppColor.kPrimaryColor,
                       ),
                       CustomRating(
-                        ratingColor: kPrimaryColor,
+                        ratingColor: AppColor.kPrimaryColor,
                       ),
                       CustomRating(
-                        ratingColor: kPrimaryColor,
+                        ratingColor: AppColor.kPrimaryColor,
                       ),
                       // CustomRating(
-                      //   ratingColor: kPrimaryColor,
+                      //   ratingColor: AppColor.kPrimaryColor,
                       // ),
                       // SmoothStarRating(
                       //   allowHalfRating: true,
-                      //   borderColor: kPrimaryColor,
+                      //   borderColor: AppColor.kPrimaryColor,
                       //   rating: 4.5,
                       // ),
 
@@ -108,7 +110,7 @@ class DiscriptionContainer extends StatelessWidget {
                       Text(
                         ' 24 reviews',
                         style: TextStyle(
-                          color: kTextColor,
+                          color: AppColor.kTextColor,
                         ),
                       )
                     ],
@@ -118,7 +120,7 @@ class DiscriptionContainer extends StatelessWidget {
               const Spacer(),
               Container(
                 decoration: BoxDecoration(
-                  color: kPrimaryColor,
+                  color: AppColor.kPrimaryColor,
                   shape: BoxShape.rectangle,
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -126,7 +128,7 @@ class DiscriptionContainer extends StatelessWidget {
                 child: const Text(
                   '\$ 15',
                   style: TextStyle(
-                    color: kTextColor,
+                    color: AppColor.kTextColor,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -137,6 +139,16 @@ class DiscriptionContainer extends StatelessWidget {
             padding: const EdgeInsets.only(top: 10),
             child: const TempText(),
           ),
+          emptySpace,
+          BigggButton(
+              theLeadingIcon: Icons.delivery_dining_outlined,
+              theButtonTitle: 'Order',
+              onTaped: () {
+                Get.snackbar(
+                  'Order',
+                  'comming soon',
+                );
+              })
         ],
       ),
     );

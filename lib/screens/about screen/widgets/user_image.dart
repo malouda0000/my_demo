@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/constants.dart';
+
+import '../../../constans/app_images.dart';
 
 class UserImage extends StatelessWidget {
   const UserImage({Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class UserImage extends StatelessWidget {
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         image: DecorationImage(
-          image: AssetImage(userImage),
+          image: AssetImage(AppImages.userImage),
           fit: BoxFit.fitHeight,
         ),
       ),

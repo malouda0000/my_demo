@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
 
 class TheFap extends StatelessWidget {
   const TheFap({Key? key}) : super(key: key);
@@ -8,7 +8,7 @@ class TheFap extends StatelessWidget {
   Widget build(BuildContext context) {
     return Builder(builder: (context) {
       return FloatingActionButton(
-        backgroundColor: kPrimaryColor,
+        backgroundColor: AppColor.kPrimaryColor,
         enableFeedback: true,
         // foregroundColor: ksecondaryColor,
 

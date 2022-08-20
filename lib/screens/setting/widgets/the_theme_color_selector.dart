@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
 
 class TheThemeColorSelector extends StatelessWidget {
   const TheThemeColorSelector({

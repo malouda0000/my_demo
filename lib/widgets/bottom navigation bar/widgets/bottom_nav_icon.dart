@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/constants.dart';
+import 'package:my_demo/constans/constants.dart';
 
 class BottomeNavBarIcon extends StatelessWidget {
   final String theNamedRout;
@@ -19,7 +19,7 @@ class BottomeNavBarIcon extends StatelessWidget {
       },
       icon: Icon(theNavBarIcon),
       iconSize: 25,
-      color: kPrimaryColor,
+      color: AppColor.kPrimaryColor,
     );
   }
 }

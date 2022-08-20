@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-// import 'package:get/get.dart';
-import 'package:my_demo/constants.dart';
-// import 'package:my_demo/screens/Error/error_message_screen.dart';
+import 'package:get/get.dart';
+import 'package:my_demo/constans/constants.dart';
 import 'package:my_demo/screens/about%20screen/widgets/communication_icon.dart';
-// import 'package:url_launcher/url_launcher.dart';
-// import 'package:url_launcher/url_launcher_string.dart';
-// import 'package:url_launcher/link.dart';
+import 'package:url_launcher/url_launcher.dart';
+import '../screens/Error/error_message_screen.dart';
 
 class CommunicationRow extends StatelessWidget {
   const CommunicationRow({Key? key}) : super(key: key);
@@ -17,10 +15,10 @@ class CommunicationRow extends StatelessWidget {
       children: [
         CommuincationIcon(
           theIcon: Icons.work_outline,
-          iconColor: kPrimaryColor,
+          iconColor: AppColor.kPrimaryColor,
           // theUrlLanching: () => LaunchFacebook(),
           theUrlLanching: () {
-            // LaunchFacebook();
+            LaunchFacebook();
           },
 
           CommuincationIconTitle: 'linkedIn',
@@ -32,9 +30,10 @@ class CommunicationRow extends StatelessWidget {
         ),
         CommuincationIcon(
           theIcon: Icons.email_outlined,
-          iconColor: kPrimaryColor,
+          iconColor: AppColor.kPrimaryColor,
           theUrlLanching: () {
             // LaunchEmail();
+            LaunchEmail();
           },
           CommuincationIconTitle: 'Email',
         ),
@@ -43,10 +42,11 @@ class CommunicationRow extends StatelessWidget {
         ),
         CommuincationIcon(
           CommuincationIconTitle: 'callme',
-          iconColor: kPrimaryColor,
+          iconColor: AppColor.kPrimaryColor,
           theIcon: Icons.call_outlined,
           theUrlLanching: () {
             // launchPhone();
+            LaunchPhone();
           },
         ),
         const SizedBox(
@@ -54,9 +54,11 @@ class CommunicationRow extends StatelessWidget {
         ),
         CommuincationIcon(
           CommuincationIconTitle: 'github',
-          iconColor: kPrimaryColor,
+          iconColor: AppColor.kPrimaryColor,
           theIcon: Icons.control_point,
-          theUrlLanching: () {},
+          theUrlLanching: () {
+            LaunchGithub();
+          },
         ),
         const SizedBox(
           width: 20,
@@ -66,16 +68,51 @@ class CommunicationRow extends StatelessWidget {
   }
 }
 
-// LaunchFacebook() async {
-//   String url = 'https://linkedin.com/in/hummam-mohamed-hamza';
+LaunchFacebook() async {
+  Uri facebookUrl = Uri.parse('https://linkedin.com/in/hummam-mohamed-hamza');
 
-//   if (await canLaunchUrlString(url)) {
-//     await launchUrlString(url);
-//   } else {
-//     return Get.to(() => ErrorMessageScreen());
-//   }
-//   ;
-// }
+  if (!await launchUrl(facebookUrl)) {
+    Get.to(ErrorMessageScreen());
+  }
+  ;
+}
+
+LaunchEmail() async {
+  final Uri emailLaunchUri = Uri(
+    scheme: 'mailto',
+    path: 'hamam.hamza85@gmail.com',
+  );
+  if (!await launchUrl(emailLaunchUri)) {
+    Get.to(ErrorMessageScreen());
+  }
+  ;
+}
+
+LaunchPhone() async {
+  Uri phoneNumber = Uri(
+    scheme: 'tel',
+    path: '+249928722310',
+  );
+  if (!await launchUrl(phoneNumber)) {
+    Get.to(ErrorMessageScreen());
+  }
+  ;
+}
+
+LaunchGithub() async {
+  // final Uri githubUri = Uri(
+  //   scheme: 'https',
+  //   path: 'https://github.com/malouda0000',
+  // );
+
+  Uri githubUri = Uri.parse('https://github.com/malouda0000');
+  if (!await launchUrl(githubUri)) {
+    Get.to(ErrorMessageScreen());
+  }
+  ;
+}
+
+
 
 // LaunchEmail() async {
 //   // Uri url;

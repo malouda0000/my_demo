@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:my_demo/constans/constants.dart';
+import '../../../constans/app_color.dart';
 
 class TheSearchBar extends StatelessWidget {
   const TheSearchBar({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:my_demo/constans/constants.dart';
+import '../../../constans/app_color.dart';
 
 class DarknessRow extends StatelessWidget {
   const DarknessRow({Key? key}) : super(key: key);

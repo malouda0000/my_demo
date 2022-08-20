@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/constans/constants.dart';
+import '../../../constans/app_color.dart';
 import 'package:my_demo/screens/about%20screen/widgets/communication_icon.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../screens/Error/error_message_screen.dart';

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:my_demo/constans/constants.dart';
 import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
 import 'package:my_demo/widgets/big_button.dart';
+import '../../../constans/app_color.dart';
 
 class DiscriptionContainer extends StatelessWidget {
   const DiscriptionContainer({Key? key}) : super(key: key);

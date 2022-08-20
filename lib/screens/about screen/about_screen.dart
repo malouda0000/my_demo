@@ -12,6 +12,7 @@ import 'package:my_demo/widgets/title_builder.dart';
 import 'package:my_demo/constans/constants.dart';
 
 import 'widgets/temp_debuging_row.dart';
+import '../../../constans/app_color.dart';
 // import 'package:flutter_remix/flutter_remix.dart';
 
 // final Uri _url = Uri.parse('tel:+1-555-010-999');

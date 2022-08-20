@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-import '../../../constans/constants.dart';
+import '../../../constans/app_color.dart';
 
 AppBar DetialsScreenAppBar() {
   return AppBar(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/constans/constants.dart';
+import '../../../constans/app_color.dart';
 import 'package:my_demo/widgets/the%20appbar/widgets/the_main_title_builder.dart';
 
 import '../../constans/app_images.dart';
@@ -44,13 +44,12 @@ AppBar TheAppBar() {
     actions: [
       IconButton(
         onPressed: () {
-          Get.snackbar(
-            'Notificatins',
-            'comming soon',
+          Get.defaultDialog(
+            title: 'notifacations',
           );
         },
         icon: SvgPicture.asset(
-          'assets/icons/notification.svg',
+          AppImages.notificationSvg,
         ),
       ),
       IconButton(
@@ -61,7 +60,7 @@ AppBar TheAppBar() {
           );
         },
         icon: SvgPicture.asset(
-          'assets/icons/search.svg',
+          AppImages.searchSvg,
         ),
       ),
     ],

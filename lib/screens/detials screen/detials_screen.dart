@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/constans/constants.dart';
+import '../../../constans/app_color.dart';
 import 'package:my_demo/screens/detials%20screen/widgets/detials_screen_app_bar.dart';
 import 'package:my_demo/screens/detials%20screen/widgets/detials_screen_body.dart';
 import 'package:my_demo/widgets/bottom%20navigation%20bar/bottom_nav_bar.dart';

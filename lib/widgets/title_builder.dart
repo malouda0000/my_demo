@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/constans/constants.dart';
+import '../../../constans/app_color.dart';
 
 class TitleBuilder extends StatelessWidget {
   final String theTitle;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_demo/constans/constants.dart';
+import '../../../constans/app_color.dart';
 
 class OffersAndDiscounts extends StatelessWidget {
   const OffersAndDiscounts({Key? key}) : super(key: key);

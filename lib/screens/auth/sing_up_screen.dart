@@ -11,6 +11,7 @@ import 'package:my_demo/widgets/the_input_feaild.dart';
 
 import 'dont_have_account.dart';
 import 'or_row.dart';
+import '../../../constans/app_color.dart';
 
 class SingUpScreen extends StatelessWidget {
   const SingUpScreen({Key? key}) : super(key: key);

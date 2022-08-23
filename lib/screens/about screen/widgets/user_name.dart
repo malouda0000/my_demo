@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/constans/constants.dart';
+import 'package:get/get.dart';
+import 'package:my_demo/localization/localization.dart';
 
 class UserName extends StatelessWidget {
   const UserName({
@@ -9,7 +10,7 @@ class UserName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      userName.toUpperCase(),
+      AppLocal.userName.tr.toUpperCase(),
       style: Theme.of(context).textTheme.bodyText1,
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/constans/constants.dart';
+import 'package:my_demo/localization/localization.dart';
 import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
 import 'package:my_demo/widgets/big_button.dart';
 import '../../../constans/app_color.dart';
@@ -23,7 +24,7 @@ class DiscriptionContainer extends StatelessWidget {
       child: Column(
         children: [
           Row(
-            children: const [
+            children: [
               Icon(
                 Icons.location_on,
                 color: AppColor.kTextColor,
@@ -32,7 +33,7 @@ class DiscriptionContainer extends StatelessWidget {
                 width: 10,
               ),
               Text(
-                'khartoum city',
+                AppLocal.cityname.tr,
                 style: TextStyle(
                   color: AppColor.kTextColor,
                 ),
@@ -47,8 +48,8 @@ class DiscriptionContainer extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Text(
-                    'Big Burger',
+                  Text(
+                    AppLocal.bigBurger.tr,
                     style: TextStyle(
                       color: AppColor.kTextColor,
                       fontSize: 20,
@@ -59,7 +60,7 @@ class DiscriptionContainer extends StatelessWidget {
                     height: 10,
                   ),
                   Row(
-                    children: const [
+                    children: [
                       CustomRating(
                         ratingColor: AppColor.kPrimaryColor,
                       ),
@@ -107,13 +108,19 @@ class DiscriptionContainer extends StatelessWidget {
                       //
                       //
                       //
-
+                      emptySpace,
                       Text(
-                        ' 24 reviews',
+                        AppLocal.numberOfReviews,
                         style: TextStyle(
                           color: AppColor.kTextColor,
                         ),
-                      )
+                      ),
+                      Text(
+                        AppLocal.reviews.tr,
+                        style: TextStyle(
+                          color: AppColor.kTextColor,
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -138,16 +145,18 @@ class DiscriptionContainer extends StatelessWidget {
           ),
           Container(
             padding: const EdgeInsets.only(top: 10),
-            child: const TempText(),
+            child: Text(AppLocal.macdonalz.tr, softWrap: true),
           ),
           emptySpace,
           BigggButton(
+              leadingIconColor: AppColor.theMainLightColor,
+              buttonTitleColor: AppColor.theMainLightColor,
               theLeadingIcon: Icons.delivery_dining_outlined,
-              theButtonTitle: 'Order',
+              theButtonTitle: AppLocal.order.tr,
               onTaped: () {
                 Get.snackbar(
-                  'Order',
-                  'comming soon',
+                  AppLocal.order.tr,
+                  AppLocal.commingSoon.tr,
                 );
               })
         ],

@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import '../../../constans/app_color.dart';
 import 'package:my_demo/constans/routes.dart';
 
+import '../../../localization/localization.dart';
+
 class ReservedRightsRow extends StatelessWidget {
   const ReservedRightsRow({Key? key}) : super(key: key);
 
@@ -10,7 +12,7 @@ class ReservedRightsRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
       Text(
-        'all rights reserved to : ',
+        AppLocal.allRightsReserved.tr,
         style: Theme.of(context).textTheme.bodyText1,
       ),
       GestureDetector(
@@ -18,7 +20,7 @@ class ReservedRightsRow extends StatelessWidget {
           Get.toNamed(AppRoute.aboutScreen);
         },
         child: Text(
-          'HMMAM HAMZA',
+          AppLocal.userName.tr,
           style: TextStyle(
             color: AppColor.kPrimaryColor,
           ),

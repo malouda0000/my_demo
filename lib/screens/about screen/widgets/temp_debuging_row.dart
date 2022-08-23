@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/constans/routes.dart';
+import 'package:my_demo/localization/localization.dart';
 
 import '../../../constans/app_color.dart';
 
@@ -25,10 +26,9 @@ class TempDebugingRow extends StatelessWidget {
                   Get.offAllNamed(
                     AppRoute.singInScreen,
                   );
-                  print('the new button tabded sucssfully');
                 },
                 child: Text(
-                  'debug SingIn Screen',
+                  AppLocal.debugSinIng.tr,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     // fontSize: 30,
@@ -50,10 +50,9 @@ class TempDebugingRow extends StatelessWidget {
                   Get.offAllNamed(
                     AppRoute.introSliderScreen,
                   );
-                  print('the new button tabded sucssfully');
                 },
                 child: Text(
-                  'debug the Slider Screen',
+                  AppLocal.debugSplashScreen.tr,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     // fontSize: 30,
@@ -82,7 +81,7 @@ class TempDebugingRow extends StatelessWidget {
                   );
                 },
                 child: Text(
-                  'debug the splashScreen',
+                  AppLocal.debugSplach.tr,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     // fontSize: 30,

@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/localization/localization_controller.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../constans/app_color.dart';
 import 'package:my_demo/constans/routes.dart';
 import 'package:my_demo/routesPluse.dart';
 import 'package:my_demo/screens/home/my_home_page.dart';
+
+import 'localization/localization.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
-void main() {
+main() {
+  // final prefs = await SharedPreferences.getInstance();
   runApp(const MyApp());
 }
 
@@ -16,6 +21,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    Get.put(MylocalController());
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: AppRoute.customSplashScreen,
@@ -83,6 +89,9 @@ class MyApp extends StatelessWidget {
           bodyText2: TextStyle(color: AppColor.kTextBlacColor),
         ),
       ),
+
+      locale: Get.deviceLocale,
+      translations: TheLocalization(),
 
       home: MyHomePage(),
     );

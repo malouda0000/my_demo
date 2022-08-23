@@ -1,9 +1,18 @@
+// import 'package:flutter/material.dart';
+// import 'package:get/get.dart';
+// import 'package:my_demo/constans/app_images.dart';
+// import '../../../constans/app_color.dart';
+
+// import '../constans/constants.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/constans/app_color.dart';
 import 'package:my_demo/constans/app_images.dart';
-import '../../../constans/app_color.dart';
-
-import '../constans/constants.dart';
+import 'package:my_demo/constans/constants.dart';
+import 'package:my_demo/localization/localization.dart';
+import 'package:my_demo/widgets/the%20appbar/widgets/the_main_title_builder.dart';
+import 'package:my_demo/widgets/title_builder.dart';
 
 class AppId extends StatelessWidget {
   final Color titleColor;
@@ -11,30 +20,36 @@ class AppId extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Container(
-          padding: EdgeInsets.all(15),
-          decoration: BoxDecoration(
-              color: AppColor.theMainLightColor,
-              borderRadius: BorderRadius.circular(10)),
-          child: Image.asset(
-            AppImages.mainIcon,
+    return Container(
+      padding: EdgeInsets.all(15),
+      decoration: BoxDecoration(
+        color: AppColor.theMainLightColor,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Image.asset(
+            AppImages.mainBurgerIcon,
             width: Get.width * 0.3,
           ),
-        ),
-        emptySpace,
-        Text(
-          'PnukFood',
-          style: TextStyle(
-            color: titleColor,
-            fontSize: 35,
-            fontWeight: FontWeight.bold,
+          emptySpace,
+          // Text(
+          //   AppLocal.appNameFast + AppLocal.appNameFood,
+          //   style: TextStyle(
+          //     color: titleColor,
+          //     fontSize: 35,
+          //     fontWeight: FontWeight.bold,
+          //   ),
+          // ),
+
+          TheMainTitleBuilder(
+            firstTitle: 'Fast',
+            secondTitle: 'Food',
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

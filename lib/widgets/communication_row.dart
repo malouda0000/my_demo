@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/localization/localization.dart';
 import '../../../constans/app_color.dart';
 import 'package:my_demo/screens/about%20screen/widgets/communication_icon.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -21,7 +22,7 @@ class CommunicationRow extends StatelessWidget {
             LaunchFacebook();
           },
 
-          CommuincationIconTitle: 'linkedIn',
+          CommuincationIconTitle: AppLocal.linkedIn.tr,
 
           // theUrlLanching: (){},
         ),
@@ -35,13 +36,13 @@ class CommunicationRow extends StatelessWidget {
             // LaunchEmail();
             LaunchEmail();
           },
-          CommuincationIconTitle: 'Email',
+          CommuincationIconTitle: AppLocal.Email.tr,
         ),
         const SizedBox(
           width: 20,
         ),
         CommuincationIcon(
-          CommuincationIconTitle: 'callme',
+          CommuincationIconTitle: AppLocal.callMe.tr,
           iconColor: AppColor.kPrimaryColor,
           theIcon: Icons.call_outlined,
           theUrlLanching: () {
@@ -53,7 +54,7 @@ class CommunicationRow extends StatelessWidget {
           width: 20,
         ),
         CommuincationIcon(
-          CommuincationIconTitle: 'github',
+          CommuincationIconTitle: AppLocal.myGithub.tr,
           iconColor: AppColor.kPrimaryColor,
           theIcon: Icons.control_point,
           theUrlLanching: () {

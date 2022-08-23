@@ -14,7 +14,7 @@ class BackgrounContainer extends StatelessWidget {
       child: Column(
         children: [
           Flexible(
-            flex: 1,
+            flex: 4,
             child: Container(
                 decoration: BoxDecoration(
                     color: AppColor.kPrimaryColor,
@@ -24,7 +24,7 @@ class BackgrounContainer extends StatelessWidget {
                     ))),
           ),
           Flexible(
-              flex: 2,
+              flex: 6,
               child: Container(
                   // color: AppColor.theMainLightColor,
                   ))

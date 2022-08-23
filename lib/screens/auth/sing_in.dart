@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/constans/constants.dart';
 import 'package:my_demo/constans/routes.dart';
+import 'package:my_demo/localization/localization.dart';
 import 'package:my_demo/screens/auth/social_auth.dart';
 import 'package:my_demo/screens/home/my_home_page.dart';
 import 'package:my_demo/widgets/backgroundContainer.dart';
@@ -31,8 +32,16 @@ class SingInScreen extends StatelessWidget {
               child: Container(
                 padding: EdgeInsets.all(15),
                 decoration: BoxDecoration(
-                    color: AppColor.kPrimaryColor,
-                    borderRadius: BorderRadius.circular(10)),
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(0, 4),
+                        blurRadius: theDefaultRaduis,
+                        color: AppColor.kTextBlacColor.withOpacity(0.70),
+                        // color: Colors.red,
+                      ),
+                    ],
+                    color: AppColor.theMainLightColor,
+                    borderRadius: BorderRadius.circular(theDefaultRaduis)),
                 child: Column(
                   // mainAxisAlignment: MainAxisAlignment.center,
                   // crossAxisAlignment: CrossAxisAlignment.center,
@@ -43,7 +52,7 @@ class SingInScreen extends StatelessWidget {
                       isPassword: false,
                       textInputType: TextInputType.name,
                       theSize: Get.width,
-                      theHint: 'email',
+                      theHint: AppLocal.Email.tr,
                       theLeadingIcon: Icons.email_outlined,
                       backgroundColor: AppColor.theMainLightColor,
                     ),
@@ -52,7 +61,7 @@ class SingInScreen extends StatelessWidget {
                       isPassword: true,
                       textInputType: TextInputType.text,
                       theSize: Get.width,
-                      theHint: 'password',
+                      theHint: AppLocal.password.tr,
                       theLeadingIcon: Icons.password_rounded,
                       backgroundColor: AppColor.theMainLightColor,
                     ),
@@ -71,8 +80,10 @@ class SingInScreen extends StatelessWidget {
                         // }));
                         ,
                         // theBackgrounColor: ksecondaryColor,
-                        theButtonTitle: 'SingIn',
+                        theButtonTitle: AppLocal.singIn.tr,
+                        buttonTitleColor: AppColor.theMainLightColor,
                         theLeadingIcon: Icons.login_rounded,
+                        leadingIconColor: AppColor.theMainLightColor,
                       ),
 
                       // child: MaterialButton(
@@ -102,8 +113,8 @@ class SingInScreen extends StatelessWidget {
                     SocialAuthRow(),
                     emptySpace,
                     DontHaveAccount(
-                      doYouHaveAccoun: 'Dot\'t have account yet !!',
-                      singOrLogin: 'SingUp Now',
+                      doYouHaveAccoun: AppLocal.dontHaveAccountYet.tr,
+                      singOrLogin: AppLocal.singUpNow.tr,
                       theFunc: () => Get.toNamed(AppRoute.singUpScreen),
                     ),
                   ],

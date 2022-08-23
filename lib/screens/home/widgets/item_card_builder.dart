@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/constans/app_images.dart';
+import 'package:my_demo/constans/routes.dart';
 import '../../../constans/app_color.dart';
-import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
+
+import '../../../localization/localization.dart';
 
 class ItemCardBuilder extends StatelessWidget {
-  const ItemCardBuilder({
+  ItemCardBuilder({
     Key? key,
   }) : super(key: key);
 
@@ -16,74 +19,15 @@ class ItemCardBuilder extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          TheItemCard(
-            title: 'burgerking',
-            discription: 'best burger',
-            svgSrc: 'assets/icons/burger_beer.svg',
-            pressit: () {
-              Get.toNamed('detialsScreen');
-            },
-          ),
-          TheItemCard(
-            title: 'burgerking',
-            discription: 'best burger',
-            svgSrc: 'assets/icons/chinese_noodles.svg',
-            pressit: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const DetialsScreen();
-                  },
-                ),
-              );
-            },
-          ),
-          TheItemCard(
-            title: 'burgerking',
-            discription: 'best burger',
-            svgSrc: 'assets/icons/chinese_noodles.svg',
-            pressit: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const DetialsScreen();
-                  },
-                ),
-              );
-            },
-          ),
-          TheItemCard(
-            title: 'burgerking',
-            discription: 'best burger',
-            svgSrc: 'assets/icons/burger_beer.svg',
-            pressit: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const DetialsScreen();
-                  },
-                ),
-              );
-            },
-          ),
-          TheItemCard(
-            title: 'burgerking',
-            discription: 'best burger',
-            svgSrc: 'assets/icons/chinese_noodles.svg',
-            pressit: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const DetialsScreen();
-                  },
-                ),
-              );
-            },
-          ),
+          for (int i = 0; i < 11; i++)
+            TheItemCard(
+              title: AppLocal.burgerKing.tr,
+              discription: AppLocal.bestBurger.tr,
+              svgSrc: AppImages.burger_beer,
+              pressit: () {
+                Get.toNamed(AppRoute.detailsScreen);
+              },
+            ),
         ],
       ),
     );
@@ -93,7 +37,7 @@ class ItemCardBuilder extends StatelessWidget {
 class TheItemCard extends StatelessWidget {
   final String title, discription, svgSrc;
   final Function pressit;
-  const TheItemCard(
+  TheItemCard(
       {Key? key,
       required this.title,
       required this.discription,
@@ -105,9 +49,9 @@ class TheItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // alignment: Alignment.center,
-      margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-      width: MediaQuery.of(context).size.width * .35,
-      height: MediaQuery.of(context).size.width * .50,
+      margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      // width: Get.width * .35,
+      // height: Get.width * .50,
       // padding:  EdgeInsets.all(20),
       // margin:  EdgeInsets.all(20),
       decoration: BoxDecoration(
@@ -121,7 +65,7 @@ class TheItemCard extends StatelessWidget {
 //
         boxShadow: [
           BoxShadow(
-            offset: const Offset(0, 4),
+            offset: Offset(0, 4),
             blurRadius: 10,
             color: AppColor.ksecondaryColor.withOpacity(0.70),
             // color: Colors.red,
@@ -137,24 +81,24 @@ class TheItemCard extends StatelessWidget {
             pressit();
           },
           child: Padding(
-            padding: const EdgeInsets.all(20),
+            padding: EdgeInsets.all(20),
             child: Column(
               children: [
                 Container(
-                  margin: const EdgeInsets.only(bottom: 15),
-                  padding: const EdgeInsets.all(25),
+                  margin: EdgeInsets.only(bottom: 5),
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: AppColor.kPrimaryColor.withOpacity(0.32),
                   ),
                   child: SvgPicture.asset(
                     svgSrc,
-                    height: Get.height * .04,
+                    height: Get.height * .08,
                   ),
                 ),
                 Text(
                   title,
-                  style: const TextStyle(color: AppColor.kPrimaryColor),
+                  style: TextStyle(color: AppColor.kPrimaryColor),
                 ),
                 Text(
                   discription,

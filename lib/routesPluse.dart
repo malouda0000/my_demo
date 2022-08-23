@@ -6,6 +6,7 @@ import 'package:my_demo/screens/auth/sing_up_screen.dart';
 import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
 import 'package:my_demo/screens/home/my_home_page.dart';
 import 'package:my_demo/screens/intro%20slider/intro_slider.dart';
+import 'package:my_demo/screens/localization/localization_screen.dart';
 import 'package:my_demo/screens/setting/setting_screen.dart';
 import 'package:my_demo/screens/setting/theme_screen.dart';
 import 'package:my_demo/screens/splash%20screen/custom_splash_screen.dart';
@@ -20,4 +21,5 @@ Map<String, Widget Function(BuildContext)> routesPluse = {
   AppRoute.settignScreen: (context) => const SettingScreen(),
   AppRoute.themeScreen: (context) => const ThemeScreen(),
   AppRoute.aboutScreen: (context) => const AboutScreen(),
+  AppRoute.localizationScreen: (context) => const LocaliaztionScreen(),
 };

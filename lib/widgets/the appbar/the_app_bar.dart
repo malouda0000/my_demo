@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/localization/localization.dart';
 import '../../../constans/app_color.dart';
 import 'package:my_demo/widgets/the%20appbar/widgets/the_main_title_builder.dart';
 
@@ -10,7 +11,9 @@ AppBar TheAppBar() {
   return AppBar(
     centerTitle: true,
     backgroundColor: AppColor.theMainLightColor,
-    title: const TheMainTitleBuilder(firstTitle: 'punk', secondTitle: 'food'),
+    title: TheMainTitleBuilder(
+        firstTitle: AppLocal.appNameFast.tr,
+        secondTitle: AppLocal.appNameFood.tr),
     elevation: 0,
     leading: Builder(builder: (context) {
       return IconButton(
@@ -45,7 +48,7 @@ AppBar TheAppBar() {
       IconButton(
         onPressed: () {
           Get.defaultDialog(
-            title: 'notifacations',
+            title: AppLocal.notifications.tr,
           );
         },
         icon: SvgPicture.asset(
@@ -55,8 +58,8 @@ AppBar TheAppBar() {
       IconButton(
         onPressed: () {
           Get.snackbar(
-            'Search',
-            'comming soon',
+            AppLocal.search.tr,
+            AppLocal.commingSoon.tr,
           );
         },
         icon: SvgPicture.asset(

@@ -8,4 +8,5 @@ class AppRoute {
   static const String settignScreen = '/settingScreen';
   static const String themeScreen = '/themeScreen';
   static const String aboutScreen = '/aboutScreen';
+  static const String localizationScreen = '/localizationScreen';
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_demo/constans/constants.dart';
 import '../../../constans/app_color.dart';
 
 class TheIputFeaild extends StatelessWidget {
@@ -36,7 +37,21 @@ class TheIputFeaild extends StatelessWidget {
         obscureText: isPassword,
         // controller: controller,
         decoration: InputDecoration(
-          border: InputBorder.none,
+          border: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: AppColor.kPrimaryColor,
+            ),
+            borderRadius: BorderRadius.all(
+              Radius.circular(
+                theDefaultRaduis,
+              ),
+            ),
+
+            // borderSide: BorderSide(
+            //     // color: AppColor.kPrimaryColor,
+
+            //     ),
+          ),
           hintText: theHint,
           hintStyle: Theme.of(context).textTheme.bodyText1,
           prefixIcon: Icon(

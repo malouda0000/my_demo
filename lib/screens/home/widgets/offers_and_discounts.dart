@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:my_demo/constans/app_images.dart';
 import '../../../constans/app_color.dart';
+import '../../../localization/localization.dart';
 
 class OffersAndDiscounts extends StatelessWidget {
   const OffersAndDiscounts({Key? key}) : super(key: key);
@@ -11,10 +14,10 @@ class OffersAndDiscounts extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
+        Padding(
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 8),
           child: Text(
-            'Offers And discounts',
+            AppLocal.offersAndDiscounts.tr,
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: AppColor.kTextColor,
@@ -28,7 +31,7 @@ class OffersAndDiscounts extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
             image: const DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage('assets/images/burger.png'),
+              image: AssetImage(AppImages.burger),
             ),
           ),
           // height: 188,
@@ -56,25 +59,23 @@ class OffersAndDiscounts extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  SvgPicture.asset(
-                    'assets/icons/macdonalds.svg',
-                  ),
+                  SvgPicture.asset(AppImages.macdonalds),
                   RichText(
-                    text: const TextSpan(
+                    text: TextSpan(
                       children: [
                         TextSpan(
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.bold),
-                            text: 'get discount fo \n'),
+                            text: AppLocal.getDiscountOff.tr + '\n'),
                         TextSpan(
                           style: TextStyle(
                               fontSize: 49, fontWeight: FontWeight.bold),
-                          text: '30% \n',
+                          text: AppLocal.therty.tr + ' \n',
                         ),
                         TextSpan(
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.bold),
-                            text: 'now'),
+                            text: AppLocal.now.tr),
                       ],
                     ),
                   ),

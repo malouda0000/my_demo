@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/localization/localization.dart';
 import '../../../constans/app_color.dart';
 
 class OrRow extends StatelessWidget {
@@ -11,19 +12,19 @@ class OrRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          color: AppColor.theMainLightColor,
+          color: AppColor.kPrimaryColor,
           width: Get.width * .32,
           height: 1,
         ),
         Text(
-          'OR',
+          AppLocal.or.tr,
           style: TextStyle(
-              color: AppColor.theMainLightColor,
+              color: AppColor.kPrimaryColor,
               fontWeight: FontWeight.bold,
               fontSize: 30),
         ),
         Container(
-          color: AppColor.theMainLightColor,
+          color: AppColor.kPrimaryColor,
           width: Get.width * .32,
           height: 1,
         ),

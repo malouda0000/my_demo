@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../../../localization/localization.dart';
 import 'item_title_builder.dart';
 
 class TheCategoryItem extends StatelessWidget {
@@ -15,42 +17,42 @@ class TheCategoryItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ItemBuilder(
-              title: 'bigburger',
+              title: AppLocal.bigBurger.tr,
               pressed: () {},
               isActive: true,
             ),
             ItemBuilder(
-              title: 'pitza',
+              title: AppLocal.pitza.tr,
               pressed: () {},
             ),
             ItemBuilder(
-              title: 'captcheno',
+              title: AppLocal.capitcheno.tr,
               pressed: () {},
             ),
             ItemBuilder(
-              title: 'hotdoge',
+              title: AppLocal.hotdoge.tr,
               pressed: () {},
             ),
             ItemBuilder(
-              title: 'smallburger',
+              title: AppLocal.smallBurger.tr,
               pressed: () {},
             ),
             ItemBuilder(
-              title: 'bigburger',
-              pressed: () {},
-              // isActive: true,
-            ),
-            ItemBuilder(
-              title: 'pitza',
-              pressed: () {},
-            ),
-            ItemBuilder(
-              title: 'bigburger',
+              title: AppLocal.bigBurger.tr,
               pressed: () {},
               // isActive: true,
             ),
             ItemBuilder(
-              title: 'pitza',
+              title: AppLocal.pitza.tr,
+              pressed: () {},
+            ),
+            ItemBuilder(
+              title: AppLocal.bigBurger.tr,
+              pressed: () {},
+              // isActive: true,
+            ),
+            ItemBuilder(
+              title: AppLocal.pitza.tr,
               pressed: () {},
             ),
           ],

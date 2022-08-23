@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/constans/app_color.dart';
 import 'package:my_demo/constans/routes.dart';
 import 'package:my_demo/screens/setting/widgets/reserved_rights_row.dart';
 import 'package:my_demo/screens/setting/widgets/settign_list_tile.dart';
 import 'package:my_demo/widgets/big_button.dart';
 import 'package:my_demo/widgets/the%20drawer/widgets/drawer_header_plus.dart';
 
-String accountName = 'Hmmam mohamed hamza';
+import '../localization/localization.dart';
+
+String accountName = '3'.tr;
 String accountEmail = 'Hamam.hamza85@gmail.com';
 
 class TheDrawer extends StatelessWidget {
@@ -23,29 +26,35 @@ class TheDrawer extends StatelessWidget {
           const DrawerHeaderplus(),
           SettingListTile(
             diviedIt: true,
-            theTitle: 'Account',
+            theTitle: AppLocal.account.tr,
             theIcon: Icons.person_outline,
             theFunction: () => Get.offAllNamed(AppRoute.detailsScreen),
           ),
           SettingListTile(
             diviedIt: true,
-            theTitle: 'Notification',
+            theTitle: AppLocal.notifications.tr,
             theIcon: Icons.notifications_outlined,
             theFunction: () {
-              Get.snackbar('Notifications', 'comming soon');
+              Get.snackbar(
+                AppLocal.notifications.tr,
+                AppLocal.commingSoon.tr,
+              );
             },
           ),
           SettingListTile(
             diviedIt: true,
-            theTitle: 'Privacy & Security',
+            theTitle: AppLocal.priviceyAndSecurity.tr,
             theIcon: Icons.lock_outline,
             theFunction: () {
-              Get.snackbar('Security center', 'comming soon');
+              Get.snackbar(
+                AppLocal.priviceyAndSecurity.tr,
+                AppLocal.commingSoon.tr,
+              );
             },
           ),
           SettingListTile(
             diviedIt: true,
-            theTitle: 'Appearance',
+            theTitle: AppLocal.appearance.tr,
             theIcon: Icons.remove_red_eye_outlined,
             theFunction: () {
               Get.toNamed(AppRoute.themeScreen);
@@ -65,8 +74,10 @@ class TheDrawer extends StatelessWidget {
                 // alignment: MainAxisAlignment.spaceBetween,
                 children: [
                   BigggButton(
+                      leadingIconColor: AppColor.theMainLightColor,
+                      buttonTitleColor: AppColor.theMainLightColor,
                       theLeadingIcon: Icons.settings_outlined,
-                      theButtonTitle: 'Settings',
+                      theButtonTitle: AppLocal.settings.tr,
                       onTaped: () {
                         Get.toNamed(AppRoute.settignScreen);
                       }),

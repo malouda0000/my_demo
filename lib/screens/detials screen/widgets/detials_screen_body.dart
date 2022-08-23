@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_demo/constans/app_images.dart';
 import 'package:my_demo/screens/detials%20screen/widgets/deatials_image.dart';
 import 'package:my_demo/screens/detials%20screen/widgets/discription_container.dart';
 import 'package:my_demo/widgets/backgroundContainer.dart';
@@ -18,7 +19,7 @@ class DeatialsScreenBody extends StatelessWidget {
           child: Column(
             children: [
               DeatialsImage(
-                imageSrc: 'assets/images/burger.png',
+                imageSrc: AppImages.burger,
               ),
               DiscriptionContainer(),
             ],

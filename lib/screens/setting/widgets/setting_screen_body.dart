@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/localization/localization.dart';
 import '../../../constans/app_color.dart';
 import 'package:my_demo/constans/routes.dart';
 import 'package:my_demo/screens/setting/widgets/reserved_rights_row.dart';
@@ -20,7 +21,7 @@ class SettingScreenBody extends StatelessWidget {
           isPassword: false,
           textInputType: TextInputType.name,
           theSize: Get.width,
-          theHint: 'search',
+          theHint: AppLocal.search.tr,
           theLeadingIcon: Icons.search_rounded,
           backgroundColor: AppColor.ksecondaryColor,
         ),
@@ -30,35 +31,35 @@ class SettingScreenBody extends StatelessWidget {
         ),
         SettingListTile(
           diviedIt: true,
-          theTitle: 'Account',
+          theTitle: AppLocal.account.tr,
           theIcon: Icons.person_outline,
           theFunction: () => Get.toNamed(AppRoute.aboutScreen),
         ),
         SettingListTile(
           diviedIt: true,
-          theTitle: 'Notification',
+          theTitle: AppLocal.notifications.tr,
           theIcon: Icons.notifications_outlined,
           theFunction: () {
             Get.snackbar(
-              'Notificatins',
-              'comming soon',
+              AppLocal.notifications.tr,
+              AppLocal.commingSoon.tr,
             );
           },
         ),
         SettingListTile(
           diviedIt: true,
-          theTitle: 'Privacy & Security',
+          theTitle: AppLocal.priviceyAndSecurity.tr,
           theIcon: Icons.lock_outline,
           theFunction: () {
             Get.snackbar(
-              'privacy',
-              'comming soon',
+              AppLocal.priviceyAndSecurity.tr,
+              AppLocal.commingSoon.tr,
             );
           },
         ),
         SettingListTile(
           diviedIt: true,
-          theTitle: 'Appearance',
+          theTitle: AppLocal.appearance.tr,
           theIcon: Icons.remove_red_eye_outlined,
           theFunction: () {
             Get.toNamed(AppRoute.themeScreen);
@@ -66,20 +67,26 @@ class SettingScreenBody extends StatelessWidget {
         ),
         SettingListTile(
           diviedIt: true,
-          theTitle: 'help & suppourt',
+          theTitle: AppLocal.helpAndSupport.tr,
           theIcon: Icons.support_outlined,
           theFunction: () {
             Get.snackbar(
-              'suppourt',
-              'comming soon',
+              AppLocal.helpAndSupport.tr,
+              AppLocal.commingSoon.tr,
             );
           },
         ),
         SettingListTile(
           diviedIt: true,
-          theTitle: 'about',
+          theTitle: AppLocal.aboutMe.tr,
           theIcon: Icons.info_outline,
           theFunction: () => Get.toNamed(AppRoute.aboutScreen),
+        ),
+        SettingListTile(
+          diviedIt: true,
+          theTitle: AppLocal.langushes.tr,
+          theIcon: Icons.language,
+          theFunction: () => Get.toNamed(AppRoute.localizationScreen),
         ),
         // const Spacer(),
         ReservedRightsRow(),

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/constans/routes.dart';
+import 'package:my_demo/localization/localization.dart';
 import 'package:my_demo/screens/about%20screen/widgets/user_image.dart';
 import 'package:my_demo/screens/about%20screen/widgets/user_name.dart';
 import 'package:my_demo/screens/setting/widgets/settign_list_tile.dart';
 import 'package:my_demo/widgets/bottom%20navigation%20bar/bottom_nav_bar.dart';
 import 'package:my_demo/widgets/the%20appbar/the_app_bar.dart';
 import 'package:my_demo/widgets/communication_row.dart';
-import 'package:my_demo/widgets/the_drawer.dart';
 import 'package:my_demo/widgets/title_builder.dart';
 import 'package:my_demo/constans/constants.dart';
 
@@ -31,7 +31,6 @@ class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const TheDrawer(),
       appBar: TheAppBar(),
       // drawer: (),
       body: ListView(
@@ -52,7 +51,7 @@ class AboutScreen extends StatelessWidget {
               ),
               SettingListTile(
                 diviedIt: true,
-                theTitle: 'Account',
+                theTitle: AppLocal.account.tr,
                 theIcon: Icons.person_outline,
                 theFunction: () {
                   Get.toNamed(AppRoute.aboutScreen);
@@ -60,29 +59,29 @@ class AboutScreen extends StatelessWidget {
               ),
               SettingListTile(
                 diviedIt: true,
-                theTitle: 'Notification',
+                theTitle: AppLocal.notifications.tr,
                 theIcon: Icons.notifications_outlined,
                 theFunction: () {
                   Get.snackbar(
-                    'Notificatins',
-                    'comming soon',
+                    AppLocal.notifications.tr,
+                    AppLocal.commingSoon.tr,
                   );
                 },
               ),
               SettingListTile(
                 diviedIt: true,
-                theTitle: 'Privacy & Security',
+                theTitle: AppLocal.priviceyAndSecurity.tr,
                 theIcon: Icons.lock_outline,
                 theFunction: () {
                   Get.snackbar(
-                    'privacy',
-                    'comming soon',
+                    AppLocal.priviceyAndSecurity.tr,
+                    AppLocal.commingSoon,
                   );
                 },
               ),
               SettingListTile(
                 diviedIt: false,
-                theTitle: 'Appearance',
+                theTitle: AppLocal.appearance.tr,
                 theIcon: Icons.remove_red_eye_outlined,
                 theFunction: () {
                   Get.toNamed(AppRoute.themeScreen);
@@ -93,7 +92,9 @@ class AboutScreen extends StatelessWidget {
               ),
               Column(
                 children: [
-                  const TitleBuilder(theTitle: 'Feel free to contac me'),
+                  TitleBuilder(
+                    theTitle: AppLocal.feelFreeToContacMe.tr,
+                  ),
                   const SizedBox(
                     height: 15,
                   ),

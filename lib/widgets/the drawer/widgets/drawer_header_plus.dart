@@ -4,6 +4,8 @@ import '../../../constans/app_color.dart';
 import 'package:my_demo/constans/routes.dart';
 import 'package:my_demo/widgets/the_drawer.dart';
 
+import '../../../localization/localization.dart';
+
 class DrawerHeaderplus extends StatelessWidget {
   const DrawerHeaderplus({
     Key? key,
@@ -25,16 +27,11 @@ class DrawerHeaderplus extends StatelessWidget {
                 fit: BoxFit.fitHeight,
               ),
             ),
-            // child: Image.asset(
-            //   'assets/images/me.jpg',
-            //   // height: 250,
-            //   // width: 250,
-            // ),
           ),
         ),
       ),
       accountName: Text(
-        accountName,
+        AppLocal.userName.tr,
         style: bodyTextTow,
       ),
       accountEmail: Text(
@@ -54,7 +51,10 @@ class DrawerHeaderplus extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-            Get.snackbar('save', 'comming soon');
+            Get.snackbar(
+              'save',
+              AppLocal.commingSoon.tr,
+            );
           },
           child: Icon(
             Icons.save_outlined,

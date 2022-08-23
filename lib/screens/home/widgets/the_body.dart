@@ -18,7 +18,7 @@ class _TheMainHomeBodyState extends State<TheMainHomeBody> {
       scrollDirection: Axis.vertical,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
+        children: [
           TheSearchBar(),
           TheCategoryItem(),
           ItemCardBuilder(),

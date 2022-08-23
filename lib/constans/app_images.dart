@@ -2,6 +2,7 @@ class AppImages {
   static const String mainImagesPath = 'assets/images/';
   static const String userImage = 'assets/images/me.jpg';
   static const String mainIcon = 'assets/mainIcon.png';
+  static const String mainBurgerIcon = 'assets/images/mainBurgerIcon.png';
   static const String secondaryIcon = 'assets/secondaryIcon.png';
   static const String macdonalzMeal = 'assets/images/beyond-meat-mcdonalds.png';
   static const String discount = 'assets/images/discount.png';

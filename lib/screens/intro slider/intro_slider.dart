@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intro_slider/intro_slider.dart';
+import 'package:my_demo/constans/app_images.dart';
 import '../../../constans/app_color.dart';
 
 import '../auth/sing_in.dart';
@@ -21,28 +22,28 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
         title: "Hello Food!",
         description:
             "The easiest way to order food from your favorite restaurant!",
-        pathImage: "assets/images/hamburger.png",
+        pathImage: AppImages.mainIcon,
       ),
     );
     slides.add(
       new Slide(
         title: "Movie Tickets",
         description: "Book movie tickets for your family and friends!",
-        pathImage: "assets/images/movie.png",
+        pathImage: AppImages.movie,
       ),
     );
     slides.add(
       new Slide(
         title: "Great Discounts",
         description: "Best discounts on every single service we offer!",
-        pathImage: "assets/images/discount.png",
+        pathImage: AppImages.discount,
       ),
     );
     slides.add(
       new Slide(
         title: "World Travel",
         description: "Book tickets of any transportation and travel the world!",
-        pathImage: "assets/images/travel.png",
+        pathImage: AppImages.travel,
       ),
     );
   }

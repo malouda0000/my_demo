@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/constans/routes.dart';
+import 'package:my_demo/constans/app_routes.dart';
 import 'package:my_demo/localization/localization.dart';
 import 'package:my_demo/screens/about%20screen/widgets/user_image.dart';
 import 'package:my_demo/screens/about%20screen/widgets/user_name.dart';

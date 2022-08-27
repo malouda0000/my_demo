@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/constans/app_color.dart';
 import 'package:my_demo/constans/constants.dart';
+import 'package:my_demo/controllers/localization_controller.dart';
 import 'package:my_demo/localization/localization.dart';
-import 'package:my_demo/localization/localization_controller.dart';
 import 'package:my_demo/widgets/big_button.dart';
 
 class LocaliaztionScreen extends StatelessWidget {
@@ -34,8 +34,8 @@ class LocaliaztionScreen extends StatelessWidget {
                 buttonTitleColor: AppColor.theMainLightColor,
                 theLeadingIcon: Icons.language_outlined,
                 theButtonTitle: AppLocal.arabic.tr,
-                onTaped: () {
-                  myLangController.ChangeLocal('ar');
+                onTaped: () async {
+                  await myLangController.ChangeLocal('ar');
                 }),
             emptySpace,
             BigggButton(
@@ -43,8 +43,8 @@ class LocaliaztionScreen extends StatelessWidget {
                 buttonTitleColor: AppColor.theMainLightColor,
                 theLeadingIcon: Icons.language_outlined,
                 theButtonTitle: AppLocal.english.tr,
-                onTaped: () {
-                  myLangController.ChangeLocal('en');
+                onTaped: () async {
+                  await myLangController.ChangeLocal('en');
                 }),
           ],
         ),

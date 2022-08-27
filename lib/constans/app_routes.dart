@@ -1,5 +1,5 @@
 class AppRoute {
-  static const String introSliderScreen = '/InroSliderScreen';
+  static const String introSliderScreen = '/';
   static const String customSplashScreen = '/splashScreen';
   static const String homePage = '/homePage';
   static const String singUpScreen = '/singUpScreen';

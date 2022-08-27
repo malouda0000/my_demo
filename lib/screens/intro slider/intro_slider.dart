@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intro_slider/intro_slider.dart';
 import 'package:my_demo/constans/app_images.dart';
+import 'package:my_demo/localization/localization.dart';
 import '../../../constans/app_color.dart';
 
 import '../auth/sing_in.dart';
@@ -19,30 +20,29 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
     super.initState();
     slides.add(
       new Slide(
-        title: "Hello Food!",
-        description:
-            "The easiest way to order food from your favorite restaurant!",
-        pathImage: AppImages.mainIcon,
+        title: AppLocal.fastfood.tr,
+        description: AppLocal.fastfoodDiscription.tr,
+        pathImage: AppImages.mainBurgerIcon,
       ),
     );
     slides.add(
       new Slide(
-        title: "Movie Tickets",
-        description: "Book movie tickets for your family and friends!",
+        title: AppLocal.moviTixts.tr,
+        description: AppLocal.moviTixtsDiscription.tr,
         pathImage: AppImages.movie,
       ),
     );
     slides.add(
       new Slide(
-        title: "Great Discounts",
-        description: "Best discounts on every single service we offer!",
+        title: AppLocal.discounts.tr,
+        description: AppLocal.discountsDiscription.tr,
         pathImage: AppImages.discount,
       ),
     );
     slides.add(
       new Slide(
-        title: "World Travel",
-        description: "Book tickets of any transportation and travel the world!",
+        title: AppLocal.fastDelivery.tr,
+        description: AppLocal.fastDeliveryDiscription.tr,
         pathImage: AppImages.travel,
       ),
     );
@@ -73,10 +73,9 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
                   ),
                   child: Image.asset(
                     currentSlide.pathImage.toString(),
-                    // "assets/images/movie.png",
                     matchTextDirection: true,
                     // height: 60,
-                    width: size.width * .5,
+                    width: size.width * .4,
                     // fit: BoxFit.contain,
                   ),
                 ),
@@ -121,20 +120,20 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
   Widget build(BuildContext context) {
     return IntroSlider(
       backgroundColorAllSlides: AppColor.kPrimaryColor,
-      renderSkipBtn: const Text(
-        "Skip",
+      renderSkipBtn: Text(
+        AppLocal.skip.tr,
         style: TextStyle(
           color: AppColor.theMainLightColor,
         ),
       ),
-      renderNextBtn: const Text(
-        "Next",
+      renderNextBtn: Text(
+        AppLocal.next.tr,
         style: TextStyle(
           color: AppColor.theMainLightColor,
         ),
       ),
-      renderDoneBtn: const Text(
-        "Done",
+      renderDoneBtn: Text(
+        AppLocal.done.tr,
         style: TextStyle(
           color: AppColor.theMainLightColor,
         ),
@@ -149,7 +148,7 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
       sizeDot: 8.0,
       // typeDotAnimation: dotSliderAnimation.SIZE_TRANSITION,
       listCustomTabs: this.renderListCustomTabs(),
-      scrollPhysics: const BouncingScrollPhysics(),
+      scrollPhysics: const ClampingScrollPhysics(),
       // shouldHideStatusBar: false,
       onDonePress: () {
         Get.offAll(SingInScreen());

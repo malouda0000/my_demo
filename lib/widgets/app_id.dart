@@ -11,8 +11,9 @@ import 'package:my_demo/constans/app_color.dart';
 import 'package:my_demo/constans/app_images.dart';
 import 'package:my_demo/constans/constants.dart';
 import 'package:my_demo/localization/localization.dart';
+// import 'package:my_demo/localization/localization.dart';
 import 'package:my_demo/widgets/the%20appbar/widgets/the_main_title_builder.dart';
-import 'package:my_demo/widgets/title_builder.dart';
+// import 'package:my_demo/widgets/title_builder.dart';
 
 class AppId extends StatelessWidget {
   final Color titleColor;
@@ -45,8 +46,8 @@ class AppId extends StatelessWidget {
           // ),
 
           TheMainTitleBuilder(
-            firstTitle: 'Fast',
-            secondTitle: 'Food',
+            firstTitle: AppLocal.appNameFast.tr,
+            secondTitle: AppLocal.appNameFood.tr,
           ),
         ],
       ),

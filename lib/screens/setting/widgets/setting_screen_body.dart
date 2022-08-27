@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/constans/app_color.dart';
+import 'package:my_demo/constans/constants.dart';
 import 'package:my_demo/localization/localization.dart';
-import '../../../constans/app_color.dart';
-import 'package:my_demo/constans/routes.dart';
+import 'package:my_demo/constans/app_routes.dart';
 import 'package:my_demo/screens/setting/widgets/reserved_rights_row.dart';
 import 'package:my_demo/screens/setting/widgets/settign_list_tile.dart';
-import 'package:my_demo/widgets/the_input_feaild.dart';
+import 'package:my_demo/widgets/the_input_field.dart';
 
 class SettingScreenBody extends StatelessWidget {
   SettingScreenBody({Key? key}) : super(key: key);
@@ -16,14 +17,15 @@ class SettingScreenBody extends StatelessWidget {
     return ListView(
       padding: EdgeInsets.all(15),
       children: [
-        TheIputFeaild(
-          // controller: searchInSettingController,
+        TheInputField(
+          theBorderColor: AppColor.kPrimaryColor,
+          theBorderRadius: theDefaultRaduis,
+          theHient: 'search',
+          theInputColor: AppColor.kTextColor,
+          theInputType: TextInputType.text,
+          thePadding: theDefaultPadding,
           isPassword: false,
-          textInputType: TextInputType.name,
-          theSize: Get.width,
-          theHint: AppLocal.search.tr,
           theLeadingIcon: Icons.search_rounded,
-          backgroundColor: AppColor.ksecondaryColor,
         ),
         const SizedBox(
           // height: size.height * .0,

@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../constans/app_color.dart';
-import 'package:my_demo/constans/routes.dart';
+import 'package:my_demo/constans/app_routes.dart';
 import '../../widgets/app_id.dart';
 
 class CustomSplashScreen extends StatefulWidget {
@@ -17,7 +17,10 @@ class _CustomSplashScreenState extends State<CustomSplashScreen> {
   @override
   void initState() {
     super.initState;
-    Timer(Duration(seconds: 1.5.toInt()), () {
+    Timer(
+        Duration(
+          seconds: 1.5.toInt(),
+        ), () {
       Get.offAllNamed(AppRoute.homePage);
     });
   }

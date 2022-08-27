@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../constans/app_color.dart';
-import 'package:my_demo/constans/routes.dart';
+import 'package:my_demo/constans/app_routes.dart';
 import 'package:my_demo/widgets/the_drawer.dart';
 
 import '../../../localization/localization.dart';

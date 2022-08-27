@@ -94,18 +94,23 @@ class TheLocalization implements Translations {
           '59': 'english',
 
           // ///////
-          // /// SingIn and Up
-          // ///
-          // '60': 'email',
-          // '61': 'password',
-          // '62': 'reInter password',
+          /// SliderScreens
+          ///
+          '60': 'Next',
+          '61': 'skip',
+          '62': 'FastFood',
+          '63': 'the easyest way to order food online ',
 
-          // '63': 'Sign In',
-          // '64': 'OR',
-          // '65': 'phone',
+          '64': 'Movi Tixts',
+          '65': 'full packet for any one who\'s like watching movies',
 
-          // '66': 'facebook',
-          // '67': 'new Account',
+          '66': 'Discaounts',
+          '67': 'unlimted discounts, just stay tooned',
+
+          '68': 'fast delivery',
+          '69': 'you can get your order every where, at any time',
+
+          '70': 'done',
         },
 
         ///////////
@@ -199,19 +204,24 @@ class TheLocalization implements Translations {
           '58': 'العربية',
           '59': 'الانجليزية',
 
-          // ///////
-          // /// SingIn and Up
-          // ///
-          // '60': 'الايميل',
-          // '61': 'كلمة السر',
-          // '62': 'اعد ادخال كلمة السر',
+          ///////
+          /// SliderScreens
+          ///
+          '60': 'التالي',
+          '61': 'تخطي',
+          '62': 'الطعام السريع',
+          '63': 'اسهل طريقة لطلب طعامك المفضل في اي وقت',
 
-          // '63': 'تسجيل الدخول',
-          // '64': 'او يمكنك الدخول بواسطة',
-          // '65': 'رقم الهاتف',
+          '64': 'صندوق الافلام',
+          '65': 'يحتوي علي بكت متكامل, لمن يحب مشاهدة الافلام',
 
-          // '66': 'الفيسبوك',
-          // '67': 'حساب جديد',
+          '66': 'الخصومات',
+          '67': 'توجد خصومات و عروض غير منتهية, فقط عليك متابعة الاشعرات',
+
+          '68': 'سرعة التوصيل',
+          '69': 'يمكنك الحصول علي طلبك في اي مكان و بسرعة وجودة منقطعة النظير ',
+
+          '70': 'تم',
         },
       };
 }
@@ -272,7 +282,7 @@ class AppLocal {
 
   static const String linkedIn = '31';
 
-  static const String Email = '32';
+  static const String email = '32';
 
   static const String callMe = '33';
 
@@ -335,4 +345,21 @@ class AppLocal {
   // static const String phone = '65';
   // static const String facebook = '66';
   // static const String newAccount = '67';
+
+// sliderScreen
+  static const String next = '60';
+  static const String skip = '61';
+  static const String fastfood = '62';
+  static const String fastfoodDiscription = '63';
+
+  static const String moviTixts = '64';
+  static const String moviTixtsDiscription = '65';
+
+  static const String discounts = '66';
+  static const String discountsDiscription = '67';
+
+  static const String fastDelivery = '68';
+  static const String fastDeliveryDiscription = '69';
+
+  static const String done = '70';
 }

@@ -15,7 +15,7 @@ class SocialAuthRow extends StatelessWidget {
         CommuincationIcon(
           CommuincationIconTitle: AppLocal.facebook.tr,
           theIcon: Icons.facebook_rounded,
-          iconColor: AppColor.kPrimaryColor,
+          iconColor: AppColor.kTextColor,
           theUrlLanching: () {
             GetSnackBar(
               message: 'logIn with sochialmedia',
@@ -25,9 +25,9 @@ class SocialAuthRow extends StatelessWidget {
           // theUrlLanching: (){},
         ),
         CommuincationIcon(
-          CommuincationIconTitle: AppLocal.Email.tr,
+          CommuincationIconTitle: AppLocal.email.tr,
           theIcon: Icons.email_outlined,
-          iconColor: AppColor.kPrimaryColor,
+          iconColor: AppColor.kTextColor,
           theUrlLanching: () {
             GetSnackBar(
               message: 'logIn with sochialmedia',
@@ -39,7 +39,7 @@ class SocialAuthRow extends StatelessWidget {
         CommuincationIcon(
           CommuincationIconTitle: AppLocal.phone.tr,
           theIcon: Icons.phone_outlined,
-          iconColor: AppColor.kPrimaryColor,
+          iconColor: AppColor.kTextColor,
           theUrlLanching: () {
             GetSnackBar(
               message: 'logIn with sochialmedia',

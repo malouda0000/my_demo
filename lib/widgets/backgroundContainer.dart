@@ -11,23 +11,24 @@ class BackgrounContainer extends StatelessWidget {
       decoration: BoxDecoration(color: AppColor.theMainLightColor),
       width: Get.width,
       height: Get.height,
-      child: Column(
+      child: ListView(
+        shrinkWrap: true,
         children: [
-          Flexible(
-            flex: 4,
-            child: Container(
-                decoration: BoxDecoration(
-                    color: AppColor.kPrimaryColor,
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(15),
-                      bottomRight: Radius.circular(15),
-                    ))),
-          ),
-          Flexible(
-              flex: 6,
-              child: Container(
-                  // color: AppColor.theMainLightColor,
-                  ))
+          Container(
+              height: Get.height * .4,
+              width: Get.width,
+              decoration: BoxDecoration(
+                  color: AppColor.kPrimaryColor,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(15),
+                    bottomRight: Radius.circular(15),
+                  ))),
+          Container(
+            height: Get.height * .4,
+            width: Get.width,
+
+            // color: AppColor.theMainLightColor,
+          )
         ],
       ),
     );

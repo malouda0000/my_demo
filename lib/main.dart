@@ -1,47 +1,111 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/localization/localization_controller.dart';
+import 'package:my_demo/controllers/localization_controller.dart';
+import 'package:my_demo/controllers/theme_controller.dart';
+import 'package:my_demo/middleware/auth_middleware.dart';
+import 'package:my_demo/screens/about%20screen/about_screen.dart';
+import 'package:my_demo/screens/auth/sing_in.dart';
+import 'package:my_demo/screens/auth/sing_up_screen.dart';
+import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
+import 'package:my_demo/screens/intro%20slider/intro_slider.dart';
+import 'package:my_demo/screens/localization/localization_screen.dart';
+import 'package:my_demo/screens/splash%20screen/custom_splash_screen.dart';
+import 'package:my_demo/screens/theme%20screen/theme_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../../constans/app_color.dart';
-import 'package:my_demo/constans/routes.dart';
+import 'package:my_demo/constans/app_routes.dart';
 import 'package:my_demo/routesPluse.dart';
 import 'package:my_demo/screens/home/my_home_page.dart';
-
+// import 'dart:async';
 import 'localization/localization.dart';
-// import 'package:google_fonts/google_fonts.dart';
 
-main() {
-  // final prefs = await SharedPreferences.getInstance();
-  runApp(const MyApp());
+// Future<SharedPreferences> LocalizationInformation = SharedPreferences.getInstance();
+SharedPreferences? mySharedPrefes;
+main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Future<SharedPreferences> prefssfdsfdfd = SharedPreferences.getInstance();
+
+  mySharedPrefes = await SharedPreferences.getInstance();
+  // await GetStorage.init
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
+  // var prefs = SharedPreferences.getInstance();
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    Get.put(MylocalController());
+    MylocalController locallizationsController =
+        Get.put(MylocalController(), permanent: true);
+    // Get.put(MylocalController());
+    // GetStorage box = GetStroage;
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoute.customSplashScreen,
-      title: 'Flutter Demo',
-// initialRoute: ,
+      // initialRoute: AppRoute.introSliderScreen,
+      title: 'Fast Food',
+      getPages: [
+        GetPage(
+          name: AppRoute.introSliderScreen,
+          page: () => IntroSliderPage(),
+          middlewares: [
+            AuthMiddleWare(),
+          ],
+        ),
+        GetPage(
+            name: AppRoute.customSplashScreen,
+            page: () => CustomSplashScreen(),
+            middlewares: []),
+        GetPage(
+          name: AppRoute.homePage,
+          page: () => MyHomePage(),
+        ),
+        GetPage(
+          name: AppRoute.singUpScreen,
+          page: () => SingUpScreen(),
+        ),
+        GetPage(
+          name: AppRoute.singInScreen,
+          page: () => SingInScreen(),
+        ),
+        GetPage(
+          name: AppRoute.detailsScreen,
+          page: () => DetialsScreen(),
+        ),
+        GetPage(
+          name: AppRoute.themeScreen,
+          page: () => ThemeScreen(),
+        ),
+        GetPage(
+          name: AppRoute.aboutScreen,
+          page: () => AboutScreen(),
+        ),
+        GetPage(
+          name: AppRoute.localizationScreen,
+          page: () => LocaliaztionScreen(),
+        ),
+      ],
+      theme: ThemeData(
+        // fontFamily: GoogleFonts.cairo().fontFamily,
+        fontFamily: 'Cairo',
+        primaryColor: AppColor.kPrimaryColor,
 
-// no need for get pages when iam using routes:
-      // getPages: [
-      //   GetPage(name: '/homePage', page: () => const MyHomePage()),
-      //   GetPage(name: '/InroSliderScreen', page: () => IntroSliderPage()),
-      //   GetPage(name: '/singUpScreen', page: () => const SingUpScreen()),
-      //   GetPage(name: '/SinInScreen', page: () => const SingInScreen()),
-      //   GetPage(name: '/detailsScreen', page: () => const DetialsScreen()),
-      //   GetPage(name: '/settingScreen', page: () => const SettingScreen()),
-      //   GetPage(name: '/aboutScreen', page: () => const AboutScreen()),
-      //   GetPage(name: '/themeScreen', page: () => const ThemeScreen()),
-      //   GetPage(name: '/splashScreen', page: () => const CustomSplashScreen()),
-      // ],
+        scaffoldBackgroundColor: Colors.white,
+        textTheme: const TextTheme(
+          bodyText1: TextStyle(color: AppColor.kTextColor),
+          bodyText2: TextStyle(color: AppColor.kTextBlacColor),
+        ),
+      ),
+      // darkTheme: ThemeData.dark(),
+      locale: locallizationsController.initalLang,
+      translations: TheLocalization(),
+      home: MyHomePage(),
+    );
+  }
+}
 
-      routes: routesPluse,
+
 
       // themeMode: ThemeMode.dark,
 
@@ -77,23 +141,3 @@ class MyApp extends StatelessWidget {
 //
 //
 //
-
-      theme: ThemeData(
-        // fontFamily: GoogleFonts.cairo().fontFamily,
-        fontFamily: 'Cairo',
-        primaryColor: AppColor.kPrimaryColor,
-
-        scaffoldBackgroundColor: Colors.white,
-        textTheme: const TextTheme(
-          bodyText1: TextStyle(color: AppColor.kTextColor),
-          bodyText2: TextStyle(color: AppColor.kTextBlacColor),
-        ),
-      ),
-
-      locale: Get.deviceLocale,
-      translations: TheLocalization(),
-
-      home: MyHomePage(),
-    );
-  }
-}

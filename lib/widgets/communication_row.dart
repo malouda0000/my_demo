@@ -36,7 +36,7 @@ class CommunicationRow extends StatelessWidget {
             // LaunchEmail();
             LaunchEmail();
           },
-          CommuincationIconTitle: AppLocal.Email.tr,
+          CommuincationIconTitle: AppLocal.email.tr,
         ),
         const SizedBox(
           width: 20,

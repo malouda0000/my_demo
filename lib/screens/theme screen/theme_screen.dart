@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:my_demo/controllers/theme_controller.dart';
+import 'package:my_demo/widgets/big_button.dart';
 import '../../../constans/app_color.dart';
 import 'package:my_demo/widgets/the%20appbar/the_app_bar.dart';
 import 'package:my_demo/screens/setting/widgets/darkness_row.dart';
@@ -10,6 +13,8 @@ class ThemeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(ThemeContorller(), permanent: true);
+    ThemeContorller theThemeController = Get.find();
     return Scaffold(
       appBar: TheAppBar(),
       body: ListView(
@@ -19,6 +24,12 @@ class ThemeScreen extends StatelessWidget {
         ),
         // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          BigggButton(
+              theLeadingIcon: Icons.dark_mode,
+              theButtonTitle: 'change theme ',
+              onTaped: () => {theThemeController.changeTheme()},
+              leadingIconColor: AppColor.theMainLightColor,
+              buttonTitleColor: AppColor.theMainLightColor),
           Container(
             padding: EdgeInsets.all(15),
             // margin: EdgeInsets.all(20),

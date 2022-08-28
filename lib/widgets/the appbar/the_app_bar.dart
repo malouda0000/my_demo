@@ -38,12 +38,6 @@ AppBar TheAppBar() {
         },
       );
     }),
-
-    // Text(
-    //   'punkfood',
-    //   style: TextStyle(color: kPrimaryColor),
-    // ),
-
     actions: [
       IconButton(
         onPressed: () {

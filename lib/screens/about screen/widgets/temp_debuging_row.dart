@@ -130,12 +130,11 @@ class TempDebugingRow extends StatelessWidget {
               ),
               child: MaterialButton(
                 color: AppColor.kPrimaryColor,
-                onPressed: () {
+                onPressed: () async {
+                  await mySharedPrefes!.setBool('logIn', false);
                   Get.offAllNamed(
                     AppRoute.singInScreen,
                   );
-
-                  mySharedPrefes!.setBool('logIn', false);
                 },
                 child: Text(
                   'Sing out',

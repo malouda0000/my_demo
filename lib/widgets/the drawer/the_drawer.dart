@@ -7,7 +7,7 @@ import 'package:my_demo/screens/setting/widgets/settign_list_tile.dart';
 import 'package:my_demo/widgets/big_button.dart';
 import 'package:my_demo/widgets/the%20drawer/widgets/drawer_header_plus.dart';
 
-import '../localization/localization.dart';
+import '../../localization/localization.dart';
 
 String accountName = '3'.tr;
 String accountEmail = 'Hamam.hamza85@gmail.com';
@@ -28,7 +28,7 @@ class TheDrawer extends StatelessWidget {
             diviedIt: true,
             theTitle: AppLocal.account.tr,
             theIcon: Icons.person_outline,
-            theFunction: () => Get.offAllNamed(AppRoute.detailsScreen),
+            theFunction: () => Get.offAllNamed(AppRoute.aboutScreen),
           ),
           SettingListTile(
             diviedIt: true,

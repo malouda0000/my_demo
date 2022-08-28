@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/controllers/bottom_nav_bar_controller.dart';
 import 'package:my_demo/controllers/localization_controller.dart';
-import 'package:my_demo/controllers/theme_controller.dart';
 import 'package:my_demo/middleware/auth_middleware.dart';
 import 'package:my_demo/screens/about%20screen/about_screen.dart';
 import 'package:my_demo/screens/auth/sing_in.dart';
@@ -14,7 +14,6 @@ import 'package:my_demo/screens/theme%20screen/theme_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../../constans/app_color.dart';
 import 'package:my_demo/constans/app_routes.dart';
-import 'package:my_demo/routesPluse.dart';
 import 'package:my_demo/screens/home/my_home_page.dart';
 // import 'dart:async';
 import 'localization/localization.dart';
@@ -23,6 +22,7 @@ import 'localization/localization.dart';
 SharedPreferences? mySharedPrefes;
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Get.put(BottomNvaBarController(), permanent: true);
 
   // Future<SharedPreferences> prefssfdsfdfd = SharedPreferences.getInstance();
 
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
     // GetStorage box = GetStroage;
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      // initialRoute: AppRoute.introSliderScreen,
+      initialRoute: AppRoute.introSliderScreen,
       title: 'Fast Food',
       getPages: [
         GetPage(

@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:my_demo/main.dart';
-import 'package:my_demo/screens/home/my_home_page.dart';
+
+import '../view/screens/home/my_home_page.dart';
 
 class SingInController extends GetxController {
   singIn() async {

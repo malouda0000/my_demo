@@ -2,23 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/controllers/bottom_nav_bar_controller.dart';
 import 'package:my_demo/controllers/localization_controller.dart';
+import 'package:my_demo/core/constants/get_pages.dart';
 import 'package:my_demo/middleware/auth_middleware.dart';
-import 'package:my_demo/screens/about%20screen/about_screen.dart';
-import 'package:my_demo/screens/auth/sing_in.dart';
-import 'package:my_demo/screens/auth/sing_up_screen.dart';
-import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
-import 'package:my_demo/screens/intro%20slider/intro_slider.dart';
-import 'package:my_demo/screens/localization/localization_screen.dart';
-import 'package:my_demo/screens/splash%20screen/custom_splash_screen.dart';
-import 'package:my_demo/screens/theme%20screen/theme_screen.dart';
+import 'package:my_demo/view/screens/about%20screen/about_screen.dart';
+import 'package:my_demo/view/screens/auth/sing_in.dart';
+import 'package:my_demo/view/screens/auth/sing_up_screen.dart';
+import 'package:my_demo/view/screens/detials%20screen/detials_screen.dart';
+import 'package:my_demo/view/screens/home/my_home_page.dart';
+import 'package:my_demo/view/screens/intro%20slider/intro_slider.dart';
+import 'package:my_demo/view/screens/localization/localization_screen.dart';
+import 'package:my_demo/view/screens/theme%20screen/theme_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../../constans/app_color.dart';
-import 'package:my_demo/constans/app_routes.dart';
-import 'package:my_demo/screens/home/my_home_page.dart';
-// import 'dart:async';
-import 'localization/localization.dart';
 
-// Future<SharedPreferences> LocalizationInformation = SharedPreferences.getInstance();
+import 'core/constants/app_color.dart';
+import 'core/constants/app_routes.dart';
+import 'core/localization/localization.dart';
+import 'core/shared/custom_splash_screen.dart';
+
+// final GlobalKey<ScaffoldState> myKey = GlobalKey();
+
 SharedPreferences? mySharedPrefes;
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,6 +34,7 @@ main() async {
 }
 
 class MyApp extends StatelessWidget {
+  // var scaffoldKey = GlobalKey<ScaffoldState>();
   MyApp({Key? key}) : super(key: key);
   // var prefs = SharedPreferences.getInstance();
 
@@ -43,49 +46,10 @@ class MyApp extends StatelessWidget {
     // GetStorage box = GetStroage;
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoute.introSliderScreen,
+      // initialRoute: AppRoute.introSliderScreen,
+      initialRoute: AppRoute.foodMenueScreen,
       title: 'Fast Food',
-      getPages: [
-        GetPage(
-          name: AppRoute.introSliderScreen,
-          page: () => IntroSliderPage(),
-          middlewares: [
-            AuthMiddleWare(),
-          ],
-        ),
-        GetPage(
-            name: AppRoute.customSplashScreen,
-            page: () => CustomSplashScreen(),
-            middlewares: []),
-        GetPage(
-          name: AppRoute.homePage,
-          page: () => MyHomePage(),
-        ),
-        GetPage(
-          name: AppRoute.singUpScreen,
-          page: () => SingUpScreen(),
-        ),
-        GetPage(
-          name: AppRoute.singInScreen,
-          page: () => SingInScreen(),
-        ),
-        GetPage(
-          name: AppRoute.detailsScreen,
-          page: () => DetialsScreen(),
-        ),
-        GetPage(
-          name: AppRoute.themeScreen,
-          page: () => ThemeScreen(),
-        ),
-        GetPage(
-          name: AppRoute.aboutScreen,
-          page: () => AboutScreen(),
-        ),
-        GetPage(
-          name: AppRoute.localizationScreen,
-          page: () => LocaliaztionScreen(),
-        ),
-      ],
+      getPages: GetPages().getpages,
       theme: ThemeData(
         // fontFamily: GoogleFonts.cairo().fontFamily,
         fontFamily: 'Cairo',

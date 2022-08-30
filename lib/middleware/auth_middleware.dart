@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:my_demo/constans/app_routes.dart';
-
+import '../core/constants/app_routes.dart';
 import '../main.dart';
 
 class AuthMiddleWare extends GetMiddleware {

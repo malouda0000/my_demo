@@ -1,12 +1,13 @@
-import 'package:my_demo/screens/about%20screen/about_screen.dart';
-import 'package:my_demo/screens/detials%20screen/detials_screen.dart';
-import 'package:my_demo/screens/home/my_home_page.dart';
-import 'package:my_demo/screens/setting/setting_screen.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/view/screens/food%20menue%20screen/food_menue_screen.dart';
+
+import '../view/screens/about screen/about_screen.dart';
+import '../view/screens/home/my_home_page.dart';
+import '../view/screens/setting/setting_screen.dart';
 
 List<Function> MainAppScreens = [
   () => MyHomePage(),
-  () => DetialsScreen(),
+  () => FoodMenueScreen(),
   () => SettingScreen(),
   () => AboutScreen(),
 ];

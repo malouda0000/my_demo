@@ -1,5 +1,5 @@
-import 'package:get/get.dart';
-import 'package:my_demo/middleware/auth_middleware.dart';
+// import 'package:get/get.dart';
+// import 'package:my_demo/middleware/auth_middleware.dart';
 // Map<String, Widget Function(BuildContext)> routesPluse = {
 //   // AppRoute.introSliderScreen: (context) => IntroSliderPage(),
 //   // middleware[AuthMiddleWare()],

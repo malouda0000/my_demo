@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/core/constants/app_images.dart';
+
 import 'package:my_demo/view/screens/about%20screen/widgets/contact_me_row.dart';
 import 'package:my_demo/view/screens/about%20screen/widgets/setting_list_tiles.dart';
 import 'package:my_demo/view/screens/about%20screen/widgets/user_name.dart';
 
-import '../../../core/constants/app_color.dart';
-import '../../../core/constants/app_routes.dart';
 import '../../../core/constants/constants.dart';
 import '../../../core/localization/localization.dart';
 import '../../../core/shared/bottom navigation bar/bottom_nav_bar.dart';
-import '../../../core/shared/communication_row.dart';
 import '../../../core/shared/the appbar/the_app_bar.dart';
-import '../../../core/shared/title_builder.dart';
-import '../setting/widgets/settign_list_tile.dart';
 import 'widgets/temp_debuging_row.dart';
 import 'widgets/user_image.dart';
 // import 'package:flutter_remix/flutter_remix.dart';

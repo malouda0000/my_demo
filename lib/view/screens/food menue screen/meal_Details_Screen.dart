@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/core/constants/constants.dart';
-import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/core/shared/big_button.dart';
 import 'package:my_demo/core/shared/the%20appbar/the_app_bar.dart';
 import 'package:my_demo/core/shared/title_builder.dart';

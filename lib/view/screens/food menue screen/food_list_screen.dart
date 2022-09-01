@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/core/constants/constants.dart';
 import 'package:my_demo/data/model/meal_detials_class.dart';
-import 'package:my_demo/view/screens/about%20screen/widgets/contact_me_row.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/add_remove_row.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/meal_Details_Screen.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/rating_stars_builder.dart';

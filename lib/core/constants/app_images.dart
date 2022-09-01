@@ -1,6 +1,7 @@
 class AppImages {
   // images
   /////////////////////////////
+
   static const String mainImagesPath = 'assets/images/';
   static const String userImage = 'assets/images/me.jpg';
   static const String mainIcon = 'assets/mainIcon.png';

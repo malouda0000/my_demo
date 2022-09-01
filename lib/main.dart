@@ -3,21 +3,21 @@ import 'package:get/get.dart';
 import 'package:my_demo/controllers/bottom_nav_bar_controller.dart';
 import 'package:my_demo/controllers/localization_controller.dart';
 import 'package:my_demo/core/constants/get_pages.dart';
-import 'package:my_demo/middleware/auth_middleware.dart';
-import 'package:my_demo/view/screens/about%20screen/about_screen.dart';
-import 'package:my_demo/view/screens/auth/sing_in.dart';
-import 'package:my_demo/view/screens/auth/sing_up_screen.dart';
-import 'package:my_demo/view/screens/detials%20screen/detials_screen.dart';
+// import 'package:my_demo/middleware/auth_middleware.dart';
+// import 'package:my_demo/view/screens/about%20screen/about_screen.dart';
+// import 'package:my_demo/view/screens/auth/sing_in.dart';
+// import 'package:my_demo/view/screens/auth/sing_up_screen.dart';
+// import 'package:my_demo/view/screens/detials%20screen/detials_screen.dart';
 import 'package:my_demo/view/screens/home/my_home_page.dart';
-import 'package:my_demo/view/screens/intro%20slider/intro_slider.dart';
-import 'package:my_demo/view/screens/localization/localization_screen.dart';
-import 'package:my_demo/view/screens/theme%20screen/theme_screen.dart';
+// import 'package:my_demo/view/screens/intro%20slider/intro_slider.dart';
+// import 'package:my_demo/view/screens/localization/localization_screen.dart';
+// import 'package:my_demo/view/screens/theme%20screen/theme_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'core/constants/app_color.dart';
 import 'core/constants/app_routes.dart';
 import 'core/localization/localization.dart';
-import 'core/shared/custom_splash_screen.dart';
+// import 'core/shared/custom_splash_screen.dart';
 
 // final GlobalKey<ScaffoldState> myKey = GlobalKey();
 

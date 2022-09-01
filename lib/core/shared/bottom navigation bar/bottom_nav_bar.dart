@@ -26,22 +26,24 @@ class TheBottomNavBar extends StatelessWidget {
                 BottomNavigationBarItem(
                     label: 'home',
                     icon: Icon(
-                      Icons.home_outlined,
+                      Icons.home_rounded,
                     )),
+                BottomNavigationBarItem(
+                    label: 'menu', icon: Icon(Icons.food_bank_rounded)),
                 BottomNavigationBarItem(
                     label: 'detials',
                     icon: Icon(
-                      Icons.details_outlined,
+                      Icons.details_rounded,
                     )),
                 BottomNavigationBarItem(
                     label: 'setting',
                     icon: Icon(
-                      Icons.settings_outlined,
+                      Icons.settings_rounded,
                     )),
                 BottomNavigationBarItem(
                     label: 'about',
                     icon: Icon(
-                      Icons.more_outlined,
+                      Icons.more_rounded,
                     )),
               ],
             )));

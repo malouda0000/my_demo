@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/main.dart';
 import '../../../../core/constants/app_color.dart';
 import '../../../../core/constants/app_routes.dart';
@@ -16,6 +17,9 @@ class TempDebugingRow extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          emptySpace,
+          TitleBuilder(theTitle: 'devloping card'),
+          emptySpace,
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -113,7 +117,7 @@ class TempDebugingRow extends StatelessWidget {
                         : mySharedPrefes!.getBool('logIn'));
                   },
                   child: Text(
-                    'print sharedprf.logIn value',
+                    'sharedprf.logIn value',
                     style: TextStyle(
                       color: AppColor.kPrimaryColor,
 

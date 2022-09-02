@@ -2,9 +2,10 @@ class MealDetailsClass {
   final String mealTitle;
   final String mealPrefDiscription;
   final String mealDiscription;
-
   final String mealType;
   final String mealImg;
+  //
+  //
   final int mealPrice;
   final int mealCount;
   final int mealRating;

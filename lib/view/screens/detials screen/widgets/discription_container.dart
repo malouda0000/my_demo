@@ -149,8 +149,8 @@ class DiscriptionContainer extends StatelessWidget {
           ),
           emptySpace,
           BigggButton(
-              leadingIconColor: AppColor.theMainLightColor,
-              buttonTitleColor: AppColor.theMainLightColor,
+              leadingIconColor: AppColor.kTextColor,
+              buttonTitleColor: AppColor.kTextColor,
               theLeadingIcon: Icons.delivery_dining_outlined,
               theButtonTitle: AppLocal.order.tr,
               onTaped: () {

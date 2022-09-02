@@ -36,7 +36,7 @@ class ItemCardBuilder extends StatelessWidget {
 
 class TheItemCard extends StatelessWidget {
   final String title, discription, svgSrc;
-  final Function()? pressit;
+  final void Function()? pressit;
   TheItemCard(
       {Key? key,
       required this.title,
@@ -64,9 +64,7 @@ class TheItemCard extends StatelessWidget {
       child: Material(
         borderRadius: BorderRadius.circular(10),
         child: InkWell(
-          onTap: () {
-            pressit;
-          },
+          onTap: pressit,
           child: Padding(
             padding: EdgeInsets.all(20),
             child: Column(
@@ -85,7 +83,9 @@ class TheItemCard extends StatelessWidget {
                 ),
                 Text(
                   title,
-                  style: TextStyle(color: AppColor.kPrimaryColor),
+                  style: TextStyle(
+                      color: AppColor.kPrimaryColor,
+                      fontWeight: FontWeight.bold),
                 ),
                 Text(
                   discription,

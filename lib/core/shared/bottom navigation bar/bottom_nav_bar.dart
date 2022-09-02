@@ -29,7 +29,10 @@ class TheBottomNavBar extends StatelessWidget {
                       Icons.home_rounded,
                     )),
                 BottomNavigationBarItem(
-                    label: 'menu', icon: Icon(Icons.food_bank_rounded)),
+                    label: 'menu',
+                    icon: Icon(
+                      Icons.food_bank_rounded,
+                    )),
                 BottomNavigationBarItem(
                     label: 'detials',
                     icon: Icon(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/core/constants/app_routes.dart';
 import '../../../../core/constants/app_color.dart';
 
 AppBar DetialsScreenAppBar() {
@@ -13,26 +14,27 @@ AppBar DetialsScreenAppBar() {
       },
       icon: const Icon(
         Icons.arrow_back,
+        color: AppColor.kTextColor,
       ),
     ),
     actions: [
       IconButton(
         onPressed: () {
-          Get.snackbar(
-            'share',
-            'comming soon',
-          );
+          Get.to(AppRoute.underDevelopmentScreen);
         },
-        icon: SvgPicture.asset('assets/icons/share.svg'),
+        icon: SvgPicture.asset(
+          'assets/icons/share.svg',
+          color: AppColor.kTextColor,
+        ),
       ),
       IconButton(
         onPressed: () {
-          Get.snackbar(
-            'more informations ',
-            'comming soon',
-          );
+          Get.to(AppRoute.underDevelopmentScreen);
         },
-        icon: SvgPicture.asset('assets/icons/more.svg'),
+        icon: SvgPicture.asset(
+          'assets/icons/more.svg',
+          color: AppColor.kTextColor,
+        ),
       ),
     ],
   );

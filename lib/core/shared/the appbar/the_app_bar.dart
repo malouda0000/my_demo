@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/core/constants/app_routes.dart';
 import 'package:my_demo/core/shared/the%20appbar/the_main_title_builder.dart';
+import 'package:my_demo/view/screens/under%20development%20screen/under_development_screen.dart';
 import '../../constants/app_color.dart';
 import '../../constants/app_images.dart';
 import '../../localization/localization.dart';
@@ -16,7 +18,10 @@ AppBar TheAppBar() {
     elevation: 0,
     leading: Builder(builder: (context) {
       return IconButton(
-        icon: SvgPicture.asset(AppImages.menuImage),
+        icon: SvgPicture.asset(
+          AppImages.menuImage,
+          color: AppColor.kTextColor,
+        ),
         onPressed: () {
           // TheDrawer();
           Scaffold.of(context).openDrawer();
@@ -51,23 +56,20 @@ AppBar TheAppBar() {
     actions: [
       IconButton(
         onPressed: () {
-          Get.defaultDialog(
-            title: AppLocal.notifications.tr,
-          );
+          Get.toNamed(AppRoute.underDevelopmentScreen);
         },
         icon: SvgPicture.asset(
           AppImages.notificationSvg,
+          color: AppColor.kTextColor,
         ),
       ),
       IconButton(
         onPressed: () {
-          Get.snackbar(
-            AppLocal.search.tr,
-            AppLocal.commingSoon.tr,
-          );
+          Get.toNamed(AppRoute.underDevelopmentScreen);
         },
         icon: SvgPicture.asset(
           AppImages.searchSvg,
+          color: AppColor.kTextColor,
         ),
       ),
     ],

@@ -19,7 +19,7 @@ class BottomNvaBarController extends GetxController {
 
   changeTap(index) {
     theCurrentIndex = index;
-    Get.to(MainAppScreens[index]);
+    Get.offAll(MainAppScreens[index]);
 
     //  index = theCurrentIndex;
     update();

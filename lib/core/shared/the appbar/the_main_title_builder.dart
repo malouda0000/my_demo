@@ -23,7 +23,7 @@ class TheMainTitleBuilder extends StatelessWidget {
           TextSpan(
               text: firstTitle,
               style: TextStyle(
-                color: AppColor.ksecondaryColor,
+                color: AppColor.kTextColor,
               )),
           TextSpan(
               style: TextStyle(

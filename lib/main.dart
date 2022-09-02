@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/controllers/adding_meal_controller.dart';
 import 'package:my_demo/controllers/bottom_nav_bar_controller.dart';
 import 'package:my_demo/controllers/localization_controller.dart';
 import 'package:my_demo/core/constants/get_pages.dart';
@@ -25,6 +26,7 @@ SharedPreferences? mySharedPrefes;
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Get.put(BottomNvaBarController(), permanent: true);
+  await Get.put(AddingMealController(), permanent: true);
 
   // Future<SharedPreferences> prefssfdsfdfd = SharedPreferences.getInstance();
 

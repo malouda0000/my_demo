@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/core/constants/app_routes.dart';
 import 'package:my_demo/core/shared/the%20appbar/the_main_title_builder.dart';
-import 'package:my_demo/view/screens/under%20development%20screen/under_development_screen.dart';
 import '../../constants/app_color.dart';
 import '../../constants/app_images.dart';
 import '../../localization/localization.dart';

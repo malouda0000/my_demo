@@ -1,10 +1,5 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:my_demo/data/model/local_db.dart';
-import 'package:my_demo/data/model/meal_detials_class.dart';
-import 'package:my_demo/view/screens/Error/error_message_screen.dart';
 
 MyDb mydb = MyDb();
 
@@ -37,6 +32,8 @@ SELECT * FROM usercart
 
       // var myResponce = jsonEncode(response);
       // return myResponce;
+
+      // var genaralResponse = response.fromjs;
 
       return response;
     }

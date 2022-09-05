@@ -16,7 +16,6 @@ import 'package:my_demo/view/screens/home/my_home_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'core/constants/app_color.dart';
-import 'core/constants/app_routes.dart';
 import 'core/localization/localization.dart';
 // import 'core/shared/custom_splash_screen.dart';
 

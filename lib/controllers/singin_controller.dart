@@ -7,6 +7,6 @@ class SingInController extends GetxController {
   singIn() async {
     await mySharedPrefes!.setBool('logIn', true);
 
-    Get.offAll(MyHomePage());
+    Get.offAll(() => MyHomePage());
   }
 }

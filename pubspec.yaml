@@ -46,7 +46,7 @@ dependencies:
   # smooth_star_rating: ^1.1.1
   # the smooth star packge doesn't support null safty
   # smooth_star_rating: 1.0.4+2
-  persistent_bottom_nav_bar: ^4.0.2
+  # persistent_bottom_nav_bar: ^4.0.2
   # flutter_inner_drawer: ^1.0.0+1
   # simple_animations: ^4.2.0
   get: ^4.6.5
@@ -58,6 +58,7 @@ dependencies:
   # day_night_switcher: ^0.2.0+1
   shared_preferences: ^2.0.15
   # get_storage:
+  convex_bottom_bar: ^3.0.0
 
 
 

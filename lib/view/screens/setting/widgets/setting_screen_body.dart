@@ -64,9 +64,7 @@ class SettingScreenBody extends StatelessWidget {
           diviedIt: true,
           theTitle: AppLocal.appearance.tr,
           theIcon: Icons.remove_red_eye_outlined,
-          theFunction: () {
-            Get.toNamed(AppRoute.themeScreen);
-          },
+          theFunction: () => Get.toNamed(AppRoute.themeScreen),
         ),
         SettingListTile(
           diviedIt: true,

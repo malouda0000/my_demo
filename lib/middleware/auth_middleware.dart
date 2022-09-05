@@ -6,7 +6,7 @@ import '../main.dart';
 class AuthMiddleWare extends GetMiddleware {
   @override
   RouteSettings? redirect(String? route) {
-    if (mySharedPrefes!.getBool('logIn') != null) {
+    if (mySharedPrefes?.getBool('logIn') != null) {
       // return super.redirect(route);
 
       return RouteSettings(name: AppRoute.introSliderScreen);

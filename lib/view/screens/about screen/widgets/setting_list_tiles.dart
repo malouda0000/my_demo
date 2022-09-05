@@ -19,36 +19,28 @@ class MySettingListTiles extends StatelessWidget {
             diviedIt: true,
             theTitle: AppLocal.account.tr,
             theIcon: Icons.person_outline,
-            theFunction: () {
-              Get.toNamed(AppRoute.aboutScreen);
-            },
+            theFunction: () => Get.toNamed(AppRoute.aboutScreen),
           ),
           SettingListTile(
             diviedIt: true,
             theTitle: AppLocal.notifications.tr,
             theIcon: Icons.notifications_outlined,
-            theFunction: () {
-              Get.toNamed(AppRoute.underDevelopmentScreen);
-            },
+            theFunction: () => Get.toNamed(AppRoute.underDevelopmentScreen),
           ),
           SettingListTile(
             diviedIt: true,
             theTitle: AppLocal.priviceyAndSecurity.tr,
             theIcon: Icons.lock_outline,
-            theFunction: () {
-              Get.snackbar(
-                AppLocal.priviceyAndSecurity.tr,
-                AppLocal.commingSoon,
-              );
-            },
+            theFunction: () => Get.snackbar(
+              AppLocal.priviceyAndSecurity.tr,
+              AppLocal.commingSoon.tr,
+            ),
           ),
           SettingListTile(
             diviedIt: false,
             theTitle: AppLocal.appearance.tr,
             theIcon: Icons.remove_red_eye_outlined,
-            theFunction: () {
-              Get.toNamed(AppRoute.themeScreen);
-            },
+            theFunction: () => Get.toNamed(AppRoute.themeScreen),
           ),
         ],
       ),

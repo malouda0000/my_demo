@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       // initialRoute: AppRoute.introSliderScreen,
-      initialRoute: AppRoute.foodMenueScreen,
+      // initialRoute: AppRoute.foodMenueScreen,
       title: 'Fast Food',
       getPages: GetPages().getpages,
       theme: ThemeData(

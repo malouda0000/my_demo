@@ -10,6 +10,7 @@ class RatingStarsBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         for (int i = 0; i < starsCount; i++)
           Icon(

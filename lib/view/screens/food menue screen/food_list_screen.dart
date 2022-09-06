@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/core/constants/constants.dart';
+import 'package:my_demo/core/shared/circular_image.dart';
 import 'package:my_demo/data/model/meal_detials_class.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/add_remove_row.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/meal_Details_Screen.dart';
@@ -84,11 +85,8 @@ class FoodListScreen extends StatelessWidget {
                           emptySpace
                         ],
                       ),
-                      CircleAvatar(
-                        radius: 50,
-                        backgroundImage: AssetImage(
-                          foodListItems[index].mealImg,
-                        ),
+                      CircularDiscriptionImage(
+                        assetImageName: foodListItems[index].mealImg,
                       ),
                     ]),
               ),

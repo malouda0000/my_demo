@@ -11,7 +11,7 @@ class ContactMeRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: defaultElevation,
+      elevation: theDefaultElevation,
       child: Padding(
         padding: EdgeInsets.all(theDefaultPadding),
         child: Column(

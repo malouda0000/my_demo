@@ -59,7 +59,12 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         textTheme: const TextTheme(
           bodyText1: TextStyle(color: AppColor.kTextColor),
-          bodyText2: TextStyle(color: AppColor.kTextBlacColor),
+          bodyText2: TextStyle(color: AppColor.kTextColor),
+          headline6: TextStyle(
+            color: AppColor.kTextColor,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
       // darkTheme: ThemeData.dark(),

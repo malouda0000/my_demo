@@ -13,7 +13,7 @@ class TempDebugingRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: defaultElevation,
+      elevation: theDefaultElevation,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

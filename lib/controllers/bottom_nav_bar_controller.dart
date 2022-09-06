@@ -9,7 +9,7 @@ import '../view/screens/setting/setting_screen.dart';
 List<Function> MainAppScreens = [
   () => MyHomePage(),
   () => FoodMenueScreen(),
-  () => TempCartScreen(),
+  () => CartScreen(),
   () => SettingScreen(),
   () => AboutScreen(),
 ];
@@ -17,9 +17,9 @@ List<Function> MainAppScreens = [
 class BottomNvaBarController extends GetxController {
   int theCurrentIndex = 0;
 
-  changeTap(index) {
+  changeTap(index) async {
     theCurrentIndex = index;
-    Get.offAll(MainAppScreens[index]);
+    await Get.offAll(MainAppScreens[index]);
 
     //  index = theCurrentIndex;
     update();

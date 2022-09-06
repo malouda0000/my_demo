@@ -11,7 +11,7 @@ class MySettingListTiles extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: defaultElevation,
+      elevation: theDefaultElevation,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [

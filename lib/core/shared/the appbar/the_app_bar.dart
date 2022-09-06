@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/controllers/bottom_nav_bar_controller.dart';
 import 'package:my_demo/core/constants/app_routes.dart';
 import 'package:my_demo/core/shared/the%20appbar/the_main_title_builder.dart';
 import '../../constants/app_color.dart';
@@ -8,6 +9,7 @@ import '../../constants/app_images.dart';
 import '../../localization/localization.dart';
 
 AppBar TheAppBar() {
+  BottomNvaBarController bottomNavBarController = Get.find();
   return AppBar(
     centerTitle: true,
     backgroundColor: AppColor.theMainLightColor,
@@ -63,14 +65,18 @@ AppBar TheAppBar() {
         ),
       ),
       IconButton(
-        onPressed: () {
-          Get.toNamed(AppRoute.underDevelopmentScreen);
-        },
-        icon: SvgPicture.asset(
-          AppImages.searchSvg,
-          color: AppColor.kTextColor,
-        ),
-      ),
+          onPressed: () async {
+            // Get.toNamed(AppRoute.cartScreen);
+            //  bottomNavBarController.theCurrentIndex = 2;
+            await bottomNavBarController.changeTap(2);
+          },
+          icon: Icon(
+            Icons.shop_2_rounded,
+            color: AppColor.kTextColor,
+          )),
+      const SizedBox(
+        width: 5,
+      )
     ],
   );
 }

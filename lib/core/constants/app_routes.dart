@@ -12,4 +12,5 @@ class AppRoute {
   static const String underDevelopmentScreen = '/underDevelopmentScreen';
   static const String foodMenueScreen = '/foodMenueScreen';
   static const String errorMessageScreen = '/errorMessageScreen';
+  static const String cartScreen = '/cartScreen';
 }

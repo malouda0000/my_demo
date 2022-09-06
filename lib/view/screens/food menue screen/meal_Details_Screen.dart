@@ -101,7 +101,7 @@ class MealDetailsScreen extends StatelessWidget {
                       theLeadingIcon: Icons.shop_rounded,
                       theButtonTitle: 'go to my cart',
                       onTaped: () {
-                        Get.to(() => TempCartScreen());
+                        Get.to(() => CartScreen());
                       },
                       leadingIconColor: AppColor.kTextColor,
                       buttonTitleColor: AppColor.kTextColor)

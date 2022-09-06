@@ -41,7 +41,7 @@ class AboutScreen extends StatelessWidget {
             children: [
               emptySpace,
               Card(
-                elevation: defaultElevation,
+                elevation: theDefaultElevation,
                 child: Padding(
                   padding: EdgeInsets.all(theDefaultPadding),
                   child: Row(

@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:my_demo/core/shared/custom_splash_screen.dart';
 import 'package:my_demo/view/screens/Error/error_message_screen.dart';
+import 'package:my_demo/view/screens/cart%20screen/cart_screen.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/food_menue_screen.dart';
 import 'package:my_demo/view/screens/under%20development%20screen/under_development_screen.dart';
 
@@ -68,6 +69,10 @@ class GetPages {
     GetPage(
       name: AppRoute.errorMessageScreen,
       page: () => ErrorMessageScreen(),
+    ),
+    GetPage(
+      name: AppRoute.cartScreen,
+      page: () => CartScreen(),
     ),
   ];
 }

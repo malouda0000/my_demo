@@ -1,9 +1,26 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:get/get.dart';
+import 'package:my_demo/core/constants/app_color.dart';
+import 'package:my_demo/core/constants/constants.dart';
+import 'package:my_demo/core/shared/big_button.dart';
+import 'package:my_demo/core/shared/bottom%20navigation%20bar/bottom_nav_bar.dart';
+import 'package:my_demo/core/shared/custom_splash_screen.dart';
+import 'package:my_demo/core/shared/the%20appbar/the_app_bar.dart';
+import 'package:my_demo/data/data%20source/meal_details_data.dart';
 import 'package:my_demo/data/model/local_db.dart';
+import 'package:my_demo/data/model/meal_detials_class.dart';
 
 MyDb mydb = MyDb();
 
-class TempCartScreen extends StatelessWidget {
+// var myList = [];
+// late List<MealDetailsClass> response = mydb.readData('''
+//                         SELECT * FROM usercart
+//                         ''');
+
+class TempCartScreen extends StatefulWidget {
 //   late List<MealDetailsClass> foodListItems = mydb.readData(
 //     '''
 // SELECT
@@ -22,51 +39,70 @@ class TempCartScreen extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  State<TempCartScreen> createState() => _TempCartScreenState();
+}
+
+class _TempCartScreenState extends State<TempCartScreen> {
+  @override
   Widget build(BuildContext context) {
     // var find = theListTileIndex;
-    readData() async {
-      // List<Map<MealDetailsClass, dynamic>> response = await mydb.readData('''
-      List<Map<String, dynamic>> response = await mydb.readData('''
-SELECT * FROM usercart 
-''');
-
-      // var myResponce = jsonEncode(response);
-      // return myResponce;
-
-      // var genaralResponse = response.fromjs;
+    Future<List<Map>> readData() async {
+      List<Map> response = await mydb.readData("SELECT * FROM usercart");
 
       return response;
     }
 
-    return FutureBuilder(
-        future: readData(),
-        builder: (BuildContext context, snapshot) {
-          // List<MealDetailsClass> tes = snapshot;
-          if (snapshot.hasData) {
-            // Me
-            return Scaffold(
-                body: ListView.builder(
-                    // itemCount: snapshot.data!.le,
-                    itemCount: 5,
-                    itemBuilder: ((context, i) {
+////////////////////////////////////////////////////////////////
+    ///
+    ///
+    return Scaffold(
+      appBar: TheAppBar(),
+      bottomNavigationBar: TheBottomNavBar(),
+      body: Container(
+        width: Get.width,
+        child: ListView(
+          children: [
+            FutureBuilder(
+              future: readData(),
+              builder:
+                  (BuildContext context, AsyncSnapshot<List<Map>> snapshot) {
+                if (snapshot.hasData) {
+                  return ListView.builder(
+                    itemCount: snapshot.data!.length,
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, i) {
+                      var shoutCut = snapshot.data![i];
                       return Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 15,
-                          vertical: 30,
+                        padding: EdgeInsets.all(20),
+                        child: Card(
+                          child: Container(
+                            padding: EdgeInsets.all(theDefaultPadding),
+                            height: Get.height * .2,
+                            child: Row(
+                              children: [
+                                Column(
+                                  children: [
+                                    // Text(snapshot.data![i]['id'].toString())
+                                    Text(snapshot.data![i]['title'])
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
                         ),
-                        child: Text('${snapshot.data}'),
                       );
-                    })));
-          } else {
-            return Scaffold(
-              body: Center(
-                child: Text(
-                  'loading ...',
-                  style: Theme.of(context).textTheme.headline1,
-                ),
-              ),
-            );
-          }
-        });
+                    },
+                  );
+                }
+                return Center(
+                  child: CircularProgressIndicator(),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

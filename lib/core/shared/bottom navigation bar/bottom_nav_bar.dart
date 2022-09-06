@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/controllers/bottom_nav_bar_controller.dart';
-
-import '../../constants/app_color.dart';
+import 'package:my_demo/core/constants/app_color.dart';
 
 class TheBottomNavBar extends StatelessWidget {
   const TheBottomNavBar({Key? key}) : super(key: key);
@@ -34,9 +33,9 @@ class TheBottomNavBar extends StatelessWidget {
                       Icons.food_bank_rounded,
                     )),
                 BottomNavigationBarItem(
-                    label: 'detials',
+                    label: 'cart',
                     icon: Icon(
-                      Icons.details_rounded,
+                      Icons.shop_2_rounded,
                     )),
                 BottomNavigationBarItem(
                     label: 'setting',

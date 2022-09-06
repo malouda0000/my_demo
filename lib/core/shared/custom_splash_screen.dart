@@ -15,16 +15,16 @@ class CustomSplashScreen extends StatefulWidget {
 }
 
 class _CustomSplashScreenState extends State<CustomSplashScreen> {
-  @override
-  void initState() {
-    super.initState;
-    Timer(
-        Duration(
-          seconds: 1.5.toInt(),
-        ), () {
-      Get.offAllNamed(AppRoute.homePage);
-    });
-  }
+  // @override
+  // void initState() {
+  //   super.initState;
+  //   Timer(
+  //       Duration(
+  //         seconds: 1.5.toInt(),
+  //       ), () {
+  //     Get.offAllNamed(AppRoute.homePage);
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {

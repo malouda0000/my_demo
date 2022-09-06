@@ -99,12 +99,12 @@ class MealDetailsScreen extends StatelessWidget {
                   ),
                   BigggButton(
                       theLeadingIcon: Icons.shop_rounded,
-                      theButtonTitle: 'theButtonTitle',
+                      theButtonTitle: 'go to my cart',
                       onTaped: () {
                         Get.to(() => TempCartScreen());
                       },
                       leadingIconColor: AppColor.kTextColor,
-                      buttonTitleColor: AppColor.kGrayColor)
+                      buttonTitleColor: AppColor.kTextColor)
                 ],
               ),
             )

@@ -70,4 +70,12 @@ CREATE TABLE "usercart" (
     Future<int> response = mydb!.rawUpdate(sql);
     return response;
   }
+
+  deleteMyDatabase() async {
+    String defualtPath = await getDatabasesPath();
+    // String? myDbName = 'fastfood.db';
+    String path = join(defualtPath, 'fastfood.db');
+    // var response = await deleteDatabase(path);
+    await deleteDatabase(path);
+  }
 }

@@ -42,7 +42,7 @@ class FoodListScreen extends StatelessWidget {
                 height: Get.height * .14,
                 width: Get.width,
                 margin: EdgeInsets.all(theDefaultPadding),
-                padding: EdgeInsets.only(left: theDefaultPadding),
+                // padding: EdgeInsets.only(left: theDefaultPadding),
                 decoration: BoxDecoration(
                     color: AppColor.theMainLightColor,
                     borderRadius: BorderRadius.circular(theDefaultRaduis),
@@ -55,6 +55,13 @@ class FoodListScreen extends StatelessWidget {
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+                      Container(
+                        color: Colors.red,
+                        child: const SizedBox(
+                            // width: 5,
+                            // height: 5,
+                            ),
+                      ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,

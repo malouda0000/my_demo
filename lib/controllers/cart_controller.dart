@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:get/get_navigation/src/dialog/dialog_route.dart';
 import 'package:my_demo/data/model/local_db.dart';
 
 MyDb mydb = MyDb();
@@ -45,6 +46,8 @@ DELETE FROM usercart
 DELETE FROM 'usercart' WHERE id = $id
 
 ''');
+
+    print('delete iiiitem ==========================');
     update();
   }
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/controllers/cart_controller.dart';
+import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/core/shared/big_button.dart';
 
 class EmptyTheCartButton extends StatelessWidget {
@@ -20,15 +21,56 @@ class EmptyTheCartButton extends StatelessWidget {
         child: BigggButton(
           theLeadingIcon: Icons.delete_rounded,
           theButtonTitle: 'Empty the cart',
+          leadingIconColor: AppColor.kTextColor,
+          buttonTitleColor: AppColor.kTextColor,
           // onTaped: () {},
           onTaped: () async {
-            await cartController.emptyMyCart();
-            // if(cartController.emptyMyCart()){
-
-            // }
+            Get.defaultDialog(
+              title: 'sure',
+              titleStyle: Theme.of(context).textTheme.headline6,
+              content: Column(
+                children: [
+                  Icon(
+                    Icons.warning_rounded,
+                    size: 80,
+                    color: Colors.red,
+                  ),
+                  Text(
+                    'are you sure you want to remove this meal',
+                    style: Theme.of(context).textTheme.bodyText1,
+                  ),
+                ],
+              ),
+              actions: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    MaterialButton(
+                      color: Colors.red,
+                      onPressed: () {
+                        cartController.emptyMyCart();
+                        Get.back();
+                      },
+                      child: Text(
+                        'delet',
+                        style: TextStyle(),
+                      ),
+                    ),
+                    MaterialButton(
+                      color: AppColor.kPrimaryColor,
+                      onPressed: () {
+                        Get.back();
+                      },
+                      child: Text(
+                        'keep',
+                        style: TextStyle(),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            );
           },
-          leadingIconColor: Colors.red,
-          buttonTitleColor: Colors.red,
         ),
       ),
     );

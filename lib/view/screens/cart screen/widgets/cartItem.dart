@@ -38,13 +38,19 @@ class CartItem extends StatelessWidget {
               // ),
               borderRadius: BorderRadius.circular(theDefaultRaduis),
               boxShadow: [
+                // BoxShadow(
+                //   offset: Offset(
+                //     4,
+                //     4,
+                //   ),
+                //   blurRadius: 3,
+                //   color: Colors.black.withOpacity(.7),
+                // ),
+
                 BoxShadow(
-                  offset: Offset(
-                    4,
-                    4,
-                  ),
-                  blurRadius: 3,
-                  color: Colors.black.withOpacity(.7),
+                  offset: Offset(0, 1),
+                  blurRadius: 12,
+                  color: AppColor.kTextColor.withOpacity(.5),
                 ),
               ],
               // image: DecorationImage(
@@ -98,7 +104,7 @@ class CartItem extends StatelessWidget {
                   height: Get.height * .14,
                   width: Get.height * .14,
                   decoration: BoxDecoration(
-                    color: Colors.indigoAccent,
+                    color: AppColor.kPrimaryColor,
                     shape: BoxShape.circle,
                     // image: DecorationImage(
                     //   image: AssetImage(

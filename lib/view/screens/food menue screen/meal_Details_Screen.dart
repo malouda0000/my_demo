@@ -9,7 +9,7 @@ import 'package:my_demo/core/shared/the%20appbar/the_app_bar.dart';
 import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/data/model/meal_detials_class.dart';
 import 'package:my_demo/view/screens/cart%20screen/cart_screen.dart';
-import 'package:my_demo/view/screens/food%20menue%20screen/add_remove_row.dart';
+import 'package:my_demo/view/screens/food%20menue%20screen/add_remove_column.dart';
 
 class MealDetailsScreen extends StatelessWidget {
 // MyDb sqldp = MyDb;
@@ -90,11 +90,6 @@ class MealDetailsScreen extends StatelessWidget {
                             buttonTitleColor: AppColor.kTextColor),
                       ),
                       emptySpace,
-                      AddRemoveRow(
-                        itemsCount: find.mealCount,
-                        onAdd: () {},
-                        onRemove: () {},
-                      ),
                     ],
                   ),
                   BigggButton(

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/core/constants/app_color.dart';
 
-class AddRemoveRow extends StatelessWidget {
+class AddRemoveColumn extends StatelessWidget {
   final int itemsCount;
   final void Function() onAdd;
   final void Function() onRemove;
-  const AddRemoveRow(
+  const AddRemoveColumn(
       {Key? key,
       required this.itemsCount,
       required this.onAdd,
@@ -15,8 +15,8 @@ class AddRemoveRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.end,
+    return Column(
+      // crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         // Spacer(),
         InkWell(
@@ -53,8 +53,10 @@ class CirButtonBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.all(1),
       alignment: Alignment.center,
-      width: Get.width * .08,
+      width: Get.height * .035,
+      height: Get.height * .035,
       decoration:
           BoxDecoration(shape: BoxShape.circle, color: AppColor.kPrimaryColor),
       child: childWiget,

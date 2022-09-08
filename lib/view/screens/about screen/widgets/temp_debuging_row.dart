@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/main.dart';
 import '../../../../core/constants/app_color.dart';
-import '../../../../core/constants/app_routes.dart';
 import '../../../../core/constants/constants.dart';
 import '../../../../core/localization/localization.dart';
 

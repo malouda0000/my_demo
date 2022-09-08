@@ -4,7 +4,7 @@ import 'package:my_demo/controllers/singup_controller.dart';
 import 'package:my_demo/view/screens/auth/social_auth.dart';
 
 import '../../../core/constants/app_color.dart';
-import '../../../core/constants/app_routes.dart';
+import 'package:my_demo/get_pages.dart';
 import '../../../core/constants/constants.dart';
 import '../../../core/localization/localization.dart';
 import '../../../core/shared/app_id.dart';

@@ -8,7 +8,7 @@ class TheBottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // BottomNvaBarController bottomNavBarController = Get.find();
+    BottomNvaBarController bottomNavBarController = Get.find();
     return GetBuilder<BottomNvaBarController>(
         builder: ((bottomNavBarController) => BottomNavigationBar(
               currentIndex: bottomNavBarController.theCurrentIndex,

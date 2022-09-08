@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/view/screens/setting/widgets/reserved_rights_row.dart';
 import 'package:my_demo/view/screens/setting/widgets/settign_list_tile.dart';
-
 import '../../../../core/constants/app_color.dart';
-import '../../../../core/constants/app_routes.dart';
+import 'package:my_demo/get_pages.dart';
 import '../../../../core/constants/constants.dart';
 import '../../../../core/localization/localization.dart';
 import '../../../../core/shared/the_input_field.dart';

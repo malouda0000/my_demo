@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:my_demo/core/constants/app_routes.dart';
+import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/data/model/local_db.dart';
 import 'package:my_demo/data/model/meal_detials_class.dart';
 

@@ -18,7 +18,7 @@ import 'core/constants/app_color.dart';
 import 'core/localization/localization.dart';
 // import 'core/shared/custom_splash_screen.dart';
 
-// final GlobalKey<ScaffoldState> myKey = GlobalKey();
+// GlobalKey<ScaffoldState> myKey = GlobalKey();
 
 SharedPreferences? mySharedPrefes;
 main() async {
@@ -39,6 +39,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+// final GlobalKey<ScaffoldState> myKey = GlobalKey();
     MylocalController locallizationsController = Get.find();
     // Get.put(MylocalController());
     // GetStorage box = GetStroage;
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
       title: 'Fast Food',
       getPages: GetPages().getpages,
       initialBinding: MyInitalBindings(),
+      initialRoute: '/',
       theme: ThemeData(
         fontFamily: 'Cairo',
         primaryColor: AppColor.kPrimaryColor,
@@ -64,7 +66,7 @@ class MyApp extends StatelessWidget {
       // darkTheme: ThemeData.dark(),
       locale: locallizationsController.initalLang,
       translations: TheLocalization(),
-      home: MyHomePage(),
+      // home: MyHomePage(),
     );
   }
 }

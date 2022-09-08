@@ -8,11 +8,14 @@ class AuthMiddleWare extends GetMiddleware {
   RouteSettings? redirect(String? route) {
     if (mySharedPrefes?.getBool('logIn') != null) {
       // return super.redirect(route);
-
-      return RouteSettings(name: AppRoute.introSliderScreen);
+      if (mySharedPrefes!.getBool('logIn') == true) {
+        return RouteSettings(name: AppRoute.homePage);
+      } else {
+        return RouteSettings(name: AppRoute.singInScreen);
+      }
     } else {
       return RouteSettings(
-        name: AppRoute.aboutScreen,
+        name: AppRoute.introSliderScreen,
       );
     }
   }

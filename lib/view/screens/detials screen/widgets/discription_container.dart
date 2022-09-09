@@ -127,20 +127,23 @@ class DiscriptionContainer extends StatelessWidget {
               ),
               const Spacer(),
               Container(
+                height: Get.width * .18,
+                width: Get.width * .18,
+                alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: AppColor.kPrimaryColor,
                   shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(theDefaultRaduis),
                 ),
-                padding: const EdgeInsets.all(20),
-                child: const Text(
+                // padding: const EdgeInsets.all(20),
+                child: Text(
                   '\$ 15',
                   style: TextStyle(
                     color: AppColor.kTextColor,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-              )
+              ),
             ],
           ),
           Container(

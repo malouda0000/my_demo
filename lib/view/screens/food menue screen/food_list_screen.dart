@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/controllers/adding_meal_controller.dart';
 import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/data/model/meal_detials_class.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/food_list_tile.dart';
@@ -7,10 +8,10 @@ import 'package:my_demo/view/screens/food%20menue%20screen/meal_Details_Screen.d
 
 class FoodListScreen extends StatelessWidget {
   final List<MealDetailsClass> foodListItems;
+  AddingMealController addingMealController = Get.find();
 
   final theListTileIndex;
-  const FoodListScreen(
-      {Key? key, this.theListTileIndex, required this.foodListItems})
+  FoodListScreen({Key? key, this.theListTileIndex, required this.foodListItems})
       : super(key: key);
 
   @override
@@ -38,7 +39,14 @@ class FoodListScreen extends StatelessWidget {
               child: FoodListTile(
                 mealTitle: foodListItems[index].mealTitle,
                 mealPrefDis: foodListItems[index].mealPrefDiscription,
-                onPresseded: () {},
+                onPresAddButt: () {
+                  Get.isSnackbarOpen
+                      ? () {}
+                      : GetSnackBar(
+                          message: 'added succsfuly',
+                        );
+                  addingMealController.addMealToCart(foodListItems[index]);
+                },
                 starsCount: foodListItems[index].mealStarsCount,
                 imagePath: foodListItems[index].mealImg,
                 itemsCount: foodListItems[index].mealCount,

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:my_demo/controllers/localization_controller.dart';
 import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/core/services/binding.dart';
+import 'package:my_demo/view/screens/home/my_home_page.dart';
 // import 'package:my_demo/middleware/auth_middleware.dart';
 // import 'package:my_demo/view/screens/about%20screen/about_screen.dart';
 // import 'package:my_demo/view/screens/auth/sing_in.dart';

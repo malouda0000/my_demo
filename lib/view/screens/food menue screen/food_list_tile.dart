@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/core/constants/constants.dart';
+import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/core/shared/circuled_image_with_border.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/add_remove_column.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/rating_stars_builder.dart';
@@ -9,14 +10,14 @@ import 'package:my_demo/view/screens/food%20menue%20screen/rating_stars_builder.
 class FoodListTile extends StatelessWidget {
   final String mealTitle, mealPrefDis, imagePath;
   final int itemsCount, starsCount;
-  void Function()? onPresseded = null;
+  void Function()? onPresAddButt = null;
   FoodListTile(
       {Key? key,
       required this.mealTitle,
       required this.mealPrefDis,
       required this.imagePath,
       required this.itemsCount,
-      this.onPresseded,
+      this.onPresAddButt,
       required this.starsCount})
       : super(key: key);
 
@@ -60,9 +61,9 @@ class FoodListTile extends StatelessWidget {
                 mealPrefDis,
                 softWrap: true,
               ),
-              onPresseded != null
+              onPresAddButt != null
                   ? MaterialButton(
-                      onPressed: onPresseded,
+                      onPressed: onPresAddButt,
                       child: Text('add'),
                       color: AppColor.kPrimaryColor,
                     )
@@ -73,12 +74,28 @@ class FoodListTile extends StatelessWidget {
           ),
         ),
         Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Spacer(),
+            // Spacer(),
+
             AddRemoveColumn(
               itemsCount: itemsCount,
-              onAdd: () {},
-              onRemove: () {},
+              onAdd: () {
+                Get.isSnackbarOpen
+                    ? () {}
+                    : GetSnackBar(
+                        title: 'add',
+                        message: AppLocal.commingSoon.tr,
+                      );
+              },
+              onRemove: () {
+                Get.isSnackbarOpen
+                    ? () {}
+                    : GetSnackBar(
+                        title: 'add',
+                        message: AppLocal.commingSoon.tr,
+                      );
+              },
             ),
             emptySpace
           ],

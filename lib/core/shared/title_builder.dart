@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../constants/app_color.dart';
 
 class TitleBuilder extends StatelessWidget {
   final String theTitle;
@@ -9,10 +8,7 @@ class TitleBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       theTitle,
-      style: TextStyle(
-          color: AppColor.kTextColor,
-          fontSize: 20,
-          fontWeight: FontWeight.bold),
+      style: Theme.of(context).textTheme.headline6!.copyWith(),
     );
   }
 }

@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
       title: 'Fast Food',
       getPages: GetPages().getpages,
       initialBinding: MyInitalBindings(),
-      initialRoute: '/',
+      initialRoute: AppRoute.introSliderScreen,
       theme: ThemeData(
         fontFamily: 'Cairo',
         primaryColor: AppColor.kPrimaryColor,

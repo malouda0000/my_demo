@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intro_slider/intro_slider.dart';
-
-import '../../../core/constants/app_color.dart';
-import '../../../core/constants/app_images.dart';
-import '../../../core/localization/localization.dart';
-import '../auth/sing_in.dart';
+import 'package:my_demo/core/constants/app_color.dart';
+import 'package:my_demo/core/constants/app_images.dart';
+import 'package:my_demo/core/localization/localization.dart';
+import 'package:my_demo/get_pages.dart';
 
 class IntroSliderPage extends StatefulWidget {
   @override
@@ -151,7 +150,7 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
       scrollPhysics: const ClampingScrollPhysics(),
       // shouldHideStatusBar: false,
       onDonePress: () {
-        Get.offAll(SingInScreen());
+        Get.offAllNamed(AppRoute.singInScreen);
       },
     );
   }

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/controllers/auth_controller.dart';
 import 'package:my_demo/view/screens/auth/social_auth.dart';
-
-import '../../../controllers/singin_controller.dart';
 import '../../../core/constants/app_color.dart';
 import 'package:my_demo/get_pages.dart';
 import '../../../core/constants/constants.dart';
@@ -19,8 +18,7 @@ class SingInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Get.lazyPut(() => SingInController(), fenix: true);
-    SingInController singInController = Get.find();
+    AuthController authController = Get.find();
     return Scaffold(
         // backgroundColor: AppColor.kPrimaryColor,
         body: Stack(
@@ -84,7 +82,7 @@ class SingInScreen extends StatelessWidget {
                           ),
                           child: BigggButton(
                             onTaped: () {
-                              singInController.singIn();
+                              authController.singIn();
                             }
 
                             // Navigator.of(context).pushReplacement(

@@ -8,7 +8,6 @@ import 'package:my_demo/core/services/binding.dart';
 // import 'package:my_demo/view/screens/auth/sing_in.dart';
 // import 'package:my_demo/view/screens/auth/sing_up_screen.dart';
 // import 'package:my_demo/view/screens/detials%20screen/detials_screen.dart';
-import 'package:my_demo/view/screens/home/my_home_page.dart';
 // import 'package:my_demo/view/screens/intro%20slider/intro_slider.dart';
 // import 'package:my_demo/view/screens/localization/localization_screen.dart';
 // import 'package:my_demo/view/screens/theme%20screen/theme_screen.dart';
@@ -67,6 +66,7 @@ class MyApp extends StatelessWidget {
       locale: locallizationsController.initalLang,
       translations: TheLocalization(),
       // home: MyHomePage(),
+      // offcourse you can't use home prob with the middleware
     );
   }
 }

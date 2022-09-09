@@ -43,9 +43,9 @@ class GetPages {
       ],
     ),
     GetPage(
-        name: AppRoute.customSplashScreen,
-        page: () => CustomSplashScreen(),
-        middlewares: []),
+      name: AppRoute.customSplashScreen,
+      page: () => CustomSplashScreen(),
+    ),
     GetPage(
       name: AppRoute.homePage,
       page: () => MyHomePage(),

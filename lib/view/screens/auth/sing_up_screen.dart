@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/controllers/singup_controller.dart';
+import 'package:my_demo/controllers/auth_controller.dart';
 import 'package:my_demo/view/screens/auth/social_auth.dart';
-
 import '../../../core/constants/app_color.dart';
 import 'package:my_demo/get_pages.dart';
 import '../../../core/constants/constants.dart';
@@ -19,8 +18,7 @@ class SingUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(SingupController(), permanent: true);
-    SingupController singupController = Get.find();
+    AuthController authController = Get.find();
     return Scaffold(
         body: Stack(
       // clipBehavior: Clip.hardEdge,
@@ -90,7 +88,7 @@ class SingUpScreen extends StatelessWidget {
                         emptySpace,
                         BigggButton(
                           onTaped: () {
-                            singupController.singup();
+                            authController.singup();
                           }
 
                           // Navigator.of(context).pushReplacement(

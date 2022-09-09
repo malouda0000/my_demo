@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/controllers/adding_meal_controller.dart';
 import 'package:my_demo/core/constants/app_color.dart';
+import 'package:my_demo/core/constants/constants.dart';
+import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/data/model/meal_detials_class.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/food_list_tile.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/meal_Details_Screen.dart';
@@ -25,31 +27,42 @@ class FoodListScreen extends StatelessWidget {
           //   color: AppColor.kTextColor,
           // ),
         ),
-        body: ListView.builder(
-          itemCount: foodListItems.length,
-          itemBuilder: (context, index) {
-            // final find = foodListItems[index];
-            return InkWell(
-              onTap: () {
-                Get.to(
-                  () => MealDetailsScreen(
-                    foodListItems: foodListItems,
-                    indexOfTheMealDetails: index,
+        body: ListView(
+          children: [
+            Container(
+                padding: EdgeInsets.all(theDefaultPadding),
+                alignment: Alignment.center,
+                child:
+                    TitleBuilder(theTitle: 'tap on the meal for more details')),
+            ListView.builder(
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: foodListItems.length,
+              itemBuilder: (context, index) {
+                // final find = foodListItems[index];
+                return InkWell(
+                  onTap: () {
+                    Get.to(
+                      () => MealDetailsScreen(
+                        foodListItems: foodListItems,
+                        indexOfTheMealDetails: index,
+                      ),
+                    );
+                  },
+                  child: FoodListTile(
+                    mealTitle: foodListItems[index].mealTitle,
+                    mealPrefDis: foodListItems[index].mealPrefDiscription,
+                    onPresAddButt: () {
+                      addingMealController.addMealToCart(foodListItems[index]);
+                    },
+                    starsCount: foodListItems[index].mealStarsCount,
+                    imagePath: foodListItems[index].mealImg,
+                    itemsCount: foodListItems[index].mealCount,
                   ),
                 );
               },
-              child: FoodListTile(
-                mealTitle: foodListItems[index].mealTitle,
-                mealPrefDis: foodListItems[index].mealPrefDiscription,
-                onPresAddButt: () {
-                  addingMealController.addMealToCart(foodListItems[index]);
-                },
-                starsCount: foodListItems[index].mealStarsCount,
-                imagePath: foodListItems[index].mealImg,
-                itemsCount: foodListItems[index].mealCount,
-              ),
-            );
-          },
+            ),
+          ],
         ));
   }
 }

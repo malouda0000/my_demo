@@ -31,20 +31,17 @@ class FoodListScreen extends StatelessWidget {
             // final find = foodListItems[index];
             return InkWell(
               onTap: () {
-                Get.to(() => MealDetailsScreen(
-                      foodListItems: foodListItems,
-                      indexOfTheMealDetails: index,
-                    ));
+                Get.to(
+                  () => MealDetailsScreen(
+                    foodListItems: foodListItems,
+                    indexOfTheMealDetails: index,
+                  ),
+                );
               },
               child: FoodListTile(
                 mealTitle: foodListItems[index].mealTitle,
                 mealPrefDis: foodListItems[index].mealPrefDiscription,
                 onPresAddButt: () {
-                  Get.isSnackbarOpen
-                      ? () {}
-                      : GetSnackBar(
-                          message: 'added succsfuly',
-                        );
                   addingMealController.addMealToCart(foodListItems[index]);
                 },
                 starsCount: foodListItems[index].mealStarsCount,

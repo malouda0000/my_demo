@@ -3,7 +3,9 @@ import 'package:get/get.dart';
 import 'package:my_demo/controllers/cart_controller.dart';
 
 import 'package:my_demo/core/constants/constants.dart';
-import 'package:my_demo/view/screens/cart%20screen/widgets/cartItem.dart';
+import 'package:my_demo/view/screens/cart%20screen/widgets/EmptyTheCartButton.dart';
+
+import 'package:my_demo/view/screens/food%20menue%20screen/food_list_tile.dart';
 
 class UserCartItemsList extends StatelessWidget {
   const UserCartItemsList({
@@ -28,8 +30,13 @@ class UserCartItemsList extends StatelessWidget {
                   itemBuilder: (context, i) {
                     Map<dynamic, dynamic> shourtCut = snapshot.data![i];
 
-                    return CartItem(
-                      shourtCut: shourtCut,
+                    return FoodListTile(
+                      mealTitle: shourtCut['title'].toString(),
+                      mealPrefDis: shourtCut['prefdiscription'].toString(),
+                      // imagePath: shourtCut['image'],
+                      itemsCount: shourtCut.length,
+                      starsCount: 3,
+                      // starsCount: shourtCut['starsCount'],
                     );
                   },
                 );
@@ -39,6 +46,9 @@ class UserCartItemsList extends StatelessWidget {
               );
             },
           ),
+          EmptyTheCartButton(),
+          emptySpace,
+          emptySpace,
           emptySpace,
           emptySpace,
           emptySpace,

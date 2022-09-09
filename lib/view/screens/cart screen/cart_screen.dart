@@ -6,6 +6,7 @@ import 'package:my_demo/core/shared/the%20appbar/the_app_bar.dart';
 import 'package:my_demo/data/model/local_db.dart';
 import 'package:my_demo/view/screens/cart%20screen/widgets/EmptyTheCartButton.dart';
 import 'package:my_demo/view/screens/cart%20screen/widgets/UserCartItemsList.dart';
+import 'package:my_demo/view/screens/cart%20screen/widgets/order_Button.dart';
 
 MyDb mydb = MyDb();
 
@@ -21,10 +22,11 @@ class CartScreen extends StatelessWidget {
       body: Stack(
         children: [
           GetBuilder<CartController>(
-              builder: (cartController) => UserCartItemsList()),
+            builder: (cartController) => UserCartItemsList(),
+          ),
           Positioned(
             bottom: 15,
-            child: EmptyTheCartButton(),
+            child: OrderButton(),
           ),
         ],
       ),

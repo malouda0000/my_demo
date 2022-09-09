@@ -7,26 +7,24 @@ class CartController extends GetxController {
   // var find = theListTileIndex;
 
   emptyMyCart() async {
-    // await mydb.deleteMyDatabase();
-    // int response = await mydb.deleteMyDatabase();
-
-    /////////////
-    ///
-
-    // if (response > (0)) {
-    //   update();
-
-    //   return true;
-    // } else {
-    //   return false;
-    // }
-    // print('database deleted =========================');
-
     await mydb.deletData('''
 DELETE FROM usercart
 ''');
     print('database is empty =========================');
     update();
+
+    Get.isSnackbarOpen
+        ? Get.snackbar('', 'sadStory!! please comeback soon ')
+        : null;
+  }
+
+  orderMeals() async {
+    await mydb.deletData('''
+DELETE FROM usercart
+''');
+    print('database is empty =========================');
+    update();
+    Get.isSnackbarOpen ? Get.snackbar('order', 'meals are on way ') : null;
   }
 
   Future<List<Map>> readData() async {

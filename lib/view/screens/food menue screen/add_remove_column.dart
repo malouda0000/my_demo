@@ -4,14 +4,11 @@ import 'package:my_demo/core/constants/app_color.dart';
 
 class AddRemoveColumn extends StatelessWidget {
   final int itemsCount;
-  final void Function()? onAdd;
-  final void Function()? onRemove;
-  const AddRemoveColumn(
-      {Key? key,
-      required this.itemsCount,
-      required this.onAdd,
-      required this.onRemove})
-      : super(key: key);
+
+  const AddRemoveColumn({
+    Key? key,
+    required this.itemsCount,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +16,13 @@ class AddRemoveColumn extends StatelessWidget {
       // crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         // Spacer(),
-        Material(
-          child: InkWell(
-            onTap: onAdd,
-            child: CirButtonBuilder(
-              childWiget: Icon(
-                Icons.add_rounded,
-              ),
+        InkWell(
+          onTap: () {
+            Get.isSnackbarOpen ? () {} : Get.snackbar('add', 'comming soon');
+          },
+          child: CirButtonBuilder(
+            childWiget: Icon(
+              Icons.add_rounded,
             ),
           ),
         ),
@@ -35,7 +32,9 @@ class AddRemoveColumn extends StatelessWidget {
           ),
         ),
         InkWell(
-          onTap: onRemove,
+          onTap: () {
+            Get.isSnackbarOpen ? () {} : Get.snackbar('remove', 'comming soon');
+          },
           child: CirButtonBuilder(
             childWiget: Icon(
               Icons.remove_rounded,

@@ -8,14 +8,16 @@ import 'package:my_demo/view/screens/food%20menue%20screen/add_remove_column.dar
 import 'package:my_demo/view/screens/food%20menue%20screen/rating_stars_builder.dart';
 
 class FoodListTile extends StatelessWidget {
-  final String mealTitle, mealPrefDis, imagePath;
+  final String mealTitle, mealPrefDis;
+
+  String? imagePath = null;
   final int itemsCount, starsCount;
   void Function()? onPresAddButt = null;
   FoodListTile(
       {Key? key,
       required this.mealTitle,
       required this.mealPrefDis,
-      required this.imagePath,
+      this.imagePath,
       required this.itemsCount,
       this.onPresAddButt,
       required this.starsCount})
@@ -39,16 +41,7 @@ class FoodListTile extends StatelessWidget {
             ),
           ]),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-        // Container(
-        //   color: Colors.red,
-        //   child: const SizedBox(
-        //       // width: 5,
-        //       // height: 5,
-
-        //       ),
-        // ),
         Container(
-          // width: Get.width * .25,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -80,22 +73,6 @@ class FoodListTile extends StatelessWidget {
 
             AddRemoveColumn(
               itemsCount: itemsCount,
-              onAdd: () {
-                Get.isSnackbarOpen
-                    ? () {}
-                    : GetSnackBar(
-                        title: 'add',
-                        message: AppLocal.commingSoon.tr,
-                      );
-              },
-              onRemove: () {
-                Get.isSnackbarOpen
-                    ? () {}
-                    : GetSnackBar(
-                        title: 'add',
-                        message: AppLocal.commingSoon.tr,
-                      );
-              },
             ),
             emptySpace
           ],

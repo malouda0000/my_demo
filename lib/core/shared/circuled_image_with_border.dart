@@ -12,34 +12,36 @@ class CircularImageWithBorder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        alignment: Alignment.center,
-        width: Get.width * .30,
-        decoration: BoxDecoration(
-          // color: Colors.red,
-          boxShadow: [
-            BoxShadow(
-              offset: Offset(2, 2),
-              blurRadius: 5,
-            ),
-          ],
-          shape: BoxShape.circle,
-          border: Border.all(width: 2, color: AppColor.kPrimaryColor),
-        ),
-        child: imagePath != null
-            ? Container(
-                alignment: Alignment.center,
-                height: Get.width * 0.28,
-                decoration: BoxDecoration(
-                  border: Border.all(width: 2, color: AppColor.kPrimaryColor),
-                  color: Colors.cyanAccent,
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: AssetImage(imagePath!),
-                    fit: BoxFit.fitHeight,
-                  ),
+      alignment: Alignment.center,
+      width: Get.width * .30,
+      decoration: BoxDecoration(
+        // color: Colors.red,
+        boxShadow: [
+          BoxShadow(
+            offset: Offset(2, 2),
+            blurRadius: 5,
+          ),
+        ],
+        shape: BoxShape.circle,
+        border: Border.all(width: 2, color: AppColor.kPrimaryColor),
+      ),
+      child: imagePath != null
+          ? Container(
+              alignment: Alignment.center,
+              height: Get.width * 0.28,
+              decoration: BoxDecoration(
+                border: Border.all(width: 2, color: AppColor.kPrimaryColor),
+                color: Colors.cyanAccent,
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage(imagePath!),
+                  fit: BoxFit.fitHeight,
                 ),
-              )
-            : Text(content!));
+              ),
+            )
+          : null,
+      // : Text(content!),
+    );
 
     // Container(
     //   // height: MediaQuery.of(context).size.width * 0.32,

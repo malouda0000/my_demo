@@ -27,10 +27,8 @@ VALUES ( " ${meal.mealPrice}" ,
 
 ''');
 
-    print('added to the cart succsfly ==========================');
-
     if (response > 0) {
-      Get.snackbar('', 'added to cart sucssefly');
+      Get.isSnackbarOpen ? () {} : Get.snackbar('', ' added succesfly ');
 
       // Get.toNamed(AppRoute.errorMessageScreen);
 

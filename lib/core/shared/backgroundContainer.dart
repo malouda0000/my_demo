@@ -13,6 +13,7 @@ class BackgrounContainer extends StatelessWidget {
       height: Get.height,
       child: ListView(
         shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
         children: [
           Container(
               height: Get.height * .4,

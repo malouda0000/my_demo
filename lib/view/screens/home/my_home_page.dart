@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:my_demo/core/shared/the_drawer.dart';
 import '../../../core/shared/bottom navigation bar/bottom_nav_bar.dart';
 import '../../../core/shared/the appbar/the_app_bar.dart';
-import '../../../core/shared/the appbar/the_drawer.dart';
 import 'widgets/the_home_body.dart';
 
 // GlobalKey<ScaffoldState> myKey = GlobalKey();

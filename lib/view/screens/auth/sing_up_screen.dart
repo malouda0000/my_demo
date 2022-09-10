@@ -89,14 +89,7 @@ class SingUpScreen extends StatelessWidget {
                         BigggButton(
                           onTaped: () {
                             authController.singup();
-                          }
-
-                          // Navigator.of(context).pushReplacement(
-                          //     MaterialPageRoute(builder: (context) {
-                          //   return MyHomePage();
-                          // }));
-                          ,
-                          // theBackgrounColor: ksecondaryColor,
+                          },
                           theButtonTitle: AppLocal.singUp.tr,
                           theLeadingIcon: Icons.login_rounded,
 

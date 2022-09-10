@@ -28,7 +28,7 @@ class TheBottomNavBar extends StatelessWidget {
                       Icons.home_rounded,
                     )),
                 BottomNavigationBarItem(
-                    label: 'menu',
+                    label: 'online food',
                     icon: Icon(
                       Icons.food_bank_rounded,
                     )),

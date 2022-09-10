@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/controllers/auth_controller.dart';
 import 'package:my_demo/controllers/localization_controller.dart';
 import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/core/services/binding.dart';
+import 'package:my_demo/middleware/auth_middleware.dart';
 import 'package:my_demo/view/screens/home/my_home_page.dart';
 // import 'package:my_demo/middleware/auth_middleware.dart';
 // import 'package:my_demo/view/screens/about%20screen/about_screen.dart';
@@ -25,6 +27,9 @@ main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Get.lazyPut(() => MylocalController());
   mySharedPrefes = await SharedPreferences.getInstance();
+  Get.lazyPut(() => AuthController(), fenix: true);
+  await AuthMiddleWare;
+  // await AuthMiddleWare;
 
   // Future<SharedPreferences> prefssfdsfdfd = SharedPreferences.getInstance();
 
@@ -48,7 +53,7 @@ class MyApp extends StatelessWidget {
       title: 'Fast Food',
       getPages: GetPages().getpages,
       initialBinding: MyInitalBindings(),
-      initialRoute: AppRoute.introSliderScreen,
+      // initialRoute: AppRoute.introSliderScreen,
       theme: ThemeData(
         fontFamily: 'Cairo',
         primaryColor: AppColor.kPrimaryColor,
@@ -66,7 +71,7 @@ class MyApp extends StatelessWidget {
       // darkTheme: ThemeData.dark(),
       locale: locallizationsController.initalLang,
       translations: TheLocalization(),
-      // home: MyHomePage(),
+      home: MyHomePage(),
       // offcourse you can't use home prob with the middleware
     );
   }

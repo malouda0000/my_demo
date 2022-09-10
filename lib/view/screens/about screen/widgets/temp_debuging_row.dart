@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/controllers/auth_controller.dart';
 import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/main.dart';
@@ -12,6 +13,7 @@ class TempDebugingRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AuthController authController = Get.find();
     return Card(
       elevation: theDefaultElevation,
       child: Column(
@@ -144,10 +146,7 @@ class TempDebugingRow extends StatelessWidget {
                 child: MaterialButton(
                   color: AppColor.kTextColor,
                   onPressed: () async {
-                    await mySharedPrefes!.setBool('logIn', false);
-                    Get.offAllNamed(
-                      AppRoute.singInScreen,
-                    );
+                    await authController.singOut();
                   },
                   child: Text(
                     'Sing out',

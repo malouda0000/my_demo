@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:my_demo/view/screens/cart%20screen/cart_screen.dart';
-import 'package:my_demo/view/screens/food%20menue%20screen/food_menue_screen.dart';
+import 'package:my_demo/view/screens/meals%20from%20api/meals_from_api.dart';
 
 import '../view/screens/about screen/about_screen.dart';
 import '../view/screens/home/my_home_page.dart';
@@ -8,7 +8,9 @@ import '../view/screens/setting/setting_screen.dart';
 
 List<Function> MainAppScreens = [
   () => MyHomePage(),
-  () => FoodMenueScreen(),
+  () => MealsFromApi(),
+
+  // () => FoodMenueScreen(),
   () => CartScreen(),
   () => SettingScreen(),
   () => AboutScreen(),

@@ -5,6 +5,7 @@ import 'package:my_demo/core/constants/constants.dart';
 import 'package:my_demo/core/services/binding.dart';
 import 'package:my_demo/core/shared/bottom%20navigation%20bar/bottom_nav_bar.dart';
 import 'package:my_demo/core/shared/the%20appbar/the_app_bar.dart';
+import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/data/data%20source/food_menue_data.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/food_list_screen.dart';
 
@@ -12,12 +13,19 @@ class FoodMenueScreen extends StatelessWidget {
   const FoodMenueScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: TheAppBar(),
-        bottomNavigationBar: TheBottomNavBar(),
-        body: GridView.builder(
-            // shrinkWrap: true,
+  Widget build(
+    BuildContext context,
+  ) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(theDefaultPadding),
+          child: TitleBuilder(theTitle: 'Food Menu'),
+        ),
+        GridView.builder(
+            physics: NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
             padding: EdgeInsets.all(theDefaultPadding),
             itemCount: FoodMenuesData.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -114,6 +122,8 @@ class FoodMenueScreen extends StatelessWidget {
                       ],
                     ),
                   ));
-            })));
+            })),
+      ],
+    );
   }
 }

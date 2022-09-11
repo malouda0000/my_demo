@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/controllers/auth_controller.dart';
 import 'package:my_demo/controllers/localization_controller.dart';
+import 'package:my_demo/controllers/theme_controller.dart';
+import 'package:my_demo/core/themes/themes.dart';
 import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/core/services/binding.dart';
 import 'package:my_demo/middleware/auth_middleware.dart';
@@ -28,7 +30,13 @@ main() async {
   Get.lazyPut(() => MylocalController());
   mySharedPrefes = await SharedPreferences.getInstance();
   Get.lazyPut(() => AuthController(), fenix: true);
+  Get.lazyPut(() => ThemeContorller(), fenix: true);
   await AuthMiddleWare;
+
+  ThemeData initalTheme = await mySharedPrefes!.getBool('dark') == true
+      ? MyThemes.customDarkTheme
+      : MyThemes.customLightTheme;
+
   // await AuthMiddleWare;
 
   // Future<SharedPreferences> prefssfdsfdfd = SharedPreferences.getInstance();
@@ -46,6 +54,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 // final GlobalKey<ScaffoldState> myKey = GlobalKey();
     MylocalController locallizationsController = Get.find();
+    ThemeContorller themeContorller = Get.find();
     // Get.put(MylocalController());
     // GetStorage box = GetStroage;
     return GetMaterialApp(
@@ -54,20 +63,9 @@ class MyApp extends StatelessWidget {
       getPages: GetPages().getpages,
       initialBinding: MyInitalBindings(),
       // initialRoute: AppRoute.introSliderScreen,
-      theme: ThemeData(
-        fontFamily: 'Cairo',
-        primaryColor: AppColor.kPrimaryColor,
-        scaffoldBackgroundColor: Colors.white,
-        textTheme: const TextTheme(
-          bodyText1: TextStyle(color: AppColor.kTextColor),
-          bodyText2: TextStyle(color: AppColor.kTextColor),
-          headline6: TextStyle(
-            color: AppColor.kTextColor,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
+      theme: themeContorller.initalTheme,
+      // theme: MyThemes.customDarkTheme,
+      // theme: MyThemes.customLightTheme,
       // darkTheme: ThemeData.dark(),
       locale: locallizationsController.initalLang,
       translations: TheLocalization(),

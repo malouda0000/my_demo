@@ -6,7 +6,6 @@ import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/core/constants/constants.dart';
 import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/core/shared/big_button.dart';
-import 'package:my_demo/core/shared/the%20appbar/the_app_bar.dart';
 import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/data/model/meal_detials_class.dart';
 import 'package:my_demo/get_pages.dart';
@@ -28,7 +27,6 @@ class MealDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     MealDetailsClass find = foodListItems[indexOfTheMealDetails];
     return Scaffold(
-      appBar: TheAppBar(),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(

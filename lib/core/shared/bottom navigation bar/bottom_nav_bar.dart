@@ -12,7 +12,7 @@ class TheBottomNavBar extends StatelessWidget {
     return GetBuilder<BottomNvaBarController>(
         builder: ((bottomNavBarController) => BottomNavigationBar(
               currentIndex: bottomNavBarController.theCurrentIndex,
-              backgroundColor: AppColor.theMainLightColor,
+              // backgroundColor: AppColor.theMainLightColor,
               type: BottomNavigationBarType.fixed,
               selectedItemColor: AppColor.kPrimaryColor,
               unselectedItemColor: AppColor.kTextColor,

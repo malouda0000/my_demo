@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/controllers/bottom_nav_bar_controller.dart';
-import 'package:my_demo/core/constants/app_routes.dart';
 import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/core/shared/the%20appbar/the_main_title_builder.dart';
 import '../../constants/app_color.dart';
@@ -12,8 +11,9 @@ import '../../localization/localization.dart';
 AppBar TheAppBar() {
   BottomNvaBarController bottomNavBarController = Get.find();
   return AppBar(
+    // backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
     centerTitle: true,
-    backgroundColor: AppColor.theMainLightColor,
+    // backgroundColor: AppColor.theMainLightColor,
     title: TheMainTitleBuilder(
         firstTitle: AppLocal.appNameFast.tr,
         secondTitle: AppLocal.appNameFood.tr),
@@ -74,6 +74,7 @@ AppBar TheAppBar() {
           icon: Icon(
             Icons.shop_2_rounded,
             color: AppColor.kTextColor,
+            // color: Theme.of(context).iconTheme,
           )),
       const SizedBox(
         width: 5,

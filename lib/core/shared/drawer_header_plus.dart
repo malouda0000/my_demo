@@ -46,7 +46,7 @@ class DrawerHeaderplus extends StatelessWidget {
           child: Icon(
             Icons.person_outline,
             // color: Colors.white,
-            color: AppColor.kTextBlacColor,
+            // color: AppColor.kTextBlacColor,
           ),
         ),
         GestureDetector(
@@ -59,7 +59,7 @@ class DrawerHeaderplus extends StatelessWidget {
           child: Icon(
             Icons.save_outlined,
             // color: Colors.white,
-            color: AppColor.kTextBlacColor,
+            // color: AppColor.kTextBlacColor,
           ),
         )
       ],

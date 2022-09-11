@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 import 'package:my_demo/controllers/adding_meal_controller.dart';
 import 'package:my_demo/controllers/api_controller.dart';
-import 'package:my_demo/controllers/auth_controller.dart';
 import 'package:my_demo/controllers/bottom_nav_bar_controller.dart';
 import 'package:my_demo/controllers/cart_controller.dart';
 import 'package:my_demo/controllers/localization_controller.dart';

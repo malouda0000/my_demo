@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/app_color.dart';
-
 class SettingListTile extends StatelessWidget {
   final String theTitle;
   final IconData theIcon;
@@ -22,12 +20,12 @@ class SettingListTile extends StatelessWidget {
         ListTile(
           leading: Icon(
             theIcon,
-            color: AppColor.kTextColor,
+            // color: AppColor.kTextColor,
           ),
           title: Text(theTitle, style: Theme.of(context).textTheme.bodyText1),
           trailing: const Icon(
             Icons.arrow_forward,
-            color: AppColor.kTextColor,
+            // color: AppColor.kTextColor,
           ),
           onTap: theFunction,
         ),

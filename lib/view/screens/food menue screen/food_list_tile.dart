@@ -59,7 +59,7 @@ class FoodListTile extends StatelessWidget {
               onPresAddButt != null
                   ? MaterialButton(
                       onPressed: onPresAddButt,
-                      child: Text('add'),
+                      child: Text(AppLocal.add.tr),
                       color: AppColor.kPrimaryColor,
                     )
                   : RatingStarsBuilder(

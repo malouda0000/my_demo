@@ -3,17 +3,21 @@ import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/data/model/meal_detials_class.dart';
 import 'package:get/get.dart';
 
-final String mealTypeBeef = 'beeef';
-final String mealTypeChin = 'chin';
-final String mealTypejuice = 'juice';
-final String mealTypeNoodles = 'noodles';
-final String mealTypePasta = 'pasta';
-final String mealTypeSalad = 'salad';
-final String mealTypeSoda = 'soda';
+final String mealTypeBeef = AppLocal.beef.tr;
+final String mealTypeChin = AppLocal.chin.tr;
+final String mealTypejuice = AppLocal.juice.tr;
+final String mealTypeNoodles = AppLocal.noodles.tr;
+final String mealTypePasta = AppLocal.pasta.tr;
+final String mealTypeSalad = AppLocal.salad.tr;
+final String mealTypeSoda = AppLocal.soda.tr;
+
+///
+///
+
 final List<MealDetailsClass> beefDetailsData = [
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeBeef,
+      mealPrefDiscription: AppLocal.beefPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeBeef,
       mealImg: FoodImages.beef1,
@@ -22,8 +26,8 @@ final List<MealDetailsClass> beefDetailsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeBeef,
+      mealPrefDiscription: AppLocal.beefPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeBeef,
       mealImg: FoodImages.beef2,
@@ -32,8 +36,8 @@ final List<MealDetailsClass> beefDetailsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeBeef,
+      mealPrefDiscription: AppLocal.beefPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeBeef,
       mealImg: FoodImages.beef3,
@@ -42,8 +46,8 @@ final List<MealDetailsClass> beefDetailsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeBeef,
+      mealPrefDiscription: AppLocal.beefPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeBeef,
       mealImg: FoodImages.beef4,
@@ -52,8 +56,8 @@ final List<MealDetailsClass> beefDetailsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeBeef,
+      mealPrefDiscription: AppLocal.beefPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeBeef,
       mealImg: FoodImages.beef5,
@@ -69,8 +73,8 @@ final List<MealDetailsClass> beefDetailsData = [
 
 final List<MealDetailsClass> chineseDetialsData = [
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeChin,
+      mealPrefDiscription: AppLocal.chinPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeChin,
       mealImg: FoodImages.chin1,
@@ -79,8 +83,8 @@ final List<MealDetailsClass> chineseDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeChin,
+      mealPrefDiscription: AppLocal.chinPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeChin,
       mealImg: FoodImages.chin2,
@@ -89,8 +93,8 @@ final List<MealDetailsClass> chineseDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeChin,
+      mealPrefDiscription: AppLocal.chinPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeChin,
       mealImg: FoodImages.chin3,
@@ -99,8 +103,8 @@ final List<MealDetailsClass> chineseDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeChin,
+      mealPrefDiscription: AppLocal.chinPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeChin,
       mealImg: FoodImages.chin4,
@@ -109,8 +113,8 @@ final List<MealDetailsClass> chineseDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeChin,
+      mealPrefDiscription: AppLocal.chinPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeChin,
       mealImg: FoodImages.chin5,
@@ -119,8 +123,8 @@ final List<MealDetailsClass> chineseDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeChin,
+      mealPrefDiscription: AppLocal.chinPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeChin,
       mealImg: FoodImages.chin6,
@@ -129,8 +133,8 @@ final List<MealDetailsClass> chineseDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeChin,
+      mealPrefDiscription: AppLocal.chinPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeChin,
       mealImg: FoodImages.chin7,
@@ -139,8 +143,8 @@ final List<MealDetailsClass> chineseDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeChin,
+      mealPrefDiscription: AppLocal.chinPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeChin,
       mealImg: FoodImages.chin8,
@@ -149,8 +153,8 @@ final List<MealDetailsClass> chineseDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeChin,
+      mealPrefDiscription: AppLocal.chinPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeChin,
       mealImg: FoodImages.chin9,
@@ -159,8 +163,8 @@ final List<MealDetailsClass> chineseDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeChin,
+      mealPrefDiscription: AppLocal.chinPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeChin,
       mealImg: FoodImages.chin10,
@@ -169,8 +173,8 @@ final List<MealDetailsClass> chineseDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeChin,
+      mealPrefDiscription: AppLocal.chinPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeChin,
       mealImg: FoodImages.chin11,
@@ -179,8 +183,8 @@ final List<MealDetailsClass> chineseDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeChin,
+      mealPrefDiscription: AppLocal.chinPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeChin,
       mealImg: FoodImages.chin12,
@@ -189,8 +193,8 @@ final List<MealDetailsClass> chineseDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeChin,
+      mealPrefDiscription: AppLocal.chinPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeChin,
       mealImg: FoodImages.chin1,
@@ -199,8 +203,8 @@ final List<MealDetailsClass> chineseDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeChin,
+      mealPrefDiscription: AppLocal.chinPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeChin,
       mealImg: FoodImages.chin2,
@@ -209,8 +213,8 @@ final List<MealDetailsClass> chineseDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypeChin,
+      mealPrefDiscription: AppLocal.chinPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeChin,
       mealImg: FoodImages.chin3,
@@ -226,8 +230,8 @@ final List<MealDetailsClass> chineseDetialsData = [
 
 final List<MealDetailsClass> juiceDetialsData = [
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice1,
@@ -236,8 +240,8 @@ final List<MealDetailsClass> juiceDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice2,
@@ -246,8 +250,8 @@ final List<MealDetailsClass> juiceDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice3,
@@ -256,8 +260,8 @@ final List<MealDetailsClass> juiceDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice4,
@@ -266,8 +270,8 @@ final List<MealDetailsClass> juiceDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice5,
@@ -276,8 +280,8 @@ final List<MealDetailsClass> juiceDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice6,
@@ -286,8 +290,8 @@ final List<MealDetailsClass> juiceDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice7,
@@ -296,8 +300,8 @@ final List<MealDetailsClass> juiceDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice8,
@@ -306,8 +310,8 @@ final List<MealDetailsClass> juiceDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice9,
@@ -316,8 +320,8 @@ final List<MealDetailsClass> juiceDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice10,
@@ -326,8 +330,8 @@ final List<MealDetailsClass> juiceDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice11,
@@ -336,8 +340,8 @@ final List<MealDetailsClass> juiceDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice12,
@@ -346,8 +350,8 @@ final List<MealDetailsClass> juiceDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice13,
@@ -356,8 +360,8 @@ final List<MealDetailsClass> juiceDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice14,
@@ -366,8 +370,8 @@ final List<MealDetailsClass> juiceDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice15,
@@ -376,8 +380,8 @@ final List<MealDetailsClass> juiceDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice16,
@@ -386,8 +390,8 @@ final List<MealDetailsClass> juiceDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'beef',
-      mealPrefDiscription: 'its light nice beef',
+      mealTitle: mealTypejuice,
+      mealPrefDiscription: AppLocal.juicePrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypejuice,
       mealImg: FoodImages.juice17,
@@ -403,8 +407,8 @@ final List<MealDetailsClass> juiceDetialsData = [
 
 final List<MealDetailsClass> noodlesDetialsData = [
   MealDetailsClass(
-      mealTitle: 'noodles',
-      mealPrefDiscription: 'its light nice noodles',
+      mealTitle: mealTypeNoodles,
+      mealPrefDiscription: AppLocal.noodlesPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeNoodles,
       mealImg: FoodImages.noodles1,
@@ -413,8 +417,8 @@ final List<MealDetailsClass> noodlesDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'noodles',
-      mealPrefDiscription: 'its light nice noodles',
+      mealTitle: mealTypeNoodles,
+      mealPrefDiscription: AppLocal.noodlesPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeNoodles,
       mealImg: FoodImages.noodles2,
@@ -423,8 +427,8 @@ final List<MealDetailsClass> noodlesDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'noodles',
-      mealPrefDiscription: 'its light nice noodles',
+      mealTitle: mealTypeNoodles,
+      mealPrefDiscription: AppLocal.noodlesPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeNoodles,
       mealImg: FoodImages.noodles3,
@@ -433,8 +437,8 @@ final List<MealDetailsClass> noodlesDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'noodles',
-      mealPrefDiscription: 'its light nice noodles',
+      mealTitle: mealTypeNoodles,
+      mealPrefDiscription: AppLocal.noodlesPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeNoodles,
       mealImg: FoodImages.noodles4,
@@ -443,8 +447,8 @@ final List<MealDetailsClass> noodlesDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'noodles',
-      mealPrefDiscription: 'its light nice noodles',
+      mealTitle: mealTypeNoodles,
+      mealPrefDiscription: AppLocal.noodlesPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeNoodles,
       mealImg: FoodImages.noodles5,
@@ -453,8 +457,8 @@ final List<MealDetailsClass> noodlesDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'noodles',
-      mealPrefDiscription: 'its light nice noodles',
+      mealTitle: mealTypeNoodles,
+      mealPrefDiscription: AppLocal.noodlesPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeNoodles,
       mealImg: FoodImages.noodles6,
@@ -463,8 +467,8 @@ final List<MealDetailsClass> noodlesDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'noodles',
-      mealPrefDiscription: 'its light nice noodles',
+      mealTitle: mealTypeNoodles,
+      mealPrefDiscription: AppLocal.noodlesPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeNoodles,
       mealImg: FoodImages.noodles7,
@@ -473,8 +477,8 @@ final List<MealDetailsClass> noodlesDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'noodles',
-      mealPrefDiscription: 'its light nice noodles',
+      mealTitle: mealTypeNoodles,
+      mealPrefDiscription: AppLocal.noodlesPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeNoodles,
       mealImg: FoodImages.noodles8,
@@ -490,8 +494,8 @@ final List<MealDetailsClass> noodlesDetialsData = [
 
 final List<MealDetailsClass> pastaDetialsData = [
   MealDetailsClass(
-      mealTitle: 'pasta',
-      mealPrefDiscription: 'its light nice pasta',
+      mealTitle: mealTypePasta,
+      mealPrefDiscription: AppLocal.pastaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypePasta,
       mealImg: FoodImages.pasta1,
@@ -500,8 +504,8 @@ final List<MealDetailsClass> pastaDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'pasta',
-      mealPrefDiscription: 'its light nice pasta',
+      mealTitle: mealTypePasta,
+      mealPrefDiscription: AppLocal.pastaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypePasta,
       mealImg: FoodImages.pasta2,
@@ -510,8 +514,8 @@ final List<MealDetailsClass> pastaDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'pasta',
-      mealPrefDiscription: 'its light nice pasta',
+      mealTitle: mealTypePasta,
+      mealPrefDiscription: AppLocal.pastaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypePasta,
       mealImg: FoodImages.pasta3,
@@ -520,8 +524,8 @@ final List<MealDetailsClass> pastaDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'pasta',
-      mealPrefDiscription: 'its light nice pasta',
+      mealTitle: mealTypePasta,
+      mealPrefDiscription: AppLocal.pastaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypePasta,
       mealImg: FoodImages.pasta4,
@@ -530,8 +534,8 @@ final List<MealDetailsClass> pastaDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'pasta',
-      mealPrefDiscription: 'its light nice pasta',
+      mealTitle: mealTypePasta,
+      mealPrefDiscription: AppLocal.pastaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypePasta,
       mealImg: FoodImages.pasta5,
@@ -540,8 +544,8 @@ final List<MealDetailsClass> pastaDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'pasta',
-      mealPrefDiscription: 'its light nice pasta',
+      mealTitle: mealTypePasta,
+      mealPrefDiscription: AppLocal.pastaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypePasta,
       mealImg: FoodImages.pasta6,
@@ -550,8 +554,8 @@ final List<MealDetailsClass> pastaDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'pasta',
-      mealPrefDiscription: 'its light nice pasta',
+      mealTitle: mealTypePasta,
+      mealPrefDiscription: AppLocal.pastaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypePasta,
       mealImg: FoodImages.pasta9,
@@ -560,8 +564,8 @@ final List<MealDetailsClass> pastaDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'pasta',
-      mealPrefDiscription: 'its light nice pasta',
+      mealTitle: mealTypePasta,
+      mealPrefDiscription: AppLocal.pastaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypePasta,
       mealImg: FoodImages.pasta10,
@@ -577,8 +581,8 @@ final List<MealDetailsClass> pastaDetialsData = [
 
 final List<MealDetailsClass> saladDetialsData = [
   MealDetailsClass(
-      mealTitle: 'salad',
-      mealPrefDiscription: 'its light nice salad',
+      mealTitle: mealTypeSalad,
+      mealPrefDiscription: AppLocal.saladPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSalad,
       mealImg: FoodImages.salad1,
@@ -587,8 +591,8 @@ final List<MealDetailsClass> saladDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'salad',
-      mealPrefDiscription: 'its light nice salad',
+      mealTitle: mealTypeSalad,
+      mealPrefDiscription: AppLocal.saladPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSalad,
       mealImg: FoodImages.salad2,
@@ -597,8 +601,8 @@ final List<MealDetailsClass> saladDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'salad',
-      mealPrefDiscription: 'its light nice salad',
+      mealTitle: mealTypeSalad,
+      mealPrefDiscription: AppLocal.saladPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSalad,
       mealImg: FoodImages.salad3,
@@ -607,8 +611,8 @@ final List<MealDetailsClass> saladDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'salad',
-      mealPrefDiscription: 'its light nice salad',
+      mealTitle: mealTypeSalad,
+      mealPrefDiscription: AppLocal.saladPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSalad,
       mealImg: FoodImages.salad4,
@@ -617,8 +621,8 @@ final List<MealDetailsClass> saladDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'salad',
-      mealPrefDiscription: 'its light nice salad',
+      mealTitle: mealTypeSalad,
+      mealPrefDiscription: AppLocal.saladPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSalad,
       mealImg: FoodImages.salad1,
@@ -627,8 +631,8 @@ final List<MealDetailsClass> saladDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'salad',
-      mealPrefDiscription: 'its light nice salad',
+      mealTitle: mealTypeSalad,
+      mealPrefDiscription: AppLocal.saladPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSalad,
       mealImg: FoodImages.salad2,
@@ -637,8 +641,8 @@ final List<MealDetailsClass> saladDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'salad',
-      mealPrefDiscription: 'its light nice salad',
+      mealTitle: mealTypeSalad,
+      mealPrefDiscription: AppLocal.saladPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSalad,
       mealImg: FoodImages.salad3,
@@ -647,8 +651,8 @@ final List<MealDetailsClass> saladDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'salad',
-      mealPrefDiscription: 'its light nice salad',
+      mealTitle: mealTypeSalad,
+      mealPrefDiscription: AppLocal.saladPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSalad,
       mealImg: FoodImages.salad4,
@@ -664,8 +668,8 @@ final List<MealDetailsClass> saladDetialsData = [
 
 final List<MealDetailsClass> sodaDetialsData = [
   MealDetailsClass(
-      mealTitle: 'soda',
-      mealPrefDiscription: 'its light nice soda',
+      mealTitle: mealTypeSoda,
+      mealPrefDiscription: AppLocal.sodaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSoda,
       mealImg: FoodImages.juice1,
@@ -674,8 +678,8 @@ final List<MealDetailsClass> sodaDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'soda',
-      mealPrefDiscription: 'its light nice soda',
+      mealTitle: mealTypeSoda,
+      mealPrefDiscription: AppLocal.sodaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSoda,
       mealImg: FoodImages.juice2,
@@ -684,8 +688,8 @@ final List<MealDetailsClass> sodaDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'soda',
-      mealPrefDiscription: 'its light nice soda',
+      mealTitle: mealTypeSoda,
+      mealPrefDiscription: AppLocal.sodaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSoda,
       mealImg: FoodImages.juice3,
@@ -694,8 +698,8 @@ final List<MealDetailsClass> sodaDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'soda',
-      mealPrefDiscription: 'its light nice soda',
+      mealTitle: mealTypeSoda,
+      mealPrefDiscription: AppLocal.sodaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSoda,
       mealImg: FoodImages.juice4,
@@ -704,8 +708,8 @@ final List<MealDetailsClass> sodaDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'soda',
-      mealPrefDiscription: 'its light nice soda',
+      mealTitle: mealTypeSoda,
+      mealPrefDiscription: AppLocal.sodaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSoda,
       mealImg: FoodImages.juice5,
@@ -714,8 +718,8 @@ final List<MealDetailsClass> sodaDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'soda',
-      mealPrefDiscription: 'its light nice soda',
+      mealTitle: mealTypeSoda,
+      mealPrefDiscription: AppLocal.sodaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSoda,
       mealImg: FoodImages.juice1,
@@ -724,8 +728,8 @@ final List<MealDetailsClass> sodaDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'soda',
-      mealPrefDiscription: 'its light nice soda',
+      mealTitle: mealTypeSoda,
+      mealPrefDiscription: AppLocal.sodaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSoda,
       mealImg: FoodImages.juice3,
@@ -734,8 +738,8 @@ final List<MealDetailsClass> sodaDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'soda',
-      mealPrefDiscription: 'its light nice soda',
+      mealTitle: mealTypeSoda,
+      mealPrefDiscription: AppLocal.sodaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSoda,
       mealImg: FoodImages.juice4,
@@ -744,8 +748,8 @@ final List<MealDetailsClass> sodaDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'soda',
-      mealPrefDiscription: 'its light nice soda',
+      mealTitle: mealTypeSoda,
+      mealPrefDiscription: AppLocal.sodaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSoda,
       mealImg: FoodImages.juice3,
@@ -754,8 +758,8 @@ final List<MealDetailsClass> sodaDetialsData = [
       mealRating: 2,
       mealStarsCount: 2),
   MealDetailsClass(
-      mealTitle: 'soda',
-      mealPrefDiscription: 'its light nice soda',
+      mealTitle: mealTypeSoda,
+      mealPrefDiscription: AppLocal.sodaPrefDiscrip.tr,
       mealDiscription: AppLocal.macdonalz.tr,
       mealType: mealTypeSoda,
       mealImg: FoodImages.juice4,

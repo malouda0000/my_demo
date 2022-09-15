@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/controllers/cart_controller.dart';
 import 'package:my_demo/core/constants/app_color.dart';
+import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/core/shared/big_button.dart';
 
 class EmptyTheCartButton extends StatelessWidget {
@@ -20,12 +21,12 @@ class EmptyTheCartButton extends StatelessWidget {
         width: Get.width * .8,
         child: BigggButton(
           theLeadingIcon: Icons.delete_rounded,
-          theButtonTitle: 'Empty the cart',
+          theButtonTitle: AppLocal.emptyTheCart.tr,
 
           // onTaped: () {},
           onTaped: () async {
             Get.defaultDialog(
-              title: 'sure',
+              title: AppLocal.alert.tr,
               titleStyle: Theme.of(context).textTheme.headline6,
               content: Column(
                 children: [
@@ -35,7 +36,7 @@ class EmptyTheCartButton extends StatelessWidget {
                     color: Colors.red,
                   ),
                   Text(
-                    'are you sure you want to remove this meal',
+                    AppLocal.alertAgrement.tr,
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                 ],
@@ -51,7 +52,7 @@ class EmptyTheCartButton extends StatelessWidget {
                         Get.back();
                       },
                       child: Text(
-                        'delet',
+                        AppLocal.remove.tr,
                         style: TextStyle(),
                       ),
                     ),
@@ -61,7 +62,7 @@ class EmptyTheCartButton extends StatelessWidget {
                         Get.back();
                       },
                       child: Text(
-                        'keep',
+                        AppLocal.keep.tr,
                         style: TextStyle(),
                       ),
                     ),

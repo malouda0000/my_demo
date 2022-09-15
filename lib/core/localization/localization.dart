@@ -120,9 +120,46 @@ class TheLocalization implements Translations {
 
           '81': 'hmmam hamza',
           '82': 'hamam.hamza85@gmail.com',
-          '83': 'done',
-          '84': 'done',
-          '85': 'done',
+
+          // food menu screen
+
+          // meal type beef
+          '83': 'beef',
+          '84': 'its light nice beef',
+
+          '85': 'chinese food',
+          '86': 'it\'s nice chinese food',
+
+          '87': 'juice',
+          '88': 'fresh juices',
+
+          '89': 'noodles',
+          '90': 'it\'s light nice chines meal ',
+
+          '91': 'pasta',
+          '92': 'it\'s nice pasta',
+
+          '93': 'salad',
+          '94': 'it\'s healthy salad',
+
+          '95': 'soda',
+          '96': 'very cool soda',
+
+          // dealing with the user cart
+
+          '97': 'tap on the meal for more deatials',
+
+          '98': 'add to the cart',
+          '99': 'go to my cart',
+          '100': 'Food Menu',
+          '101': 'empty the cart',
+
+          // removing form cart
+          '102': 'alert',
+          '103': 'are you sure that you want to remove',
+          '104': 'keep',
+          '105': 'remove',
+          '106': 'add',
         },
 
 //
@@ -260,9 +297,46 @@ class TheLocalization implements Translations {
 
           '81': 'همام حمزه',
           '82': 'hamam.hamza85@gmail.com',
-          '83': 'done',
-          '84': 'done',
-          '85': 'done',
+
+          // food menu screen
+
+          // meal type beef
+          '83': 'لحم مجفف',
+          '84': 'لحم مجفف سريع التحضير',
+
+          '85': 'المطبخ الصيني',
+          '86': 'ارقي الوجبات الصينية',
+
+          '87': 'عصائر',
+          '88': 'عصائر طازجة',
+
+          '89': 'نودلز',
+          '90': 'افخم انواع النودلز الاسيوي',
+
+          '91': 'باسطة',
+          '92': 'ارقي انواع الحلوويات',
+
+          '93': 'صلة خضار',
+          '94': 'صلة خضار صحية',
+
+          '95': 'مشروبات غازية',
+          '96': 'ارقي انواع المشروبات الغازية',
+
+          // dealing with the user cart
+
+          '97': 'اضغط علي الوجبة للمزيد من المعلومات',
+
+          '98': 'اضف الي السلة',
+          '99': 'الانتقال الي السلة',
+          '100': 'قائمة الطعام',
+          '101': 'فرغ السلة',
+
+          // removing form cart
+          '102': 'تحزير',
+          '103': 'هل انت متاكد من هذا الاجراء',
+          '104': 'ابقاء',
+          '105': 'ازالة',
+          '106': 'اضافة',
         },
       };
 }
@@ -414,4 +488,42 @@ class AppLocal {
   //  static const String thisPageIsUnderDevelopment = '83': 'done',
   //   static const String thisPageIsUnderDevelopment ='84': 'done',
 // static const String thisPageIsUnderDevelopment =          '85': 'done',
+//
+//
+//
+//
+
+// food menue screen
+
+  static const String beef = '83';
+  static const String beefPrefDiscrip = '84';
+  static const String chin = '85';
+  static const String chinPrefDiscrip = '86';
+  static const String juice = '87';
+  static const String juicePrefDiscrip = '88';
+  static const String noodles = '89';
+
+  static const String noodlesPrefDiscrip = '90';
+  static const String pasta = '91';
+  static const String pastaPrefDiscrip = '92';
+  static const String salad = '93';
+  static const String saladPrefDiscrip = '94';
+  static const String soda = '95';
+  static const String sodaPrefDiscrip = '96';
+
+  // dealing with the user cart
+
+  static const String moreMealDeatial = '97';
+  static const String addToTheCart = '98';
+  static const String goToMyCart = '99';
+  static const String foodMenu = '100';
+  static const String emptyTheCart = '101';
+
+// removing from user cart
+
+  static const String alert = '102';
+  static const String alertAgrement = '103';
+  static const String keep = '104';
+  static const String remove = '105';
+  static const String add = '106';
 }

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:my_demo/controllers/adding_meal_controller.dart';
 import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/core/constants/constants.dart';
+import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/data/model/meal_detials_class.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/food_list_tile.dart';
@@ -32,8 +33,7 @@ class FoodListScreen extends StatelessWidget {
             Container(
                 padding: EdgeInsets.all(theDefaultPadding),
                 alignment: Alignment.center,
-                child:
-                    TitleBuilder(theTitle: 'tap on the meal for more details')),
+                child: TitleBuilder(theTitle: AppLocal.moreMealDeatial.tr)),
             ListView.builder(
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,

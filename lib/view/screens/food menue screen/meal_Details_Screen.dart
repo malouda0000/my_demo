@@ -105,12 +105,12 @@ class MealDetailsScreen extends StatelessWidget {
                       Expanded(
                         child: BigggButton(
                           theLeadingIcon: Icons.add_rounded,
-                          theButtonTitle: 'add to cart',
+                          theButtonTitle: AppLocal.addToTheCart.tr,
                           onTaped: () {
                             Get.isSnackbarOpen
                                 ? () {}
                                 : GetSnackBar(
-                                    message: 'added succsfuly',
+                                    message: AppLocal.done.tr,
                                   );
                             addingMealController.addMealToCart(find);
                           },
@@ -121,7 +121,7 @@ class MealDetailsScreen extends StatelessWidget {
                   ),
                   BigggButton(
                     theLeadingIcon: Icons.shop_rounded,
-                    theButtonTitle: 'go to my cart',
+                    theButtonTitle: AppLocal.goToMyCart.tr,
                     onTaped: () {
                       Get.toNamed(AppRoute.cartScreen);
                     },

@@ -21,11 +21,12 @@ class SettingListTile extends StatelessWidget {
           leading: Icon(
             theIcon,
             // color: AppColor.kTextColor,
+            color: Theme.of(context).iconTheme.color,
           ),
           title: Text(theTitle, style: Theme.of(context).textTheme.bodyText1),
-          trailing: const Icon(
+          trailing: Icon(
             Icons.arrow_forward,
-            // color: AppColor.kTextColor,
+            color: Theme.of(context).iconTheme.color,
           ),
           onTap: theFunction,
         ),

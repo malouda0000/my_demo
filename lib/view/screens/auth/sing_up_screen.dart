@@ -42,6 +42,7 @@ class SingUpScreen extends StatelessWidget {
                       BoxShadow(
                         offset: Offset(2, 2),
                         blurRadius: 5,
+                        color: Theme.of(context).shadowColor,
                       ),
                     ],
                   ),

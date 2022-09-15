@@ -37,8 +37,8 @@ class FoodListTile extends StatelessWidget {
           borderRadius: BorderRadius.circular(theDefaultRaduis),
           boxShadow: [
             BoxShadow(
-              offset: Offset(2, 2),
-              blurRadius: 12,
+              offset: Offset(1, 1),
+              blurRadius: 5,
               color: Theme.of(context).shadowColor,
             ),
           ]),

@@ -10,7 +10,7 @@ class DetialsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.kPrimaryColor,
-      appBar: DetialsScreenAppBar(),
+      appBar: DetialsScreenAppBar(context),
       body: const DeatialsScreenBody(),
       // bottomNavigationBar: const TheBottomNavBar(),
     );

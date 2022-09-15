@@ -74,7 +74,7 @@ class MyApp extends StatelessWidget {
       // darkTheme: ThemeData.dark(),
       locale: locallizationsController.initalLang,
       translations: TheLocalization(),
-      home: MyHomePage(),
+      // home: MyHomePage(),
       // offcourse you can't use home prob with the middleware
     );
   }

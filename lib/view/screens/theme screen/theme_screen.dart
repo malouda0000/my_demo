@@ -14,9 +14,9 @@ class ThemeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     ThemeContorller theThemeController =
         Get.put(ThemeContorller(), permanent: true);
-    return SafeArea(
-      child: Scaffold(
-        body: ListView(
+    return Scaffold(
+      body: SafeArea(
+        child: ListView(
           primary: true,
           padding: const EdgeInsets.all(15),
           // crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,8 +68,8 @@ class ThemeScreen extends StatelessWidget {
             ),
           ],
         ),
-        bottomNavigationBar: TheBottomNavBar(),
       ),
+      bottomNavigationBar: TheBottomNavBar(),
     );
   }
 }

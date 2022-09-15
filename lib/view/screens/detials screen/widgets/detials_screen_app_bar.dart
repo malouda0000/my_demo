@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:my_demo/get_pages.dart';
 import '../../../../core/constants/app_color.dart';
 
-AppBar DetialsScreenAppBar() {
+AppBar DetialsScreenAppBar(BuildContext context) {
   return AppBar(
     elevation: 0,
     backgroundColor: AppColor.kPrimaryColor,
@@ -23,6 +23,7 @@ AppBar DetialsScreenAppBar() {
         },
         icon: SvgPicture.asset(
           'assets/icons/share.svg',
+          color: Theme.of(context).iconTheme.color,
         ),
       ),
       IconButton(
@@ -31,6 +32,7 @@ AppBar DetialsScreenAppBar() {
         },
         icon: SvgPicture.asset(
           'assets/icons/more.svg',
+          color: Theme.of(context).iconTheme.color,
         ),
       ),
     ],

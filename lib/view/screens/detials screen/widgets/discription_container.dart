@@ -127,7 +127,9 @@ class DiscriptionContainer extends StatelessWidget {
                 // padding: const EdgeInsets.all(20),
                 child: Text(
                   '\$ 15',
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: TextStyle(
+                    color: Theme.of(context).scaffoldBackgroundColor,
+                  ),
                 ),
               ),
             ],

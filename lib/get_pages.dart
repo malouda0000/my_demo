@@ -39,7 +39,7 @@ class GetPages {
       name: AppRoute.introSliderScreen,
       page: () => IntroSliderPage(),
       middlewares: [
-        // AuthMiddleWare(),
+        AuthMiddleWare(),
       ],
     ),
     GetPage(

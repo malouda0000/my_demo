@@ -3,6 +3,7 @@ import 'package:my_demo/core/constants/app_color.dart';
 
 class MyThemes {
   static ThemeData customLightTheme = ThemeData.light().copyWith(
+    shadowColor: AppColor.kTextColor.withOpacity(.3),
     primaryColor: AppColor.kPrimaryColor,
     iconTheme: IconThemeData(color: AppColor.kTextColor),
     scaffoldBackgroundColor: Colors.white,
@@ -10,10 +11,6 @@ class MyThemes {
       backgroundColor: AppColor.theMainLightColor,
       elevation: 0,
       iconTheme: IconThemeData(color: AppColor.kTextColor),
-
-      // shadowColor: AppColor.kPrimaryColor,
-
-      shadowColor: AppColor.kTextColor.withOpacity(.5),
     ),
     bottomAppBarColor: AppColor.theMainLightColor,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
@@ -37,16 +34,18 @@ class MyThemes {
     ),
   );
   static ThemeData customDarkTheme = ThemeData.dark().copyWith(
+    shadowColor: AppColor.kTextColor.withOpacity(.3),
     primaryColor: AppColor.kPrimaryColor,
     iconTheme: IconThemeData(
       color: AppColor.theMainLightColor,
     ),
     appBarTheme: AppBarTheme(
-        // backgroundColor: AppColor.theMainLightColor,
-        elevation: 0,
-        iconTheme: IconThemeData(color: AppColor.theMainLightColor)),
-
-    shadowColor: AppColor.kTextColor,
+      // backgroundColor: AppColor.theMainLightColor,
+      elevation: 0,
+      iconTheme: IconThemeData(
+        color: AppColor.theMainLightColor,
+      ),
+    ),
 
     // shadowColor: Colors.grey[400]!.withOpacity(.5),
     textTheme: const TextTheme(

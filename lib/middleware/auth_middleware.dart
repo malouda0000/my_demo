@@ -27,21 +27,29 @@ class AuthMiddleWare extends GetMiddleware {
 
   @override
   RouteSettings? redirect(String? route) {
-    priority = 2;
-    if (authController.initalMiddelWare() != null) {
-      // return super.redirect(route);
-      if (authController.initalMiddelWare() == true) {
-        return RouteSettings(
-          name: AppRoute.homePage,
-        );
-      } else if (authController.initalMiddelWare() == false) {
-        return RouteSettings(
-          name: AppRoute.singInScreen,
-        );
-      }
+    // priority = 2;
+    return authController.initalMiddelWare() != null
+        ? authContMiddleMiddleware()
+        : RouteSettings(name: AppRoute.introSliderScreen);
+
+    //  if ( await authController.initalMiddelWare() != null) {
+    //     // return super.redirect(route);
+    //     return authContMiddleMiddleware() ;
+    //   }  else {
+    //     return RouteSettings(
+    //       name: AppRoute.introSliderScreen,
+    //     );
+    //   };
+  }
+
+  authContMiddleMiddleware() {
+    if (authController.initalMiddelWare() == true) {
+      return RouteSettings(
+        name: AppRoute.homePage,
+      );
     } else {
       return RouteSettings(
-        name: AppRoute.introSliderScreen,
+        name: AppRoute.singInScreen,
       );
     }
   }

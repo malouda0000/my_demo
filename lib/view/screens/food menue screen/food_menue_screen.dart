@@ -54,8 +54,9 @@ class FoodMenueScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(theDefaultRaduis),
                       boxShadow: [
                         BoxShadow(
-                          offset: Offset(0, 3),
-                          blurRadius: 10,
+                          color: Theme.of(context).shadowColor,
+                          offset: Offset(0, 1),
+                          blurRadius: 3,
                           // color: AppColor.ksecondaryColor.withOpacity(0.70),
                         ),
                       ],

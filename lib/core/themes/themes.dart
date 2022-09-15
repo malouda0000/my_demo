@@ -9,6 +9,7 @@ class MyThemes {
     appBarTheme: AppBarTheme(
       backgroundColor: AppColor.theMainLightColor,
       elevation: 0,
+      shadowColor: AppColor.kPrimaryColor.withOpacity(.5),
     ),
     bottomAppBarColor: AppColor.theMainLightColor,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
@@ -40,7 +41,7 @@ class MyThemes {
       backgroundColor: AppColor.theMainLightColor,
       elevation: 0,
     ),
-    shadowColor: Colors.grey[400],
+    shadowColor: Colors.grey[400]!.withOpacity(.5),
     textTheme: const TextTheme(
       bodyText1: TextStyle(
         color: AppColor.theMainLightColor,

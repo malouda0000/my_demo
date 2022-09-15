@@ -28,10 +28,10 @@ class AboutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        // drawer: (),
-        body: ListView(
+    return Scaffold(
+      // drawer: (),
+      body: SafeArea(
+        child: ListView(
           scrollDirection: Axis.vertical,
           padding: const EdgeInsets.all(10),
           children: [
@@ -74,9 +74,9 @@ class AboutScreen extends StatelessWidget {
             ),
           ],
         ),
-        // floatingActionButton: const TheFap(),
-        bottomNavigationBar: const TheBottomNavBar(),
       ),
+      // floatingActionButton: const TheFap(),
+      bottomNavigationBar: const TheBottomNavBar(),
     );
   }
 }

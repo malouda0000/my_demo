@@ -13,42 +13,40 @@ class SettingScreen extends StatefulWidget {
 class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        // backgroundColor: theMainLightColor,
-        // drawer: Drawer(backgroundColor: kPrimaryColor),
-        // appBar: AppBar(
-        //   elevation: 0,
-        //   // leading: IconButton(
-        //   //   onPressed: () {
-        //   //     // Get.back();
-        //   //     Get.back();
-        //   //   },
-        //   //   icon: const Icon(
-        //   //     Icons.arrow_back,
-        //   //     color: kPrimaryColor,
-        //   //   ),
-        //   // ),
+    return Scaffold(
+      // backgroundColor: theMainLightColor,
+      // drawer: Drawer(backgroundColor: kPrimaryColor),
+      // appBar: AppBar(
+      //   elevation: 0,
+      //   // leading: IconButton(
+      //   //   onPressed: () {
+      //   //     // Get.back();
+      //   //     Get.back();
+      //   //   },
+      //   //   icon: const Icon(
+      //   //     Icons.arrow_back,
+      //   //     color: kPrimaryColor,
+      //   //   ),
+      //   // ),
 
-        //   // leading: Icon(
-        //   //   Icons.arrow_back,
-        //   //   color: kPrimaryColor,
-        //   // ),
-        //   backgroundColor: theMainLightColor,
-        //   centerTitle: true,
-        //   title: const Text(
-        //     'Setting',
-        //     style: TextStyle(
-        //       color: kPrimaryColor,
-        //       fontWeight: FontWeight.bold,
-        //     ),
-        //   ),
-        // ),
+      //   // leading: Icon(
+      //   //   Icons.arrow_back,
+      //   //   color: kPrimaryColor,
+      //   // ),
+      //   backgroundColor: theMainLightColor,
+      //   centerTitle: true,
+      //   title: const Text(
+      //     'Setting',
+      //     style: TextStyle(
+      //       color: kPrimaryColor,
+      //       fontWeight: FontWeight.bold,
+      //     ),
+      //   ),
+      // ),
 
-        // appBar: TheAppBar({Key? key}) ,
-        body: SettingScreenBody(),
-        bottomNavigationBar: const TheBottomNavBar(),
-      ),
+      // appBar: TheAppBar({Key? key}) ,
+      body: SafeArea(child: SettingScreenBody()),
+      bottomNavigationBar: const TheBottomNavBar(),
     );
   }
 }

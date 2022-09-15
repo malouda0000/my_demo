@@ -33,9 +33,9 @@ main() async {
   Get.lazyPut(() => ThemeContorller(), fenix: true);
   await AuthMiddleWare;
 
-  ThemeData initalTheme = await mySharedPrefes!.getBool('dark') == true
-      ? MyThemes.customDarkTheme
-      : MyThemes.customLightTheme;
+  // ThemeData initalTheme = await mySharedPrefes!.getBool('dark') == true
+  //     ? MyThemes.customDarkTheme
+  //     : MyThemes.customLightTheme;
 
   // await AuthMiddleWare;
 
@@ -63,7 +63,12 @@ class MyApp extends StatelessWidget {
       getPages: GetPages().getpages,
       initialBinding: MyInitalBindings(),
       // initialRoute: AppRoute.introSliderScreen,
-      theme: themeContorller.initalTheme,
+      // theme: themeContorller.initalTheme,
+
+      theme: MyThemes.customLightTheme,
+
+      darkTheme: MyThemes.customDarkTheme,
+      themeMode: themeContorller.myThemeMode,
       // theme: MyThemes.customDarkTheme,
       // theme: MyThemes.customLightTheme,
       // darkTheme: ThemeData.dark(),

@@ -53,10 +53,11 @@ class TheItemCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(theDefaultRaduis),
         boxShadow: [
           BoxShadow(
-            offset: Offset(0, 3),
-            blurRadius: 10,
-            // color: AppColor.ksecondaryColor.withOpacity(0.70),
-          ),
+              offset: Offset(0, 1),
+              blurRadius: 5,
+              color: Theme.of(context).shadowColor
+              // color: AppColor.ksecondaryColor.withOpacity(0.70),
+              ),
         ],
       ),
       // child: SvgPicture.asset('assets/images/beyond-meat-mcdonalds.png'),

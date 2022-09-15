@@ -26,7 +26,7 @@ class ThemeScreen extends StatelessWidget {
             BigggButton(
                 theLeadingIcon: Icons.dark_mode,
                 theButtonTitle: 'change theme ',
-                onTaped: () => {theThemeController.myThemeServece()},
+                onTaped: () => {theThemeController.changeThemeService()},
                 leadingIconColor: AppColor.theMainLightColor,
                 buttonTitleColor: AppColor.theMainLightColor),
             Container(

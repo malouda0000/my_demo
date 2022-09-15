@@ -16,16 +16,18 @@ class CartScreen extends StatelessWidget {
     // CartController cartController = Get.find();
     return Scaffold(
       bottomNavigationBar: TheBottomNavBar(),
-      body: Stack(
-        children: [
-          GetBuilder<CartController>(
-            builder: (cartController) => UserCartItemsList(),
-          ),
-          Positioned(
-            bottom: 15,
-            child: OrderButton(),
-          ),
-        ],
+      body: SafeArea(
+        child: Stack(
+          children: [
+            GetBuilder<CartController>(
+              builder: (cartController) => UserCartItemsList(),
+            ),
+            Positioned(
+              bottom: 15,
+              child: OrderButton(),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -14,11 +14,11 @@ class LocaliaztionScreen extends StatelessWidget {
     MylocalController myLangController = Get.find();
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColor.theMainLightColor,
+        // backgroundColor: AppColor.theMainLightColor,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: AppColor.ksecondaryColor,
+            // color: AppColor.ksecondaryColor,
           ),
           onPressed: Get.back,
         ),

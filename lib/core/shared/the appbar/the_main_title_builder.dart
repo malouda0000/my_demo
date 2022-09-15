@@ -17,19 +17,19 @@ class TheMainTitleBuilder extends StatelessWidget {
         text: TextSpan(
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 25,
+              fontSize: 20,
             ),
             children: [
           TextSpan(
             text: firstTitle,
             style: Theme.of(context).textTheme.headline6!.copyWith(
-                  fontSize: 30,
+                // fontSize: 20,
                 ),
           ),
           TextSpan(
               style: Theme.of(context).textTheme.headline6!.copyWith(
                     color: AppColor.kPrimaryColor,
-                    fontSize: 30,
+                    // fontSize: 30,
                   ),
               text: secondTitle)
         ]));

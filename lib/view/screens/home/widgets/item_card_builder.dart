@@ -50,19 +50,15 @@ class TheItemCard extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 15, vertical: 12),
       decoration: BoxDecoration(
-        // color: Theme.of(context).appBarTheme.foregroundColor,
+        // color: Theme.of(context).cardTheme.color,
         borderRadius: BorderRadius.circular(theDefaultRaduis),
         boxShadow: [
           BoxShadow(
               offset: Offset(0, 1),
               blurRadius: 5,
-              color: Theme.of(context).shadowColor
-              // color: AppColor.ksecondaryColor.withOpacity(0.70),
-              ),
+              color: Theme.of(context).shadowColor),
         ],
       ),
-      // child: SvgPicture.asset('assets/images/beyond-meat-mcdonalds.png'),
-
       child: Material(
         borderRadius: BorderRadius.circular(10),
         child: InkWell(

@@ -21,8 +21,7 @@ class EmptyTheCartButton extends StatelessWidget {
         child: BigggButton(
           theLeadingIcon: Icons.delete_rounded,
           theButtonTitle: 'Empty the cart',
-          leadingIconColor: AppColor.kTextColor,
-          buttonTitleColor: AppColor.kTextColor,
+
           // onTaped: () {},
           onTaped: () async {
             Get.defaultDialog(

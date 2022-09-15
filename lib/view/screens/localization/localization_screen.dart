@@ -30,8 +30,6 @@ class LocaliaztionScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             BigggButton(
-                leadingIconColor: AppColor.theMainLightColor,
-                buttonTitleColor: AppColor.theMainLightColor,
                 theLeadingIcon: Icons.language_outlined,
                 theButtonTitle: AppLocal.arabic.tr,
                 onTaped: () async {
@@ -39,8 +37,6 @@ class LocaliaztionScreen extends StatelessWidget {
                 }),
             emptySpace,
             BigggButton(
-                leadingIconColor: AppColor.theMainLightColor,
-                buttonTitleColor: AppColor.theMainLightColor,
                 theLeadingIcon: Icons.language_outlined,
                 theButtonTitle: AppLocal.english.tr,
                 onTaped: () async {

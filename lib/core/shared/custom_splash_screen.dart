@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/core/constants/constants.dart';
 import 'package:my_demo/core/shared/bubles_background.dart';
 import '../constants/app_color.dart';
 import '../constants/app_routes.dart';
@@ -39,10 +40,9 @@ class _CustomSplashScreenState extends State<CustomSplashScreen> {
                 alignment: Alignment.center,
                 width: Get.width,
                 // height: Get.height,
-                child: AppId(
-                  titleColor: AppColor.kPrimaryColor,
-                ),
+                child: AppId(),
               ),
+              emptySpace,
               CircularProgressIndicator(
                 color: AppColor.kPrimaryColor,
               ),

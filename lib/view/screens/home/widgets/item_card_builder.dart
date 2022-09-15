@@ -50,6 +50,7 @@ class TheItemCard extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 15, vertical: 12),
       decoration: BoxDecoration(
+        // color: Theme.of(context).appBarTheme.foregroundColor,
         borderRadius: BorderRadius.circular(theDefaultRaduis),
         boxShadow: [
           BoxShadow(

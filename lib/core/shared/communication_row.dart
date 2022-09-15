@@ -16,7 +16,7 @@ class CommunicationRow extends StatelessWidget {
       children: [
         CommuincationIcon(
           theIcon: Icons.work_outline,
-          iconColor: AppColor.kTextColor,
+
           // theUrlLanching: () => LaunchFacebook(),
           theUrlLanching: () {
             LaunchFacebook();
@@ -31,7 +31,6 @@ class CommunicationRow extends StatelessWidget {
         ),
         CommuincationIcon(
           theIcon: Icons.email_outlined,
-          iconColor: AppColor.kTextColor,
           theUrlLanching: () {
             // LaunchEmail();
             LaunchEmail();
@@ -43,7 +42,6 @@ class CommunicationRow extends StatelessWidget {
         ),
         CommuincationIcon(
           CommuincationIconTitle: AppLocal.callMe.tr,
-          iconColor: AppColor.kTextColor,
           theIcon: Icons.call_outlined,
           theUrlLanching: () {
             // launchPhone();
@@ -55,7 +53,6 @@ class CommunicationRow extends StatelessWidget {
         ),
         CommuincationIcon(
           CommuincationIconTitle: AppLocal.myGithub.tr,
-          iconColor: AppColor.kTextColor,
           theIcon: Icons.control_point,
           theUrlLanching: () {
             LaunchGithub();

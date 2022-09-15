@@ -31,13 +31,15 @@ class FoodListTile extends StatelessWidget {
       margin: EdgeInsets.all(theDefaultPadding),
       padding: EdgeInsets.all(theDefaultPadding),
       decoration: BoxDecoration(
-          color: AppColor.theMainLightColor,
+          // color: AppColor.theMainLightColor,
+
+          color: Theme.of(context).scaffoldBackgroundColor,
           borderRadius: BorderRadius.circular(theDefaultRaduis),
           boxShadow: [
             BoxShadow(
-              offset: Offset(0, 1),
+              offset: Offset(2, 2),
               blurRadius: 12,
-              color: AppColor.kTextColor.withOpacity(.5),
+              color: Theme.of(context).shadowColor,
             ),
           ]),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [

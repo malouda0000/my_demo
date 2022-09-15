@@ -23,7 +23,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       // key: myKey,
       drawer: const TheDrawer(),
-      appBar: TheAppBar(),
+      appBar: TheAppBar(context),
       // drawer: (),
       body: const TheMainHomeBody(),
       // floatingActionButton: const TheFap(),

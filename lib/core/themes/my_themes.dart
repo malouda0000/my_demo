@@ -9,7 +9,11 @@ class MyThemes {
     appBarTheme: AppBarTheme(
       backgroundColor: AppColor.theMainLightColor,
       elevation: 0,
-      shadowColor: AppColor.kPrimaryColor.withOpacity(.5),
+      iconTheme: IconThemeData(color: AppColor.kTextColor),
+
+      // shadowColor: AppColor.kPrimaryColor,
+
+      shadowColor: AppColor.kTextColor.withOpacity(.5),
     ),
     bottomAppBarColor: AppColor.theMainLightColor,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
@@ -38,10 +42,13 @@ class MyThemes {
       color: AppColor.theMainLightColor,
     ),
     appBarTheme: AppBarTheme(
-      backgroundColor: AppColor.theMainLightColor,
-      elevation: 0,
-    ),
-    shadowColor: Colors.grey[400]!.withOpacity(.5),
+        // backgroundColor: AppColor.theMainLightColor,
+        elevation: 0,
+        iconTheme: IconThemeData(color: AppColor.theMainLightColor)),
+
+    shadowColor: AppColor.kTextColor,
+
+    // shadowColor: Colors.grey[400]!.withOpacity(.5),
     textTheme: const TextTheme(
       bodyText1: TextStyle(
         color: AppColor.theMainLightColor,

@@ -17,6 +17,7 @@ class UserCartItemsList extends StatelessWidget {
     CartController cartController = Get.find();
     return Container(
       width: Get.width,
+      color: Theme.of(context).scaffoldBackgroundColor,
       child: ListView(
         children: [
           FutureBuilder(

@@ -14,7 +14,6 @@ AppBar DetialsScreenAppBar() {
       },
       icon: const Icon(
         Icons.arrow_back,
-        color: AppColor.kTextColor,
       ),
     ),
     actions: [
@@ -24,7 +23,6 @@ AppBar DetialsScreenAppBar() {
         },
         icon: SvgPicture.asset(
           'assets/icons/share.svg',
-          color: AppColor.kTextColor,
         ),
       ),
       IconButton(
@@ -33,7 +31,6 @@ AppBar DetialsScreenAppBar() {
         },
         icon: SvgPicture.asset(
           'assets/icons/more.svg',
-          color: AppColor.kTextColor,
         ),
       ),
     ],

@@ -6,13 +6,12 @@ class CommuincationIcon extends StatelessWidget {
   final String CommuincationIconTitle;
   final void Function()? theUrlLanching;
   final IconData theIcon;
-  final Color iconColor;
+  // final Color iconColor;
   const CommuincationIcon({
     Key? key,
     this.theUrlLanching,
     required this.theIcon,
     required this.CommuincationIconTitle,
-    required this.iconColor,
   }) : super(key: key);
 
   @override
@@ -28,7 +27,9 @@ class CommuincationIcon extends StatelessWidget {
 
               // color: kPrimaryColor,
               shape: BoxShape.circle,
-              border: Border.all(color: iconColor)),
+              border: Border.all(
+                color: Theme.of(context).iconTheme.color!,
+              )),
           // padding: EdgeInsets.all(15),
           child: IconButton(
             onPressed: theUrlLanching,
@@ -36,14 +37,16 @@ class CommuincationIcon extends StatelessWidget {
               theIcon,
               // color: kTextBlacColor.withOpacity(.5),
               // color: kTextBlacColor,
-              color: iconColor,
+              color: Theme.of(context).iconTheme.color!,
             ),
           ),
         ),
         emptySpace,
         Text(
           CommuincationIconTitle,
-          style: TextStyle(color: iconColor),
+          style: TextStyle(
+            color: Theme.of(context).iconTheme.color!,
+          ),
         )
       ],
     );

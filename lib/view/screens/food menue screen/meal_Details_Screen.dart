@@ -104,30 +104,28 @@ class MealDetailsScreen extends StatelessWidget {
                     children: [
                       Expanded(
                         child: BigggButton(
-                            theLeadingIcon: Icons.add_rounded,
-                            theButtonTitle: 'add to cart',
-                            onTaped: () {
-                              Get.isSnackbarOpen
-                                  ? () {}
-                                  : GetSnackBar(
-                                      message: 'added succsfuly',
-                                    );
-                              addingMealController.addMealToCart(find);
-                            },
-                            leadingIconColor: AppColor.kTextColor,
-                            buttonTitleColor: AppColor.kTextColor),
+                          theLeadingIcon: Icons.add_rounded,
+                          theButtonTitle: 'add to cart',
+                          onTaped: () {
+                            Get.isSnackbarOpen
+                                ? () {}
+                                : GetSnackBar(
+                                    message: 'added succsfuly',
+                                  );
+                            addingMealController.addMealToCart(find);
+                          },
+                        ),
                       ),
                       emptySpace,
                     ],
                   ),
                   BigggButton(
-                      theLeadingIcon: Icons.shop_rounded,
-                      theButtonTitle: 'go to my cart',
-                      onTaped: () {
-                        Get.toNamed(AppRoute.cartScreen);
-                      },
-                      leadingIconColor: AppColor.kTextColor,
-                      buttonTitleColor: AppColor.kTextColor)
+                    theLeadingIcon: Icons.shop_rounded,
+                    theButtonTitle: 'go to my cart',
+                    onTaped: () {
+                      Get.toNamed(AppRoute.cartScreen);
+                    },
+                  )
                 ],
               ),
             )

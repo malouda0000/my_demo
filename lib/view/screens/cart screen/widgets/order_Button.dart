@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/controllers/cart_controller.dart';
-import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/core/shared/big_button.dart';
 
 class OrderButton extends StatelessWidget {
@@ -18,8 +17,7 @@ class OrderButton extends StatelessWidget {
         child: BigggButton(
           theLeadingIcon: Icons.delivery_dining_rounded,
           theButtonTitle: 'order',
-          leadingIconColor: AppColor.kTextColor,
-          buttonTitleColor: AppColor.kTextColor,
+
           // onTaped: () {},
           onTaped: () {
             // GetSnackBar(

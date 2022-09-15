@@ -25,11 +25,11 @@ class ItemBuilder extends StatelessWidget {
               title,
               style: isActive
                   ? const TextStyle(
-                      color: AppColor.kTextColor, fontWeight: FontWeight.bold
+                      color: AppColor.kPrimaryColor, fontWeight: FontWeight.bold
                       // fontSize: 12,
                       )
-                  : const TextStyle(
-                      color: AppColor.ksecondaryColor,
+                  : TextStyle(
+                      color: Theme.of(context).textTheme.headline6!.color,
                       // fontSize: 12,
                     ),
             ),

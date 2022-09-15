@@ -23,10 +23,7 @@ class OffersAndDiscounts extends StatelessWidget {
           ),
           child: Text(
             AppLocal.offersAndDiscounts.tr,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: AppColor.kTextColor,
-            ),
+            style: Theme.of(context).textTheme.headline6,
           ),
         ),
         Padding(

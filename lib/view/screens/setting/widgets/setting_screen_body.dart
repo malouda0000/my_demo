@@ -21,7 +21,7 @@ class SettingScreenBody extends StatelessWidget {
           theBorderColor: AppColor.kPrimaryColor,
           theBorderRadius: theDefaultRaduis,
           theHient: 'search',
-          theInputColor: AppColor.kTextColor,
+          theInputColor: Theme.of(context).textTheme.headline6!.color!,
           theInputType: TextInputType.text,
           thePadding: theDefaultPadding,
           isPassword: false,

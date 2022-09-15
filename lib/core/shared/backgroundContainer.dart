@@ -8,7 +8,8 @@ class BackgrounContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: AppColor.theMainLightColor),
+      decoration:
+          BoxDecoration(color: Theme.of(context).scaffoldBackgroundColor),
       width: Get.width,
       height: Get.height,
       child: ListView(

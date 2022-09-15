@@ -8,7 +8,7 @@ import '../../constants/app_color.dart';
 import '../../constants/app_images.dart';
 import '../../localization/localization.dart';
 
-AppBar TheAppBar() {
+AppBar TheAppBar(BuildContext context) {
   BottomNvaBarController bottomNavBarController = Get.find();
   return AppBar(
     // backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
@@ -22,7 +22,9 @@ AppBar TheAppBar() {
       return IconButton(
         icon: SvgPicture.asset(
           AppImages.menuImage,
-          color: AppColor.kTextColor,
+          // color: AppColor.kTextColor,
+
+          color: Theme.of(context).appBarTheme.iconTheme!.color,
         ),
         onPressed: () {
           // TheDrawer();
@@ -62,7 +64,8 @@ AppBar TheAppBar() {
         },
         icon: SvgPicture.asset(
           AppImages.notificationSvg,
-          color: AppColor.kTextColor,
+          // color: AppColor.kTextColor,
+          color: Theme.of(context).appBarTheme.iconTheme!.color,
         ),
       ),
       IconButton(
@@ -73,8 +76,9 @@ AppBar TheAppBar() {
           },
           icon: Icon(
             Icons.shop_2_rounded,
-            color: AppColor.kTextColor,
-            // color: Theme.of(context).iconTheme,
+            // color: AppColor.kTextColor,
+
+            color: Theme.of(context).appBarTheme.iconTheme!.color,
           )),
       const SizedBox(
         width: 5,

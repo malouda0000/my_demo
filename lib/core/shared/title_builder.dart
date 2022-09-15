@@ -8,7 +8,7 @@ class TitleBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       theTitle,
-      style: Theme.of(context).textTheme.headline6!.copyWith(),
+      style: Theme.of(context).textTheme.headline6,
     );
   }
 }

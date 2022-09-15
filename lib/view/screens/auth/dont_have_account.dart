@@ -19,12 +19,12 @@ class DontHaveAccount extends StatelessWidget {
       children: [
         Text(
           doYouHaveAccoun,
-          style: TextStyle(color: AppColor.kTextColor),
+          style: Theme.of(context).textTheme.bodyText1,
         ),
         GestureDetector(
           child: Text(
             singOrLogin.toUpperCase(),
-            style: TextStyle(
+            style: const TextStyle(
                 color: AppColor.kPrimaryColor, fontWeight: FontWeight.bold),
           ),
           onTap: theFunc,

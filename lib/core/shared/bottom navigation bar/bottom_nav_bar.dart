@@ -14,8 +14,8 @@ class TheBottomNavBar extends StatelessWidget {
               currentIndex: bottomNavBarController.theCurrentIndex,
               // backgroundColor: AppColor.theMainLightColor,
               type: BottomNavigationBarType.fixed,
-              selectedItemColor: AppColor.kPrimaryColor,
-              unselectedItemColor: AppColor.kTextColor,
+              selectedItemColor: Theme.of(context).primaryColor,
+              unselectedItemColor: Theme.of(context).iconTheme.color,
               showSelectedLabels: false,
               showUnselectedLabels: false,
               onTap: (index) {

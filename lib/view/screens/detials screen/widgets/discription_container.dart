@@ -14,8 +14,8 @@ class DiscriptionContainer extends StatelessWidget {
     return Container(
       alignment: AlignmentDirectional.topStart,
       padding: const EdgeInsets.all(15),
-      decoration: const BoxDecoration(
-        color: AppColor.theMainLightColor,
+      decoration: BoxDecoration(
+        color: Theme.of(context).scaffoldBackgroundColor,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(15),
           topRight: Radius.circular(15),
@@ -27,16 +27,13 @@ class DiscriptionContainer extends StatelessWidget {
             children: [
               Icon(
                 Icons.location_on,
-                color: AppColor.kTextColor,
               ),
               SizedBox(
                 width: 10,
               ),
               Text(
                 AppLocal.cityname.tr,
-                style: TextStyle(
-                  color: AppColor.kTextColor,
-                ),
+                style: Theme.of(context).textTheme.headline6,
               ),
             ],
           ),
@@ -50,11 +47,7 @@ class DiscriptionContainer extends StatelessWidget {
                   ),
                   Text(
                     AppLocal.bigBurger.tr,
-                    style: TextStyle(
-                      color: AppColor.kTextColor,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: Theme.of(context).textTheme.headline6,
                   ),
                   const SizedBox(
                     height: 10,
@@ -111,15 +104,11 @@ class DiscriptionContainer extends StatelessWidget {
                       emptySpace,
                       Text(
                         AppLocal.numberOfReviews,
-                        style: TextStyle(
-                          color: AppColor.kTextColor,
-                        ),
+                        style: Theme.of(context).textTheme.bodyText1,
                       ),
                       Text(
                         AppLocal.reviews.tr,
-                        style: TextStyle(
-                          color: AppColor.kTextColor,
-                        ),
+                        style: Theme.of(context).textTheme.bodyText1,
                       ),
                     ],
                   ),
@@ -138,22 +127,18 @@ class DiscriptionContainer extends StatelessWidget {
                 // padding: const EdgeInsets.all(20),
                 child: Text(
                   '\$ 15',
-                  style: TextStyle(
-                    color: AppColor.kTextColor,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
               ),
             ],
           ),
           Container(
             padding: const EdgeInsets.only(top: 10),
-            child: Text(AppLocal.macdonalz.tr, softWrap: true),
+            child: Text(AppLocal.macdonalz.tr,
+                style: Theme.of(context).textTheme.bodyText1, softWrap: true),
           ),
           emptySpace,
           BigggButton(
-              leadingIconColor: AppColor.kTextColor,
-              buttonTitleColor: AppColor.kTextColor,
               theLeadingIcon: Icons.delivery_dining_outlined,
               theButtonTitle: AppLocal.order.tr,
               onTaped: () {

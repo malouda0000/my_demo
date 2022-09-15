@@ -33,7 +33,7 @@ class AboutScreen extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           scrollDirection: Axis.vertical,
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(15),
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,

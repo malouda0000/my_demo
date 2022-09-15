@@ -74,8 +74,6 @@ class TheDrawer extends StatelessWidget {
               ButtonBar(
                 children: [
                   BigggButton(
-                      leadingIconColor: AppColor.theMainLightColor,
-                      buttonTitleColor: AppColor.theMainLightColor,
                       theLeadingIcon: Icons.settings_outlined,
                       theButtonTitle: AppLocal.settings.tr,
                       onTaped: () {

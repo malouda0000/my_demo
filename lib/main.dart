@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:my_demo/controllers/auth_controller.dart';
 import 'package:my_demo/controllers/localization_controller.dart';
 import 'package:my_demo/controllers/theme_controller.dart';
-import 'package:my_demo/core/themes/themes.dart';
+import 'package:my_demo/core/themes/my_themes.dart';
 import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/core/services/binding.dart';
 import 'package:my_demo/middleware/auth_middleware.dart';

@@ -6,16 +6,12 @@ class BigggButton extends StatelessWidget {
   final IconData theLeadingIcon;
   final String theButtonTitle;
   final void Function()? onTaped;
-  final Color leadingIconColor;
-  final Color buttonTitleColor;
 
   BigggButton({
     Key? key,
     required this.theLeadingIcon,
     required this.theButtonTitle,
     required this.onTaped,
-    required this.leadingIconColor,
-    required this.buttonTitleColor,
   }) : super(key: key);
 
   @override
@@ -39,7 +35,7 @@ class BigggButton extends StatelessWidget {
               children: [
                 Icon(
                   theLeadingIcon,
-                  color: leadingIconColor,
+                  color: AppColor.theMainLightColor,
                 ),
                 emptySpace,
                 Text(
@@ -47,7 +43,7 @@ class BigggButton extends StatelessWidget {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: buttonTitleColor),
+                      color: AppColor.theMainLightColor),
                 ),
               ],
             ),

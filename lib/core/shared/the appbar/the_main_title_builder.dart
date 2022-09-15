@@ -21,15 +21,16 @@ class TheMainTitleBuilder extends StatelessWidget {
             ),
             children: [
           TextSpan(
-              text: firstTitle,
-              style: TextStyle(
-                color: AppColor.kTextColor,
-              )),
+            text: firstTitle,
+            style: Theme.of(context).textTheme.headline6!.copyWith(
+                  fontSize: 30,
+                ),
+          ),
           TextSpan(
-              style: TextStyle(
-                // fontWeight: FontWeight.bold,
-                color: AppColor.kPrimaryColor,
-              ),
+              style: Theme.of(context).textTheme.headline6!.copyWith(
+                    color: AppColor.kPrimaryColor,
+                    fontSize: 30,
+                  ),
               text: secondTitle)
         ]));
   }

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_demo/view/screens/detials%20screen/widgets/detials_screen_body.dart';
-
 import '../../../core/constants/app_color.dart';
-import '../../../core/shared/bottom navigation bar/bottom_nav_bar.dart';
 import 'widgets/detials_screen_app_bar.dart';
 
 class DetialsScreen extends StatelessWidget {
@@ -14,7 +12,7 @@ class DetialsScreen extends StatelessWidget {
       backgroundColor: AppColor.kPrimaryColor,
       appBar: DetialsScreenAppBar(),
       body: const DeatialsScreenBody(),
-      bottomNavigationBar: const TheBottomNavBar(),
+      // bottomNavigationBar: const TheBottomNavBar(),
     );
   }
 }

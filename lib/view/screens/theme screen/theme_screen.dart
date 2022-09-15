@@ -12,23 +12,20 @@ class ThemeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(ThemeContorller(), permanent: true);
-    ThemeContorller theThemeController = Get.find();
+    ThemeContorller theThemeController =
+        Get.put(ThemeContorller(), permanent: true);
     return SafeArea(
       child: Scaffold(
         body: ListView(
           primary: true,
-          padding: EdgeInsets.symmetric(
-            horizontal: 15,
-          ),
+          padding: const EdgeInsets.all(15),
           // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             BigggButton(
-                theLeadingIcon: Icons.dark_mode,
-                theButtonTitle: 'change theme ',
-                onTaped: () => {theThemeController.changeThemeService()},
-                leadingIconColor: AppColor.theMainLightColor,
-                buttonTitleColor: AppColor.theMainLightColor),
+              theLeadingIcon: Icons.dark_mode,
+              theButtonTitle: 'change theme ',
+              onTaped: () => {theThemeController.changeThemeService()},
+            ),
             Container(
               padding: EdgeInsets.all(15),
               // margin: EdgeInsets.all(20),

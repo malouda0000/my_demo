@@ -24,14 +24,12 @@ class _TheMainHomeBodyState extends State<TheMainHomeBody> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: theDefaultPadding,
-            ),
+            padding: const EdgeInsets.all(theDefaultPadding),
             child: TheInputField(
               theBorderColor: AppColor.kPrimaryColor,
               theBorderRadius: theDefaultRaduis,
               theHient: 'search',
-              theInputColor: AppColor.kTextColor,
+              theInputColor: Theme.of(context).textTheme.bodyText1!.color!,
               theInputType: TextInputType.text,
               thePadding: theDefaultPadding,
               isPassword: false,

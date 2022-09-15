@@ -15,16 +15,23 @@ import 'the appbar/the_main_title_builder.dart';
 // import 'package:my_demo/widgets/title_builder.dart';
 
 class AppId extends StatelessWidget {
-  final Color titleColor;
-  const AppId({Key? key, required this.titleColor}) : super(key: key);
+  const AppId({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(15),
       decoration: BoxDecoration(
-        color: AppColor.theMainLightColor,
+        color: Theme.of(context).scaffoldBackgroundColor,
         borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            offset: Offset(2, 2),
+            blurRadius: 5,
+          ),
+        ],
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -35,15 +42,6 @@ class AppId extends StatelessWidget {
             width: Get.width * 0.3,
           ),
           emptySpace,
-          // Text(
-          //   AppLocal.appNameFast + AppLocal.appNameFood,
-          //   style: TextStyle(
-          //     color: titleColor,
-          //     fontSize: 35,
-          //     fontWeight: FontWeight.bold,
-          //   ),
-          // ),
-
           TheMainTitleBuilder(
             firstTitle: AppLocal.appNameFast.tr,
             secondTitle: AppLocal.appNameFood.tr,

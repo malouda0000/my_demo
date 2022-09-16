@@ -6,9 +6,14 @@ import '../../../core/constants/constants.dart';
 import '../../../core/localization/localization.dart';
 import '../../../core/shared/big_button.dart';
 
-class LocaliaztionScreen extends StatelessWidget {
+class LocaliaztionScreen extends StatefulWidget {
   const LocaliaztionScreen({Key? key}) : super(key: key);
 
+  @override
+  State<LocaliaztionScreen> createState() => _LocaliaztionScreenState();
+}
+
+class _LocaliaztionScreenState extends State<LocaliaztionScreen> {
   @override
   Widget build(BuildContext context) {
     MylocalController myLangController = Get.find();
@@ -33,14 +38,18 @@ class LocaliaztionScreen extends StatelessWidget {
                 theLeadingIcon: Icons.language_outlined,
                 theButtonTitle: AppLocal.arabic.tr,
                 onTaped: () async {
-                  await myLangController.ChangeLocal('ar');
+                  setState(() async {
+                    await myLangController.ChangeLocal('ar');
+                  });
                 }),
             emptySpace,
             BigggButton(
                 theLeadingIcon: Icons.language_outlined,
                 theButtonTitle: AppLocal.english.tr,
                 onTaped: () async {
-                  await myLangController.ChangeLocal('en');
+                  setState(() async {
+                    await myLangController.ChangeLocal('en');
+                  });
                 }),
           ],
         ),

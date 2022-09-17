@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
 import 'package:my_demo/controllers/auth_controller.dart';
 import 'package:my_demo/get_pages.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import '../main.dart';
 
 import 'package:get/get.dart';
 

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/controllers/adding_meal_controller.dart';
-
 import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/core/constants/constants.dart';
 import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/core/shared/big_button.dart';
 import 'package:my_demo/core/shared/title_builder.dart';
-import 'package:my_demo/data/model/meal_detials_class.dart';
 import 'package:my_demo/get_pages.dart';
+import 'package:my_demo/model/model/meal_detials_class.dart';
 
 class MealDetailsScreen extends StatelessWidget {
 // MyDb sqldp = MyDb;

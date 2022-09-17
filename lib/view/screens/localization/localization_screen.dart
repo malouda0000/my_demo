@@ -37,18 +37,18 @@ class _LocaliaztionScreenState extends State<LocaliaztionScreen> {
             BigggButton(
                 theLeadingIcon: Icons.language_outlined,
                 theButtonTitle: AppLocal.arabic.tr,
-                onTaped: () async {
-                  setState(() async {
-                    await myLangController.ChangeLocal('ar');
+                onTaped: () {
+                  setState(() {
+                    myLangController.ChangeLocal('ar');
                   });
                 }),
             emptySpace,
             BigggButton(
                 theLeadingIcon: Icons.language_outlined,
                 theButtonTitle: AppLocal.english.tr,
-                onTaped: () async {
-                  setState(() async {
-                    await myLangController.ChangeLocal('en');
+                onTaped: () {
+                  setState(() {
+                    myLangController.ChangeLocal('en');
                   });
                 }),
           ],

@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:my_demo/core/middleware/auth_middleware.dart';
 import 'package:my_demo/core/services/binding.dart';
 import 'package:my_demo/core/shared/custom_splash_screen.dart';
 import 'package:my_demo/view/screens/Error/error_message_screen.dart';
@@ -6,7 +7,6 @@ import 'package:my_demo/view/screens/cart%20screen/cart_screen.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/food_menue_screen.dart';
 import 'package:my_demo/view/screens/under%20development%20screen/under_development_screen.dart';
 import 'view/screens/intro slider/intro_slider.dart';
-import 'package:my_demo/middleware/auth_middleware.dart';
 import 'package:my_demo/view/screens/about%20screen/about_screen.dart';
 import 'package:my_demo/view/screens/auth/sing_in.dart';
 import 'package:my_demo/view/screens/auth/sing_up_screen.dart';

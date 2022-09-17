@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/controllers/theme_controller.dart';
-import '../../../core/constants/app_color.dart';
-import '../../../core/shared/big_button.dart';
-import '../../../core/shared/bottom navigation bar/bottom_nav_bar.dart';
-import '../setting/widgets/darkness_row.dart';
-import '../setting/widgets/the_color_picker.dart';
+import '../../../../core/constants/app_color.dart';
+import '../../../../core/shared/big_button.dart';
+import '../../../../core/shared/bottom navigation bar/bottom_nav_bar.dart';
+import 'darkness_row.dart';
+import 'the_color_picker.dart';
 
 class ThemeScreen extends StatelessWidget {
   const ThemeScreen({Key? key}) : super(key: key);

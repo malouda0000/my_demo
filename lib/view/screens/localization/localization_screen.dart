@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/controllers/localization_controller.dart';
-import '../../../core/constants/app_color.dart';
 import '../../../core/constants/constants.dart';
 import '../../../core/localization/localization.dart';
 import '../../../core/shared/big_button.dart';

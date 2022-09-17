@@ -4,8 +4,8 @@ import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/core/constants/constants.dart';
 import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/core/shared/circuled_image_with_border.dart';
-import 'package:my_demo/view/screens/food%20menue%20screen/add_remove_column.dart';
-import 'package:my_demo/view/screens/food%20menue%20screen/rating_stars_builder.dart';
+import 'package:my_demo/view/screens/food%20menue%20screen/widgets/add_remove_column.dart';
+import 'package:my_demo/view/screens/food%20menue%20screen/widgets/rating_stars_builder.dart';
 
 class FoodListTile extends StatelessWidget {
   final String mealTitle, mealPrefDis;

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../core/constants/app_color.dart';
-import '../../../core/localization/localization.dart';
-import '../about screen/widgets/communication_icon.dart';
+import 'package:my_demo/view/screens/about%20screen/widgets/communication_icon.dart';
+import '../../../../core/localization/localization.dart';
+import '../../about screen/widgets/communication_icon.dart';
 
 class SocialAuthRow extends StatelessWidget {
   const SocialAuthRow({Key? key}) : super(key: key);

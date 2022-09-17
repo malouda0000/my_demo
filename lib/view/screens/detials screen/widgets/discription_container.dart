@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/view/screens/detials%20screen/widgets/custom_rating.dart';
 import '../../../../core/constants/app_color.dart';
 import '../../../../core/constants/constants.dart';
 import '../../../../core/localization/localization.dart';

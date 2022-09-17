@@ -6,8 +6,8 @@ import 'package:my_demo/core/constants/constants.dart';
 import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/model/model/meal_detials_class.dart';
-import 'package:my_demo/view/screens/food%20menue%20screen/food_list_tile.dart';
-import 'package:my_demo/view/screens/food%20menue%20screen/meal_Details_Screen.dart';
+import 'package:my_demo/view/screens/food%20menue%20screen/widgets/food_list_tile.dart';
+import 'package:my_demo/view/screens/food%20menue%20screen/widgets/meal_Details_Screen.dart';
 
 class FoodListScreen extends StatelessWidget {
   final List<MealDetailsClass> foodListItems;

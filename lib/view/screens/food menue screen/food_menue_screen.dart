@@ -4,15 +4,13 @@ import 'package:my_demo/core/constants/constants.dart';
 import 'package:my_demo/core/services/binding.dart';
 import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/model/data%20source/food_menue_data.dart';
-import 'package:my_demo/view/screens/food%20menue%20screen/food_list_screen.dart';
+import 'package:my_demo/view/screens/food%20menue%20screen/widgets/food_list_screen.dart';
 
 class FoodMenueScreen extends StatelessWidget {
   const FoodMenueScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(
-    BuildContext context,
-  ) {
+  Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -37,8 +35,6 @@ class FoodMenueScreen extends StatelessWidget {
                     Get.to(
                         () => FoodListScreen(
                               theListTileIndex: index,
-                              // foodListItems:   FoodMenuesData[index].foodListItems ,
-
                               foodListItems:
                                   FoodMenuesData[index].foodListItems,
                             ),

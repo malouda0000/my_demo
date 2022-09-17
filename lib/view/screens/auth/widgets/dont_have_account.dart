@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../core/constants/app_color.dart';
+import '../../../../core/constants/app_color.dart';
 
 class DontHaveAccount extends StatelessWidget {
   final String doYouHaveAccoun;

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/controllers/cart_controller.dart';
-
 import 'package:my_demo/core/constants/constants.dart';
 import 'package:my_demo/view/screens/cart%20screen/widgets/EmptyTheCartButton.dart';
-
-import 'package:my_demo/view/screens/food%20menue%20screen/food_list_tile.dart';
+import 'package:my_demo/view/screens/food%20menue%20screen/widgets/food_list_tile.dart';
 
 class UserCartItemsList extends StatelessWidget {
   const UserCartItemsList({

@@ -18,10 +18,10 @@ class MealsFromApi extends StatefulWidget {
 class _MealsFromApiState extends State<MealsFromApi> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-          bottomNavigationBar: TheBottomNavBar(),
-          body: GetBuilder<ApiController>(
+    return Scaffold(
+        bottomNavigationBar: TheBottomNavBar(),
+        body: SafeArea(
+          child: GetBuilder<ApiController>(
             builder: (controller) {
               return FutureBuilder(
                 future: controller.getMealsFromApi(),
@@ -65,8 +65,8 @@ class _MealsFromApiState extends State<MealsFromApi> {
                 },
               );
             },
-          )),
-    );
+          ),
+        ));
   }
 
   // body: ListView.builder(

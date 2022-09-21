@@ -1,7 +1,7 @@
 import 'package:my_demo/core/constants/app_images.dart';
 import 'package:my_demo/core/localization/localization.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/model/model/meal_detials_class.dart';
+import 'package:my_demo/model/models/meal_detials_class.dart';
 
 final String mealTypeBeef = AppLocal.beef.tr;
 final String mealTypeChin = AppLocal.chin.tr;

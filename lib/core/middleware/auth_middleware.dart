@@ -27,7 +27,7 @@ class AuthMiddleWare extends GetMiddleware {
     // priority = 2;
     return authController.initalMiddelWare() != null
         ? authContMiddleMiddleware()
-        : RouteSettings(name: AppRoute.introSliderScreen);
+        : RouteSettings(name: AppRoute.customOnbordingScreen);
 
     //  if ( await authController.initalMiddelWare() != null) {
     //     // return super.redirect(route);

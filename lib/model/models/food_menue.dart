@@ -1,4 +1,4 @@
-import 'package:my_demo/model/model/meal_detials_class.dart';
+import 'package:my_demo/model/models/meal_detials_class.dart';
 
 class FoodMenue {
   final String title;

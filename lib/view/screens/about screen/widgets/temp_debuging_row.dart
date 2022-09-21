@@ -60,7 +60,7 @@ class TempDebugingRow extends StatelessWidget {
                   color: AppColor.kTextColor,
                   onPressed: () {
                     Get.offAllNamed(
-                      AppRoute.introSliderScreen,
+                      AppRoute.customOnbordingScreen,
                     );
                   },
                   child: Text(

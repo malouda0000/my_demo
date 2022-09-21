@@ -68,7 +68,7 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     // color: Colors.white,
-                    color: AppColor.kPrimaryColor,
+                    color: AppColor.theMainLightColor,
                   ),
                   child: Image.asset(
                     currentSlide.pathImage.toString(),

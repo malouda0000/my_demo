@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:my_demo/model/model/local_db.dart';
+import 'package:my_demo/model/models/local_db.dart';
 
 MyDb mydb = MyDb();
 

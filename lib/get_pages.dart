@@ -4,6 +4,7 @@ import 'package:my_demo/core/services/binding.dart';
 import 'package:my_demo/core/shared/custom_splash_screen.dart';
 import 'package:my_demo/view/screens/Error/error_message_screen.dart';
 import 'package:my_demo/view/screens/cart%20screen/cart_screen.dart';
+import 'package:my_demo/view/screens/custom%20onbording/custom_onbording.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/food_menue_screen.dart';
 import 'package:my_demo/view/screens/under%20development%20screen/under_development_screen.dart';
 import 'view/screens/intro slider/intro_slider.dart';
@@ -17,7 +18,8 @@ import 'package:my_demo/view/screens/localization/localization_screen.dart';
 import 'package:my_demo/view/screens/setting/widgets/theme_screen.dart';
 
 class AppRoute {
-  static const String introSliderScreen = '/';
+  // static const String introSliderScreen = '/';
+  static const String customOnbordingScreen = '/';
   static const String customSplashScreen = '/splashScreen';
   static const String homePage = '/homePage';
   static const String singUpScreen = '/singUpScreen';
@@ -36,12 +38,16 @@ class AppRoute {
 class GetPages {
   List<GetPage<dynamic>>? getpages = [
     GetPage(
-      name: AppRoute.introSliderScreen,
-      page: () => IntroSliderPage(),
-      middlewares: [
-        AuthMiddleWare(),
-      ],
+      name: AppRoute.customOnbordingScreen,
+      page: () => CustomOnBordingPageViewBuilder(),
     ),
+    // GetPage(
+    //   name: AppRoute.introSliderScreen,
+    //   page: () => IntroSliderPage(),
+    //   // middlewares: [
+    //   //   AuthMiddleWare(),
+    //   // ],
+    // ),
     GetPage(
       name: AppRoute.customSplashScreen,
       page: () => CustomSplashScreen(),

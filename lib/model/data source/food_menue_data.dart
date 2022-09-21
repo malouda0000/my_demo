@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/model/data%20source/meal_details_data.dart';
-import 'package:my_demo/model/model/food_menue.dart';
+import 'package:my_demo/model/models/food_menue.dart';
 
 final List<FoodMenue> FoodMenuesData = [
   FoodMenue(

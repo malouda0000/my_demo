@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
       title: 'Fast Food',
       getPages: GetPages().getpages,
       initialBinding: MyInitalBindings(),
-      // initialRoute: AppRoute.introSliderScreen,
+      initialRoute: AppRoute.homePage,
       // theme: themeContorller.initalTheme,
 
       theme: MyThemes.customLightTheme,

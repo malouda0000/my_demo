@@ -18,7 +18,7 @@ class AddRemoveColumn extends StatelessWidget {
         // Spacer(),
         InkWell(
           onTap: () {
-            Get.isSnackbarOpen ? () {} : Get.snackbar('add', 'comming soon');
+            // Get.isSnackbarOpen ? () {} : Get.snackbar('add', 'comming soon');
           },
           child: CirButtonBuilder(
             childWiget: Icon(

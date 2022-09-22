@@ -31,10 +31,6 @@ VALUES ( " ${meal.mealPrice}" ,
 
       // Get.toNamed(AppRoute.errorMessageScreen);
 
-      // Get.snackbar(
-      //   AppLocal.notifications.tr,
-      //   AppLocal.commingSoon.tr,
-      // );
     } else {
       Get.toNamed(AppRoute.errorMessageScreen);
     }

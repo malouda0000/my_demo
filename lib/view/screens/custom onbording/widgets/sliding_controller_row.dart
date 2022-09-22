@@ -45,10 +45,9 @@ class NextButton extends GetView<OnBordingControllerImp> {
         color: AppColor.kPrimaryColor,
         child: Text(
           AppLocal.next.tr,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontFamily: 'Cairo',
-          ),
+          style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                color: Theme.of(context).scaffoldBackgroundColor,
+              ),
         ),
         onPressed: () {
           controller.next();
@@ -119,10 +118,9 @@ class SkipButton extends GetView<OnBordingControllerImp> {
         color: AppColor.kPrimaryColor,
         child: Text(
           AppLocal.skip.tr,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontFamily: 'Cairo',
-          ),
+          style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                color: Theme.of(context).scaffoldBackgroundColor,
+              ),
         ),
         onPressed: () {
           controller.skip();

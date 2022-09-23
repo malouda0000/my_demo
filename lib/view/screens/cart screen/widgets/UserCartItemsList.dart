@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/controllers/adding_meal_controller.dart';
 import 'package:my_demo/controllers/cart_controller.dart';
 import 'package:my_demo/core/constants/constants.dart';
 import 'package:my_demo/view/screens/cart%20screen/widgets/EmptyTheCartButton.dart';
@@ -13,6 +14,9 @@ class UserCartItemsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     CartController cartController = Get.find();
+    // AddingMealController addingMealController= Get.find();
+    Get.put(AddingMealController());
+
     return Container(
       width: Get.width,
       color: Theme.of(context).scaffoldBackgroundColor,

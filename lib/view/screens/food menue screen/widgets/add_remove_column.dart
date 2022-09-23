@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/controllers/adding_meal_controller.dart';
 import 'package:my_demo/core/constants/app_color.dart';
 
 class AddRemoveColumn extends StatelessWidget {
+  AddingMealController addingMealController = Get.find();
   final int itemsCount;
+  final String mealTitle;
 
-  const AddRemoveColumn({
+  AddRemoveColumn({
     Key? key,
     required this.itemsCount,
+    required this.mealTitle,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    addingMealController = Get.put(AddingMealController());
     return Column(
       // crossAxisAlignment: CrossAxisAlignment.end,
       children: [
@@ -19,6 +24,7 @@ class AddRemoveColumn extends StatelessWidget {
         InkWell(
           onTap: () {
             // Get.isSnackbarOpen ? () {} : Get.snackbar('add', 'comming soon');
+            addingMealController.checkMeal(mealTitle);
           },
           child: CirButtonBuilder(
             childWiget: Icon(

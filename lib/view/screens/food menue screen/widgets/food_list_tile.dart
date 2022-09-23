@@ -83,6 +83,7 @@ class FoodListTile extends StatelessWidget {
 
             AddRemoveColumn(
               itemsCount: itemsCount,
+              mealTitle: mealTitle,
             ),
             emptySpace
           ],

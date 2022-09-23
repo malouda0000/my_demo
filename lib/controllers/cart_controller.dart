@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:my_demo/model/models/local_db.dart';
+import 'package:my_demo/model/models/meal_detials_class.dart';
 
 MyDb mydb = MyDb();
 
@@ -27,13 +28,24 @@ DELETE FROM usercart
     Get.isSnackbarOpen ? Get.snackbar('order', 'meals are on way ') : null;
   }
 
-  Future<List<Map>> readData() async {
+  Future<List<MealDetailsClass>> readData() async {
     List<Map> response = await mydb.readData("SELECT * FROM usercart");
 
-    // print('rereeeeeeeeeeeeeeeed data');
-    // print('$response');
-    // print('rereeeeeeeeeeeeeeeed data');
-    return response;
+    return List.generate(response.length, (i) {
+      return MealDetailsClass(
+        mealTitle: response[i]['title'],
+        mealPrefDiscription: response[i]['prefdiscription'],
+        mealDiscription: response[i]['discription'],
+        mealType: response[i]['type'],
+        mealImg: response[i]['image'],
+        //
+        //
+        mealPrice: response[i]['price'],
+        mealCount: response[i]['count'],
+        mealRating: response[i]['ratings'],
+        mealStarsCount: response[i]['starscount'],
+      );
+    });
   }
 
   deletItem(int id) async {

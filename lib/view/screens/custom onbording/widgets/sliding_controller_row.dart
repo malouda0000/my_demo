@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:my_demo/controllers/custom_onbording_controller.dart';
 import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/core/localization/localization.dart';
+import 'package:my_demo/main.dart';
 import 'package:my_demo/model/data%20source/custom_onbording.dart';
 
 class SlidingControllerRow extends StatelessWidget {
@@ -49,7 +50,8 @@ class NextButton extends GetView<OnBordingControllerImp> {
                 color: Theme.of(context).scaffoldBackgroundColor,
               ),
         ),
-        onPressed: () {
+        onPressed: () async {
+          await mySharedPrefes!.setBool('firstAppInit', true);
           controller.next();
         },
       ),

@@ -16,7 +16,6 @@ import 'package:my_demo/view/screens/localization/localization_screen.dart';
 import 'package:my_demo/view/screens/setting/widgets/theme_screen.dart';
 
 class AppRoute {
-  // static const String introSliderScreen = '/';
   static const String customOnbordingScreen = '/';
   static const String customSplashScreen = '/splashScreen';
   static const String homePage = '/homePage';
@@ -38,6 +37,19 @@ class GetPages {
     GetPage(
       name: AppRoute.customOnbordingScreen,
       page: () => const CustomOnBordingPageViewBuilder(),
+      middlewares: [
+        FirstTimeInit(),
+      ],
+    ),
+
+    GetPage(
+      name: AppRoute.singUpScreen,
+      page: () => const SingUpScreen(),
+      middlewares: [AuthMiddleWare()],
+    ),
+    GetPage(
+      name: AppRoute.singInScreen,
+      page: () => const SingInScreen(),
       middlewares: [AuthMiddleWare()],
     ),
     // GetPage(
@@ -48,21 +60,13 @@ class GetPages {
     //   // ],
     // ),
     GetPage(
-      name: AppRoute.customSplashScreen,
-      page: () => const CustomSplashScreen(),
-    ),
-    GetPage(
       name: AppRoute.homePage,
       page: () => const MyHomePage(),
       // binding: LocalizationBindings(),
     ),
     GetPage(
-      name: AppRoute.singUpScreen,
-      page: () => const SingUpScreen(),
-    ),
-    GetPage(
-      name: AppRoute.singInScreen,
-      page: () => const SingInScreen(),
+      name: AppRoute.customSplashScreen,
+      page: () => const CustomSplashScreen(),
     ),
     GetPage(
       name: AppRoute.detailsScreen,

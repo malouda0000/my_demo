@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_demo/core/constants/constants.dart';
 import 'package:my_demo/core/shared/bottom%20navigation%20bar/bottom_nav_bar.dart';
+import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/food_menue_screen.dart';
 import 'package:my_demo/view/screens/home/widgets/custom_search_bar.dart';
 import 'package:my_demo/view/screens/home/widgets/item_card_builder.dart';
@@ -41,6 +42,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ItemCardBuilder(),
             OffersAndDiscounts(),
             FoodMenueScreen(),
+            emptySpace,
+            Padding(
+              padding: const EdgeInsets.all(theDefaultPadding),
+              child: TitleBuilder(theTitle: 'more offers'),
+            ),
             emptySpace,
             ItemCardBuilder(),
           ],

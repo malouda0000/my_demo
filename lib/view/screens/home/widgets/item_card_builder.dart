@@ -14,7 +14,6 @@ class ItemCardBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
@@ -60,7 +59,7 @@ class TheItemCard extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             offset: Offset(0, 1),
-            blurRadius: 5,
+            blurRadius: 3,
             color: Theme.of(context).shadowColor,
           ),
         ],

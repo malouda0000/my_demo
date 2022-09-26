@@ -5,7 +5,6 @@ import '../../../../core/constants/app_color.dart';
 import '../../../../core/constants/constants.dart';
 import '../../../../core/localization/localization.dart';
 import '../../../../core/shared/big_button.dart';
-import '../detials_screen.dart';
 
 class DiscriptionContainer extends StatelessWidget {
   const DiscriptionContainer({Key? key}) : super(key: key);

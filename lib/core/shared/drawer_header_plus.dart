@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/core/shared/the_drawer.dart';
-import '../constants/app_color.dart';
-import '../constants/app_routes.dart';
 import '../localization/localization.dart';
 
 class DrawerHeaderplus extends StatelessWidget {

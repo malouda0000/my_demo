@@ -37,67 +37,67 @@ class GetPages {
   List<GetPage<dynamic>>? getpages = [
     GetPage(
       name: AppRoute.customOnbordingScreen,
-      page: () => CustomOnBordingPageViewBuilder(),
+      page: () => const CustomOnBordingPageViewBuilder(),
       middlewares: [AuthMiddleWare()],
     ),
     // GetPage(
     //   name: AppRoute.introSliderScreen,
-    //   page: () => IntroSliderPage(),
+    //   page: () =>const IntroSliderPage(),
     //   // middlewares: [
     //   //   AuthMiddleWare(),
     //   // ],
     // ),
     GetPage(
       name: AppRoute.customSplashScreen,
-      page: () => CustomSplashScreen(),
+      page: () => const CustomSplashScreen(),
     ),
     GetPage(
       name: AppRoute.homePage,
-      page: () => MyHomePage(),
+      page: () => const MyHomePage(),
       // binding: LocalizationBindings(),
     ),
     GetPage(
       name: AppRoute.singUpScreen,
-      page: () => SingUpScreen(),
+      page: () => const SingUpScreen(),
     ),
     GetPage(
       name: AppRoute.singInScreen,
-      page: () => SingInScreen(),
+      page: () => const SingInScreen(),
     ),
     GetPage(
       name: AppRoute.detailsScreen,
-      page: () => DetialsScreen(),
+      page: () => const DetialsScreen(),
     ),
     GetPage(
       name: AppRoute.themeScreen,
-      page: () => ThemeScreen(),
+      page: () => const ThemeScreen(),
     ),
     GetPage(
       name: AppRoute.aboutScreen,
-      page: () => AboutScreen(),
+      page: () => const AboutScreen(),
       // bindings: [],
     ),
     GetPage(
       name: AppRoute.localizationScreen,
-      page: () => LocaliaztionScreen(),
+      page: () => const LocaliaztionScreen(),
       binding: LocalizationBindings(),
     ),
     GetPage(
       name: AppRoute.underDevelopmentScreen,
-      page: () => UnderDevelopment(),
+      page: () => const UnderDevelopment(),
     ),
     GetPage(
       name: AppRoute.foodMenueScreen,
-      page: () => FoodMenueScreen(),
+      page: () => const FoodMenueScreen(),
       binding: AddingMealBindings(),
     ),
     GetPage(
       name: AppRoute.errorMessageScreen,
-      page: () => ErrorMessageScreen(),
+      page: () => const ErrorMessageScreen(),
     ),
     GetPage(
       name: AppRoute.cartScreen,
-      page: () => CartScreen(),
+      page: () => const CartScreen(),
       binding: CartBindings(),
     ),
   ];

@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:my_demo/core/services/binding.dart';
 import 'package:my_demo/get_pages.dart';
 import '../main.dart';
 

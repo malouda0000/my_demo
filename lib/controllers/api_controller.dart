@@ -1,6 +1,5 @@
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
-import 'package:flutter/material.dart';
 import 'package:get/state_manager.dart';
 
 int postNo = 0;

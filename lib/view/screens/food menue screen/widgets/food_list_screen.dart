@@ -11,7 +11,6 @@ import 'package:my_demo/view/screens/food%20menue%20screen/widgets/meal_Details_
 
 class FoodListScreen extends StatelessWidget {
   final List<MealDetailsClass> foodListItems;
-  AddingMealController addingMealController = Get.find();
 
   final theListTileIndex;
   FoodListScreen({Key? key, this.theListTileIndex, required this.foodListItems})
@@ -19,6 +18,8 @@ class FoodListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AddingMealController addingMealController = Get.find();
+
     return Scaffold(
         appBar: AppBar(
           backgroundColor: AppColor.kPrimaryColor,

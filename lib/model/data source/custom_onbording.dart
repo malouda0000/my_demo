@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/core/constants/app_images.dart';
 import 'package:my_demo/core/localization/localization.dart';

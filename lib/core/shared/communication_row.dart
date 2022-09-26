@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../view/screens/Error/error_message_screen.dart';
 import '../../view/screens/about screen/widgets/communication_icon.dart';
-import '../constants/app_color.dart';
 import '../localization/localization.dart';
 
 class CommunicationRow extends StatelessWidget {

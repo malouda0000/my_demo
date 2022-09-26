@@ -15,11 +15,11 @@ class CustomOnBordingPageViewBuilder extends StatelessWidget {
       // backgroundColor: AppColor.kPrimaryColor,
       body: Column(
         children: [
-          Expanded(
+          const Expanded(
             flex: 7,
             child: const OnBordingPageSlider(),
           ),
-          Expanded(
+          const Expanded(
             // flex: 1,
             child: SlidingControllerRow(),
           )

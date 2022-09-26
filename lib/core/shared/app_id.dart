@@ -7,7 +7,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../constants/app_color.dart';
 import '../constants/app_images.dart';
 import '../constants/constants.dart';
 import '../localization/localization.dart';

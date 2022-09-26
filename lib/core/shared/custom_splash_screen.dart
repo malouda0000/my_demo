@@ -1,11 +1,8 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/core/constants/constants.dart';
 import 'package:my_demo/core/shared/bubles_background.dart';
 import '../constants/app_color.dart';
-import '../constants/app_routes.dart';
 import 'app_id.dart';
 
 class CustomSplashScreen extends StatefulWidget {

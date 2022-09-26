@@ -4,7 +4,7 @@ import 'package:my_demo/controllers/adding_meal_controller.dart';
 import 'package:my_demo/core/constants/app_color.dart';
 
 class AddRemoveColumn extends StatelessWidget {
-  AddingMealController addingMealController = Get.find();
+  // AddingMealController addingMealController = Get.find();
   final int itemsCount;
   final String mealTitle;
 
@@ -16,7 +16,7 @@ class AddRemoveColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    addingMealController = Get.put(AddingMealController());
+    AddingMealController addingMealController = Get.put(AddingMealController());
     return Column(
       // crossAxisAlignment: CrossAxisAlignment.end,
       children: [

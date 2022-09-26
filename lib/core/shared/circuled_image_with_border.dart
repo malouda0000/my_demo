@@ -4,7 +4,6 @@ import 'package:my_demo/core/constants/app_images.dart';
 import '../../../../core/constants/app_color.dart';
 
 class CircularImageWithBorder extends StatelessWidget {
-  // final bool textInstadeOfImage = true;
   String? imagePath = null;
   final String? content;
 

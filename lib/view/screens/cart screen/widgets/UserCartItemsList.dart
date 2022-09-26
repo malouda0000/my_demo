@@ -37,7 +37,7 @@ class UserCartItemsList extends StatelessWidget {
                     return FoodListTile(
                       mealTitle: shourtCut.mealTitle,
                       mealPrefDis: shourtCut.mealPrefDiscription,
-                      imagePath: shourtCut.mealImg,
+                      // imagePath: shourtCut.mealImg,
                       itemsCount: shourtCut.mealCount,
                       starsCount: shourtCut.mealStarsCount,
                       // starsCount: shourtCut['starsCount'],

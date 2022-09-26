@@ -94,8 +94,8 @@ class MealDetailsScreen extends StatelessWidget {
                     child: Text(
                       find.mealDiscription,
                       style: TextStyle(
-                        color: AppColor.kTextColor,
-                      ),
+                          // color: AppColor.kTextColor,
+                          ),
                     ),
                   ),
                   emptySpace,

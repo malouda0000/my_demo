@@ -46,25 +46,18 @@ class _SettingScreenState extends State<SettingScreen> {
               theFunction: () => Get.toNamed(AppRoute.aboutScreen),
             ),
             SettingListTile(
-              diviedIt: true,
-              theTitle: AppLocal.notifications.tr,
-              theIcon: Icons.notifications_outlined,
-              theFunction: () {
-                Get.snackbar(
-                  AppLocal.notifications.tr,
-                  AppLocal.commingSoon.tr,
-                );
-              },
-            ),
+                diviedIt: true,
+                theTitle: AppLocal.notifications.tr,
+                theIcon: Icons.notifications_outlined,
+                theFunction: () {
+                  Get.offAndToNamed(AppRoute.underDevelopmentScreen);
+                }),
             SettingListTile(
               diviedIt: true,
               theTitle: AppLocal.priviceyAndSecurity.tr,
               theIcon: Icons.lock_outline,
               theFunction: () {
-                Get.snackbar(
-                  AppLocal.priviceyAndSecurity.tr,
-                  AppLocal.commingSoon.tr,
-                );
+                Get.offAndToNamed(AppRoute.underDevelopmentScreen);
               },
             ),
             SettingListTile(
@@ -78,10 +71,7 @@ class _SettingScreenState extends State<SettingScreen> {
               theTitle: AppLocal.helpAndSupport.tr,
               theIcon: Icons.support_outlined,
               theFunction: () {
-                Get.snackbar(
-                  AppLocal.helpAndSupport.tr,
-                  AppLocal.commingSoon.tr,
-                );
+                Get.offAndToNamed(AppRoute.underDevelopmentScreen);
               },
             ),
             SettingListTile(

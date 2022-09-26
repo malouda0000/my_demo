@@ -34,7 +34,7 @@ class MyThemes {
     ),
   );
   static ThemeData customDarkTheme = ThemeData.dark().copyWith(
-    shadowColor: AppColor.kTextColor.withOpacity(.3),
+    shadowColor: Colors.black.withOpacity(.7),
     primaryColor: AppColor.kPrimaryColor,
     iconTheme: IconThemeData(
       color: AppColor.theMainLightColor,

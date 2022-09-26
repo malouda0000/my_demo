@@ -15,7 +15,7 @@ class ThemeContorller extends GetxController {
       : ThemeMode.light;
 
   changeThemeService() async {
-    if (Get.isDarkMode) {
+    if (await Get.isDarkMode) {
       Get.changeTheme(MyThemes.customLightTheme);
 
       await mySharedPrefes!.setBool('dark', false);

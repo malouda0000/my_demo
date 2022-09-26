@@ -43,9 +43,7 @@ class FoodMenueScreen extends StatelessWidget {
                   child: Container(
                     clipBehavior: Clip.hardEdge,
                     decoration: BoxDecoration(
-                      // color: AppColor.theMainLightColor,
-
-                      color: Theme.of(context).scaffoldBackgroundColor,
+                      color: Theme.of(context).cardColor,
                       borderRadius: BorderRadius.circular(theDefaultRaduis),
                       boxShadow: [
                         BoxShadow(

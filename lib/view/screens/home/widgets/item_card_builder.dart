@@ -51,49 +51,51 @@ class TheItemCard extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 15, vertical: 12),
       decoration: BoxDecoration(
         // color: Theme.of(context).cardTheme.color,
+        // color: Theme.of(context).appBarTheme.backgroundColor,
+        color: Theme.of(context).cardColor,
+
+        // color: Colors.white,
+
         borderRadius: BorderRadius.circular(theDefaultRaduis),
         boxShadow: [
           BoxShadow(
-              offset: Offset(0, 1),
-              blurRadius: 5,
-              color: Theme.of(context).shadowColor),
+            offset: Offset(0, 1),
+            blurRadius: 5,
+            color: Theme.of(context).shadowColor,
+          ),
         ],
       ),
-      child: Material(
-        borderRadius: BorderRadius.circular(10),
-        child: InkWell(
-          onTap: pressit,
-          child: Padding(
-            padding: EdgeInsets.all(20),
-            child: Column(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(bottom: 5),
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppColor.kPrimaryColor.withOpacity(0.32),
-                  ),
-                  child: SvgPicture.asset(
-                    svgSrc,
-                    height: Get.height * .08,
-                  ),
+      child: GestureDetector(
+        onTap: pressit,
+        child: Padding(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.only(bottom: 5),
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: AppColor.kPrimaryColor.withOpacity(0.32),
                 ),
-                Text(
-                  title,
-                  style: TextStyle(
-                      color: AppColor.kPrimaryColor,
-                      fontWeight: FontWeight.bold),
+                child: SvgPicture.asset(
+                  svgSrc,
+                  height: Get.height * .08,
                 ),
-                Text(
-                  discription,
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyText1
-                      ?.copyWith(fontSize: 12),
-                ),
-              ],
-            ),
+              ),
+              Text(
+                title,
+                style: TextStyle(
+                    color: AppColor.kPrimaryColor, fontWeight: FontWeight.bold),
+              ),
+              Text(
+                discription,
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyText1
+                    ?.copyWith(fontSize: 12),
+              ),
+            ],
           ),
         ),
       ),

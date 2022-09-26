@@ -28,9 +28,10 @@ class AppId extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
-            offset: Offset(2, 2),
-            blurRadius: 5,
-          ),
+              offset: Offset(2, 2),
+              blurRadius: 5,
+              // color:
+              color: Theme.of(context).shadowColor),
         ],
       ),
       child: Column(

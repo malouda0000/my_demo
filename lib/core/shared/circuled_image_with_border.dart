@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/core/constants/app_images.dart';
 import '../../../../core/constants/app_color.dart';
 
 class CircularImageWithBorder extends StatelessWidget {
@@ -25,21 +26,24 @@ class CircularImageWithBorder extends StatelessWidget {
         shape: BoxShape.circle,
         border: Border.all(width: 2, color: AppColor.kPrimaryColor),
       ),
-      child: imagePath != null
-          ? Container(
-              alignment: Alignment.center,
-              height: Get.width * 0.28,
-              decoration: BoxDecoration(
-                border: Border.all(width: 2, color: AppColor.kPrimaryColor),
-                color: Colors.cyanAccent,
-                shape: BoxShape.circle,
-                image: DecorationImage(
+      child: Container(
+        alignment: Alignment.center,
+        height: Get.width * 0.28,
+        decoration: BoxDecoration(
+          border: Border.all(width: 2, color: AppColor.kPrimaryColor),
+          color: Colors.cyanAccent,
+          shape: BoxShape.circle,
+          image: imagePath != null
+              ? DecorationImage(
                   image: AssetImage(imagePath!),
                   fit: BoxFit.fitHeight,
+                )
+              : DecorationImage(
+                  image: AssetImage(AppImages.burger),
+                  fit: BoxFit.fitHeight,
                 ),
-              ),
-            )
-          : null,
+        ),
+      ),
       // : Text(content!),
     );
 

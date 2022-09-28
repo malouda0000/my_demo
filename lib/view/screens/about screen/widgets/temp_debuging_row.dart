@@ -4,7 +4,6 @@ import 'package:my_demo/controllers/auth_controller.dart';
 import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/main.dart';
-import 'package:my_demo/view/screens/custom%20onbording/custom_onbording.dart';
 import '../../../../core/constants/app_color.dart';
 import '../../../../core/constants/constants.dart';
 import '../../../../core/localization/localization.dart';

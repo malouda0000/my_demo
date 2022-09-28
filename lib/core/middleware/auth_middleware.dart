@@ -16,6 +16,7 @@ class FirstTimeInit extends GetMiddleware {
     } else {
       RouteSettings(name: AppRoute.customOnbordingScreen);
     }
+    return null;
   }
 
   // authContMiddleMiddleware() {
@@ -42,6 +43,7 @@ class AuthMiddleWare extends GetMiddleware {
     } else {
       RouteSettings(name: AppRoute.singInScreen);
     }
+    return null;
     //  if ( await authController.initalMiddelWare() != null) {
     //     // return super.redirect(route);
     //     return authContMiddleMiddleware() ;

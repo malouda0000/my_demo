@@ -1,17 +1,9 @@
-// import 'package:flutter/material.dart';
-// import 'package:get/get.dart';
-// import 'package:my_demo/constans/app_images.dart';
-// import '../../../constans/app_color.dart';
-
-// import '../constans/constants.dart';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../constants/app_images.dart';
 import '../constants/constants.dart';
 import '../localization/localization.dart';
 import 'the appbar/the_main_title_builder.dart';
-// import 'package:my_demo/widgets/title_builder.dart';
 
 class AppId extends StatelessWidget {
   const AppId({

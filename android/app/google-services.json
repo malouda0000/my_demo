@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "827921812928",
+    "project_id": "fast-food-713ea",
+    "storage_bucket": "fast-food-713ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827921812928:android:66177b11a42718df77cc25",
+        "android_client_info": {
+          "package_name": "com.example.my_demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "827921812928-b2mtqgvl23bv71ckv6pqo86uchsj5d0v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.my_demo",
+            "certificate_hash": "49572bfbf5f6500d7f76df740b3df90633175d6f"
+          }
+        },
+        {
+          "client_id": "827921812928-bselpdb71d9q5l8hhrp4l7nnp12nbs7r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzJtA9i7RLMb6Z1XfHS2ESYvfTX-eSVDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "827921812928-bselpdb71d9q5l8hhrp4l7nnp12nbs7r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

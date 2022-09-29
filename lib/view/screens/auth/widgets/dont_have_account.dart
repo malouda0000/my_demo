@@ -3,12 +3,12 @@ import '../../../../core/constants/app_color.dart';
 
 class DontHaveAccount extends StatelessWidget {
   final String doYouHaveAccoun;
-  final String singOrLogin;
+  final String signOrLogin;
   final void Function() theFunc;
   const DontHaveAccount(
       {Key? key,
       required this.doYouHaveAccoun,
-      required this.singOrLogin,
+      required this.signOrLogin,
       required this.theFunc})
       : super(key: key);
 
@@ -23,7 +23,7 @@ class DontHaveAccount extends StatelessWidget {
         ),
         GestureDetector(
           child: Text(
-            singOrLogin.toUpperCase(),
+            signOrLogin.toUpperCase(),
             style: const TextStyle(
                 color: AppColor.kPrimaryColor, fontWeight: FontWeight.bold),
           ),

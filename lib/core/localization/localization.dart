@@ -62,16 +62,16 @@ class TheLocalization implements Translations {
           // sinIn screen
           '38': 'email',
           '39': 'password',
-          '40': 'SingIn',
+          '40': 'SignIn',
           '41': 'faceBook',
           '42': 'email',
           '43': 'phone',
           '44': 'Don\'t have account yet !!',
-          '45': 'SINGUP NOW ',
+          '45': 'SIgnUP NOW ',
           '46': 'email',
           '47': 'password',
           '48': 'reInter password',
-          '49': 'Sing Up ',
+          '49': 'Sign Up ',
           '50': 'Allredy have account !!',
 
           '51': 'OR',
@@ -160,6 +160,13 @@ class TheLocalization implements Translations {
           '104': 'keep',
           '105': 'remove',
           '106': 'add',
+
+// auth input errores
+          '302': 'the email is too shourt',
+          '303': 'the email is too long',
+          '304': 'password is too shourt',
+          '305': 'the password is too long',
+          '306': 'the passwords are not equal',
         },
 
 //
@@ -337,6 +344,13 @@ class TheLocalization implements Translations {
           '104': 'ابقاء',
           '105': 'ازالة',
           '106': 'اضافة',
+
+          // auth input errores
+          '302': 'الايميل قصير جدا',
+          '303': 'الايميل طويل جدا',
+          '304': 'كلمة المرور قصيرة جدا',
+          '305': 'كلمة المرور طويلة جدا',
+          '306': 'كلمات المرور غير متطابقة',
         },
       };
 }
@@ -409,8 +423,8 @@ class AppLocal {
 
   static const String debugSplach = '37';
 
-//sing screen
-  static const String singIn = '40';
+//sign screen
+  static const String signIn = '40';
 
   static const String facebook = '41';
 
@@ -418,13 +432,13 @@ class AppLocal {
 
   static const String dontHaveAccountYet = '44';
 
-  static const String singUpNow = '45';
+  static const String signUpNow = '45';
 
   static const String password = '47';
 
   static const String reinterPassword = '48';
 
-  static const String singUp = '49';
+  static const String signUp = '49';
 
   static const String allredyHaveAccount = '50';
 
@@ -439,7 +453,7 @@ class AppLocal {
   static const String arabic = '58';
   static const String english = '59';
 
-  //         /// SingIn and Up
+  //         /// SignIn and Up
   //         ///
   //         '60': 'email',
   //         '61': 'password',
@@ -526,4 +540,12 @@ class AppLocal {
   static const String keep = '104';
   static const String remove = '105';
   static const String add = '106';
+
+// up form here and then i'll use new naming way
+// auth input erorres
+  static const String emailIsTooShourt = '302';
+  static const String emailIsTooLong = '303';
+  static const String passwordIsTooShourt = '304';
+  static const String passwordIsTooLong = '305';
+  static const String passwordsAreNotEqual = '306';
 }

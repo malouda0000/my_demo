@@ -4,7 +4,7 @@ import 'package:my_demo/main.dart';
 
 class MylocalController extends GetxController {
   Locale initalLang =
-      mySharedPrefes!.getString('lang') == 'ar' ? Locale('ar') : Locale('en');
+      mySharedPrefes!.getString('lang') == 'en' ? Locale('en') : Locale('ar');
 
   ChangeLocal(String langCode) async {
     Locale myLocale = Locale(langCode);

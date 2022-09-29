@@ -34,7 +34,7 @@ class TempDebugingRow extends StatelessWidget {
                   color: AppColor.kTextColor,
                   onPressed: () {
                     Get.offAllNamed(
-                      AppRoute.singInScreen,
+                      AppRoute.signInScreen,
                     );
                   },
                   child: Text(
@@ -148,10 +148,10 @@ class TempDebugingRow extends StatelessWidget {
                 child: MaterialButton(
                   color: AppColor.kTextColor,
                   onPressed: () async {
-                    await authController.singOut();
+                    await authController.signOut();
                   },
                   child: Text(
-                    'Sing out',
+                    'Sign out',
                     style: TextStyle(
                       color: AppColor.kPrimaryColor,
 

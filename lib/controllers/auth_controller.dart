@@ -3,24 +3,24 @@ import 'package:my_demo/get_pages.dart';
 import '../main.dart';
 
 class AuthController extends GetxController {
-  singup() async {
+  signup() async {
     await mySharedPrefes!.setBool('logIn', true);
     print('loged innnnnnnnnnn');
 
     Get.offAllNamed(AppRoute.homePage);
   }
 
-  singIn() async {
+  signIn() async {
     await mySharedPrefes!.setBool('logIn', true);
-    print('loged innnnnnnnnnn');
+    print('signedIn innnnnnnnnnn');
 
     Get.offAllNamed(AppRoute.homePage);
   }
 
-  singOut() async {
+  signOut() async {
     await mySharedPrefes!.setBool('logIn', false);
     Get.offAllNamed(
-      AppRoute.singInScreen,
+      AppRoute.signInScreen,
     );
   }
 /* no more need for the initalMiddelWare() Function */

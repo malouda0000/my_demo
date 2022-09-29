@@ -19,7 +19,7 @@ class OnBordingControllerImp extends CustomOnBordingController {
   next() {
     currentPage++;
     if (currentPage >= mainCustomOnBordingList.length) {
-      Get.offAllNamed(AppRoute.singInScreen);
+      Get.offAllNamed(AppRoute.signInScreen);
     } else {
       pageController.animateToPage(currentPage,
           duration: Duration(milliseconds: 900), curve: Curves.easeInOut);

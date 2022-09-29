@@ -19,6 +19,9 @@ class SettingScreen extends StatefulWidget {
 class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
+    Key searchSettingKey = new Key('');
+    TextEditingController searchSettingTextEditingController =
+        new TextEditingController();
     return Scaffold(
       bottomNavigationBar: const TheBottomNavBar(),
       body: SafeArea(
@@ -26,12 +29,11 @@ class _SettingScreenState extends State<SettingScreen> {
           padding: EdgeInsets.all(15),
           children: [
             TheInputField(
-              theBorderColor: AppColor.kPrimaryColor,
-              theBorderRadius: theDefaultRaduis,
+              theValidator: (p0) {},
+              theKey: searchSettingKey,
+              theTextEditingController: searchSettingTextEditingController,
               theHient: AppLocal.search.tr,
-              theInputColor: Theme.of(context).textTheme.headline6!.color!,
               theInputType: TextInputType.text,
-              thePadding: theDefaultPadding,
               isPassword: false,
               theLeadingIcon: Icons.search_rounded,
             ),

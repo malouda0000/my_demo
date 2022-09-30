@@ -1,6 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/controllers/auth_controller.dart';
+import 'package:my_demo/controllers/localization_controller.dart';
+import 'package:my_demo/core/constants/app_color.dart';
+import 'package:my_demo/view/screens/auth/widgets/check_email_dialog.dart';
 import 'package:my_demo/view/screens/auth/widgets/custom_auth_card.dart';
 import 'package:my_demo/view/screens/auth/widgets/social_auth.dart';
 import 'package:my_demo/get_pages.dart';
@@ -50,10 +54,10 @@ class SignUpScreen extends StatelessWidget {
 
               theValidator: (text) {
                 text = signupEmailController.text;
-                if (text.length < 4) {
+                if (text.length < 6) {
                   return AppLocal.emailIsTooShourt.tr + '\n';
                 }
-                if (text.length > 25) {
+                if (text.length > 50) {
                   return AppLocal.emailIsTooLong.tr + '\n';
                 }
                 return null;
@@ -72,7 +76,7 @@ class SignUpScreen extends StatelessWidget {
               theValidator: (text) {
                 text = signupPasswordController.text;
 
-                if (text.length < 4) {
+                if (text.length < 6) {
                   return AppLocal.passwordIsTooShourt.tr + '\n';
                 }
                 if (text.length > 25) {
@@ -113,12 +117,41 @@ class SignUpScreen extends StatelessWidget {
             ),
             emptySpace,
             BigggButton(
-              onTaped: () {
+              onTaped: () async {
                 bool test = signupKey.currentState!.validate();
 
                 if (test) {
-                  authController.signup();
+                  // authController.signup();
+                  try {
+                    final credential = await FirebaseAuth.instance
+                        .createUserWithEmailAndPassword(
+                      email: signupEmailController.text,
+                      password: signupPasswordController.text,
+                    );
+
+                    if (credential.user?.uid != null) {
+                      // GetSnackBar(
+                      //   message: 'check your email to verfiy it',
+                      // );
+                      Get.offAllNamed(AppRoute.signInScreen);
+                      checkYourEmailDialog(context);
+                    }
+                  } on FirebaseAuthException catch (e) {
+                    if (e.code == 'weak-password') {
+                      signupPasswordKey.printError();
+                      print('The password provided is too weak.');
+                    } else if (e.code == 'email-already-in-use') {
+                      print('The account already exists for that email.');
+                    }
+                  } catch (e) {
+                    print(e);
+                  }
                 }
+
+//
+//
+//
+//
               },
               theButtonTitle: AppLocal.signUp.tr,
               theLeadingIcon: Icons.login_rounded,

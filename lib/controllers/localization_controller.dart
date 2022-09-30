@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:my_demo/main.dart';
 
-class MylocalController extends GetxController {
+class LocallizationsController extends GetxController {
   Locale initalLang =
       mySharedPrefes!.getString('lang') == 'en' ? Locale('en') : Locale('ar');
 
@@ -12,5 +12,9 @@ class MylocalController extends GetxController {
     Get.updateLocale(myLocale);
 
     mySharedPrefes!.setString('lang', langCode);
+  }
+
+  String emailVerLang() {
+    return mySharedPrefes!.getString('lang') == 'en' ? 'en' : 'ar';
   }
 }

@@ -167,6 +167,15 @@ class TheLocalization implements Translations {
           '304': 'password is too shourt',
           '305': 'the password is too long',
           '306': 'the passwords are not equal',
+
+// auth dailog
+          '307': 'confirm your email',
+          '308': 'check you inbox to confirm \n the email: ',
+          '309': 'no email is recevded',
+          '310': 'check the "spam" feiald',
+          '311': 'send feedback to the developer',
+          '312': 'i\'ll check',
+          '313': 'resend the email',
         },
 
 //
@@ -351,6 +360,15 @@ class TheLocalization implements Translations {
           '304': 'كلمة المرور قصيرة جدا',
           '305': 'كلمة المرور طويلة جدا',
           '306': 'كلمات المرور غير متطابقة',
+
+// auth dialog
+          '307': 'اكد بريدك الالكتروني',
+          '308': 'تحقق من بريدك الوارد \n لاثبات ملكية الحساب:',
+          '309': 'لايوجد بريد وارد',
+          '310': 'تحقق من خانة "الاسبام" ',
+          '311': 'ارسال نصيحة للمطور',
+          '312': 'سوف اتحقق',
+          '313': 'ارسل البريد مجددا',
         },
       };
 }
@@ -548,4 +566,13 @@ class AppLocal {
   static const String passwordIsTooShourt = '304';
   static const String passwordIsTooLong = '305';
   static const String passwordsAreNotEqual = '306';
+
+// auth dialog errors
+  static const String confirmYourEmail = '307';
+  static const String checkYourInbox = '308';
+  static const String noEmailReciveded = '309';
+  static const String checkTheSpam = '310';
+  static const String sendFeedback = '311';
+  static const String illCheck = '312';
+  static const String resendEmail = '313';
 }

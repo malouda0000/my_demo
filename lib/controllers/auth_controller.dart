@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/get_pages.dart';
 import '../main.dart';
@@ -19,9 +20,27 @@ class AuthController extends GetxController {
 
   signOut() async {
     await mySharedPrefes!.setBool('logIn', false);
+    // To sign out a user, call signOut():
+    await FirebaseAuth.instance.signOut();
+
     Get.offAllNamed(
       AppRoute.signInScreen,
     );
+  }
+
+  deletAccount() async {
+// signout and delet your account
+    final user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+      await user.delete().then((value) {
+        signOut();
+      });
+    } else {
+      GetSnackBar(
+        title: '',
+        message: 'unKnown Error',
+      );
+    }
   }
 /* no more need for the initalMiddelWare() Function */
   // initalMiddelWare() async {

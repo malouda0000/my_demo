@@ -114,12 +114,10 @@ class SignUpScreen extends StatelessWidget {
             emptySpace,
             BigggButton(
               onTaped: () {
-                // authController.signup();
-
                 bool test = signupKey.currentState!.validate();
 
                 if (test) {
-                  print('valedddd ============');
+                  authController.signup();
                 }
               },
               theButtonTitle: AppLocal.signUp.tr,

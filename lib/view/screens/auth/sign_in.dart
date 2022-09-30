@@ -86,11 +86,10 @@ class SignInScreen extends StatelessWidget {
               ),
               child: BigggButton(
                 onTaped: () {
-                  // authController.signIn();
                   bool test = signinKey.currentState!.validate();
 
                   if (test) {
-                    print('valedddd ============');
+                    authController.signIn();
                   }
                 },
                 theButtonTitle: AppLocal.signIn.tr,

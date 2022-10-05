@@ -117,6 +117,10 @@ class SignUpScreen extends StatelessWidget {
             ),
             emptySpace,
             BigggButton(
+              // signup button
+
+              theButtonTitle: AppLocal.signUp.tr,
+              theLeadingIcon: Icons.login_rounded,
               onTaped: () async {
                 bool test = signupKey.currentState!.validate();
 
@@ -147,14 +151,7 @@ class SignUpScreen extends StatelessWidget {
                     print(e);
                   }
                 }
-
-//
-//
-//
-//
               },
-              theButtonTitle: AppLocal.signUp.tr,
-              theLeadingIcon: Icons.login_rounded,
             ),
             emptySpace,
             OrRow(),

@@ -14,7 +14,7 @@ class LocallizationsController extends GetxController {
     mySharedPrefes!.setString('lang', langCode);
   }
 
-  String emailVerLang() {
-    return mySharedPrefes!.getString('lang') == 'en' ? 'en' : 'ar';
-  }
+  // String emailVerLang() {
+  //   return mySharedPrefes!.getString('lang') == 'en' ? 'en' : 'ar';
+  // }
 }

@@ -4,7 +4,6 @@ import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/core/constants/constants.dart';
 import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/core/shared/communication_row.dart';
-import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/view/screens/auth/widgets/my_send_email_vervication.dart';
 
 resendVerEmailDialog(BuildContext context) {
@@ -24,11 +23,11 @@ resendVerEmailDialog(BuildContext context) {
         ),
         emptySpace,
         GestureDetector(
-            onTap: () {
-              LaunchEmail();
-            },
-            child: Center(
-                child: Container(
+          onTap: () {
+            LaunchEmail();
+          },
+          child: Center(
+            child: Container(
               // send me feedback container
               padding: EdgeInsets.symmetric(
                 horizontal: theDefaultPadding,
@@ -46,7 +45,9 @@ resendVerEmailDialog(BuildContext context) {
                     .bodyText1!
                     .copyWith(color: AppColor.kPrimaryColor),
               ),
-            ))),
+            ),
+          ),
+        ),
       ],
     ),
     actions: [
@@ -72,10 +73,11 @@ resendVerEmailDialog(BuildContext context) {
           MaterialButton(
             // resend email button
             color: AppColor.kPrimaryColor,
-            onPressed: () {
-              // Get.back();
-              mySendEmailVervication();
-              Get.snackbar(AppLocal.resendEmail.tr, 'email sended');
+            onPressed: () async {
+              Get.back();
+              await mySendEmailVervication();
+              // Get.snackbar(
+              //     AppLocal.resendEmail.tr, 'email sended, check your inbox');
             },
             child: Text(
               AppLocal.resendEmail.tr,

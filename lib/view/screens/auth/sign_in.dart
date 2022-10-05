@@ -6,6 +6,7 @@ import 'package:my_demo/controllers/localization_controller.dart';
 import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/view/screens/auth/widgets/check_email_dialog.dart';
 import 'package:my_demo/view/screens/auth/widgets/custom_auth_card.dart';
+import 'package:my_demo/view/screens/auth/widgets/my_dialog.dart';
 import 'package:my_demo/view/screens/auth/widgets/social_auth.dart';
 import 'package:my_demo/get_pages.dart';
 import '../../../core/constants/constants.dart';
@@ -21,7 +22,7 @@ class SignInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    AuthController authController = Get.find();
+    AuthController authController = Get.put(AuthController());
     LocallizationsController locallizationsController = Get.find();
 
     ///
@@ -124,6 +125,17 @@ class SignInScreen extends StatelessWidget {
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'user-not-found') {
                         print('No user found for that email.');
+
+                        myDialog(
+                          context,
+                          'error ',
+                          Icons.email,
+                          'no user found for that email',
+                          'dismiss',
+                          'confirm',
+                          () {},
+                          () {},
+                        );
                       } else if (e.code == 'wrong-password') {
                         print('Wrong password provided for that user.');
                       }

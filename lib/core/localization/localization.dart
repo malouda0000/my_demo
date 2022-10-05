@@ -176,6 +176,10 @@ class TheLocalization implements Translations {
           '311': 'send feedback to the developer',
           '312': 'i\'ll check',
           '313': 'resend the email',
+
+// randomes
+
+          '1000': 'Google',
         },
 
 //
@@ -369,6 +373,9 @@ class TheLocalization implements Translations {
           '311': 'ارسال نصيحة للمطور',
           '312': 'سوف اتحقق',
           '313': 'ارسل البريد مجددا',
+
+// randomes
+          '1000': 'قوقل',
         },
       };
 }
@@ -575,4 +582,8 @@ class AppLocal {
   static const String sendFeedback = '311';
   static const String illCheck = '312';
   static const String resendEmail = '313';
+
+  // randomes
+
+  static const String google = '1000';
 }

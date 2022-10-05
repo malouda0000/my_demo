@@ -20,7 +20,7 @@ class ThemeContorller extends GetxController {
 
       await mySharedPrefes!.setBool('dark', false);
       // print('theme changed to light theme');
-    } else {
+    } else if (await !Get.isDarkMode) {
       Get.changeTheme(MyThemes.customDarkTheme);
 
       await mySharedPrefes!.setBool('dark', true);

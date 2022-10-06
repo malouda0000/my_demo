@@ -20,7 +20,7 @@ class TempDebugingRow extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           emptySpace,
-          TitleBuilder(theTitle: 'devloping card'),
+          TitleBuilder(theTitle: 'debuging card'),
           emptySpace,
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -34,7 +34,7 @@ class TempDebugingRow extends StatelessWidget {
                   color: AppColor.kTextColor,
                   onPressed: () {
                     Get.offAllNamed(
-                      AppRoute.singInScreen,
+                      AppRoute.signInScreen,
                     );
                   },
                   child: Text(
@@ -148,10 +148,10 @@ class TempDebugingRow extends StatelessWidget {
                 child: MaterialButton(
                   color: AppColor.kTextColor,
                   onPressed: () async {
-                    await authController.singOut();
+                    await authController.signOut();
                   },
                   child: Text(
-                    'Sing out',
+                    'Sign out',
                     style: TextStyle(
                       color: AppColor.kPrimaryColor,
 
@@ -162,7 +162,49 @@ class TempDebugingRow extends StatelessWidget {
                 ),
               ),
               emptySpace,
+              Container(
+                clipBehavior: Clip.hardEdge,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: MaterialButton(
+                  color: AppColor.kTextColor,
+                  onPressed: () async {
+                    await authController.deletAccount();
+                  },
+                  child: Text(
+                    'delet account',
+                    style: TextStyle(
+                      color: AppColor.kPrimaryColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
             ],
+          ),
+          emptySpace,
+          Center(
+            child: Container(
+              padding: EdgeInsets.symmetric(
+                horizontal: theDefaultPadding,
+              ),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: AppColor.kPrimaryColor,
+                ),
+                borderRadius: BorderRadius.circular(
+                  theDefaultRaduis,
+                ),
+              ),
+              child: Text(
+                'this card will be removed on  \n the final product, its just used for debuging purpose',
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                      color: AppColor.kPrimaryColor,
+                    ),
+              ),
+            ),
           ),
         ],
       ),

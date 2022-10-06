@@ -10,15 +10,17 @@ class CustomSearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Key searchMealKey = new Key('');
+    TextEditingController searchMealTextEditingController =
+        new TextEditingController();
     return Padding(
       padding: EdgeInsets.all(theDefaultPadding),
       child: TheInputField(
-        theBorderColor: AppColor.kPrimaryColor,
-        theBorderRadius: theDefaultRaduis,
+        theValidator: (p0) {},
+        theKey: searchMealKey,
+        theTextEditingController: searchMealTextEditingController,
         theHient: AppLocal.search.tr,
-        theInputColor: Theme.of(context).textTheme.bodyText1!.color!,
         theInputType: TextInputType.text,
-        thePadding: theDefaultPadding,
         isPassword: false,
         theLeadingIcon: Icons.search_rounded,
       ),

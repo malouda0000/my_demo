@@ -30,6 +30,6 @@ class CartBindings implements Bindings {
 class LocalizationBindings implements Bindings {
   @override
   void dependencies() {
-    Get.put(MylocalController());
+    Get.put(LocallizationsController());
   }
 }

@@ -40,10 +40,11 @@ class BigggButton extends StatelessWidget {
                 emptySpace,
                 Text(
                   theButtonTitle,
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      color: AppColor.theMainLightColor),
+                  style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        color: AppColor.theMainLightColor,
+                      ),
                 ),
               ],
             ),

@@ -12,7 +12,7 @@ class FirstTimeInit extends GetMiddleware {
   RouteSettings? redirect(String? route) {
     // priority = 1;
     if (mySharedPrefes!.getBool('firstAppInit') == true) {
-      return RouteSettings(name: AppRoute.singInScreen);
+      return RouteSettings(name: AppRoute.signInScreen);
     } else {
       RouteSettings(name: AppRoute.customOnbordingScreen);
     }
@@ -26,7 +26,7 @@ class FirstTimeInit extends GetMiddleware {
   //     );
   //   } else {
   //     return RouteSettings(
-  //       name: AppRoute.singInScreen,
+  //       name: AppRoute.signInScreen,
   //     );
   //   }
   // }
@@ -41,7 +41,7 @@ class AuthMiddleWare extends GetMiddleware {
     if (mySharedPrefes!.getBool('logIn') == true) {
       return RouteSettings(name: AppRoute.homePage);
     } else {
-      RouteSettings(name: AppRoute.singInScreen);
+      RouteSettings(name: AppRoute.signInScreen);
     }
     return null;
     //  if ( await authController.initalMiddelWare() != null) {
@@ -65,7 +65,7 @@ class AuthMiddleWare extends GetMiddleware {
   //     );
   //   } else {
   //     return RouteSettings(
-  //       name: AppRoute.singInScreen,
+  //       name: AppRoute.signInScreen,
   //     );
   //   }
   // }
@@ -80,7 +80,7 @@ class AuthMiddleWare extends GetMiddleware {
   //       );
   //     } else {
   //       return RouteSettings(
-  //         name: AppRoute.singInScreen,
+  //         name: AppRoute.signInScreen,
   //       );
   //     }
   //   } else {

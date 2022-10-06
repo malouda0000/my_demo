@@ -15,7 +15,7 @@ class LocaliaztionScreen extends StatefulWidget {
 class _LocaliaztionScreenState extends State<LocaliaztionScreen> {
   @override
   Widget build(BuildContext context) {
-    MylocalController myLangController = Get.find();
+    LocallizationsController locallizationsController = Get.find();
     return Scaffold(
       appBar: AppBar(
         // backgroundColor: AppColor.theMainLightColor,
@@ -38,7 +38,7 @@ class _LocaliaztionScreenState extends State<LocaliaztionScreen> {
                 theButtonTitle: AppLocal.arabic.tr,
                 onTaped: () {
                   setState(() {
-                    myLangController.ChangeLocal('ar');
+                    locallizationsController.ChangeLocal('ar');
                   });
                 }),
             emptySpace,
@@ -47,7 +47,7 @@ class _LocaliaztionScreenState extends State<LocaliaztionScreen> {
                 theButtonTitle: AppLocal.english.tr,
                 onTaped: () {
                   setState(() {
-                    myLangController.ChangeLocal('en');
+                    locallizationsController.ChangeLocal('en');
                   });
                 }),
           ],

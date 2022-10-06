@@ -6,7 +6,6 @@ class CommuincationIcon extends StatelessWidget {
   final String CommuincationIconTitle;
   final void Function()? theUrlLanching;
   final IconData theIcon;
-  // final Color iconColor;
   const CommuincationIcon({
     Key? key,
     this.theUrlLanching,

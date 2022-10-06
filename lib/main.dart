@@ -9,15 +9,17 @@ import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/core/services/binding.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'core/localization/localization.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 SharedPreferences? mySharedPrefes;
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Get.lazyPut(() => MylocalController());
+  Get.lazyPut(() => LocallizationsController());
   mySharedPrefes = await SharedPreferences.getInstance();
   Get.lazyPut(() => AuthController(), fenix: true);
   Get.lazyPut(() => ThemeContorller(), fenix: true);
   await AuthMiddleWare;
+  FirebaseApp defaultApp = await Firebase.initializeApp();
 
   runApp(MyApp());
 }
@@ -27,14 +29,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MylocalController locallizationsController = Get.find();
+    LocallizationsController locallizationsController = Get.find();
     ThemeContorller themeContorller = Get.find();
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Fast Food',
       getPages: GetPages().getpages,
       initialBinding: MyInitalBindings(),
-      // initialRoute: AppRoute.homePage,
+      // initialRoute: AppRoute.signInScreen,
       theme: MyThemes.customLightTheme,
       darkTheme: MyThemes.customDarkTheme,
       themeMode: themeContorller.myThemeMode,

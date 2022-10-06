@@ -8,8 +8,8 @@ import 'package:my_demo/view/screens/custom%20onbording/custom_onbording.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/food_menue_screen.dart';
 import 'package:my_demo/view/screens/under%20development%20screen/under_development_screen.dart';
 import 'package:my_demo/view/screens/about%20screen/about_screen.dart';
-import 'package:my_demo/view/screens/auth/sing_in.dart';
-import 'package:my_demo/view/screens/auth/sing_up_screen.dart';
+import 'package:my_demo/view/screens/auth/sign_in.dart';
+import 'package:my_demo/view/screens/auth/sign_up_screen.dart';
 import 'package:my_demo/view/screens/detials%20screen/detials_screen.dart';
 import 'package:my_demo/view/screens/home/my_home_page.dart';
 import 'package:my_demo/view/screens/localization/localization_screen.dart';
@@ -19,8 +19,8 @@ class AppRoute {
   static const String customOnbordingScreen = '/';
   static const String customSplashScreen = '/splashScreen';
   static const String homePage = '/homePage';
-  static const String singUpScreen = '/singUpScreen';
-  static const String singInScreen = '/SinInScreen';
+  static const String signUpScreen = '/signUpScreen';
+  static const String signInScreen = '/SinInScreen';
   static const String detailsScreen = '/detailsScreen';
   static const String settingScreen = '/settingScreen';
   static const String themeScreen = '/themeScreen';
@@ -43,13 +43,13 @@ class GetPages {
     ),
 
     GetPage(
-      name: AppRoute.singUpScreen,
-      page: () => const SingUpScreen(),
+      name: AppRoute.signUpScreen,
+      page: () => const SignUpScreen(),
       middlewares: [AuthMiddleWare()],
     ),
     GetPage(
-      name: AppRoute.singInScreen,
-      page: () => const SingInScreen(),
+      name: AppRoute.signInScreen,
+      page: () => const SignInScreen(),
       middlewares: [AuthMiddleWare()],
     ),
     // GetPage(

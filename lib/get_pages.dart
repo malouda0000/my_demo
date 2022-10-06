@@ -13,7 +13,7 @@ import 'package:my_demo/view/screens/auth/sign_up_screen.dart';
 import 'package:my_demo/view/screens/detials%20screen/detials_screen.dart';
 import 'package:my_demo/view/screens/home/my_home_page.dart';
 import 'package:my_demo/view/screens/localization/localization_screen.dart';
-import 'package:my_demo/view/screens/setting/widgets/theme_screen.dart';
+import 'package:my_demo/view/screens/theme/theme_screen.dart';
 
 class AppRoute {
   static const String customOnbordingScreen = '/';

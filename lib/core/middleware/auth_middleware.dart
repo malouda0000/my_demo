@@ -13,6 +13,7 @@ class FirstTimeInit extends GetMiddleware {
     // priority = 1;
     if (mySharedPrefes!.getBool('firstAppInit') == true) {
       return RouteSettings(name: AppRoute.signInScreen);
+      // return RouteSettings(name: AppRoute.localizationScreen);
     } else {
       RouteSettings(name: AppRoute.customOnbordingScreen);
     }

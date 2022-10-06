@@ -11,7 +11,7 @@ import '../../../core/shared/the appbar/the_app_bar.dart';
 import '../../../core/shared/the_drawer.dart';
 
 // GlobalKey<ScaffoldState> myKey = GlobalKey();
-// GlobalKey<ScaffoldState> myKey = GlobalKey<ScaffoldState>();
+GlobalKey<ScaffoldState> myKey = GlobalKey<ScaffoldState>();
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
@@ -27,7 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // key: myKey,
+      key: myKey,
       drawer: const TheDrawer(),
       appBar: TheAppBar(context),
       bottomNavigationBar: TheBottomNavBar(),

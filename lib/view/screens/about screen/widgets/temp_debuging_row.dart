@@ -206,6 +206,7 @@ class TempDebugingRow extends StatelessWidget {
               ),
             ),
           ),
+          emptySpace,
         ],
       ),
     );

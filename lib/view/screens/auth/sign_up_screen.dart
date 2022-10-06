@@ -1,9 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/controllers/auth_controller.dart';
-import 'package:my_demo/controllers/localization_controller.dart';
-import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/view/screens/auth/widgets/check_email_dialog.dart';
 import 'package:my_demo/view/screens/auth/widgets/custom_auth_card.dart';
 import 'package:my_demo/view/screens/auth/widgets/social_auth.dart';
@@ -21,8 +18,6 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    AuthController authController = Get.find();
-
     ///
     GlobalKey<FormState> signupKey = new GlobalKey<FormState>();
 

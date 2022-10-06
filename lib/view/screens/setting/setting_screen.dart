@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:my_demo/core/shared/bottom%20navigation%20bar/bottom_nav_bar.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/view/screens/setting/widgets/reserved_rights_row.dart';
 import 'package:my_demo/view/screens/setting/widgets/settign_list_tile.dart';
-import '../../../../core/constants/app_color.dart';
 import 'package:my_demo/get_pages.dart';
-import '../../../../core/constants/constants.dart';
 import '../../../../core/localization/localization.dart';
 import '../../../../core/shared/the_input_field.dart';
+import '../../../core/shared/reserved_rights_row.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({Key? key}) : super(key: key);
@@ -29,7 +27,9 @@ class _SettingScreenState extends State<SettingScreen> {
           padding: EdgeInsets.all(15),
           children: [
             TheInputField(
-              theValidator: (p0) {},
+              theValidator: (p0) {
+                return null;
+              },
               theKey: searchSettingKey,
               theTextEditingController: searchSettingTextEditingController,
               theHient: AppLocal.search.tr,
@@ -52,14 +52,14 @@ class _SettingScreenState extends State<SettingScreen> {
                 theTitle: AppLocal.notifications.tr,
                 theIcon: Icons.notifications_outlined,
                 theFunction: () {
-                  Get.offAndToNamed(AppRoute.underDevelopmentScreen);
+                  Get.toNamed(AppRoute.underDevelopmentScreen);
                 }),
             SettingListTile(
               diviedIt: true,
               theTitle: AppLocal.priviceyAndSecurity.tr,
               theIcon: Icons.lock_outline,
               theFunction: () {
-                Get.offAndToNamed(AppRoute.underDevelopmentScreen);
+                Get.toNamed(AppRoute.underDevelopmentScreen);
               },
             ),
             SettingListTile(
@@ -73,7 +73,7 @@ class _SettingScreenState extends State<SettingScreen> {
               theTitle: AppLocal.helpAndSupport.tr,
               theIcon: Icons.support_outlined,
               theFunction: () {
-                Get.offAndToNamed(AppRoute.underDevelopmentScreen);
+                Get.toNamed(AppRoute.underDevelopmentScreen);
               },
             ),
             SettingListTile(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:my_demo/get_pages.dart';
 
 List<Color> myColors = [
   Colors.amber,
@@ -29,20 +31,16 @@ class ColorPicker extends StatelessWidget {
       shrinkWrap: true,
       itemCount: myColors.length,
       itemBuilder: (context, index) {
-        return Column(
-          children: [
-            Expanded(
-              child: Container(
-                // height: Get.height * .3,
-                // width: Get.height * .3,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: myColors[index],
-                ),
-              ),
+        return GestureDetector(
+          onTap: () {
+            Get.toNamed(AppRoute.underDevelopmentScreen);
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              color: myColors[index],
             ),
-            // Text(myColors[index].toString().removeAllWhitespace),
-          ],
+          ),
         );
       },
     );

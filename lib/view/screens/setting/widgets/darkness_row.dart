@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
+import 'package:my_demo/get_pages.dart';
 import '../../../../core/constants/app_color.dart';
 
 class DarknessRow extends StatelessWidget {
@@ -12,15 +14,19 @@ class DarknessRow extends StatelessWidget {
       AppColor.kTextBlacColor,
     ];
     return GridView.builder(
-        shrinkWrap: true,
-        primary: false,
-        itemCount: darknessList.length,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisSpacing: 15,
-          mainAxisSpacing: 15,
-          crossAxisCount: 2,
-        ),
-        itemBuilder: ((context, index) => Container(
+      shrinkWrap: true,
+      primary: false,
+      itemCount: darknessList.length,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisSpacing: 15,
+        mainAxisSpacing: 15,
+        crossAxisCount: 2,
+      ),
+      itemBuilder: ((context, index) => GestureDetector(
+            onTap: () {
+              Get.toNamed(AppRoute.underDevelopmentScreen);
+            },
+            child: Container(
               alignment: Alignment.center,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
@@ -28,6 +34,8 @@ class DarknessRow extends StatelessWidget {
               child: Text(
                 'Dark theme',
               ),
-            )));
+            ),
+          )),
+    );
   }
 }

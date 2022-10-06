@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/core/constants/app_images.dart';
 import 'package:my_demo/core/shared/circuled_image_with_border.dart';
+import 'package:my_demo/core/shared/reserved_rights_row.dart';
 
 import 'package:my_demo/view/screens/about%20screen/widgets/contact_me_row.dart';
 import 'package:my_demo/view/screens/about%20screen/widgets/setting_list_tiles.dart';
@@ -70,6 +71,9 @@ class AboutScreen extends StatelessWidget {
                 ContactMeRow(),
                 emptySpace,
                 TempDebugingRow(),
+                emptySpace,
+                ReservedRightsRow(),
+                emptySpace,
               ],
             ),
           ],

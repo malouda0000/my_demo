@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/controllers/auth_controller.dart';
-import 'package:my_demo/controllers/localization_controller.dart';
 import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/view/screens/auth/widgets/check_email_dialog.dart';
 import 'package:my_demo/view/screens/auth/widgets/custom_auth_card.dart';
@@ -23,7 +22,6 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     AuthController authController = Get.put(AuthController());
-    LocallizationsController locallizationsController = Get.find();
 
     ///
     GlobalKey<FormState> signinKey = new GlobalKey<FormState>();

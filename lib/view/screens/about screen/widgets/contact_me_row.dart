@@ -19,10 +19,18 @@ class ContactMeRow extends StatelessWidget {
             TitleBuilder(
               theTitle: AppLocal.feelFreeToContacMe.tr,
             ),
-            const SizedBox(
-              height: 15,
-            ),
+            emptySpace,
             CommunicationRow(),
+            emptySpace,
+            emptySpace,
+            GestureDetector(
+              onTap: () {
+                LaunchEmail();
+              },
+              child: TitleBuilder(
+                theTitle: 'اطلب تطبيقا مشابها الان',
+              ),
+            ),
           ],
         ),
       ),

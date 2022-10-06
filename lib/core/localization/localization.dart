@@ -114,7 +114,7 @@ class TheLocalization implements Translations {
 
           // UnderDevelopmentScreen
 
-          '80': 'THIS PAGE \n IS UNDER DEVELOPMENT',
+          '80': 'THIS FEATURE \n IS UNDER DEVELOPMENT',
 
           // userInformations
 
@@ -311,7 +311,7 @@ class TheLocalization implements Translations {
 
           // UnderDevelopmentScreen
 
-          '80': 'هذه الصفحة \n تحت التطوير',
+          '80': 'هذه الخاصية \n تحت التطوير',
 
           // userInformations
 

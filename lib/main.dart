@@ -9,7 +9,7 @@ import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/core/services/binding.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'core/localization/localization.dart';
-import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_core/firebase_core.dart';
 
 SharedPreferences? mySharedPrefes;
 main() async {
@@ -19,7 +19,7 @@ main() async {
   Get.lazyPut(() => AuthController(), fenix: true);
   Get.lazyPut(() => ThemeContorller(), fenix: true);
   await AuthMiddleWare;
-  FirebaseApp defaultApp = await Firebase.initializeApp();
+  // FirebaseApp defaultApp = await Firebase.initializeApp();
 
   runApp(MyApp());
 }
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
       locale: locallizationsController.initalLang,
       translations: TheLocalization(),
       // home: MyHomePage(),
-      // offcourse you can't use home prob with the middleware
+      // just i'll use home proberty for testing
     );
   }
 }

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../constants/app_color.dart';
 
-class BackgrounContainer extends StatelessWidget {
-  const BackgrounContainer({Key? key}) : super(key: key);
+class MyBackgrounContainer extends StatelessWidget {
+  const MyBackgrounContainer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

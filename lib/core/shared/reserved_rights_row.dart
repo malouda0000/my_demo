@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../../core/constants/app_color.dart';
+import '../../core/constants/app_color.dart';
 import 'package:my_demo/get_pages.dart';
-import '../../../../core/localization/localization.dart';
+import '../../core/localization/localization.dart';
 
 class ReservedRightsRow extends StatelessWidget {
   const ReservedRightsRow({Key? key}) : super(key: key);

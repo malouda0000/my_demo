@@ -15,7 +15,7 @@ class CustomAuthCard extends StatelessWidget {
         body: Stack(
       // clipBehavior: Clip.hardEdge,
       children: [
-        BackgrounContainer(),
+        MyBackgrounContainer(),
         SafeArea(
           child: Center(
             child: Padding(

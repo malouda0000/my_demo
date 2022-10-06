@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/get_pages.dart';
-import '../../view/screens/setting/widgets/reserved_rights_row.dart';
-import '../../view/screens/setting/widgets/settign_list_tile.dart';
 import '../localization/localization.dart';
+import 'reserved_rights_row.dart';
+import '../../view/screens/setting/widgets/settign_list_tile.dart';
 import 'big_button.dart';
 import 'drawer_header_plus.dart';
 

@@ -7,6 +7,7 @@ import 'package:my_demo/core/middleware/auth_middleware.dart';
 import 'package:my_demo/core/themes/my_themes.dart';
 import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/core/services/binding.dart';
+import 'package:my_demo/view/screens/home/home_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'core/localization/localization.dart';
 // import 'package:firebase_core/firebase_core.dart';
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
       themeMode: themeContorller.myThemeMode,
       locale: locallizationsController.initalLang,
       translations: TheLocalization(),
-      // home: MyHomePage(),
+      home: HomeScreen(),
       // just i'll use home proberty for testing
     );
   }

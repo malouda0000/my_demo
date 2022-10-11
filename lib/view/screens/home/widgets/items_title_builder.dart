@@ -22,7 +22,7 @@ class ItemsTitleBuilder extends GetView<HomeScreenControllerImp> {
         onTap: pressed,
         child: AnimatedContainer(
           duration: Duration(
-            milliseconds: 900,
+            milliseconds: 1500,
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,

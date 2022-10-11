@@ -11,7 +11,7 @@ import 'package:my_demo/view/screens/about%20screen/about_screen.dart';
 import 'package:my_demo/view/screens/auth/sign_in.dart';
 import 'package:my_demo/view/screens/auth/sign_up_screen.dart';
 import 'package:my_demo/view/screens/detials%20screen/detials_screen.dart';
-import 'package:my_demo/view/screens/home/my_home_page.dart';
+import 'package:my_demo/view/screens/home/home_screen.dart';
 import 'package:my_demo/view/screens/localization/localization_screen.dart';
 import 'package:my_demo/view/screens/theme/theme_screen.dart';
 
@@ -61,7 +61,7 @@ class GetPages {
     // ),
     GetPage(
       name: AppRoute.homePage,
-      page: () => const MyHomePage(),
+      page: () => const HomeScreen(),
       // binding: LocalizationBindings(),
     ),
     GetPage(

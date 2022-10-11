@@ -9,10 +9,9 @@ import 'package:my_demo/view/screens/home/widgets/the_category_item.dart';
 import '../../../core/shared/the appbar/the_app_bar.dart';
 import '../../../core/shared/the_drawer.dart';
 
-HomeScreenControllerImp homeScreenControllerImp = Get.put(
-  HomeScreenControllerImp(),
-  permanent: true,
-);
+///
+///
+
 // GlobalKey<ScaffoldState> myKey = GlobalKey();
 // GlobalKey<ScaffoldState> myKey = GlobalKey<ScaffoldState>();
 // List<Map<String, Widget>> homePagesList = [
@@ -37,17 +36,9 @@ List<Widget> homePagesList = [
 
 // i don't think that i need for stateflull widget
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({
-    Key? key,
-  }) : super(key: key);
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  // GlobalKey<ScaffoldState> ScaffoldGenralKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,29 +47,84 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: TheAppBar(context),
       bottomNavigationBar: TheBottomNavBar(),
       // drawer: (),
-      body: Container(
-        color: Colors.red,
-        child: Column(
-          // mainAxisSize: MainAxisSize.min,
-          children: [
-            // Expanded(
-            //   flex: 1,
-            //   child: TheCategoryItem(),
-            // ),
-            // Expanded(
-            //   flex: 9,
-            //   child: Body(),
-            // ),
-            Text('data'),
-            Text('data'),
-            Text('data'),
-          ],
-        ),
+      body: Column(
+        // mainAxisSize: MainAxisSize.min,
+        children: [
+          Expanded(
+            flex: 1,
+            child: TheCategoryItem(),
+          ),
+          Expanded(
+            flex: 9,
+            child: Body(),
+          ),
+        ],
       ),
       // floatingActionButton: const TheFap(),
     );
   }
 }
+
+// class HomeScreen extends StatefulWidget {
+//   const HomeScreen({
+//     Key? key,
+//   }) : super(key: key);
+
+//   @override
+//   State<HomeScreen> createState() => _HomeScreenState();
+// }
+
+// class _HomeScreenState extends State<HomeScreen> {
+//   // GlobalKey<ScaffoldState> ScaffoldGenralKey = GlobalKey<ScaffoldState>();
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       // key: myKey,
+//       drawer: const TheDrawer(),
+//       appBar: TheAppBar(context),
+//       bottomNavigationBar: TheBottomNavBar(),
+//       // drawer: (),
+//       body: Column(
+//         // mainAxisSize: MainAxisSize.min,
+//         children: [
+//           Expanded(
+//             flex: 1,
+//             child: TheCategoryItem(),
+//           ),
+//           Expanded(
+//             flex: 9,
+//             child: Body(),
+//           ),
+//         ],
+//       ),
+//       // floatingActionButton: const TheFap(),
+//     );
+//   }
+// }
+
+// class Body extends StatelessWidget {
+//   const Body({
+//     Key? key,
+//   }) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return PageView.builder(
+//       controller: homeScreenControllerImp.pageController,
+//       onPageChanged: (value) {
+//         // homeScreenControllerImp.onPageChanged(value);
+//       },
+//       itemCount: homePagesList.length,
+//       itemBuilder: (context, index) {
+//         return homePagesList[index];
+
+//         // return BigBurgurePage();
+//       },
+//     );
+//   }
+// }
+
+/////////////////////////////
 
 class Body extends StatelessWidget {
   const Body({
@@ -87,17 +133,16 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(HomeScreenControllerImp());
     return GetBuilder<HomeScreenControllerImp>(
       builder: ((homeScreenControllerImp) => PageView.builder(
             controller: homeScreenControllerImp.pageController,
             onPageChanged: (value) {
-              // homeScreenControllerImp.onPageChanged(value);
+              homeScreenControllerImp.onPageChanged(value);
             },
             itemCount: homePagesList.length,
             itemBuilder: (context, index) {
               return homePagesList[index];
-
-              // return BigBurgurePage();
             },
           )),
     );

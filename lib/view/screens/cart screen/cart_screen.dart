@@ -6,7 +6,7 @@ import 'package:my_demo/core/shared/the%20appbar/the_app_bar.dart';
 import 'package:my_demo/model/models/local_db.dart';
 import 'package:my_demo/view/screens/cart%20screen/widgets/UserCartItemsList.dart';
 import 'package:my_demo/view/screens/cart%20screen/widgets/order_Button.dart';
-import 'package:my_demo/view/screens/home/my_home_page.dart';
+import 'package:my_demo/view/screens/home/home_screen.dart';
 
 MyDb mydb = MyDb();
 

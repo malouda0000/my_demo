@@ -22,7 +22,13 @@ class HomeScreenControllerImp extends HomeScreenController {
   onPageChanged(int index) {
     currentPage = index;
 
-    print('page is changed ============================');
+    // pageController.animateToPage(currentPage,
+    //     duration: Duration(milliseconds: 900), curve: Curves.easeInOut);
+
+    pageController.animateToPage(currentPage,
+        duration: Duration(milliseconds: 900), curve: Curves.easeInOut);
+
+    print('page is changed to $index ============================ ');
     update();
   }
 }

@@ -44,55 +44,61 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(HomeScreenControllerImp());
     return Scaffold(
-        // key: myKey,
-        drawer: const TheDrawer(),
-        appBar: TheAppBar(context),
-        bottomNavigationBar: TheBottomNavBar(),
-        // drawer: (),
-        body: GetBuilder<HomeScreenControllerImp>(
-            builder: ((homeScreenControllerImp) {
-          return Column(
-            // mainAxisSize: MainAxisSize.min,
-            children: [
-              Expanded(
-                flex: 1,
-                child: ListView.builder(
-                    itemCount: homePagesList.length,
-                    scrollDirection: Axis.horizontal,
-                    // shrinkWrap: true,
-                    itemBuilder: (context, i) {
-                      // return items[index];
+      // key: myKey,
+      drawer: const TheDrawer(),
+      appBar: TheAppBar(context),
+      bottomNavigationBar: TheBottomNavBar(),
+      // drawer: (),
+      body: Column(
+        // mainAxisSize: MainAxisSize.min,
+        children: [
+          Expanded(
+              flex: 1,
+              child: GetBuilder<HomeScreenControllerImp>(
+                builder: ((homeScreenControllerImp) {
+                  return ListView.builder(
 
-                      return ItemsTitleBuilder(
-                        title: titlesList[i],
-                        pressed: () async {
-                          await homeScreenControllerImp.onPageChanged(i);
-                        },
-                        isActive: i == homeScreenControllerImp.currentPage
-                            ? true
-                            : false,
+                      // titles list
+                      itemCount: homePagesList.length,
+                      scrollDirection: Axis.horizontal,
+                      // shrinkWrap: true,
+                      itemBuilder: (context, i) {
+                        // return items[index];
+
+                        return ItemsTitleBuilder(
+                          title: titlesList[i],
+                          pressed: () async {
+                            await homeScreenControllerImp.onPageJumpededTo(i);
+                          },
+                          isActive: i == homeScreenControllerImp.currentPage
+                              ? true
+                              : false,
 // if( index == homeScreenControllerImp.currentPage ){ return true;} else { return false;},
-                      );
-                    }),
-              ),
-              Expanded(
-                flex: 9,
-                child: PageView.builder(
-                  controller: homeScreenControllerImp.pageController,
-                  onPageChanged: (value) {
-                    // homeScreenControllerImp.onPageChanged(value);
-                  },
-                  itemCount: homePagesList.length,
-                  itemBuilder: (context, index) {
-                    return homePagesList[index];
-                  },
-                ),
-              ),
-            ],
-          );
-        }))
-        // floatingActionButton: const TheFap(),
-        );
+                        );
+                      });
+                }),
+              )),
+          Expanded(
+              // home page body
+              flex: 9,
+              child: GetBuilder<HomeScreenControllerImp>(
+                builder: ((homeScreenControllerImp) {
+                  return PageView.builder(
+                    controller: homeScreenControllerImp.pageController,
+                    onPageChanged: (value) {
+                      homeScreenControllerImp.onPageChanged(value);
+                    },
+                    itemCount: homePagesList.length,
+                    itemBuilder: (context, index) {
+                      return homePagesList[index];
+                    },
+                  );
+                }),
+              )),
+        ],
+      ),
+      // floatingActionButton: const TheFap(),
+    );
   }
 }
 
@@ -164,12 +170,10 @@ class HomeScreen extends StatelessWidget {
 
 //   @override
 //   Widget build(BuildContext context) {
-//     return  
+//     return
 //     ;
 //   }
 // }
-
-
 
 // class HomeScreen extends StatelessWidget {
 //   const HomeScreen({Key? key}) : super(key: key);

@@ -1,11 +1,14 @@
+import 'dart:developer';
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-abstract class HomeScreenController extends GetxController {
-  onPageChanged(int index);
-}
+// abstract class HomeScreenController extends GetxController {
+//   onPageChanged(int index);
+// }
 
-class HomeScreenControllerImp extends HomeScreenController {
+class HomeScreenControllerImp extends GetxController {
   late PageController pageController;
   int currentPage = 0;
 
@@ -18,8 +21,8 @@ class HomeScreenControllerImp extends HomeScreenController {
     super.onInit();
   }
 
-  @override
   onPageChanged(int index) {
+    print("onPageChanged");
     currentPage = index;
 
     // pageController.animateToPage(currentPage,

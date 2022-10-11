@@ -5,6 +5,7 @@ import 'package:my_demo/core/shared/bottom%20navigation%20bar/bottom_nav_bar.dar
 import 'package:my_demo/view/screens/home/categores_page.dart';
 import 'package:my_demo/view/screens/home/temp_page.dart';
 import 'package:my_demo/view/screens/home/widgets/big_burger_page.dart';
+import 'package:my_demo/view/screens/home/widgets/items_title_builder.dart';
 import 'package:my_demo/view/screens/home/widgets/the_category_item.dart';
 import '../../../core/shared/the appbar/the_app_bar.dart';
 import '../../../core/shared/the_drawer.dart';
@@ -41,27 +42,57 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(HomeScreenControllerImp());
     return Scaffold(
-      // key: myKey,
-      drawer: const TheDrawer(),
-      appBar: TheAppBar(context),
-      bottomNavigationBar: TheBottomNavBar(),
-      // drawer: (),
-      body: Column(
-        // mainAxisSize: MainAxisSize.min,
-        children: [
-          Expanded(
-            flex: 1,
-            child: TheCategoryItem(),
-          ),
-          Expanded(
-            flex: 9,
-            child: Body(),
-          ),
-        ],
-      ),
-      // floatingActionButton: const TheFap(),
-    );
+        // key: myKey,
+        drawer: const TheDrawer(),
+        appBar: TheAppBar(context),
+        bottomNavigationBar: TheBottomNavBar(),
+        // drawer: (),
+        body: GetBuilder<HomeScreenControllerImp>(
+            builder: ((homeScreenControllerImp) {
+          return Column(
+            // mainAxisSize: MainAxisSize.min,
+            children: [
+              Expanded(
+                flex: 1,
+                child: ListView.builder(
+                    itemCount: homePagesList.length,
+                    scrollDirection: Axis.horizontal,
+                    // shrinkWrap: true,
+                    itemBuilder: (context, i) {
+                      // return items[index];
+
+                      return ItemsTitleBuilder(
+                        title: titlesList[i],
+                        pressed: () async {
+                          await homeScreenControllerImp.onPageChanged(i);
+                        },
+                        isActive: i == homeScreenControllerImp.currentPage
+                            ? true
+                            : false,
+// if( index == homeScreenControllerImp.currentPage ){ return true;} else { return false;},
+                      );
+                    }),
+              ),
+              Expanded(
+                flex: 9,
+                child: PageView.builder(
+                  controller: homeScreenControllerImp.pageController,
+                  onPageChanged: (value) {
+                    // homeScreenControllerImp.onPageChanged(value);
+                  },
+                  itemCount: homePagesList.length,
+                  itemBuilder: (context, index) {
+                    return homePagesList[index];
+                  },
+                ),
+              ),
+            ],
+          );
+        }))
+        // floatingActionButton: const TheFap(),
+        );
   }
 }
 
@@ -126,28 +157,17 @@ class HomeScreen extends StatelessWidget {
 
 /////////////////////////////
 
-class Body extends StatelessWidget {
-  const Body({
-    Key? key,
-  }) : super(key: key);
+// class Body extends StatelessWidget {
+//   const Body({
+//     Key? key,
+//   }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    Get.put(HomeScreenControllerImp());
-    return GetBuilder<HomeScreenControllerImp>(
-      builder: ((homeScreenControllerImp) => PageView.builder(
-            controller: homeScreenControllerImp.pageController,
-            onPageChanged: (value) {
-              homeScreenControllerImp.onPageChanged(value);
-            },
-            itemCount: homePagesList.length,
-            itemBuilder: (context, index) {
-              return homePagesList[index];
-            },
-          )),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return  
+//     ;
+//   }
+// }
 
 
 

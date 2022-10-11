@@ -87,35 +87,35 @@ final List<String> titlesList = [
 
 ///////////////////////////
 
-class TheCategoryItem extends StatelessWidget {
-  const TheCategoryItem({Key? key}) : super(key: key);
+// class TheCategoryItem extends StatelessWidget {
+//   const TheCategoryItem({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    Get.put(HomeScreenControllerImp());
-    return GetBuilder<HomeScreenControllerImp>(
-      builder: ((homeScreenControllerImp) => Expanded(
-            child: ListView.builder(
-                itemCount: homePagesList.length,
-                scrollDirection: Axis.horizontal,
-                // shrinkWrap: true,
-                itemBuilder: (context, i) {
-                  // return items[index];
+//   @override
+//   Widget build(BuildContext context) {
+//     Get.put(HomeScreenControllerImp());
+//     return GetBuilder<HomeScreenControllerImp>(
+//       builder: ((homeScreenControllerImp) => Expanded(
+//             child: ListView.builder(
+//                 itemCount: homePagesList.length,
+//                 scrollDirection: Axis.horizontal,
+//                 // shrinkWrap: true,
+//                 itemBuilder: (context, i) {
+//                   // return items[index];
 
-                  return ItemsTitleBuilder(
-                    title: titlesList[i],
-                    pressed: () async {
-                      await homeScreenControllerImp.onPageChanged(i);
-                    },
-                    isActive:
-                        i == homeScreenControllerImp.currentPage ? true : false,
-// if( index == homeScreenControllerImp.currentPage ){ return true;} else { return false;},
-                  );
-                }),
-          )),
-    );
-  }
-}
+//                   return ItemsTitleBuilder(
+//                     title: titlesList[i],
+//                     pressed: () async {
+//                       await homeScreenControllerImp.onPageChanged(i);
+//                     },
+//                     isActive:
+//                         i == homeScreenControllerImp.currentPage ? true : false,
+// // if( index == homeScreenControllerImp.currentPage ){ return true;} else { return false;},
+//                   );
+//                 }),
+//           )),
+//     );
+//   }
+// }
 
 // padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 8.0),
 

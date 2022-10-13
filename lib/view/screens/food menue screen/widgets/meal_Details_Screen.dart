@@ -26,109 +26,117 @@ class MealDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     MealDetailsClass find = foodListItems[indexOfTheMealDetails];
     return Scaffold(
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          children: [
-            Image.asset(find.mealImg),
-            Padding(
-              padding: const EdgeInsets.all(theDefaultPadding),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        AppLocal.cityname.tr,
-                      ),
-                      emptySpace,
-                      Icon(Icons.location_on_rounded),
-                    ],
-                  ),
-                  // emptySpace,
-                  Row(
-                    children: [
-                      Column(
-                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          TitleBuilder(
-                            theTitle: find.mealTitle,
-                          ),
-                          Row(
-                            children: [
-                              for (int i = 0; i < find.mealStarsCount; i++)
-                                Icon(
-                                  Icons.star_rounded,
-                                  color: AppColor.kPrimaryColor,
-                                ),
-                              emptySpace,
-                              Text(find.mealRating.toString() + ' Ratirings'),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Spacer(),
-                      Container(
-                        height: Get.width * .18,
-                        width: Get.width * .18,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: AppColor.kPrimaryColor,
-                          shape: BoxShape.rectangle,
-                          borderRadius: BorderRadius.circular(theDefaultRaduis),
+      // appBar: SliverAppBar( ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              Image.asset(find.mealImg),
+              Padding(
+                padding: const EdgeInsets.all(theDefaultPadding),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          AppLocal.cityname.tr,
                         ),
-                        // padding: const EdgeInsets.all(20),
-                        child: Text(
-                          '\$ ' + find.mealPrice.toString(),
-                          style: TextStyle(
-                            color: AppColor.kTextColor,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                      emptySpace,
-                    ],
-                  ),
-                  emptySpace,
-                  Container(
-                    child: Text(
-                      find.mealDiscription,
-                      style: TextStyle(
-                          // color: AppColor.kTextColor,
-                          ),
+                        emptySpace,
+                        Icon(Icons.location_on_rounded),
+                      ],
                     ),
-                  ),
-                  emptySpace,
-                  Row(
-                    children: [
-                      Expanded(
-                        child: BigggButton(
-                          theLeadingIcon: Icons.add_rounded,
-                          theButtonTitle: AppLocal.addToTheCart.tr,
-                          onTaped: () {
-                            Get.isSnackbarOpen
-                                ? () {}
-                                : GetSnackBar(
-                                    message: AppLocal.done.tr,
-                                  );
-                            addingMealController.addMealToCart(find);
-                          },
+                    // emptySpace,
+                    Row(
+                      children: [
+                        Column(
+                          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            TitleBuilder(
+                              theTitle: find.mealTitle,
+                            ),
+                            Row(
+                              children: [
+                                for (int i = 0; i < find.mealStarsCount; i++)
+                                  Icon(
+                                    Icons.star_rounded,
+                                    color: AppColor.kPrimaryColor,
+                                  ),
+                                emptySpace,
+                                Text(find.mealRating.toString() + ' Ratirings'),
+                              ],
+                            ),
+                          ],
                         ),
+                        Spacer(),
+                        Container(
+                          height: Get.width * .18,
+                          width: Get.width * .18,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: AppColor.kPrimaryColor,
+                            shape: BoxShape.rectangle,
+                            borderRadius:
+                                BorderRadius.circular(theDefaultRaduis),
+                          ),
+                          // padding: const EdgeInsets.all(20),
+                          child: Text(
+                            '\$ ' + find.mealPrice.toString(),
+                            style: TextStyle(
+                              color: AppColor.kTextColor,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        emptySpace,
+                      ],
+                    ),
+                    emptySpace,
+                    Container(
+                      child: Text(
+                        find.mealDiscription,
+                        style: TextStyle(
+                            // color: AppColor.kTextColor,
+                            ),
                       ),
-                      emptySpace,
-                    ],
-                  ),
-                  BigggButton(
-                    theLeadingIcon: Icons.shop_rounded,
-                    theButtonTitle: AppLocal.goToMyCart.tr,
-                    onTaped: () {
-                      Get.toNamed(AppRoute.cartScreen);
-                    },
-                  )
-                ],
-              ),
-            )
-          ],
+                    ),
+                    emptySpace,
+                    Row(
+                      children: [
+                        Expanded(
+                          child: BigggButton(
+                            // add  to cart button
+                            theLeadingIcon: Icons.add_rounded,
+                            theButtonTitle: AppLocal.addToTheCart.tr,
+                            onTaped: () {
+                              Get.isSnackbarOpen
+                                  ? () {}
+                                  : GetSnackBar(
+                                      message: AppLocal.done.tr,
+                                    );
+                              addingMealController.addMealToCart(find);
+                            },
+                          ),
+                        ),
+                        emptySpace,
+                      ],
+                    ),
+                    emptySpace,
+                    BigggButton(
+                      // go to user cart button
+                      theLeadingIcon: Icons.shop_rounded,
+                      theButtonTitle: AppLocal.goToMyCart.tr,
+                      onTaped: () {
+                        Get.toNamed(AppRoute.cartScreen);
+                      },
+                    ),
+                    emptySpace,
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

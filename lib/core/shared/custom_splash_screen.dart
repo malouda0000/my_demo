@@ -5,14 +5,16 @@ import 'package:my_demo/core/shared/bubles_background.dart';
 import '../constants/app_color.dart';
 import 'app_id.dart';
 
-class CustomSplashScreen extends StatefulWidget {
-  const CustomSplashScreen({Key? key}) : super(key: key);
+class CustomSplashScreen extends StatelessWidget {
+  final bool progress, haveDiscription;
+  String discription;
+  CustomSplashScreen(
+      {Key? key,
+      required this.progress,
+      required this.haveDiscription,
+      this.discription = ''})
+      : super(key: key);
 
-  @override
-  State<CustomSplashScreen> createState() => _CustomSplashScreenState();
-}
-
-class _CustomSplashScreenState extends State<CustomSplashScreen> {
   // @override
   // void initState() {
   //   super.initState;
@@ -40,9 +42,14 @@ class _CustomSplashScreenState extends State<CustomSplashScreen> {
                 child: AppId(),
               ),
               emptySpace,
-              CircularProgressIndicator(
-                color: AppColor.kPrimaryColor,
-              ),
+              if (progress)
+                CircularProgressIndicator(
+                  color: AppColor.kPrimaryColor,
+                ),
+              emptySpace,
+              if (haveDiscription)
+                Text(discription, style: Theme.of(context).textTheme.headline6),
+              emptySpace,
             ],
           ),
         ],

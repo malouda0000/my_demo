@@ -4,9 +4,9 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-// abstract class HomeScreenController extends GetxController {
-//   onPageChanged(int index);
-// }
+abstract class HomeScreenController extends GetxController {
+  onPageChanged(int index);
+}
 
 class HomeScreenControllerImp extends GetxController {
   late PageController pageController;

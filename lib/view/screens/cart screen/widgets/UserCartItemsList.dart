@@ -50,6 +50,7 @@ class UserCartItemsList extends StatelessWidget {
               );
             },
           ),
+          emptySpace,
           EmptyTheCartButton(),
           emptySpace,
           emptySpace,

@@ -52,35 +52,37 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         // mainAxisSize: MainAxisSize.min,
         children: [
-          Expanded(
-              flex: 1,
-              child: GetBuilder<HomeScreenControllerImp>(
-                builder: ((homeScreenControllerImp) {
-                  return ListView.builder(
+          Container(
+            child: Expanded(
+                // flex: 1,
+                child: GetBuilder<HomeScreenControllerImp>(
+              builder: ((homeScreenControllerImp) {
+                return ListView.builder(
 
-                      // titles list
-                      itemCount: homePagesList.length,
-                      scrollDirection: Axis.horizontal,
-                      // shrinkWrap: true,
-                      itemBuilder: (context, i) {
-                        // return items[index];
+                    // titles list
+                    itemCount: homePagesList.length,
+                    scrollDirection: Axis.horizontal,
+                    // shrinkWrap: true,
+                    itemBuilder: (context, i) {
+                      // return items[index];
 
-                        return ItemsTitleBuilder(
-                          title: titlesList[i],
-                          pressed: () async {
-                            await homeScreenControllerImp.onPageJumpededTo(i);
-                          },
-                          isActive: i == homeScreenControllerImp.currentPage
-                              ? true
-                              : false,
+                      return ItemsTitleBuilder(
+                        title: titlesList[i],
+                        pressed: () async {
+                          await homeScreenControllerImp.onPageJumpededTo(i);
+                        },
+                        isActive: i == homeScreenControllerImp.currentPage
+                            ? true
+                            : false,
 // if( index == homeScreenControllerImp.currentPage ){ return true;} else { return false;},
-                        );
-                      });
-                }),
-              )),
+                      );
+                    });
+              }),
+            )),
+          ),
           Expanded(
               // home page body
-              flex: 9,
+              flex: 10,
               child: GetBuilder<HomeScreenControllerImp>(
                 builder: ((homeScreenControllerImp) {
                   return PageView.builder(

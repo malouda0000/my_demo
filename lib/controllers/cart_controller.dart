@@ -67,4 +67,9 @@ SELECT FROM 'usercart' WHERE id = $id
 ''');
     update();
   }
+
+  doesUserCartEmpty() async {
+    List<Map> response = await mydb.readData("SELECT * FROM usercart");
+    return response.length == 0 ? true : false;
+  }
 }

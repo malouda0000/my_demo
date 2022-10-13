@@ -61,7 +61,10 @@ class _MealsFromApiState extends State<MealsFromApi> {
                             );
                           },
                         )
-                      : CustomSplashScreen();
+                      : CustomSplashScreen(
+                          progress: true,
+                          haveDiscription: false,
+                        );
                 },
               );
             },

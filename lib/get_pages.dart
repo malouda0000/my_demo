@@ -66,7 +66,10 @@ class GetPages {
     ),
     GetPage(
       name: AppRoute.customSplashScreen,
-      page: () => const CustomSplashScreen(),
+      page: () => CustomSplashScreen(
+        haveDiscription: false,
+        progress: false,
+      ),
     ),
     GetPage(
       name: AppRoute.detailsScreen,

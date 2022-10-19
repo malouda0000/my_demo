@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/controllers/auth_controller.dart';
+import 'package:my_demo/controllers/auth/signin_controller.dart';
 import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/view/screens/about%20screen/widgets/communication_icon.dart';
 import '../../../../core/localization/localization.dart';
@@ -13,7 +13,7 @@ class SocialAuthRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    AuthController authController = Get.find();
+    SignInControllerImp signInControllerImp = Get.put(SignInControllerImp());
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -42,7 +42,7 @@ class SocialAuthRow extends StatelessWidget {
           theUrlLanching: () async {
             UserCredential cred = await signInWithGoogle();
             if (cred.user?.email != null) {
-              authController.signIn();
+              signInControllerImp.signIn();
             } else {
               Get.snackbar('', 'unKnown Error');
             }

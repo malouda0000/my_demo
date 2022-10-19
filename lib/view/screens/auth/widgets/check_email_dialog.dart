@@ -5,7 +5,8 @@ import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/view/screens/auth/widgets/resend_email_dialog.dart';
 import 'package:my_demo/view/screens/auth/widgets/my_send_email_vervication.dart';
 
-checkYourEmailDialog(BuildContext context) async {
+BuildContext context = context;
+checkYourEmailDialog() async {
   mySendEmailVervication();
 
   return Get.defaultDialog(
@@ -29,10 +30,11 @@ checkYourEmailDialog(BuildContext context) async {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           MaterialButton(
+            // no email reciveded button
             color: AppColor.kPrimaryColor,
-            onPressed: () {
+            onPressed: () async {
               Get.back();
-              resendVerEmailDialog(context);
+              await resendVerEmailDialog(context);
             },
             child: Text(
               AppLocal.noEmailReciveded.tr,
@@ -40,6 +42,7 @@ checkYourEmailDialog(BuildContext context) async {
             ),
           ),
           MaterialButton(
+            // done button
             color: AppColor.kPrimaryColor,
             onPressed: () {
               // Get.offAllNamed(AppRoute.signInScreen);

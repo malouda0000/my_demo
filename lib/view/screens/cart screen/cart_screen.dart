@@ -17,26 +17,24 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // CartController cartController = Get.find();
     return Scaffold(
-      // appBar: TheAppBar(context),
-      bottomNavigationBar: TheBottomNavBar(),
-      body: SafeArea(
-        child: cartController.doesUserCartEmpty() == true
-            ? Stack(
-                children: [
-                  GetBuilder<CartController>(
-                    builder: (cartController) => UserCartItemsList(),
-                  ),
-                  Positioned(
-                    bottom: 15,
-                    child: OrderButton(),
-                  ),
-                ],
-              )
-            : CustomSplashScreen(
-                progress: false,
-                haveDiscription: true,
-                discription: 'no items in the Cart'),
-      ),
-    );
+        // appBar: TheAppBar(context),
+        bottomNavigationBar: TheBottomNavBar(),
+        body: SafeArea(
+            child: cartController.doesUserCartEmpty() == false
+                ? Stack(
+                    children: [
+                      GetBuilder<CartController>(
+                        builder: (cartController) => UserCartItemsList(),
+                      ),
+                      Positioned(
+                        bottom: 15,
+                        child: OrderButton(),
+                      ),
+                    ],
+                  )
+                : CustomSplashScreen(
+                    progress: false,
+                    haveDiscription: true,
+                    discription: 'no items in the Cart')));
   }
 }

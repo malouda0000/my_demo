@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/controllers/auth_controller.dart';
+import 'package:my_demo/controllers/auth/auth_controller.dart';
 import 'package:my_demo/get_pages.dart';
 
 import 'package:get/get.dart';

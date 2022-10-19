@@ -1,22 +1,21 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/get_pages.dart';
-import '../main.dart';
+import '../../main.dart';
 
 class AuthController extends GetxController {
-  signup() async {
-    await mySharedPrefes!.setBool('logIn', true);
-    print('loged innnnnnnnnnn');
+  fackSignOut() async {
+    await mySharedPrefes!.setBool('logIn', false);
+    // To sign out a user, call signOut():
+    // await FirebaseAuth.instance.signOut();
 
-    Get.offAllNamed(AppRoute.homePage);
+    Get.offAllNamed(
+      AppRoute.signInScreen,
+    );
   }
 
-  signIn() async {
-    await mySharedPrefes!.setBool('logIn', true);
-    print('signedIn innnnnnnnnnn');
-
-    Get.offAllNamed(AppRoute.homePage);
-  }
+  // signIn() async {
+  // }
 
   signOut() async {
     await mySharedPrefes!.setBool('logIn', false);

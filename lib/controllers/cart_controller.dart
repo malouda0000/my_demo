@@ -69,7 +69,14 @@ SELECT FROM 'usercart' WHERE id = $id
   }
 
   doesUserCartEmpty() async {
+    print('doesUserCartEmpty()========');
     List<Map> response = await mydb.readData("SELECT * FROM usercart");
+    if (response.length == 0) {
+      print('doesUserCartEmpty()========');
+    } else {
+      print('usercart not empty()========');
+    }
+    ;
     return response.length == 0 ? true : false;
   }
 }

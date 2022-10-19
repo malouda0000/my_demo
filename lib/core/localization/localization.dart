@@ -442,7 +442,7 @@ class AppLocal {
 
   static const String myGithub = '34';
 
-  static const String debugSinIng = '35';
+  static const String debugSinIn = '35';
 
   static const String DebugLogIn = '36';
 

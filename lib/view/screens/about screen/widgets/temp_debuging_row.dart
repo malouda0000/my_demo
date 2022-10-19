@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/controllers/auth_controller.dart';
+import 'package:my_demo/controllers/auth/auth_controller.dart';
 import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/main.dart';
@@ -31,14 +31,13 @@ class TempDebugingRow extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: MaterialButton(
+                  // debugSingIn
                   color: AppColor.kTextColor,
                   onPressed: () {
-                    Get.offAllNamed(
-                      AppRoute.signInScreen,
-                    );
+                    authController.fackSignOut();
                   },
                   child: Text(
-                    AppLocal.debugSinIng.tr,
+                    AppLocal.debugSinIn.tr,
                     style: TextStyle(
                       color: AppColor.kPrimaryColor,
 
@@ -57,11 +56,12 @@ class TempDebugingRow extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: MaterialButton(
+                  // test customOnbording button
                   color: AppColor.kTextColor,
                   onPressed: () async {
                     await mySharedPrefes!.setBool('firstAppInit', false);
 
-                    Get.offAllNamed(
+                    await Get.offAllNamed(
                       AppRoute.customOnbordingScreen,
                     );
                   },
@@ -114,6 +114,7 @@ class TempDebugingRow extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: MaterialButton(
+                  // used to print the sharedpref value on the consol
                   color: AppColor.kTextColor,
                   onPressed: () {
                     print(mySharedPrefes!.getBool('logIn') == null
@@ -146,6 +147,7 @@ class TempDebugingRow extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: MaterialButton(
+                  // signOut button
                   color: AppColor.kTextColor,
                   onPressed: () async {
                     await authController.signOut();
@@ -168,6 +170,7 @@ class TempDebugingRow extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: MaterialButton(
+                  // deleteAccount Button
                   color: AppColor.kTextColor,
                   onPressed: () async {
                     await authController.deletAccount();

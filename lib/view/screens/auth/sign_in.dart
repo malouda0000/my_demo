@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/controllers/auth_controller.dart';
+import 'package:my_demo/controllers/auth/signin_controller.dart';
 import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/view/screens/auth/widgets/check_email_dialog.dart';
 import 'package:my_demo/view/screens/auth/widgets/custom_auth_card.dart';
@@ -21,14 +21,10 @@ class SignInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    AuthController authController = Get.put(AuthController());
+    SignInControllerImp signInControllerImp = Get.put(SignInControllerImp());
 
     ///
     GlobalKey<FormState> signinKey = new GlobalKey<FormState>();
-
-    ////
-    TextEditingController signinEmailController = TextEditingController();
-    TextEditingController signinPasswordController = TextEditingController();
 
     //
     Key signinEmailKey = new Key('');
@@ -45,7 +41,7 @@ class SignInScreen extends StatelessWidget {
             TheInputField(
               // email input field
               theValidator: (text) {
-                text = signinEmailController.text;
+                text = signInControllerImp.signinEmailTextController.text;
                 if (text.length < 6) {
                   return AppLocal.emailIsTooShourt.tr + '\n';
                 }
@@ -55,7 +51,8 @@ class SignInScreen extends StatelessWidget {
                 return null;
               },
               theKey: signinEmailKey,
-              theTextEditingController: signinEmailController,
+              theTextEditingController:
+                  signInControllerImp.signinEmailTextController,
               theInputType: TextInputType.text,
               theHient: AppLocal.email.tr,
               theLeadingIcon: Icons.email_outlined,
@@ -65,7 +62,7 @@ class SignInScreen extends StatelessWidget {
             TheInputField(
               // password input field
               theValidator: (text) {
-                text = signinPasswordController.text;
+                text = signInControllerImp.signinPasswordTextController.text;
 
                 if (text.length < 6) {
                   return AppLocal.passwordIsTooShourt.tr + '\n';
@@ -76,7 +73,8 @@ class SignInScreen extends StatelessWidget {
                 return null;
               },
               theKey: signinPasswordKey,
-              theTextEditingController: signinPasswordController,
+              theTextEditingController:
+                  signInControllerImp.signinPasswordTextController,
               theInputType: TextInputType.text,
               theHient: AppLocal.password.tr,
               theLeadingIcon: Icons.password_outlined,
@@ -98,8 +96,10 @@ class SignInScreen extends StatelessWidget {
                     try {
                       final credential = await FirebaseAuth.instance
                           .signInWithEmailAndPassword(
-                        email: signinEmailController.text,
-                        password: signinPasswordController.text,
+                        email:
+                            signInControllerImp.signinEmailTextController.text,
+                        password: signInControllerImp
+                            .signinPasswordTextController.text,
                       );
                       // print(credential);
 
@@ -111,7 +111,7 @@ class SignInScreen extends StatelessWidget {
                         // User? user = FirebaseAuth.instance.currentUser;
                         // await user!.sendEmailVerification();
 
-                        checkYourEmailDialog(context);
+                        checkYourEmailDialog();
                         print('email not vervied ============');
                       } else {
                         Get.offAllNamed(
@@ -158,12 +158,14 @@ class SignInScreen extends StatelessWidget {
             DontHaveAccount(
               doYouHaveAccoun: AppLocal.dontHaveAccountYet.tr,
               signOrLogin: AppLocal.signUpNow.tr,
-              theFunc: () => Get.toNamed(AppRoute.signUpScreen),
+              theFunc: () {
+                signInControllerImp.goToSignUp();
+              },
             ),
             Center(
               child: GestureDetector(
                   onTap: () {
-                    authController.signIn();
+                    signInControllerImp.signIn();
                   },
                   child: Text(
                     'signIn for debuging',

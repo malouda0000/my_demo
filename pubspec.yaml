@@ -64,6 +64,9 @@ dependencies:
   # i have canceled the facebook auth for now, for some resones(vervied emails problem)
   # flutter_facebook_auth: ^3.5.0
 
+  # genaral packges
+  otp_text_field: ^1.1.3
+
 
 
 dev_dependencies:

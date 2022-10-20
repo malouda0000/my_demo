@@ -10,6 +10,7 @@ abstract class SignupController extends GetxController {
   passwordTextValidator(String? text);
   PasswordConfTextValidator(String? text);
   signup();
+  goToVerifyEmailScreen();
   goToSignIn();
 }
 
@@ -103,6 +104,11 @@ class SignupControllerImp extends SignupController {
       return AppLocal.passwordsAreNotEqual.tr + '\n';
     }
     return null;
+  }
+
+  @override
+  goToVerifyEmailScreen() {
+    Get.offAllNamed(AppRoute.verifyCodeScreenForSignup);
   }
 
   @override

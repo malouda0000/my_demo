@@ -87,13 +87,14 @@ class SignUpScreen extends StatelessWidget {
               theLeadingIcon: Icons.login_rounded,
               // onTaped: signupControllerImp.signup(),
               onTaped: () async {
-                bool test = signupKey.currentState!.validate();
+                // bool test = signupKey.currentState!.validate();
 
-                if (test) {
-                  // authController.signup();
-                  signupControllerImp.signup();
-                }
-                ;
+                // if (test) {
+                //   // authController.signup();
+                //   signupControllerImp.signup();
+                // };
+
+                signupControllerImp.goToVerifyEmailScreen();
               },
             ),
             emptySpace,

@@ -8,9 +8,11 @@ import 'package:my_demo/core/middleware/auth_middleware.dart';
 import 'package:my_demo/core/themes/my_themes.dart';
 import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/core/services/binding.dart';
+import 'package:my_demo/view/screens/auth/sign_in_screen.dart';
 // import 'package:my_demo/view/screens/home/home_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'core/localization/localization.dart';
+import 'view/screens/auth/forget password/verify_code_screen_for_resetpass.dart';
 // import 'package:firebase_core/firebase_core.dart';
 
 SharedPreferences? mySharedPrefes;
@@ -44,7 +46,9 @@ class MyApp extends StatelessWidget {
       themeMode: themeContorller.myThemeMode,
       locale: locallizationsController.initalLang,
       translations: TheLocalization(),
-      // home: HomeScreen(),
+      home: SignInScreen(),
+      // home: SuccessfullySignedupScreen(),
+      // home: SuccessfullyResetedPasswordScreen(),
       // just i'll use home proberty for testing
     );
   }

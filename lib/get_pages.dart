@@ -3,36 +3,58 @@ import 'package:my_demo/core/middleware/auth_middleware.dart';
 import 'package:my_demo/core/services/binding.dart';
 import 'package:my_demo/core/shared/custom_splash_screen.dart';
 import 'package:my_demo/view/screens/Error/error_message_screen.dart';
+import 'package:my_demo/view/screens/auth/forget%20password/forget_password_screen.dart';
+import 'package:my_demo/view/screens/auth/forget%20password/reset_password_screen.dart';
+import 'package:my_demo/view/screens/auth/forget%20password/verify_code_screen_for_resetpass.dart';
+import 'package:my_demo/view/screens/auth/forget%20password/verify_code_screen_for_signup.dart';
 import 'package:my_demo/view/screens/cart%20screen/cart_screen.dart';
 import 'package:my_demo/view/screens/custom%20onbording/custom_onbording.dart';
 import 'package:my_demo/view/screens/food%20menue%20screen/food_menue_screen.dart';
 import 'package:my_demo/view/screens/under%20development%20screen/under_development_screen.dart';
 import 'package:my_demo/view/screens/about%20screen/about_screen.dart';
-import 'package:my_demo/view/screens/auth/sign_in.dart';
+import 'package:my_demo/view/screens/auth/sign_in_screen.dart';
 import 'package:my_demo/view/screens/auth/sign_up_screen.dart';
 import 'package:my_demo/view/screens/detials%20screen/detials_screen.dart';
 import 'package:my_demo/view/screens/home/home_screen.dart';
 import 'package:my_demo/view/screens/localization/localization_screen.dart';
 import 'package:my_demo/view/screens/theme/theme_screen.dart';
 
+import 'view/screens/auth/forget password/succesfully_reseted_password_screen.dart';
+import 'view/screens/auth/forget password/successfully_signedup_screen.dart';
+
 class AppRoute {
+  // app inital
   static const String customOnbordingScreen = '/';
   static const String customSplashScreen = '/splashScreen';
-  static const String homePage = '/homePage';
+
+  // auth
   static const String signUpScreen = '/signUpScreen';
   static const String signInScreen = '/SinInScreen';
+  static const String forgetPasswordScreen = '/forgetPasswordScreen';
+  static const String verifyCodeScreenForRestPass =
+      '/verifyCodeScreenForResetPass';
+  static const String verifyCodeScreenForSignup = '/verifyCodeScreenForSignup';
+  static const String resetPasswordScreen = '/resetPasswordScreen';
+  static const String succResetedPasswordScreen = '/succResetedPasswordScreen';
+  static const String successfullySignedupScreen = '/succSignedupScreen';
+
+  // main screens
+  static const String homePage = '/homePage';
   static const String detailsScreen = '/detailsScreen';
   static const String settingScreen = '/settingScreen';
-  static const String themeScreen = '/themeScreen';
+  static const String foodMenueScreen = '/foodMenueScreen';
+  static const String cartScreen = '/cartScreen';
   static const String aboutScreen = '/aboutScreen';
+
+// seconders screens
+  static const String themeScreen = '/themeScreen';
   static const String localizationScreen = '/localizationScreen';
   static const String underDevelopmentScreen = '/underDevelopmentScreen';
-  static const String foodMenueScreen = '/foodMenueScreen';
   static const String errorMessageScreen = '/errorMessageScreen';
-  static const String cartScreen = '/cartScreen';
 }
 
 class GetPages {
+  // initaling app
   List<GetPage<dynamic>>? getpages = [
     GetPage(
       name: AppRoute.customOnbordingScreen,
@@ -42,6 +64,7 @@ class GetPages {
       ],
     ),
 
+// auth screens
     GetPage(
       name: AppRoute.signUpScreen,
       page: () => const SignUpScreen(),
@@ -52,13 +75,37 @@ class GetPages {
       page: () => const SignInScreen(),
       middlewares: [AuthMiddleWare()],
     ),
-    // GetPage(
-    //   name: AppRoute.introSliderScreen,
-    //   page: () =>const IntroSliderPage(),
-    //   // middlewares: [
-    //   //   AuthMiddleWare(),
-    //   // ],
-    // ),
+
+    GetPage(
+      name: AppRoute.forgetPasswordScreen,
+      page: () => const ForgetPasswordScreen(),
+    ),
+
+    GetPage(
+      name: AppRoute.verifyCodeScreenForRestPass,
+      page: () => const VerifyCodeScreenForResetPass(),
+    ),
+
+    GetPage(
+      name: AppRoute.verifyCodeScreenForSignup,
+      page: () => const VerifyCodeScreenForSignup(),
+    ),
+    GetPage(
+      name: AppRoute.resetPasswordScreen,
+      page: () => const ResetPasswordScreen(),
+    ),
+
+    GetPage(
+      name: AppRoute.succResetedPasswordScreen,
+      page: () => const SuccessfullyResetedPasswordScreen(),
+    ),
+
+    GetPage(
+      name: AppRoute.successfullySignedupScreen,
+      page: () => const SuccessfullySignedupScreen(),
+    ),
+
+    // main screens
     GetPage(
       name: AppRoute.homePage,
       page: () => const HomeScreen(),

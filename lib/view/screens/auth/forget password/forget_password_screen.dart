@@ -9,8 +9,6 @@ import 'package:my_demo/core/shared/the_input_field.dart';
 import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/view/screens/auth/widgets/custom_auth_card.dart';
 
-GlobalKey<FormState> forgetPasswordKey = new GlobalKey<FormState>();
-
 class ForgetPasswordScreen extends StatelessWidget {
   const ForgetPasswordScreen({Key? key}) : super(key: key);
 
@@ -21,7 +19,7 @@ class ForgetPasswordScreen extends StatelessWidget {
 
     return CustomAuthCard(
       authFealds: Form(
-        key: forgetPasswordKey,
+        key: forgetPasswordControllerImp.forgetPasswordKey,
         child: Column(
           children: [
             AppId(),

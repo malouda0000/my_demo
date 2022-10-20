@@ -8,8 +8,6 @@ import 'package:my_demo/core/shared/big_button.dart';
 import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/view/screens/auth/widgets/custom_auth_card.dart';
 
-GlobalKey<FormState> successfullyResetedPassword = new GlobalKey<FormState>();
-
 class SuccessfullyResetedPasswordScreen extends StatelessWidget {
   const SuccessfullyResetedPasswordScreen({Key? key}) : super(key: key);
 
@@ -21,7 +19,8 @@ class SuccessfullyResetedPasswordScreen extends StatelessWidget {
 
     return CustomAuthCard(
       authFealds: Form(
-        key: successfullyResetedPassword,
+        key: successfullyResetedPasswordControllerImp
+            .successfullyResetedPassword,
         child: Column(
           children: [
             AppId(),

@@ -11,6 +11,8 @@ abstract class VerifyCodeControllerForSuccSignup extends GetxController {
 
 class VerifyCodeControllerForSuccSignupImp
     extends VerifyCodeControllerForSuccSignup {
+  GlobalKey<FormState> verifyCodeKeyForSignup = new GlobalKey<FormState>();
+
   //
   Key signinEmailKey = new Key('');
   //
@@ -37,7 +39,9 @@ class VerifyCodeControllerForSuccSignupImp
 
   @override
   goToSuccSignup() {
-    Get.offAndToNamed(AppRoute.successfullySignedupScreen);
+    if (verifyCodeKeyForSignup.currentState!.validate()) {
+      Get.offAndToNamed(AppRoute.successfullySignedupScreen);
+    }
   }
 
   @override

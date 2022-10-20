@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/core/functions/validator.dart';
 import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/get_pages.dart';
 
 abstract class ResetPasswordController extends GetxController {
-  newPasswordTextValidator(String? text);
-  newPasswordConfTextValidator(String? text);
-  reset(String? text);
+  newPasswordTextValidator(String text);
+  newPasswordConfTextValidator(String text);
+  reset();
   goToSignIn();
   goToSuccessfullyResetedPassword();
 }
 
 class ResetPasswordControllerImp extends ResetPasswordController {
+  GlobalKey<FormState> resetPasswordKey = new GlobalKey<FormState>();
+
   //
   late TextEditingController newPasswordTextController;
   late TextEditingController newPasswordConfTextController;
@@ -29,25 +32,38 @@ class ResetPasswordControllerImp extends ResetPasswordController {
   }
 
   @override
-  reset(String? text) async {
+  reset() {
 // reset the password
+    // newPasswordTextValidator(text);
+    // newPasswordConfTextValidator(text);
+    if (resetPasswordKey.currentState!.validate()) {
+      goToSuccessfullyResetedPassword();
+    }
   }
 
   @override
-  newPasswordTextValidator(String? text) {
-    text = newPasswordTextController.text;
+  newPasswordTextValidator(String text) {
+    // text = newPasswordTextController.text;
 
-    if (text.length < 6) {
-      return AppLocal.passwordIsTooShourt.tr + '\n';
-    }
-    if (text.length > 25) {
-      return AppLocal.passwordIsTooLong.tr + '\n';
-    }
-    return null;
+    // if (text.length < 6) {
+    //   return AppLocal.passwordIsTooShourt.tr + '\n';
+    // }
+    // if (text.length > 25) {
+    //   return AppLocal.passwordIsTooLong.tr + '\n';
+    // }
+    // return null;
+
+    return validator(text, 6, 30, 'userName');
+
+    // if (text != null) {
+    //   return validator(text, 6, 30, 'userName');
+    // } else {
+    //   return 'password cant be empty';
+    // }
   }
 
   @override
-  newPasswordConfTextValidator(String? text) {
+  newPasswordConfTextValidator(String text) {
     text = newPasswordConfTextController.text;
 
     if (newPasswordTextController.text != text) {
@@ -59,7 +75,10 @@ class ResetPasswordControllerImp extends ResetPasswordController {
   }
 
   @override
-  goToSignIn() {}
+  goToSignIn() {
+    // if(verifyCodeKeyForResetPass.currentState!.validate() ){
+    // }
+  }
 
   @override
   void dispose() {
@@ -69,8 +88,6 @@ class ResetPasswordControllerImp extends ResetPasswordController {
 
   @override
   goToSuccessfullyResetedPassword() {
-    Get.offAllNamed(
-      AppRoute.succResetedPasswordScreen,
-    );
+    Get.offAllNamed(AppRoute.succResetedPasswordScreen);
   }
 }

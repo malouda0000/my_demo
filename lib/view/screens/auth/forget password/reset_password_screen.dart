@@ -10,8 +10,6 @@ import 'package:my_demo/core/shared/the_input_field.dart';
 import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/view/screens/auth/widgets/custom_auth_card.dart';
 
-GlobalKey<FormState> resetPasswordKey = new GlobalKey<FormState>();
-
 class ResetPasswordScreen extends StatelessWidget {
   const ResetPasswordScreen({Key? key}) : super(key: key);
 
@@ -26,7 +24,7 @@ class ResetPasswordScreen extends StatelessWidget {
     return CustomAuthCard(
       authFealds: Form(
         // key: ResetPasswordControllerImp.signupKey,
-        key: resetPasswordKey,
+        key: resetPasswordControllerImp.resetPasswordKey,
         child: Column(
           children: [
             AppId(),
@@ -35,7 +33,9 @@ class ResetPasswordScreen extends StatelessWidget {
               // new password text feild
 
               theValidator: (text) {
-                return resetPasswordControllerImp.reset(text);
+                // return resetPasswordControllerImp.reset();
+                return resetPasswordControllerImp
+                    .newPasswordTextValidator(text!);
               },
               theKey: resetPasswordControllerImp.newPasswordKey,
               theTextEditingController:
@@ -51,7 +51,7 @@ class ResetPasswordScreen extends StatelessWidget {
 
               theValidator: (text) {
                 return resetPasswordControllerImp
-                    .newPasswordConfTextValidator(text);
+                    .newPasswordConfTextValidator(text!);
               },
               theKey: resetPasswordControllerImp.newPasswordConfKey,
               theTextEditingController:
@@ -66,8 +66,11 @@ class ResetPasswordScreen extends StatelessWidget {
               // reset password button
               theButtonTitle: AppLocal.done.tr,
               theLeadingIcon: Icons.done,
-              onTaped: () async {
-                resetPasswordControllerImp.goToSuccessfullyResetedPassword();
+              onTaped: () {
+                resetPasswordControllerImp.reset(
+                    // resetPasswordControllerImp.newPasswordTextController.text
+
+                    );
               },
             ),
             emptySpace,

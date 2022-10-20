@@ -11,8 +11,6 @@ import '../../../core/shared/the_input_field.dart';
 import 'widgets/dont_have_account.dart';
 import 'widgets/or_row.dart';
 
-GlobalKey<FormState> signupKey = new GlobalKey<FormState>();
-
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({Key? key}) : super(key: key);
 
@@ -26,7 +24,7 @@ class SignUpScreen extends StatelessWidget {
     return CustomAuthCard(
       authFealds: Form(
         // key: signupControllerImp.signupKey,
-        key: signupKey,
+        key: signupControllerImp.signupKey,
         child: Column(
           children: [
             AppId(),

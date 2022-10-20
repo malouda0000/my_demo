@@ -11,8 +11,6 @@ import 'package:my_demo/view/screens/auth/widgets/custom_auth_card.dart';
 import 'package:otp_text_field/style.dart';
 import 'package:otp_text_field/otp_text_field.dart';
 
-GlobalKey<FormState> verifyCodeKeyForSignup = new GlobalKey<FormState>();
-
 class VerifyCodeScreenForSignup extends StatelessWidget {
   const VerifyCodeScreenForSignup({
     Key? key,
@@ -25,7 +23,7 @@ class VerifyCodeScreenForSignup extends StatelessWidget {
 
     return CustomAuthCard(
       authFealds: Form(
-        key: verifyCodeKeyForSignup,
+        key: verifyCodeControllerForSuccSignupImp.verifyCodeKeyForSignup,
         child: Column(
           children: [
             AppId(),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/core/themes/my_themes.dart';
+import 'package:my_demo/core/constants/my_themes.dart';
 import 'package:my_demo/main.dart';
 
 //  bool themeMode =  mySharedPrefes!.getBool('dark');

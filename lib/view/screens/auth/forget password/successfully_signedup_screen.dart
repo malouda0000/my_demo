@@ -8,8 +8,6 @@ import 'package:my_demo/core/shared/big_button.dart';
 import 'package:my_demo/core/shared/title_builder.dart';
 import 'package:my_demo/view/screens/auth/widgets/custom_auth_card.dart';
 
-GlobalKey<FormState> successfullySignedup = new GlobalKey<FormState>();
-
 class SuccessfullySignedupScreen extends StatelessWidget {
   const SuccessfullySignedupScreen({Key? key}) : super(key: key);
 
@@ -20,7 +18,7 @@ class SuccessfullySignedupScreen extends StatelessWidget {
 
     return CustomAuthCard(
       authFealds: Form(
-        key: successfullySignedup,
+        key: successfullySignedupControllerImp.successfullySignedup,
         child: Column(
           children: [
             AppId(),

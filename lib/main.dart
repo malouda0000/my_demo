@@ -5,7 +5,7 @@ import 'package:my_demo/controllers/auth/auth_controller.dart';
 import 'package:my_demo/controllers/localization_controller.dart';
 import 'package:my_demo/controllers/theme_controller.dart';
 import 'package:my_demo/core/middleware/auth_middleware.dart';
-import 'package:my_demo/core/themes/my_themes.dart';
+import 'package:my_demo/core/constants/my_themes.dart';
 import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/core/services/binding.dart';
 import 'package:my_demo/view/screens/auth/sign_in_screen.dart';
@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
       themeMode: themeContorller.myThemeMode,
       locale: locallizationsController.initalLang,
       translations: TheLocalization(),
-      home: SignInScreen(),
+      // home: SignInScreen(),
       // home: SuccessfullySignedupScreen(),
       // home: SuccessfullyResetedPasswordScreen(),
       // just i'll use home proberty for testing

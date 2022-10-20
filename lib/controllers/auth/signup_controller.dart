@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/core/functions/validator.dart';
 import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/view/screens/auth/widgets/check_email_dialog.dart';
@@ -15,6 +16,8 @@ abstract class SignupController extends GetxController {
 }
 
 class SignupControllerImp extends SignupController {
+  GlobalKey<FormState> signupKey = new GlobalKey<FormState>();
+
   //
   late TextEditingController signupEmailController;
   late TextEditingController signupPasswordController;
@@ -41,44 +44,47 @@ class SignupControllerImp extends SignupController {
 
     // Get.offAllNamed(AppRoute.homePage);
 
-    try {
-      print('signing up =====================');
-      final credential =
-          await FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: signupEmailController.text,
-        password: signupPasswordController.text,
-      );
+    if (signupKey.currentState!.validate()) {
+      try {
+        print('signing up =====================');
+        final credential =
+            await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: signupEmailController.text,
+          password: signupPasswordController.text,
+        );
 
-      if (credential.user?.uid != null) {
-        // GetSnackBar(
-        //   message: 'check your email to verfiy it',
-        // );
-        await Get.offAllNamed(AppRoute.signInScreen)!.then((value) async {
-          await checkYourEmailDialog();
-        });
+        if (credential.user?.uid != null) {
+          // GetSnackBar(
+          //   message: 'check your email to verfiy it',
+          // );
+          await Get.offAllNamed(AppRoute.signInScreen)!.then((value) async {
+            await checkYourEmailDialog();
+          });
+        }
+      } on FirebaseAuthException catch (e) {
+        if (e.code == 'weak-password') {
+          signupPasswordKey.printError();
+          print('The password provided is too weak.');
+        } else if (e.code == 'email-already-in-use') {
+          print('The account already exists for that email.');
+        }
+      } catch (e) {
+        print(e);
       }
-    } on FirebaseAuthException catch (e) {
-      if (e.code == 'weak-password') {
-        signupPasswordKey.printError();
-        print('The password provided is too weak.');
-      } else if (e.code == 'email-already-in-use') {
-        print('The account already exists for that email.');
-      }
-    } catch (e) {
-      print(e);
     }
   }
 
   @override
   emailTextValidator(String? text) {
-    text = signupEmailController.text;
-    if (text.length < 6) {
-      return AppLocal.emailIsTooShourt.tr + '\n';
-    }
-    if (text.length > 50) {
-      return AppLocal.emailIsTooLong.tr + '\n';
-    }
-    return null;
+    // text = signupEmailController.text;
+    // if (text.length < 6) {
+    //   return AppLocal.emailIsTooShourt.tr + '\n';
+    // }
+    // if (text.length > 50) {
+    //   return AppLocal.emailIsTooLong.tr + '\n';
+    // }
+    // return null;
+    return validator(text!, 6, 30, 'email');
   }
 
   @override
@@ -108,7 +114,9 @@ class SignupControllerImp extends SignupController {
 
   @override
   goToVerifyEmailScreen() {
-    Get.offAllNamed(AppRoute.verifyCodeScreenForSignup);
+    if (signupKey.currentState!.validate()) {
+      Get.offAllNamed(AppRoute.verifyCodeScreenForSignup);
+    }
   }
 
   @override

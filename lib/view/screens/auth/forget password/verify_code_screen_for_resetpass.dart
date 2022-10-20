@@ -11,8 +11,6 @@ import 'package:otp_text_field/style.dart';
 
 import 'package:otp_text_field/otp_text_field.dart';
 
-GlobalKey<FormState> verifyCodeKeyForResetPass = new GlobalKey<FormState>();
-
 class VerifyCodeScreenForResetPass extends StatelessWidget {
   const VerifyCodeScreenForResetPass({
     Key? key,
@@ -25,7 +23,7 @@ class VerifyCodeScreenForResetPass extends StatelessWidget {
 
     return CustomAuthCard(
       authFealds: Form(
-        key: verifyCodeKeyForResetPass,
+        key: verifyCodeControllerForResetPassImp.verifyCodeKeyForResetPass,
         child: Column(
           children: [
             AppId(),
@@ -33,7 +31,7 @@ class VerifyCodeScreenForResetPass extends StatelessWidget {
             // emptySpace,
 
             OTPTextField(
-              length: 5,
+              length: 6,
               width: MediaQuery.of(context).size.width,
               fieldWidth: 50,
               outlineBorderRadius: theDefaultRaduis,

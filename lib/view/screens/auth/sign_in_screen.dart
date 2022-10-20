@@ -12,8 +12,6 @@ import '../../../core/shared/the_input_field.dart';
 import 'widgets/dont_have_account.dart';
 import 'widgets/or_row.dart';
 
-GlobalKey<FormState> signinKey = new GlobalKey<FormState>();
-
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);
 
@@ -25,7 +23,7 @@ class SignInScreen extends StatelessWidget {
 
     return CustomAuthCard(
       authFealds: Form(
-        key: signinKey,
+        key: signInControllerImp.signinKey,
         child: Column(
           children: [
             AppId(),

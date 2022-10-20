@@ -7,6 +7,7 @@ import 'package:my_demo/get_pages.dart';
 abstract class ResetPasswordController extends GetxController {
   newPasswordTextValidator(String text);
   newPasswordConfTextValidator(String text);
+  showPasswordOnOff();
   reset();
   goToSignIn();
   goToSuccessfullyResetedPassword();
@@ -14,6 +15,7 @@ abstract class ResetPasswordController extends GetxController {
 
 class ResetPasswordControllerImp extends ResetPasswordController {
   GlobalKey<FormState> resetPasswordKey = new GlobalKey<FormState>();
+  bool dontShowPassword = true;
 
   //
   late TextEditingController newPasswordTextController;
@@ -72,6 +74,14 @@ class ResetPasswordControllerImp extends ResetPasswordController {
       return AppLocal.passwordsAreNotEqual.tr + '\n';
     }
     return null;
+  }
+
+  @override
+  showPasswordOnOff() {
+    dontShowPassword == true
+        ? dontShowPassword = false
+        : dontShowPassword = true;
+    update();
   }
 
   @override

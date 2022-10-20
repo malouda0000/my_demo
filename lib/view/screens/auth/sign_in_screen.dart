@@ -44,19 +44,24 @@ class SignInScreen extends StatelessWidget {
               isPassword: false,
             ),
             emptySpace,
-            TheInputField(
-              // password input field
-              theValidator: (text) {
-                return signInControllerImp.passwordTextValidator(text);
-              },
-              theKey: signInControllerImp.signinPasswordKey,
-              theTextEditingController:
-                  signInControllerImp.signinPasswordTextController,
-              theInputType: TextInputType.text,
-              theHient: AppLocal.password.tr,
-              theLeadingIcon: Icons.password_outlined,
-              isPassword: true,
-            ),
+            GetBuilder<SignInControllerImp>(builder: (signInControllerImp) {
+              return TheInputField(
+                // password input field
+                theValidator: (text) {
+                  return signInControllerImp.passwordTextValidator(text);
+                },
+                theKey: signInControllerImp.signinPasswordKey,
+                theTextEditingController:
+                    signInControllerImp.signinPasswordTextController,
+                theInputType: TextInputType.text,
+                theHient: AppLocal.password.tr,
+                theLeadingIcon: Icons.password_outlined,
+                isPassword: signInControllerImp.dontShowPassword,
+                onIconTap: () {
+                  signInControllerImp.showPasswordOnOff();
+                },
+              );
+            }),
             emptySpace,
             Container(
               clipBehavior: Clip.hardEdge,

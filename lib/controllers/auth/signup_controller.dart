@@ -13,10 +13,13 @@ abstract class SignupController extends GetxController {
   signup();
   goToVerifyEmailScreen();
   goToSignIn();
+  showPasswordOnOff();
 }
 
 class SignupControllerImp extends SignupController {
   GlobalKey<FormState> signupKey = new GlobalKey<FormState>();
+  bool dontShowPassword = true;
+// bool dontShowRePassword = true;
 
   //
   late TextEditingController signupEmailController;
@@ -122,6 +125,14 @@ class SignupControllerImp extends SignupController {
   @override
   goToSignIn() {
     Get.offAllNamed(AppRoute.signInScreen);
+  }
+
+  @override
+  showPasswordOnOff() {
+    dontShowPassword == true
+        ? dontShowPassword = false
+        : dontShowPassword = true;
+    update();
   }
 
   @override

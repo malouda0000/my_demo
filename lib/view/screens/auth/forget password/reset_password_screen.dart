@@ -29,38 +29,53 @@ class ResetPasswordScreen extends StatelessWidget {
           children: [
             AppId(),
             TitleBuilder(theTitle: 'reset password'),
-            TheInputField(
-              // new password text feild
+            GetBuilder<ResetPasswordControllerImp>(
+                builder: (resetPasswordControllerImp) {
+              return TheInputField(
+                // new password text feild
 
-              theValidator: (text) {
-                // return resetPasswordControllerImp.reset();
-                return resetPasswordControllerImp
-                    .newPasswordTextValidator(text!);
-              },
-              theKey: resetPasswordControllerImp.newPasswordKey,
-              theTextEditingController:
-                  resetPasswordControllerImp.newPasswordTextController,
-              theInputType: TextInputType.text,
-              theHient: AppLocal.password.tr,
-              theLeadingIcon: Icons.password_outlined,
-              isPassword: true,
-            ),
+                theValidator: (text) {
+                  // return resetPasswordControllerImp.reset();
+                  return resetPasswordControllerImp
+                      .newPasswordTextValidator(text!);
+                },
+                theKey: resetPasswordControllerImp.newPasswordKey,
+                theTextEditingController:
+                    resetPasswordControllerImp.newPasswordTextController,
+                theInputType: TextInputType.text,
+                theHient: AppLocal.password.tr,
+                theLeadingIcon: Icons.password_outlined,
+                // iam so happy that i discovered this
+                // error so fast
+                // isPassword: resetPasswordControllerImp.showPasswordOnOff(),
+                isPassword: resetPasswordControllerImp.dontShowPassword,
+                onIconTap: () {
+                  resetPasswordControllerImp.showPasswordOnOff();
+                },
+              );
+            }),
             emptySpace,
-            TheInputField(
-              // new password confirm text feiald
+            GetBuilder<ResetPasswordControllerImp>(
+                builder: (resetPasswordControllerImp) {
+              return TheInputField(
+                // new password confirm text feiald
 
-              theValidator: (text) {
-                return resetPasswordControllerImp
-                    .newPasswordConfTextValidator(text!);
-              },
-              theKey: resetPasswordControllerImp.newPasswordConfKey,
-              theTextEditingController:
-                  resetPasswordControllerImp.newPasswordConfTextController,
-              theInputType: TextInputType.text,
-              theHient: AppLocal.reinterPassword.tr,
-              theLeadingIcon: Icons.password_outlined,
-              isPassword: true,
-            ),
+                theValidator: (text) {
+                  return resetPasswordControllerImp
+                      .newPasswordConfTextValidator(text!);
+                },
+                theKey: resetPasswordControllerImp.newPasswordConfKey,
+                theTextEditingController:
+                    resetPasswordControllerImp.newPasswordConfTextController,
+                theInputType: TextInputType.text,
+                theHient: AppLocal.reinterPassword.tr,
+                theLeadingIcon: Icons.password_outlined,
+                isPassword: resetPasswordControllerImp.dontShowPassword,
+                onIconTap: () {
+                  resetPasswordControllerImp.showPasswordOnOff();
+                },
+              );
+            }),
             emptySpace,
             BigggButton(
               // reset password button

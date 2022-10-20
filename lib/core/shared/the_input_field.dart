@@ -10,6 +10,7 @@ class TheInputField extends StatelessWidget {
   // final Color theBorderColor, theInputColor;
   // final double theBorderRadius, thePadding;
   final IconData theLeadingIcon;
+  final void Function()? onIconTap;
   final bool isPassword;
   final TextInputType theInputType;
 
@@ -26,6 +27,7 @@ class TheInputField extends StatelessWidget {
     required this.theLeadingIcon,
     required this.isPassword,
     required this.theInputType,
+    this.onIconTap,
   }) : super(key: key);
 
   @override
@@ -47,14 +49,17 @@ class TheInputField extends StatelessWidget {
         controller: theTextEditingController,
 
         keyboardType: theInputType,
-        obscureText: isPassword,
+        obscureText: isPassword == false ? false : true,
         style: Theme.of(context).textTheme.bodyText1,
         decoration: InputDecoration(
           fillColor: AppColor.kPrimaryColor.withOpacity(.2),
           border: InputBorder.none,
-          icon: Icon(
-            theLeadingIcon,
-            color: Theme.of(context).textTheme.bodyText1!.color!,
+          icon: GestureDetector(
+            onTap: onIconTap,
+            child: Icon(
+              theLeadingIcon,
+              color: Theme.of(context).textTheme.bodyText1!.color!,
+            ),
           ),
           hintText: theHient,
           hintStyle: Theme.of(context).textTheme.bodyText1!,

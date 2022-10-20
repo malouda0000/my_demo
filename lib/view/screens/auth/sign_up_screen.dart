@@ -46,38 +46,48 @@ class SignUpScreen extends StatelessWidget {
               isPassword: false,
             ),
             emptySpace,
-            TheInputField(
-              // password text feiald
+            GetBuilder<SignupControllerImp>(builder: ((signupControllerImp) {
+              return TheInputField(
+                // password text feiald
 
-              theValidator: (text) {
-                return signupControllerImp.passwordTextValidator(text);
-              },
-              theKey: signupControllerImp.signupPasswordKey,
-              theTextEditingController:
-                  signupControllerImp.signupPasswordController,
-              theInputType: TextInputType.text,
-              theHient: AppLocal.password.tr,
-              theLeadingIcon: Icons.password_outlined,
-              isPassword: true,
-            ),
+                theValidator: (text) {
+                  return signupControllerImp.passwordTextValidator(text);
+                },
+                theKey: signupControllerImp.signupPasswordKey,
+                theTextEditingController:
+                    signupControllerImp.signupPasswordController,
+                theInputType: TextInputType.text,
+                theHient: AppLocal.password.tr,
+                theLeadingIcon: Icons.password_outlined,
+                isPassword: signupControllerImp.dontShowPassword,
+                onIconTap: () {
+                  signupControllerImp.showPasswordOnOff();
+                },
+              );
+            })),
             emptySpace,
-            TheInputField(
-              // confirm password text feiald
-              theValidator: (text) {
-                return signupControllerImp.PasswordConfTextValidator(text);
-              },
-              theKey: signupControllerImp.signupPasswordConfKey,
-              theTextEditingController:
-                  signupControllerImp.signupPasswordConfController,
-              theInputType: TextInputType.text,
-              // theBorderColor: AppColor.kPrimaryColor,
-              // theBorderRadius: ,
-              theHient: AppLocal.password.tr,
-              // theInputColor: Theme.of(context).textTheme.bodyText1!.color!,
-              theLeadingIcon: Icons.password_outlined,
+            GetBuilder<SignupControllerImp>(builder: (signupControllerImp) {
+              return TheInputField(
+                // confirm password text feiald
+                theValidator: (text) {
+                  return signupControllerImp.PasswordConfTextValidator(text);
+                },
+                theKey: signupControllerImp.signupPasswordConfKey,
+                theTextEditingController:
+                    signupControllerImp.signupPasswordConfController,
+                theInputType: TextInputType.text,
+                // theBorderColor: AppColor.kPrimaryColor,
+                // theBorderRadius: ,
+                theHient: AppLocal.password.tr,
+                // theInputColor: Theme.of(context).textTheme.bodyText1!.color!,
+                theLeadingIcon: Icons.password_outlined,
 
-              isPassword: true,
-            ),
+                isPassword: signupControllerImp.dontShowPassword,
+                onIconTap: () {
+                  signupControllerImp.showPasswordOnOff();
+                },
+              );
+            }),
             emptySpace,
             BigggButton(
               // signup button

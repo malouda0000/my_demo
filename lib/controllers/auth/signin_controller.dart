@@ -11,6 +11,7 @@ import 'package:my_demo/view/screens/auth/widgets/my_dialog.dart';
 abstract class SignInController extends GetxController {
   emailTextValidator(String? text);
   passwordTextValidator(String? text);
+  showPasswordOnOff();
   signIn();
   fackSignIn();
   goToSignUp();
@@ -19,6 +20,7 @@ abstract class SignInController extends GetxController {
 
 class SignInControllerImp extends SignInController {
   GlobalKey<FormState> signinKey = new GlobalKey<FormState>();
+  bool dontShowPassword = true;
 
   //
   Key signinEmailKey = new Key('');
@@ -63,6 +65,14 @@ class SignInControllerImp extends SignInController {
     return null;
 
     // return validator(text!, 6, 30, 'password');
+  }
+
+  @override
+  showPasswordOnOff() {
+    dontShowPassword == true
+        ? dontShowPassword = false
+        : dontShowPassword = true;
+    update();
   }
 
   @override

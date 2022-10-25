@@ -14,32 +14,37 @@ class CustBottomNavItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<HomeScreenControllerImp>(
         builder: ((homeScreenControllerImp) {
-      return MaterialButton(
-        animationDuration: Duration(
-          seconds: 1,
-        ),
-        // minWidth: 0,
-        onPressed: () {
-          homeScreenControllerImp.changeHomeScreenBody(theIndex);
-        },
-        child: Row(
-          children: [
-            // theIndex == 0 ? Spacer() : SizedBox(),
-            Icon(
-              homeScreenControllerImp.bottomNavIcons[theIndex],
-              color: theIndex == homeScreenControllerImp.currentHomeScreen
-                  ? AppColor.kPrimaryColor
-                  : AppColor.kTextColor,
-              // size: theIndex == homeScreenControllerImp.currentHomeScreen
-              //     ? 28
-              //     : 20,
+      return SizedBox(
+        width: 65,
+        child: MaterialButton(
+          splashColor: Colors.transparent,
 
-              size: 20,
-            ),
-            // theIndex == bottomNavBarControllerImp.mainAppScreens.length
-            //     ? Spacer()
-            //     : SizedBox(),
-          ],
+          animationDuration: Duration(
+            seconds: 1,
+          ),
+          // minWidth: 0,
+          onPressed: () {
+            homeScreenControllerImp.changeHomeScreenBody(theIndex);
+          },
+          child: Row(
+            children: [
+              // theIndex == 0 ? Spacer() : SizedBox(),
+              Icon(
+                homeScreenControllerImp.bottomNavIcons[theIndex],
+                color: theIndex == homeScreenControllerImp.currentHomeScreen
+                    ? AppColor.kPrimaryColor
+                    : AppColor.kTextColor,
+                // size: theIndex == homeScreenControllerImp.currentHomeScreen
+                //     ? 28
+                //     : 20,
+
+                size: 20,
+              ),
+              // theIndex == bottomNavBarControllerImp.mainAppScreens.length
+              //     ? Spacer()
+              //     : SizedBox(),
+            ],
+          ),
         ),
       );
     }));

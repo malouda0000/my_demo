@@ -22,11 +22,14 @@ class MainScreen extends StatelessWidget {
         drawer: const TheDrawer(),
         appBar: TheAppBar(context),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: AppColor.kPrimaryColor,
-          onPressed: () {},
-          child: CustBottomNavItem(
-            theIndex: 2,
+        floatingActionButton: Container(
+          margin: EdgeInsets.all(5),
+          child: FloatingActionButton(
+            backgroundColor: AppColor.kPrimaryColor,
+            onPressed: () {},
+            child: CustBottomNavItem(
+              theIndex: 2,
+            ),
           ),
         ),
         bottomNavigationBar: TheBottomNavBar(),

@@ -13,7 +13,7 @@ class TheBottomNavBar extends StatelessWidget {
       builder: ((homeScreenControllerImp) {
         return BottomAppBar(
           shape: CircularNotchedRectangle(),
-          notchMargin: 10,
+          // notchMargin: 10,
           // elevation: 0,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,

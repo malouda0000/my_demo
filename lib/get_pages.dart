@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:my_demo/core/middleware/auth_middleware.dart';
 import 'package:my_demo/core/services/binding.dart';
 import 'package:my_demo/core/shared/custom_splash_screen.dart';
+import 'package:my_demo/main_screen.dart';
 import 'package:my_demo/view/screens/Error/error_message_screen.dart';
 import 'package:my_demo/view/screens/auth/forget%20password/forget_password_screen.dart';
 import 'package:my_demo/view/screens/auth/forget%20password/reset_password_screen.dart';
@@ -15,7 +16,6 @@ import 'package:my_demo/view/screens/about%20screen/about_screen.dart';
 import 'package:my_demo/view/screens/auth/sign_in_screen.dart';
 import 'package:my_demo/view/screens/auth/sign_up_screen.dart';
 import 'package:my_demo/view/screens/detials%20screen/detials_screen.dart';
-import 'package:my_demo/view/screens/home/home_screen.dart';
 import 'package:my_demo/view/screens/localization/localization_screen.dart';
 import 'package:my_demo/view/screens/theme/theme_screen.dart';
 
@@ -39,7 +39,7 @@ class AppRoute {
   static const String successfullySignedupScreen = '/succSignedupScreen';
 
   // main screens
-  static const String homePage = '/homePage';
+  static const String mainScreen = '/mainScreen';
   static const String detailsScreen = '/detailsScreen';
   static const String settingScreen = '/settingScreen';
   static const String foodMenueScreen = '/foodMenueScreen';
@@ -107,8 +107,8 @@ class GetPages {
 
     // main screens
     GetPage(
-      name: AppRoute.homePage,
-      page: () => const HomeScreen(),
+      name: AppRoute.mainScreen,
+      page: () => const MainScreen(),
       // binding: LocalizationBindings(),
     ),
     GetPage(

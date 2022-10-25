@@ -1,31 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/controllers/home_screen_controller.dart';
-import 'package:my_demo/core/shared/bottom%20navigation%20bar/bottom_nav_bar.dart';
 import 'package:my_demo/view/screens/home/categores_page.dart';
 import 'package:my_demo/view/screens/home/temp_page.dart';
 import 'package:my_demo/view/screens/home/widgets/big_burger_page.dart';
 import 'package:my_demo/view/screens/home/widgets/items_title_builder.dart';
 import 'package:my_demo/view/screens/home/widgets/the_category_item.dart';
-import '../../../core/shared/the appbar/the_app_bar.dart';
-import '../../../core/shared/the_drawer.dart';
-
-///
-///
-
-// GlobalKey<ScaffoldState> myKey = GlobalKey();
-// GlobalKey<ScaffoldState> myKey = GlobalKey<ScaffoldState>();
-// List<Map<String, Widget>> homePagesList = [
-//   {AppLocal.bigBurger: BigBurgurePage()},
-//   {AppLocal.hotdoge: CategoresPage()},
-//   {AppLocal.smallBurger: TempPage()},
-//   {AppLocal.bigBurger: BigBurgurePage()},
-//   {AppLocal.pitza: CategoresPage()},
-//   {AppLocal.bigBurger: TempPage()},
-//   {AppLocal.pitza: BigBurgurePage()},
-// ];
 
 List<Widget> homePagesList = [
+  // used for the home screen taps changer
   BigBurgurePage(),
   CategoresPage(),
   TempPage(),
@@ -42,64 +25,54 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(HomeScreenControllerImp());
-    return Scaffold(
-      // key: myKey,
-      drawer: const TheDrawer(),
-      appBar: TheAppBar(context),
-      bottomNavigationBar: TheBottomNavBar(),
-      // drawer: (),
-      body: Column(
-        // mainAxisSize: MainAxisSize.min,
-        children: [
-          Container(
-            child: Expanded(
-                // flex: 1,
-                child: GetBuilder<HomeScreenControllerImp>(
-              builder: ((homeScreenControllerImp) {
-                return ListView.builder(
+    return Column(
+      children: [
+        Container(
+          child: Expanded(
+              // flex: 1,
+              child: GetBuilder<HomeScreenControllerImp>(
+            builder: ((homeScreenControllerImp) {
+              return ListView.builder(
 
-                    // titles list
-                    itemCount: homePagesList.length,
-                    scrollDirection: Axis.horizontal,
-                    // shrinkWrap: true,
-                    itemBuilder: (context, i) {
-                      // return items[index];
+                  // titles list
+                  itemCount: homePagesList.length,
+                  scrollDirection: Axis.horizontal,
+                  // shrinkWrap: true,
+                  itemBuilder: (context, i) {
+                    // return items[index];
 
-                      return ItemsTitleBuilder(
-                        title: titlesList[i],
-                        pressed: () async {
-                          await homeScreenControllerImp.onPageJumpededTo(i);
-                        },
-                        isActive: i == homeScreenControllerImp.currentPage
-                            ? true
-                            : false,
+                    return ItemsTitleBuilder(
+                      title: titlesList[i],
+                      pressed: () async {
+                        await homeScreenControllerImp.onPageJumpededTo(i);
+                      },
+                      isActive: i == homeScreenControllerImp.currentPage
+                          ? true
+                          : false,
 // if( index == homeScreenControllerImp.currentPage ){ return true;} else { return false;},
-                      );
-                    });
+                    );
+                  });
+            }),
+          )),
+        ),
+        Expanded(
+            // home page body
+            flex: 10,
+            child: GetBuilder<HomeScreenControllerImp>(
+              builder: ((homeScreenControllerImp) {
+                return PageView.builder(
+                  controller: homeScreenControllerImp.pageController,
+                  onPageChanged: (value) {
+                    homeScreenControllerImp.onPageChanged(value);
+                  },
+                  itemCount: homePagesList.length,
+                  itemBuilder: (context, index) {
+                    return homePagesList[index];
+                  },
+                );
               }),
             )),
-          ),
-          Expanded(
-              // home page body
-              flex: 10,
-              child: GetBuilder<HomeScreenControllerImp>(
-                builder: ((homeScreenControllerImp) {
-                  return PageView.builder(
-                    controller: homeScreenControllerImp.pageController,
-                    onPageChanged: (value) {
-                      homeScreenControllerImp.onPageChanged(value);
-                    },
-                    itemCount: homePagesList.length,
-                    itemBuilder: (context, index) {
-                      return homePagesList[index];
-                    },
-                  );
-                }),
-              )),
-        ],
-      ),
-      // floatingActionButton: const TheFap(),
+      ],
     );
   }
 }

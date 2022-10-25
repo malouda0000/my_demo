@@ -107,7 +107,7 @@ class SignInControllerImp extends SignInController {
               print('email not vervied ============');
             } else {
               Get.offAllNamed(
-                AppRoute.homePage,
+                AppRoute.mainScreen,
               );
 
               print('email is vervied ============');
@@ -145,7 +145,7 @@ class SignInControllerImp extends SignInController {
     // the final product !!!
     await mySharedPrefes!.setBool('logIn', true);
     print('signedIn innnnnnnnnnn');
-    Get.offAllNamed(AppRoute.homePage);
+    Get.offAllNamed(AppRoute.mainScreen);
   }
 
   goToSignUp() {

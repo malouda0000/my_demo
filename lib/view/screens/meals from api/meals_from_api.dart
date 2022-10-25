@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:my_demo/controllers/api_controller.dart';
 import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/core/constants/constants.dart';
-import 'package:my_demo/core/shared/bottom%20navigation%20bar/bottom_nav_bar.dart';
 import 'package:my_demo/core/shared/custom_splash_screen.dart';
 
 // List posts = [];
@@ -18,58 +17,53 @@ class MealsFromApi extends StatefulWidget {
 class _MealsFromApiState extends State<MealsFromApi> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        bottomNavigationBar: TheBottomNavBar(),
-        body: SafeArea(
-          child: GetBuilder<ApiController>(
-            builder: (controller) {
-              return FutureBuilder(
-                future: controller.getMealsFromApi(),
-                builder: (context, snapshot) {
-                  return snapshot.hasData
-                      ? ListView.builder(
-                          // shrinkWrap: true,
-                          // physics: NeverScrollableScrollPhysics(),
-                          itemCount: controller.posts.length,
-                          itemBuilder: (context, index) {
-                            // var shourtcut = snapshot.data!;
+    return GetBuilder<ApiController>(
+      builder: (controller) {
+        return FutureBuilder(
+          future: controller.getMealsFromApi(),
+          builder: (context, snapshot) {
+            return snapshot.hasData
+                ? ListView.builder(
+                    // shrinkWrap: true,
+                    // physics: NeverScrollableScrollPhysics(),
+                    itemCount: controller.posts.length,
+                    itemBuilder: (context, index) {
+                      // var shourtcut = snapshot.data!;
 
-                            return Container(
-                              margin: EdgeInsets.all(20),
-                              // height: 20,
-                              width: double.infinity,
-                              clipBehavior: Clip.hardEdge,
-                              decoration: BoxDecoration(
-                                color: AppColor.kPrimaryColor,
+                      return Container(
+                        margin: EdgeInsets.all(20),
+                        // height: 20,
+                        width: double.infinity,
+                        clipBehavior: Clip.hardEdge,
+                        decoration: BoxDecoration(
+                          color: AppColor.kPrimaryColor,
 
-                                borderRadius:
-                                    BorderRadius.circular(theDefaultRaduis),
-                                // border: Border.all()
+                          borderRadius: BorderRadius.circular(theDefaultRaduis),
+                          // border: Border.all()
+                        ),
+                        child: Column(
+                          children: [
+                            Image(
+                              image: NetworkImage(
+                                '${controller.posts[index]['url']}',
                               ),
-                              child: Column(
-                                children: [
-                                  Image(
-                                    image: NetworkImage(
-                                      '${controller.posts[index]['url']}',
-                                    ),
-                                  ),
-                                  emptySpace,
-                                  Text('${controller.posts[index]['title']}'),
-                                  emptySpace,
-                                ],
-                              ),
-                            );
-                          },
-                        )
-                      : CustomSplashScreen(
-                          progress: true,
-                          haveDiscription: false,
-                        );
-                },
-              );
-            },
-          ),
-        ));
+                            ),
+                            emptySpace,
+                            Text('${controller.posts[index]['title']}'),
+                            emptySpace,
+                          ],
+                        ),
+                      );
+                    },
+                  )
+                : CustomSplashScreen(
+                    progress: true,
+                    haveDiscription: false,
+                  );
+          },
+        );
+      },
+    );
   }
 
   // body: ListView.builder(

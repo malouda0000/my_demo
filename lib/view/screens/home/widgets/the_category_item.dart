@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_demo/controllers/home_screen_controller.dart';
-import 'package:my_demo/view/screens/home/home_screen.dart';
 import '../../../../core/localization/localization.dart';
 import 'items_title_builder.dart';
 

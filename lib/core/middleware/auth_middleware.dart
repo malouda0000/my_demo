@@ -40,7 +40,7 @@ class AuthMiddleWare extends GetMiddleware {
   RouteSettings? redirect(String? route) {
     // priority = 2;
     if (mySharedPrefes!.getBool('logIn') == true) {
-      return RouteSettings(name: AppRoute.homePage);
+      return RouteSettings(name: AppRoute.mainScreen);
     } else {
       RouteSettings(name: AppRoute.signInScreen);
     }

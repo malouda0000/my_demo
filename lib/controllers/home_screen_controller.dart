@@ -1,16 +1,68 @@
-import 'dart:developer';
-import 'dart:math';
-
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_demo/view/screens/about%20screen/about_screen.dart';
+import 'package:my_demo/view/screens/cart%20screen/cart_screen.dart';
+import 'package:my_demo/view/screens/home/home_screen.dart';
+import 'package:my_demo/view/screens/meals%20from%20api/meals_from_api.dart';
+import 'package:my_demo/view/screens/setting/setting_screen.dart';
 
 abstract class HomeScreenController extends GetxController {
   onPageChanged(int index);
+  onPageJumpededTo(int index);
+
+  /* 
+    changeHomeScreen() is for changing the body
+    of the main scaffold
+  */
+  changeHomeScreenBody(int index);
 }
 
 class HomeScreenControllerImp extends GetxController {
+  /* 
+    used for the home screen and its pages 
+    and taps, like bigburgger, hotdoge, pitzaa,
+  */
   late PageController pageController;
   int currentPage = 0;
+
+  /*
+    used for the for the bottom nav bar, and changing the 
+    body of the main scaffold
+  */
+  int currentHomeScreen = 0;
+
+  List<IconData> bottomNavIcons = [
+    /* 
+    used for the bottom navigation bar
+    */
+    Icons.home_rounded,
+    Icons.food_bank_rounded,
+    Icons.shop_2_rounded,
+    Icons.settings_rounded,
+    Icons.more_rounded,
+  ];
+  List<Widget> mainAppScreens = [
+    /*
+this are the body of the main scaffold, and they are changed
+when you chang the bottom nav bar icon, or on pressing the bottom nav bar
+
+    */
+    HomeScreen(),
+    MealsFromApi(),
+    CartScreen(),
+    SettingScreen(),
+    AboutScreen(),
+  ];
+  int theCurrentIndex = 0;
+
+  changeHomeScreenBody(index) {
+/*
+used to change the body of the main scaffold 
+*/
+    currentHomeScreen = index;
+    // Get.offAll(MainAppScreens[index]);
+    update();
+  }
 
   @override
   void onInit() {

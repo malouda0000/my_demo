@@ -29,58 +29,51 @@ class AboutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // drawer: (),
-      body: SafeArea(
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          padding: const EdgeInsets.all(15),
+    return ListView(
+      scrollDirection: Axis.vertical,
+      padding: const EdgeInsets.all(15),
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              // mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                emptySpace,
-                Card(
-                  elevation: theDefaultElevation,
-                  child: Padding(
-                    padding: EdgeInsets.all(theDefaultPadding),
-                    child: Row(
+            emptySpace,
+            Card(
+              elevation: theDefaultElevation,
+              child: Padding(
+                padding: EdgeInsets.all(theDefaultPadding),
+                child: Row(
+                  children: [
+                    // the default user image
+                    CircularImageWithBorder(imagePath: AppImages.userImage),
+                    Spacer(),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // the default user image
-                        CircularImageWithBorder(imagePath: AppImages.userImage),
-                        Spacer(),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            UserName(),
-                            Text(
-                              AppLocal.userEmail.tr,
-                            )
-                          ],
-                        ),
-                        Spacer(),
+                        UserName(),
+                        Text(
+                          AppLocal.userEmail.tr,
+                        )
                       ],
                     ),
-                  ),
+                    Spacer(),
+                  ],
                 ),
-                emptySpace,
-                MySettingListTiles(),
-                emptySpace,
-                ContactMeRow(),
-                emptySpace,
-                TempDebugingRow(),
-                emptySpace,
-                ReservedRightsRow(),
-                emptySpace,
-              ],
+              ),
             ),
+            emptySpace,
+            MySettingListTiles(),
+            emptySpace,
+            ContactMeRow(),
+            emptySpace,
+            TempDebugingRow(),
+            emptySpace,
+            ReservedRightsRow(),
+            emptySpace,
           ],
         ),
-      ),
-      // floatingActionButton: const TheFap(),
-      bottomNavigationBar: const TheBottomNavBar(),
+      ],
     );
   }
 }

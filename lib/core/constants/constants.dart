@@ -12,3 +12,10 @@ const SizedBox emptySpace = const SizedBox(
   height: 10,
   width: 10,
 );
+
+class AppConstants {
+  static const String userPhone = '+249928722310';
+  static const String gitHub = 'https://github.com/malouda0000';
+  static const String linkedIn = 'https://linkedin.com/in/hummam-mohamed-hamza';
+  static const String userEmail = 'hamam.hamza85@gmail.com';
+}

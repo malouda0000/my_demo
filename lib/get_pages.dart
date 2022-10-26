@@ -4,6 +4,7 @@ import 'package:my_demo/core/services/binding.dart';
 import 'package:my_demo/core/shared/custom_splash_screen.dart';
 import 'package:my_demo/main_screen.dart';
 import 'package:my_demo/view/screens/Error/error_message_screen.dart';
+import 'package:my_demo/view/screens/account/user_account.dart';
 import 'package:my_demo/view/screens/auth/forget%20password/forget_password_screen.dart';
 import 'package:my_demo/view/screens/auth/forget%20password/reset_password_screen.dart';
 import 'package:my_demo/view/screens/auth/forget%20password/verify_code_screen_for_resetpass.dart';
@@ -23,11 +24,11 @@ import 'view/screens/auth/forget password/succesfully_reseted_password_screen.da
 import 'view/screens/auth/forget password/successfully_signedup_screen.dart';
 
 class AppRoute {
-  // app inital
+// app inital
   static const String customOnbordingScreen = '/';
   static const String customSplashScreen = '/splashScreen';
 
-  // auth
+// auth
   static const String signUpScreen = '/signUpScreen';
   static const String signInScreen = '/SinInScreen';
   static const String forgetPasswordScreen = '/forgetPasswordScreen';
@@ -38,17 +39,21 @@ class AppRoute {
   static const String succResetedPasswordScreen = '/succResetedPasswordScreen';
   static const String successfullySignedupScreen = '/succSignedupScreen';
 
-  // main screens
+// main screens
   static const String mainScreen = '/mainScreen';
   static const String detailsScreen = '/detailsScreen';
-  static const String settingScreen = '/settingScreen';
   static const String foodMenueScreen = '/foodMenueScreen';
   static const String cartScreen = '/cartScreen';
   static const String aboutScreen = '/aboutScreen';
 
-// seconders screens
+// setting screens
+  static const String settingScreen = '/settingScreen';
   static const String themeScreen = '/themeScreen';
   static const String localizationScreen = '/localizationScreen';
+  static const String userAccountScreen = '/userAccountScreen';
+
+// seconders screens
+
   static const String underDevelopmentScreen = '/underDevelopmentScreen';
   static const String errorMessageScreen = '/errorMessageScreen';
 }
@@ -122,6 +127,17 @@ class GetPages {
       name: AppRoute.detailsScreen,
       page: () => const DetialsScreen(),
     ),
+
+// setting screens
+    GetPage(
+      name: AppRoute.userAccountScreen,
+      page: () => const UserAccount(),
+    ),
+    GetPage(
+      name: AppRoute.localizationScreen,
+      page: () => const LocaliaztionScreen(),
+      binding: LocalizationBindings(),
+    ),
     GetPage(
       name: AppRoute.themeScreen,
       page: () => const ThemeScreen(),
@@ -130,11 +146,6 @@ class GetPages {
       name: AppRoute.aboutScreen,
       page: () => const AboutScreen(),
       // bindings: [],
-    ),
-    GetPage(
-      name: AppRoute.localizationScreen,
-      page: () => const LocaliaztionScreen(),
-      binding: LocalizationBindings(),
     ),
     GetPage(
       name: AppRoute.underDevelopmentScreen,

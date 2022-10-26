@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/core/constants/constants.dart';
+import 'package:my_demo/core/functions/social_functions.dart';
 import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/core/shared/communication_row.dart';
 import 'package:my_demo/core/shared/title_builder.dart';

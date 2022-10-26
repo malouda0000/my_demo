@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/core/constants/constants.dart';
+import 'package:my_demo/core/shared/title_builder.dart';
 
 import '../../../../core/constants/app_color.dart';
 import '../../../../core/constants/app_images.dart';
@@ -16,15 +17,8 @@ class OffersAndDiscounts extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: EdgeInsets.symmetric(
-            vertical: 20,
-            horizontal: theDefaultPadding,
-          ),
-          child: Text(
-            AppLocal.offersAndDiscounts.tr,
-            style: Theme.of(context).textTheme.headline6,
-          ),
+        TitleBuilder(
+          theTitle: AppLocal.offersAndDiscounts.tr,
         ),
         Padding(
           padding: EdgeInsets.symmetric(

@@ -52,7 +52,7 @@ class ItemsTitleBuilder extends GetView<HomeScreenControllerImp> {
                     vertical: 8,
                     horizontal: 8,
                   ),
-                  height: 3,
+                  height: 5,
                   width: 22,
                 ),
             ],

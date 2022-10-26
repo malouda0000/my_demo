@@ -13,7 +13,9 @@ class CustomSearchBar extends StatelessWidget {
     TextEditingController searchMealTextEditingController =
         new TextEditingController();
     return Padding(
-      padding: EdgeInsets.all(theDefaultPadding),
+      padding: EdgeInsets.symmetric(
+        horizontal: theDefaultPadding,
+      ),
       child: TheInputField(
         theValidator: (p0) {
           return null;

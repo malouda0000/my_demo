@@ -14,108 +14,104 @@ class FoodMenueScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.all(theDefaultPadding),
-          child: TitleBuilder(theTitle: 'Food Menu'),
-        ),
+        TitleBuilder(theTitle: 'Food Menu'),
         GridView.builder(
-            physics: NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            padding: EdgeInsets.all(theDefaultPadding),
-            itemCount: FoodMenuesData.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              childAspectRatio: .7,
-              crossAxisSpacing: 20,
-              mainAxisSpacing: 20,
-            ),
-            itemBuilder: ((context, index) {
-              return InkWell(
-                  onTap: () {
-                    Get.to(
-                        () => FoodListScreen(
-                              theListTileIndex: index,
-                              foodListItems:
-                                  FoodMenuesData[index].foodListItems,
-                            ),
-                        binding: AddingMealBindings());
-                  },
-                  child: Container(
-                    clipBehavior: Clip.hardEdge,
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).cardColor,
-                      borderRadius: BorderRadius.circular(theDefaultRaduis),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Theme.of(context).shadowColor,
-                          offset: Offset(0, 1),
-                          blurRadius: 3,
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Image.asset(
-                          FoodMenuesData[index].img,
-                        ),
-                        const Spacer(),
+          physics: NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          padding: EdgeInsets.all(theDefaultPadding),
+          itemCount: FoodMenuesData.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            childAspectRatio: .7,
+            crossAxisSpacing: 20,
+            mainAxisSpacing: 20,
+          ),
+          itemBuilder: ((context, index) {
+            return InkWell(
+                onTap: () {
+                  Get.to(
+                      () => FoodListScreen(
+                            theListTileIndex: index,
+                            foodListItems: FoodMenuesData[index].foodListItems,
+                          ),
+                      binding: AddingMealBindings());
+                },
+                child: Container(
+                  clipBehavior: Clip.hardEdge,
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).cardColor,
+                    borderRadius: BorderRadius.circular(theDefaultRaduis),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Theme.of(context).shadowColor,
+                        offset: Offset(0, 1),
+                        blurRadius: 3,
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        FoodMenuesData[index].img,
+                      ),
+                      const Spacer(),
 
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            emptySpace,
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  FoodMenuesData[index].title,
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Text(FoodMenuesData[index].prefDiscription),
-                              ],
-                            ),
-                          ],
-                        ),
-                        const Spacer(),
-                        // Padding(
-                        //   padding: EdgeInsets.symmetric(
-                        //     horizontal: theDefaultPadding,
-                        //   ),
-                        //   child:
-                        // ),
-                        // Padding(
-                        //   padding: EdgeInsets.fromLTRB(
-                        //     theDefaultPadding,
-                        //     0,
-                        //     theDefaultPadding,
-                        //     theDefaultPadding,
-                        //   ),
-                        //   child:
-                        // ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          emptySpace,
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                FoodMenuesData[index].title,
+                                style: TextStyle(
+                                    fontSize: 20, fontWeight: FontWeight.bold),
+                              ),
+                              Text(FoodMenuesData[index].prefDiscription),
+                            ],
+                          ),
+                        ],
+                      ),
+                      const Spacer(),
+                      // Padding(
+                      //   padding: EdgeInsets.symmetric(
+                      //     horizontal: theDefaultPadding,
+                      //   ),
+                      //   child:
+                      // ),
+                      // Padding(
+                      //   padding: EdgeInsets.fromLTRB(
+                      //     theDefaultPadding,
+                      //     0,
+                      //     theDefaultPadding,
+                      //     theDefaultPadding,
+                      //   ),
+                      //   child:
+                      // ),
 
-                        //      GridView.builder(
-                        //   itemCount: FoodMenuesData.length,
-                        //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        //       crossAxisCount: 2),
-                        //   itemBuilder: ((context, index) {
-                        //     return Card(
-                        //       child: Column(
-                        //         children: [
-                        //           Image.asset(FoodMenuesData[index].img),
-                        //           Text(FoodMenuesData[index].title),
-                        //           Text(FoodMenuesData[index].prefDiscription),
-                        //         ],
-                        //       ),
-                        //     );
-                        //   }),
-                        // )
-                      ],
-                    ),
-                  ));
-            })),
+                      //      GridView.builder(
+                      //   itemCount: FoodMenuesData.length,
+                      //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      //       crossAxisCount: 2),
+                      //   itemBuilder: ((context, index) {
+                      //     return Card(
+                      //       child: Column(
+                      //         children: [
+                      //           Image.asset(FoodMenuesData[index].img),
+                      //           Text(FoodMenuesData[index].title),
+                      //           Text(FoodMenuesData[index].prefDiscription),
+                      //         ],
+                      //       ),
+                      //     );
+                      //   }),
+                      // )
+                    ],
+                  ),
+                ));
+          }),
+        ),
       ],
     );
   }

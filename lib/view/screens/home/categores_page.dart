@@ -11,7 +11,7 @@ class CategoresPage extends StatelessWidget {
     return ListView(
       children: [
         FoodMenueScreen(),
-        emptySpace,
+        // emptySpace,
         OffersAndDiscounts(),
       ],
     );

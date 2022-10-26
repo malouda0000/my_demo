@@ -15,10 +15,15 @@ class CustBottomNavItem extends StatelessWidget {
     return GetBuilder<HomeScreenControllerImp>(
         builder: ((homeScreenControllerImp) {
       return SizedBox(
-        width: 65,
+        /*
+        here as you see i used 1/5 of the screen
+        width, so the icons will be berfectly alymented
+        */
+        width: Get.width * .2,
+        // height: 40,
         child: MaterialButton(
+          enableFeedback: true,
           splashColor: Colors.transparent,
-
           animationDuration: Duration(
             seconds: 1,
           ),
@@ -27,6 +32,8 @@ class CustBottomNavItem extends StatelessWidget {
             homeScreenControllerImp.changeHomeScreenBody(theIndex);
           },
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               // theIndex == 0 ? Spacer() : SizedBox(),
               Icon(

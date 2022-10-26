@@ -93,6 +93,9 @@ class FoodListTile extends StatelessWidget {
         // ),
 
         CircularImageWithBorder(
+          iconPressed: () {},
+          showSmallCirlIcon: false,
+          theSmallCirlIcon: null,
           imagePath: imagePath,
         )
       ]),

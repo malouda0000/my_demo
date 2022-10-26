@@ -22,6 +22,8 @@ class BigggButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: MaterialButton(
+
+          // shape: ShapeBorder.lerp(2, b, t),
           // style: ButtonStyle(backgroundColor: theBackgrounColor),
           onPressed: onTaped,
           color: AppColor.kPrimaryColor,
@@ -32,6 +34,7 @@ class BigggButton extends StatelessWidget {
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Icon(
                   theLeadingIcon,

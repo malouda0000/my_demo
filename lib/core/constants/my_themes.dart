@@ -3,6 +3,11 @@ import 'package:my_demo/core/constants/app_color.dart';
 
 class MyThemes {
   static ThemeData customLightTheme = ThemeData.light().copyWith(
+    // colorScheme: ColorScheme.light().copyWith(
+    //   // shadow: AppColor.kPrimaryColor,
+
+    // ),
+    // splashColor: AppColor.kPrimaryColor,
     shadowColor: AppColor.kTextColor.withOpacity(.3),
     primaryColor: AppColor.kPrimaryColor,
     iconTheme: IconThemeData(color: AppColor.kTextColor),

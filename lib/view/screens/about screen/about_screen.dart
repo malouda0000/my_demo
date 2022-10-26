@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:my_demo/core/constants/app_images.dart';
 import 'package:my_demo/core/shared/circuled_image_with_border.dart';
 import 'package:my_demo/core/shared/reserved_rights_row.dart';
+import 'package:my_demo/get_pages.dart';
 
 import 'package:my_demo/view/screens/about%20screen/widgets/contact_me_row.dart';
 import 'package:my_demo/view/screens/about%20screen/widgets/setting_list_tiles.dart';
@@ -38,30 +39,7 @@ class AboutScreen extends StatelessWidget {
           // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             emptySpace,
-            Card(
-              elevation: theDefaultElevation,
-              child: Padding(
-                padding: EdgeInsets.all(theDefaultPadding),
-                child: Row(
-                  children: [
-                    // the default user image
-                    CircularImageWithBorder(imagePath: AppImages.userImage),
-                    Spacer(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        UserName(),
-                        Text(
-                          AppLocal.userEmail.tr,
-                        )
-                      ],
-                    ),
-                    Spacer(),
-                  ],
-                ),
-              ),
-            ),
+            UserCard(),
             emptySpace,
             MySettingListTiles(),
             emptySpace,
@@ -74,6 +52,46 @@ class AboutScreen extends StatelessWidget {
           ],
         ),
       ],
+    );
+  }
+}
+
+class UserCard extends StatelessWidget {
+  const UserCard({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: theDefaultElevation,
+      child: Padding(
+        padding: EdgeInsets.all(theDefaultPadding),
+        child: Row(
+          children: [
+            // the default user image
+            CircularImageWithBorder(
+                showSmallCirlIcon: true,
+                theSmallCirlIcon: Icons.mode_edit_outline_rounded,
+                iconPressed: () {
+                  Get.toNamed(AppRoute.underDevelopmentScreen);
+                },
+                imagePath: AppImages.userImage),
+            Spacer(),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                UserName(),
+                Text(
+                  AppLocal.userEmail.tr,
+                )
+              ],
+            ),
+            Spacer(),
+          ],
+        ),
+      ),
     );
   }
 }

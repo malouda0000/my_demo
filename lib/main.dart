@@ -47,8 +47,8 @@ class MyApp extends StatelessWidget {
       themeMode: themeContorller.myThemeMode,
       locale: locallizationsController.initalLang,
       translations: TheLocalization(),
-      home: UserAccount(),
       // home: SuccessfullySignedupScreen(),
+      home: UserAccount(),
       // home: SuccessfullyResetedPasswordScreen(),
       // just i'll use home proberty for testing
     );

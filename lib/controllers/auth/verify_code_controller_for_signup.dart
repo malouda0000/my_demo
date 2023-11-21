@@ -22,6 +22,7 @@ class VerifyCodeControllerForSuccSignupImp
 
   @override
   void onInit() {
+    super.onInit();
     signinEmailTextController = TextEditingController();
   }
 
@@ -46,6 +47,7 @@ class VerifyCodeControllerForSuccSignupImp
 
   @override
   void dispose() {
+    super.dispose();
     signinEmailTextController.dispose();
   }
 }

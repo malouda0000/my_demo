@@ -4,13 +4,13 @@ import 'package:my_demo/core/constants/app_color.dart';
 import 'package:my_demo/core/constants/constants.dart';
 import 'package:my_demo/core/functions/social_functions.dart';
 import 'package:my_demo/core/localization/localization.dart';
-import 'package:my_demo/core/shared/communication_row.dart';
+// import 'package:my_demo/core/shared/communication_row.dart';
 import 'package:my_demo/view/screens/auth/widgets/my_send_email_vervication.dart';
 
 resendVerEmailDialog(BuildContext context) {
   return Get.defaultDialog(
     title: AppLocal.confirmYourEmail.tr,
-    titleStyle: Theme.of(context).textTheme.headline6,
+    titleStyle: Theme.of(context).textTheme.titleLarge,
     content: Column(
       children: [
         Icon(
@@ -20,7 +20,7 @@ resendVerEmailDialog(BuildContext context) {
         ),
         Text(
           AppLocal.checkTheSpam.tr,
-          style: Theme.of(context).textTheme.bodyText1,
+          style: Theme.of(context).textTheme.bodyLarge,
         ),
         emptySpace,
         GestureDetector(
@@ -43,7 +43,7 @@ resendVerEmailDialog(BuildContext context) {
                 AppLocal.sendFeedback.tr,
                 style: Theme.of(context)
                     .textTheme
-                    .bodyText1!
+                    .bodyLarge!
                     .copyWith(color: AppColor.kPrimaryColor),
               ),
             ),
@@ -68,7 +68,7 @@ resendVerEmailDialog(BuildContext context) {
             },
             child: Text(
               AppLocal.illCheck.tr,
-              style: Theme.of(context).textTheme.bodyText1,
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
           ),
           MaterialButton(

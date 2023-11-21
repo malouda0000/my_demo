@@ -12,7 +12,7 @@ import 'package:my_demo/view/screens/about%20screen/widgets/user_name.dart';
 
 import '../../../core/constants/constants.dart';
 import '../../../core/localization/localization.dart';
-import '../../../core/shared/bottom navigation bar/bottom_nav_bar.dart';
+// import '../../../core/shared/bottom navigation bar/bottom_nav_bar.dart';
 import 'widgets/temp_debuging_row.dart';
 // import 'package:flutter_remix/flutter_remix.dart';
 

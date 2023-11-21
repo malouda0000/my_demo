@@ -12,7 +12,7 @@ class ReservedRightsRow extends StatelessWidget {
     return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
       Text(
         AppLocal.allRightsReserved.tr,
-        style: Theme.of(context).textTheme.bodyText1,
+        style: Theme.of(context).textTheme.bodyLarge,
       ),
       GestureDetector(
         onTap: () {

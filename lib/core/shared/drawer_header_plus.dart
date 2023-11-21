@@ -11,7 +11,7 @@ class DrawerHeaderplus extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var bodyTextTow = Theme.of(context).textTheme.bodyText2;
+    var bodyTextTow = Theme.of(context).textTheme.bodyMedium;
     return UserAccountsDrawerHeader(
       currentAccountPicture: CircleAvatar(
         child: GestureDetector(

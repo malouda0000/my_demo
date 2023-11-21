@@ -22,12 +22,12 @@ class TheMainTitleBuilder extends StatelessWidget {
             children: [
           TextSpan(
             text: firstTitle,
-            style: Theme.of(context).textTheme.headline6!.copyWith(
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
                 // fontSize: 20,
                 ),
           ),
           TextSpan(
-              style: Theme.of(context).textTheme.headline6!.copyWith(
+              style: Theme.of(context).textTheme.titleLarge!.copyWith(
                     color: AppColor.kPrimaryColor,
                     // fontSize: 30,
                   ),

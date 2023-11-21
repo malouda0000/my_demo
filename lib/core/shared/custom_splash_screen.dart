@@ -48,7 +48,8 @@ class CustomSplashScreen extends StatelessWidget {
                 ),
               emptySpace,
               if (haveDiscription)
-                Text(discription, style: Theme.of(context).textTheme.headline6),
+                Text(discription,
+                    style: Theme.of(context).textTheme.titleLarge),
               emptySpace,
             ],
           ),

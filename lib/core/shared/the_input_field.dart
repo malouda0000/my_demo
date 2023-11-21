@@ -50,7 +50,7 @@ class TheInputField extends StatelessWidget {
 
         keyboardType: theInputType,
         obscureText: isPassword == false ? false : true,
-        style: Theme.of(context).textTheme.bodyText1,
+        style: Theme.of(context).textTheme.bodyLarge,
         decoration: InputDecoration(
           fillColor: AppColor.kPrimaryColor.withOpacity(.2),
           border: InputBorder.none,
@@ -58,13 +58,13 @@ class TheInputField extends StatelessWidget {
             onTap: onIconTap,
             child: Icon(
               theLeadingIcon,
-              color: Theme.of(context).textTheme.bodyText1!.color!,
+              color: Theme.of(context).textTheme.bodyLarge!.color!,
             ),
           ),
           hintText: theHient,
-          hintStyle: Theme.of(context).textTheme.bodyText1!,
+          hintStyle: Theme.of(context).textTheme.bodyLarge!,
           errorStyle: TextStyle(
-            fontFamily: Theme.of(context).textTheme.bodyText1!.fontFamily,
+            fontFamily: Theme.of(context).textTheme.bodyLarge!.fontFamily,
           ),
         ),
       ),

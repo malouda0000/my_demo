@@ -109,7 +109,7 @@ class SignInScreen extends StatelessWidget {
                   },
                   child: Text(
                     'signIn for debuging',
-                    style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                           color: AppColor.kPrimaryColor,
                         ),
                   )),

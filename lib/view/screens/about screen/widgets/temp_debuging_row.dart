@@ -203,7 +203,7 @@ class TempDebugingRow extends StatelessWidget {
               child: Text(
                 'this card will be removed on  \n the final product, its just used for debuging purpose',
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                       color: AppColor.kPrimaryColor,
                     ),
               ),

@@ -33,7 +33,7 @@ class DiscriptionContainer extends StatelessWidget {
               ),
               Text(
                 AppLocal.cityname.tr,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ],
           ),
@@ -47,7 +47,7 @@ class DiscriptionContainer extends StatelessWidget {
                   ),
                   Text(
                     AppLocal.bigBurger.tr,
-                    style: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                   const SizedBox(
                     height: 10,
@@ -104,11 +104,11 @@ class DiscriptionContainer extends StatelessWidget {
                       emptySpace,
                       Text(
                         AppLocal.numberOfReviews,
-                        style: Theme.of(context).textTheme.bodyText1,
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                       Text(
                         AppLocal.reviews.tr,
-                        style: Theme.of(context).textTheme.bodyText1,
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                     ],
                   ),

@@ -11,7 +11,7 @@ checkYourEmailDialog() async {
 
   return Get.defaultDialog(
     title: AppLocal.confirmYourEmail.tr,
-    titleStyle: Theme.of(context).textTheme.headline6,
+    titleStyle: Theme.of(context).textTheme.titleLarge,
     content: Column(
       children: [
         Icon(
@@ -21,7 +21,7 @@ checkYourEmailDialog() async {
         ),
         Text(
           AppLocal.checkYourInbox.tr,
-          style: Theme.of(context).textTheme.bodyText1,
+          style: Theme.of(context).textTheme.bodyLarge,
         ),
       ],
     ),
@@ -38,7 +38,7 @@ checkYourEmailDialog() async {
             },
             child: Text(
               AppLocal.noEmailReciveded.tr,
-              style: Theme.of(context).textTheme.bodyText1,
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
           ),
           MaterialButton(
@@ -50,7 +50,7 @@ checkYourEmailDialog() async {
             },
             child: Text(
               AppLocal.done.tr,
-              style: Theme.of(context).textTheme.bodyText1,
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
           ),
         ],

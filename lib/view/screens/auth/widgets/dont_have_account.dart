@@ -19,7 +19,7 @@ class DontHaveAccount extends StatelessWidget {
       children: [
         Text(
           doYouHaveAccoun,
-          style: Theme.of(context).textTheme.bodyText1,
+          style: Theme.of(context).textTheme.bodyLarge,
         ),
         GestureDetector(
           child: Text(

@@ -46,7 +46,7 @@ class NextButton extends GetView<OnBordingControllerImp> {
         color: AppColor.kPrimaryColor,
         child: Text(
           AppLocal.next.tr,
-          style: Theme.of(context).textTheme.bodyText1!.copyWith(
+          style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                 color: Theme.of(context).scaffoldBackgroundColor,
               ),
         ),
@@ -120,7 +120,7 @@ class SkipButton extends GetView<OnBordingControllerImp> {
         color: AppColor.kPrimaryColor,
         child: Text(
           AppLocal.skip.tr,
-          style: Theme.of(context).textTheme.bodyText1!.copyWith(
+          style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                 color: Theme.of(context).scaffoldBackgroundColor,
               ),
         ),

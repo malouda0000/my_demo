@@ -22,7 +22,7 @@ class DeletMealButton extends StatelessWidget {
         onPressed: () {
           Get.defaultDialog(
             title: 'sure',
-            titleStyle: Theme.of(context).textTheme.headline6,
+            titleStyle: Theme.of(context).textTheme.titleLarge,
             content: Column(
               children: [
                 Icon(
@@ -32,7 +32,7 @@ class DeletMealButton extends StatelessWidget {
                 ),
                 Text(
                   'are you sure you want to remove this meal',
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ],
             ),

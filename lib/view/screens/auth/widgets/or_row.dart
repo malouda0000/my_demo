@@ -11,19 +11,19 @@ class OrRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          color: Theme.of(context).textTheme.bodyText1!.color!,
+          color: Theme.of(context).textTheme.bodyLarge!.color!,
           width: Get.width * .28,
           height: 1,
         ),
         Text(
           AppLocal.or.tr,
           style: TextStyle(
-              color: Theme.of(context).textTheme.bodyText1!.color!,
+              color: Theme.of(context).textTheme.bodyLarge!.color!,
               fontWeight: FontWeight.bold,
               fontSize: 30),
         ),
         Container(
-          color: Theme.of(context).textTheme.bodyText1!.color!,
+          color: Theme.of(context).textTheme.bodyLarge!.color!,
           width: Get.width * .28,
           height: 1,
         ),

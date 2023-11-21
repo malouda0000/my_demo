@@ -27,7 +27,7 @@ class EmptyTheCartButton extends StatelessWidget {
           onTaped: () async {
             Get.defaultDialog(
               title: AppLocal.alert.tr,
-              titleStyle: Theme.of(context).textTheme.headline6,
+              titleStyle: Theme.of(context).textTheme.titleLarge,
               content: Column(
                 children: [
                   Icon(
@@ -37,7 +37,7 @@ class EmptyTheCartButton extends StatelessWidget {
                   ),
                   Text(
                     AppLocal.alertAgrement.tr,
-                    style: Theme.of(context).textTheme.bodyText1,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                 ],
               ),

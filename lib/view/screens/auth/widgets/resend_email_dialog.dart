@@ -82,7 +82,7 @@ resendVerEmailDialog(BuildContext context) {
             },
             child: Text(
               AppLocal.resendEmail.tr,
-              style: Theme.of(context).textTheme.bodyText1,
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
           ),
         ],

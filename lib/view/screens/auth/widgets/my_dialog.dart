@@ -17,7 +17,7 @@ myDialog(
 ) {
   Get.defaultDialog(
     title: theTitle == null ? 'Dilaog' : theTitle,
-    titleStyle: Theme.of(context).textTheme.headline6,
+    titleStyle: Theme.of(context).textTheme.titleLarge,
     content: Column(
       children: [
         theIcon != null
@@ -30,7 +30,7 @@ myDialog(
         Text(
           dialogDiscription == null ? '' : dialogDiscription,
           maxLines: 3,
-          style: Theme.of(context).textTheme.bodyText1!,
+          style: Theme.of(context).textTheme.bodyLarge!,
         ),
       ],
     ),

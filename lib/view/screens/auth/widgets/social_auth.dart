@@ -5,7 +5,7 @@ import 'package:my_demo/controllers/auth/signin_controller.dart';
 import 'package:my_demo/get_pages.dart';
 import 'package:my_demo/view/screens/about%20screen/widgets/communication_icon.dart';
 import '../../../../core/localization/localization.dart';
-import '../../about screen/widgets/communication_icon.dart';
+// import '../../about screen/widgets/communication_icon.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class SocialAuthRow extends StatelessWidget {

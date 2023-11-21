@@ -36,7 +36,7 @@ class ItemsTitleBuilder extends GetView<HomeScreenControllerImp> {
                         // fontSize: 12,
                         )
                     : TextStyle(
-                        color: Theme.of(context).textTheme.headline6!.color,
+                        color: Theme.of(context).textTheme.titleLarge!.color,
                         // fontSize: 12,
                       ),
               ),

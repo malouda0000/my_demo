@@ -91,7 +91,7 @@ class TheItemCard extends StatelessWidget {
                 discription,
                 style: Theme.of(context)
                     .textTheme
-                    .bodyText1
+                    .bodyLarge
                     ?.copyWith(fontSize: 12),
               ),
             ],

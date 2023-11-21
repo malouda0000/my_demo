@@ -137,7 +137,7 @@ class DiscriptionContainer extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(top: 10),
             child: Text(AppLocal.macdonalz.tr,
-                style: Theme.of(context).textTheme.bodyText1, softWrap: true),
+                style: Theme.of(context).textTheme.bodyLarge, softWrap: true),
           ),
           emptySpace,
           BigggButton(

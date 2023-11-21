@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_demo/core/shared/bottom%20navigation%20bar/bottom_nav_bar.dart';
+// import 'package:my_demo/core/shared/bottom%20navigation%20bar/bottom_nav_bar.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/view/screens/setting/widgets/settign_list_tile.dart';
 import 'package:my_demo/get_pages.dart';

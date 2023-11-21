@@ -23,7 +23,7 @@ class SettingListTile extends StatelessWidget {
             // color: AppColor.kTextColor,
             color: Theme.of(context).iconTheme.color,
           ),
-          title: Text(theTitle, style: Theme.of(context).textTheme.bodyText1),
+          title: Text(theTitle, style: Theme.of(context).textTheme.bodyLarge),
           trailing: Icon(
             Icons.arrow_forward,
             color: Theme.of(context).iconTheme.color,

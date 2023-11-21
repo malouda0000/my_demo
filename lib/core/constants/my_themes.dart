@@ -17,7 +17,8 @@ class MyThemes {
       elevation: 0,
       iconTheme: IconThemeData(color: AppColor.kTextColor),
     ),
-    bottomAppBarColor: AppColor.theMainLightColor,
+    // bottomAppBarColor: AppColor.theMainLightColor,
+    bottomAppBarTheme: BottomAppBarTheme(color: AppColor.theMainLightColor),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: AppColor.theMainLightColor,
     ),

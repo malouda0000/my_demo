@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/core/functions/validator.dart';
-import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/get_pages.dart';
 
 abstract class VerifyCodeControllerForResetPass extends GetxController {
@@ -23,6 +22,7 @@ class VerifyCodeControllerForResetPassImp
 
   @override
   void onInit() {
+    super.onInit();
     signinEmailTextController = TextEditingController();
   }
 
@@ -48,6 +48,7 @@ class VerifyCodeControllerForResetPassImp
 
   @override
   void dispose() {
+    super.dispose();
     signinEmailTextController.dispose();
   }
 }

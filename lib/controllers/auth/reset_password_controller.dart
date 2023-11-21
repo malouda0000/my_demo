@@ -29,6 +29,7 @@ class ResetPasswordControllerImp extends ResetPasswordController {
 
   @override
   void onInit() async {
+    super.onInit();
     newPasswordTextController = TextEditingController();
     newPasswordConfTextController = TextEditingController();
   }
@@ -92,6 +93,7 @@ class ResetPasswordControllerImp extends ResetPasswordController {
 
   @override
   void dispose() {
+    super.dispose();
     newPasswordTextController.dispose();
     newPasswordConfTextController.dispose();
   }

@@ -35,6 +35,7 @@ class SignupControllerImp extends SignupController {
 
   @override
   void onInit() async {
+    super.onInit();
     signupEmailController = TextEditingController();
     signupPasswordController = TextEditingController();
     signupPasswordConfController = TextEditingController();
@@ -137,6 +138,7 @@ class SignupControllerImp extends SignupController {
 
   @override
   void dispose() {
+    super.dispose();
     signupEmailController.dispose();
     signupPasswordController.dispose();
     signupPasswordConfController.dispose();

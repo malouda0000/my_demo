@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_demo/core/functions/validator.dart';
-import 'package:my_demo/core/localization/localization.dart';
 import 'package:my_demo/get_pages.dart';
 
 abstract class ForgetPasswordController extends GetxController {
@@ -22,6 +21,7 @@ class ForgetPasswordControllerImp extends ForgetPasswordController {
 
   @override
   void onInit() {
+    super.onInit();
     signinEmailTextController = TextEditingController();
   }
 
@@ -51,6 +51,7 @@ class ForgetPasswordControllerImp extends ForgetPasswordController {
 
   @override
   void dispose() {
+    super.dispose();
     signinEmailTextController.dispose();
   }
 }

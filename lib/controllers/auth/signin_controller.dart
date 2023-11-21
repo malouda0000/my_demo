@@ -33,6 +33,7 @@ class SignInControllerImp extends SignInController {
 
   @override
   void onInit() {
+    super.onInit();
     signinEmailTextController = TextEditingController();
     signinPasswordTextController = TextEditingController();
   }
@@ -159,6 +160,7 @@ class SignInControllerImp extends SignInController {
 
   @override
   void dispose() {
+    super.dispose();
     signinEmailTextController.dispose();
     signinPasswordTextController.dispose();
   }

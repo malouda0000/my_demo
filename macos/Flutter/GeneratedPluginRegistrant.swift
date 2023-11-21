@@ -7,7 +7,7 @@ import Foundation
 
 import firebase_auth
 import firebase_core
-import shared_preferences_macos
+import shared_preferences_foundation
 import sqflite
 import url_launcher_macos
 

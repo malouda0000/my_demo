@@ -22,16 +22,16 @@ class MyThemes {
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: AppColor.theMainLightColor,
     ),
-    textTheme: const TextTheme(
-      bodyText1: TextStyle(
+    textTheme: TextTheme(
+      bodyLarge: TextStyle(
         color: AppColor.kTextColor,
         fontFamily: 'Cairo',
       ),
-      bodyText2: TextStyle(
+      bodyMedium: TextStyle(
         color: AppColor.kTextColor,
         fontFamily: 'Cairo',
       ),
-      headline6: TextStyle(
+      bodySmall: TextStyle(
         color: AppColor.kTextColor,
         fontSize: 20,
         fontWeight: FontWeight.bold,
@@ -54,16 +54,16 @@ class MyThemes {
     ),
 
     // shadowColor: Colors.grey[400]!.withOpacity(.5),
-    textTheme: const TextTheme(
-      bodyText1: TextStyle(
+    textTheme: TextTheme(
+      bodyLarge: TextStyle(
         color: AppColor.theMainLightColor,
         fontFamily: 'Cairo',
       ),
-      bodyText2: TextStyle(
+      bodyMedium: TextStyle(
         color: AppColor.theMainLightColor,
         fontFamily: 'Cairo',
       ),
-      headline6: TextStyle(
+      bodySmall: TextStyle(
         color: AppColor.theMainLightColor,
         fontSize: 20,
         fontWeight: FontWeight.bold,

@@ -56,13 +56,22 @@ dependencies:
   json_serializable: ^6.3.1
   
   ## firebase packges
-  google_sign_in: ^5.4.2
-  firebase_core: ^1.23.0
-  firebase_auth: ^3.10.0
+  google_sign_in:
+  firebase_core: 
+  firebase_auth: 
   # firebase_storage: ^10.3.9
   # firebase_messaging: ^13.0.3
   # i have canceled the facebook auth for now, for some resones(vervied emails problem)
   # flutter_facebook_auth: ^3.5.0
+
+  #   ## firebase packges
+  # google_sign_in: ^5.4.2
+  # firebase_core: ^1.23.0
+  # firebase_auth: ^3.10.0
+  # # firebase_storage: ^10.3.9
+  # # firebase_messaging: ^13.0.3
+  # # i have canceled the facebook auth for now, for some resones(vervied emails problem)
+  # # flutter_facebook_auth: ^3.5.0
 
   # genaral packges
   otp_text_field: ^1.1.3

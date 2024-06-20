@@ -57,8 +57,11 @@ dependencies:
   
   ## firebase packges
   google_sign_in:
-  firebase_core: 
-  firebase_auth: 
+  # firebase_core: 
+  # firebase_auth: 
+
+  firebase_core: ^2.25.4
+  firebase_auth: ^4.17.4
   # firebase_storage: ^10.3.9
   # firebase_messaging: ^13.0.3
   # i have canceled the facebook auth for now, for some resones(vervied emails problem)
